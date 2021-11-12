@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="grand.app.moon.views.fragments.SplashFragment">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="te.app.aljoud.pages.settings.viewModels.SettingsViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/contact_header_img"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp150h"
+                android:src="@drawable/contact"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp12h"
+                android:text="@string/contact_title"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/contact_header_img" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/face_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10h"
+                android:onClick="@{()-> viewmodel.toFacebook()}"
+                android:src="@drawable/ic_facebook"
+                app:layout_constraintEnd_toStartOf="@+id/youtube"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/youtube"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10h"
+                android:onClick="@{()-> viewmodel.toYoutube()}"
+                android:src="@drawable/ic_youtube"
+                app:layout_constraintEnd_toStartOf="@+id/whats"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/face_book"
+                app:layout_constraintTop_toBottomOf="@+id/text" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/whats"
+                android:layout_width="@dimen/dp50w"
+                android:layout_height="@dimen/dp50h"
+                android:layout_marginTop="@dimen/dp10h"
+                android:onClick="@{()-> viewmodel.toWhats()}"
+                android:src="@drawable/ic_whatsapp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/youtube"
+                app:layout_constraintTop_toBottomOf="@+id/text" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

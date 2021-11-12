@@ -1,0 +1,74 @@
+[
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_base.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/activity_base.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_splash.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_splash.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_action_bar_back.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/layout_action_bar_back.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_action_bar_home.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/layout_action_bar_home.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_forget_password.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_forget_password.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_map_address.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/activity_map_address.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_about.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_about.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/exit_layout.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/exit_layout.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_confirm_code.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_confirm_code.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_contacts.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_contacts.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_home.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/item_home.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_login.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_login.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_tes.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/layout_tes.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_home.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_home.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_change_password.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_change_password.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_navigation_drawer.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/layout_navigation_drawer.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_register.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_register.xml"
+    }
+]
