@@ -1,0 +1,91 @@
+
+                                                       
+                                                   
+
+    
+
+                                           
+
+                                                
+
+                                                                
+
+                 
+                                    
+                                                                          
+           
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rl_item_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp6h"
+        android:tag="layout/item_chat_0"                                 xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/driver_image"
+            android:layout_width="@dimen/dp50w"
+            android:layout_height="@dimen/dp50h"
+            android:layout_margin="@dimen/dp8h"
+            android:src="@drawable/logo"
+            app:civ_border_color="@color/colorPrimaryDark"
+            app:civ_border_width="2dp"
+            android:tag="binding_1"                                                                                                                                                               
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/item_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp6h"
+            android:tag="binding_2"                                                                        
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/driver_image"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp6h"
+                android:background="@drawable/left_chat"                                                                                                                                    
+                android:padding="@dimen/dp8h"
+                android:text="hello there"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"  android:tag="binding_3"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_files"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp12h"
+            android:orientation="horizontal"
+            android:src="@color/medium_color"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/driver_image"
+            app:layout_constraintTop_toBottomOf="@+id/item_message"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent"
+            tools:listitem="@layout/item_files" />
+
+        <te.app.aljoud.customViews.views.CustomTextViewRegular
+            android:id="@+id/item_message_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp4h"
+            android:layout_marginEnd="@dimen/dp6h"
+            android:text="admin"
+            android:textColor="@color/medium_color"
+            app:drawableTint="@color/overlayBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rc_files" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+         

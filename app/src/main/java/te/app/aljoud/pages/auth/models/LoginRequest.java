@@ -12,10 +12,10 @@ public class LoginRequest {
     @SerializedName("password")
     @Expose
     private String password;
-    @SerializedName("token")
+    @SerializedName("fcm_token")
     @Expose
     private String token;
-    @SerializedName("mac_address")
+    @SerializedName("device_id")
     @Expose
     private String macAddress;
 

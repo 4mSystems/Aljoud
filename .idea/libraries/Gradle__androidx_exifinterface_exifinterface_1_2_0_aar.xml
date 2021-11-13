@@ -4,7 +4,7 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ab3e83f4963415e6f69de7179258da84/exifinterface-1.2.0/annotations.zip!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ab3e83f4963415e6f69de7179258da84/exifinterface-1.2.0/annotations.zip!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ab3e83f4963415e6f69de7179258da84/exifinterface-1.2.0/annotations.zip!/" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/07e88dc6dad496444db29232ad4f27ea/transformed/exifinterface-1.2.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/efd230262f34ce1ea4a0e8d8cdefdf58/transformed/exifinterface-1.2.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9dcaceee3aa1d60532ac1329f1ebebbb/exifinterface-1.2.0/res" />
@@ -20,9 +20,9 @@
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/ab3e83f4963415e6f69de7179258da84/exifinterface-1.2.0/res" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/ad7816b652d8a3040c7361feed01221e/exifinterface-1.2.0/res" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/efd230262f34ce1ea4a0e8d8cdefdf58/transformed/exifinterface-1.2.0/res" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/07e88dc6dad496444db29232ad4f27ea/transformed/exifinterface-1.2.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/07e88dc6dad496444db29232ad4f27ea/transformed/exifinterface-1.2.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/07e88dc6dad496444db29232ad4f27ea/transformed/exifinterface-1.2.0/res" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/efd230262f34ce1ea4a0e8d8cdefdf58/transformed/exifinterface-1.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/efd230262f34ce1ea4a0e8d8cdefdf58/transformed/exifinterface-1.2.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

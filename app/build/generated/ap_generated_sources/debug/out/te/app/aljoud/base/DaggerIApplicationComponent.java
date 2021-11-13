@@ -36,6 +36,31 @@ import te.app.aljoud.pages.auth.register.RegisterFragment_MembersInjector;
 import te.app.aljoud.pages.auth.register.RegisterViewModel;
 import te.app.aljoud.pages.auth.register.RegisterViewModel_Factory;
 import te.app.aljoud.pages.auth.register.RegisterViewModel_MembersInjector;
+import te.app.aljoud.pages.chat.view.ChatFragment;
+import te.app.aljoud.pages.chat.view.ChatFragment_MembersInjector;
+import te.app.aljoud.pages.chat.viewmodel.ChatViewModel;
+import te.app.aljoud.pages.chat.viewmodel.ChatViewModel_Factory;
+import te.app.aljoud.pages.chat.viewmodel.ChatViewModel_MembersInjector;
+import te.app.aljoud.pages.conversations.ConversationsFragment;
+import te.app.aljoud.pages.conversations.ConversationsFragment_MembersInjector;
+import te.app.aljoud.pages.conversations.viewModels.ConversationsViewModel;
+import te.app.aljoud.pages.conversations.viewModels.ConversationsViewModel_Factory;
+import te.app.aljoud.pages.conversations.viewModels.ConversationsViewModel_MembersInjector;
+import te.app.aljoud.pages.courseDetails.FragmentCourseDetails;
+import te.app.aljoud.pages.courseDetails.FragmentCourseDetails_MembersInjector;
+import te.app.aljoud.pages.courseDetails.FragmentCourseLessons;
+import te.app.aljoud.pages.courseDetails.FragmentCourseLessons_MembersInjector;
+import te.app.aljoud.pages.courseDetails.FragmentLessonDetails;
+import te.app.aljoud.pages.courseDetails.FragmentLessonDetails_MembersInjector;
+import te.app.aljoud.pages.courseDetails.viewModels.CourseLessonsViewModel;
+import te.app.aljoud.pages.courseDetails.viewModels.CourseLessonsViewModel_Factory;
+import te.app.aljoud.pages.courseDetails.viewModels.CourseLessonsViewModel_MembersInjector;
+import te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel;
+import te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel_Factory;
+import te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel_MembersInjector;
+import te.app.aljoud.pages.courseDetails.viewModels.LessonDetailsViewModel;
+import te.app.aljoud.pages.courseDetails.viewModels.LessonDetailsViewModel_Factory;
+import te.app.aljoud.pages.courseDetails.viewModels.LessonDetailsViewModel_MembersInjector;
 import te.app.aljoud.pages.home.HomeFragment;
 import te.app.aljoud.pages.home.HomeFragment_MembersInjector;
 import te.app.aljoud.pages.home.viewModels.HomeViewModel;
@@ -53,8 +78,17 @@ import te.app.aljoud.pages.splash.SplashFragment_MembersInjector;
 import te.app.aljoud.pages.splash.SplashViewModel;
 import te.app.aljoud.pages.splash.SplashViewModel_Factory;
 import te.app.aljoud.pages.splash.SplashViewModel_MembersInjector;
+import te.app.aljoud.pages.university.FragmentCategorySections;
+import te.app.aljoud.pages.university.FragmentCategorySections_MembersInjector;
+import te.app.aljoud.pages.university.FragmentUniversityDetails;
+import te.app.aljoud.pages.university.FragmentUniversityDetails_MembersInjector;
+import te.app.aljoud.pages.university.viewModel.UniversityViewModel;
+import te.app.aljoud.pages.university.viewModel.UniversityViewModel_Factory;
+import te.app.aljoud.pages.university.viewModel.UniversityViewModel_MembersInjector;
 import te.app.aljoud.repository.AuthRepository;
 import te.app.aljoud.repository.AuthRepository_Factory;
+import te.app.aljoud.repository.ChatRepository;
+import te.app.aljoud.repository.ChatRepository_Factory;
 import te.app.aljoud.repository.HomeRepository;
 import te.app.aljoud.repository.HomeRepository_Factory;
 import te.app.aljoud.repository.SettingsRepository;
@@ -81,6 +115,8 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   private Provider<AuthRepository> authRepositoryProvider;
 
   private Provider<SettingsRepository> settingsRepositoryProvider;
+
+  private Provider<ChatRepository> chatRepositoryProvider;
 
   private DaggerIApplicationComponent(ConnectionModule connectionModuleParam) {
 
@@ -127,6 +163,30 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectChangePasswordViewModel(ChangePasswordViewModel_Factory.newInstance(authRepositoryProvider.get()));
   }
 
+  private UniversityViewModel universityViewModel() {
+    return injectUniversityViewModel(UniversityViewModel_Factory.newInstance(homeRepositoryProvider.get()));
+  }
+
+  private CourseViewModel courseViewModel() {
+    return injectCourseViewModel(CourseViewModel_Factory.newInstance(homeRepositoryProvider.get()));
+  }
+
+  private CourseLessonsViewModel courseLessonsViewModel() {
+    return injectCourseLessonsViewModel(CourseLessonsViewModel_Factory.newInstance(homeRepositoryProvider.get()));
+  }
+
+  private LessonDetailsViewModel lessonDetailsViewModel() {
+    return injectLessonDetailsViewModel(LessonDetailsViewModel_Factory.newInstance(homeRepositoryProvider.get()));
+  }
+
+  private ConversationsViewModel conversationsViewModel() {
+    return injectConversationsViewModel(ConversationsViewModel_Factory.newInstance(chatRepositoryProvider.get()));
+  }
+
+  private ChatViewModel chatViewModel() {
+    return injectChatViewModel(ChatViewModel_Factory.newInstance(chatRepositoryProvider.get()));
+  }
+
   @SuppressWarnings("unchecked")
   private void initialize(final ConnectionModule connectionModuleParam) {
     this.webServiceProvider = DoubleCheck.provider(ConnectionModule_WebServiceFactory.create(connectionModuleParam));
@@ -134,6 +194,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     this.homeRepositoryProvider = DoubleCheck.provider(HomeRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
     this.authRepositoryProvider = DoubleCheck.provider(AuthRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
     this.settingsRepositoryProvider = DoubleCheck.provider(SettingsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
+    this.chatRepositoryProvider = DoubleCheck.provider(ChatRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
   }
 
   @Override
@@ -193,6 +254,41 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(ChangePasswordFragment changePasswordFragment) {
     injectChangePasswordFragment(changePasswordFragment);
+  }
+
+  @Override
+  public void inject(FragmentCategorySections fragmentCategorySections) {
+    injectFragmentCategorySections(fragmentCategorySections);
+  }
+
+  @Override
+  public void inject(FragmentUniversityDetails fragmentUniversityDetails) {
+    injectFragmentUniversityDetails(fragmentUniversityDetails);
+  }
+
+  @Override
+  public void inject(FragmentCourseDetails fragmentCourseDetails) {
+    injectFragmentCourseDetails(fragmentCourseDetails);
+  }
+
+  @Override
+  public void inject(FragmentCourseLessons fragmentCourseLessons) {
+    injectFragmentCourseLessons(fragmentCourseLessons);
+  }
+
+  @Override
+  public void inject(FragmentLessonDetails fragmentLessonDetails) {
+    injectFragmentLessonDetails(fragmentLessonDetails);
+  }
+
+  @Override
+  public void inject(ConversationsFragment conversationsFragment) {
+    injectConversationsFragment(conversationsFragment);
+  }
+
+  @Override
+  public void inject(ChatFragment chatFragment) {
+    injectChatFragment(chatFragment);
   }
 
   private HomeViewModel injectHomeViewModel(HomeViewModel instance) {
@@ -288,6 +384,73 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private ChangePasswordFragment injectChangePasswordFragment(ChangePasswordFragment instance) {
     ChangePasswordFragment_MembersInjector.injectViewModel(instance, changePasswordViewModel());
+    return instance;
+  }
+
+  private UniversityViewModel injectUniversityViewModel(UniversityViewModel instance) {
+    UniversityViewModel_MembersInjector.injectHomeRepository(instance, homeRepositoryProvider.get());
+    return instance;
+  }
+
+  private FragmentCategorySections injectFragmentCategorySections(
+      FragmentCategorySections instance) {
+    FragmentCategorySections_MembersInjector.injectViewModel(instance, universityViewModel());
+    return instance;
+  }
+
+  private FragmentUniversityDetails injectFragmentUniversityDetails(
+      FragmentUniversityDetails instance) {
+    FragmentUniversityDetails_MembersInjector.injectViewModel(instance, universityViewModel());
+    return instance;
+  }
+
+  private CourseViewModel injectCourseViewModel(CourseViewModel instance) {
+    CourseViewModel_MembersInjector.injectHomeRepository(instance, homeRepositoryProvider.get());
+    return instance;
+  }
+
+  private FragmentCourseDetails injectFragmentCourseDetails(FragmentCourseDetails instance) {
+    FragmentCourseDetails_MembersInjector.injectViewModel(instance, courseViewModel());
+    return instance;
+  }
+
+  private CourseLessonsViewModel injectCourseLessonsViewModel(CourseLessonsViewModel instance) {
+    CourseLessonsViewModel_MembersInjector.injectHomeRepository(instance, homeRepositoryProvider.get());
+    return instance;
+  }
+
+  private FragmentCourseLessons injectFragmentCourseLessons(FragmentCourseLessons instance) {
+    FragmentCourseLessons_MembersInjector.injectViewModel(instance, courseLessonsViewModel());
+    return instance;
+  }
+
+  private LessonDetailsViewModel injectLessonDetailsViewModel(LessonDetailsViewModel instance) {
+    LessonDetailsViewModel_MembersInjector.injectHomeRepository(instance, homeRepositoryProvider.get());
+    return instance;
+  }
+
+  private FragmentLessonDetails injectFragmentLessonDetails(FragmentLessonDetails instance) {
+    FragmentLessonDetails_MembersInjector.injectViewModel(instance, lessonDetailsViewModel());
+    return instance;
+  }
+
+  private ConversationsViewModel injectConversationsViewModel(ConversationsViewModel instance) {
+    ConversationsViewModel_MembersInjector.injectRepository(instance, chatRepositoryProvider.get());
+    return instance;
+  }
+
+  private ConversationsFragment injectConversationsFragment(ConversationsFragment instance) {
+    ConversationsFragment_MembersInjector.injectViewModel(instance, conversationsViewModel());
+    return instance;
+  }
+
+  private ChatViewModel injectChatViewModel(ChatViewModel instance) {
+    ChatViewModel_MembersInjector.injectRepository(instance, chatRepositoryProvider.get());
+    return instance;
+  }
+
+  private ChatFragment injectChatFragment(ChatFragment instance) {
+    ChatFragment_MembersInjector.injectViewModel(instance, chatViewModel());
     return instance;
   }
 

@@ -33,7 +33,7 @@ public class HomeFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) requireActivity().getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
-        viewModel.homeData();
+//        viewModel.homeData();
         setEvent();
         return binding.getRoot();
     }

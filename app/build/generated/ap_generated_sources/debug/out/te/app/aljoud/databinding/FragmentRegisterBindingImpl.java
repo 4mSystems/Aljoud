@@ -29,7 +29,7 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
     private final androidx.appcompat.widget.AppCompatEditText mboundView8;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback27;
+    private final android.view.View.OnClickListener mCallback21;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -73,14 +73,14 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
     private androidx.databinding.InverseBindingListener mboundView4androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
-            // Inverse of viewmodel.request.location
-            //         is viewmodel.request.setLocation((java.lang.String) callbackArg_0)
+            // Inverse of viewmodel.request.email
+            //         is viewmodel.request.setEmail((java.lang.String) callbackArg_0)
             java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView4);
             // localize variables for thread safety
             // viewmodel != null
             boolean viewmodelJavaLangObjectNull = false;
-            // viewmodel.request.location
-            java.lang.String viewmodelRequestLocation = null;
+            // viewmodel.request.email
+            java.lang.String viewmodelRequestEmail = null;
             // viewmodel.request
             te.app.aljoud.pages.auth.models.RegisterRequest viewmodelRequest = null;
             // viewmodel
@@ -102,7 +102,7 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
 
 
 
-                    viewmodelRequest.setLocation(((java.lang.String) (callbackArg_0)));
+                    viewmodelRequest.setEmail(((java.lang.String) (callbackArg_0)));
                 }
             }
         }
@@ -215,7 +215,7 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback27 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback21 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -263,7 +263,7 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeViewmodelRequestLatError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
+                return onChangeViewmodelRequestEmailError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 1 :
                 return onChangeViewmodelRequestPasswordError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 2 :
@@ -275,7 +275,7 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
         }
         return false;
     }
-    private boolean onChangeViewmodelRequestLatError(androidx.databinding.ObservableField<java.lang.String> ViewmodelRequestLatError, int fieldId) {
+    private boolean onChangeViewmodelRequestEmailError(androidx.databinding.ObservableField<java.lang.String> ViewmodelRequestEmailError, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
@@ -340,12 +340,11 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        boolean viewmodelRequestLatErrorJavaLangObjectNull = false;
-        java.lang.String viewmodelRequestLocation = null;
         te.app.aljoud.pages.auth.models.RegisterRequest viewmodelRequest = null;
         boolean textUtilsIsEmptyViewmodelMessage = false;
         boolean TextUtilsIsEmptyViewmodelMessage1 = false;
         java.lang.String viewmodelRequestName = null;
+        java.lang.String viewmodelRequestEmail = null;
         boolean viewmodelRequestPhoneErrorJavaLangObjectNullBooleanFalseBooleanTrue = false;
         boolean viewmodelRequestNameErrorJavaLangObjectNullBooleanFalseBooleanTrue = false;
         android.graphics.drawable.Drawable textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSAppCompatButtonNextAndroidDrawableCornerViewPrimaryDarkAppCompatButtonNextAndroidDrawableCornerViewPrimaryMedium = null;
@@ -354,7 +353,7 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
         boolean viewmodelMessageEqualsConstantsHIDEPROGRESS = false;
         java.lang.String viewmodelRequestPasswordErrorGet = null;
         java.lang.String viewmodelRequestNameErrorGet = null;
-        androidx.databinding.ObservableField<java.lang.String> viewmodelRequestLatError = null;
+        androidx.databinding.ObservableField<java.lang.String> viewmodelRequestEmailError = null;
         boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS = false;
         androidx.databinding.ObservableField<java.lang.String> viewmodelRequestPasswordError = null;
         boolean viewmodelRequestPasswordErrorJavaLangObjectNullBooleanFalseBooleanTrue = false;
@@ -364,12 +363,13 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
         java.lang.String viewmodelRequestPhone = null;
         boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = false;
         androidx.databinding.ObservableField<java.lang.String> viewmodelRequestNameError = null;
+        boolean viewmodelRequestEmailErrorJavaLangObjectNullBooleanFalseBooleanTrue = false;
         boolean viewmodelRequestPasswordErrorJavaLangObjectNull = false;
         boolean viewmodelMessageEqualsConstantsSHOWPROGRESS = false;
-        java.lang.String viewmodelRequestLatErrorGet = null;
-        boolean viewmodelRequestLatErrorJavaLangObjectNullBooleanFalseBooleanTrue = false;
         androidx.databinding.ObservableField<java.lang.String> viewmodelRequestPhoneError = null;
         int textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = 0;
+        boolean viewmodelRequestEmailErrorJavaLangObjectNull = false;
+        java.lang.String viewmodelRequestEmailErrorGet = null;
         te.app.aljoud.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
         boolean textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = false;
 
@@ -386,10 +386,10 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
                 if ((dirtyFlags & 0xb0L) != 0) {
 
                         if (viewmodelRequest != null) {
-                            // read viewmodel.request.location
-                            viewmodelRequestLocation = viewmodelRequest.getLocation();
                             // read viewmodel.request.name
                             viewmodelRequestName = viewmodelRequest.getName();
+                            // read viewmodel.request.email
+                            viewmodelRequestEmail = viewmodelRequest.getEmail();
                             // read viewmodel.request.password
                             viewmodelRequestPassword = viewmodelRequest.getPassword();
                             // read viewmodel.request.phone
@@ -399,22 +399,22 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
                 if ((dirtyFlags & 0xb1L) != 0) {
 
                         if (viewmodelRequest != null) {
-                            // read viewmodel.request.latError
-                            viewmodelRequestLatError = viewmodelRequest.latError;
+                            // read viewmodel.request.emailError
+                            viewmodelRequestEmailError = viewmodelRequest.emailError;
                         }
-                        updateRegistration(0, viewmodelRequestLatError);
+                        updateRegistration(0, viewmodelRequestEmailError);
 
 
-                        if (viewmodelRequestLatError != null) {
-                            // read viewmodel.request.latError.get()
-                            viewmodelRequestLatErrorGet = viewmodelRequestLatError.get();
+                        if (viewmodelRequestEmailError != null) {
+                            // read viewmodel.request.emailError.get()
+                            viewmodelRequestEmailErrorGet = viewmodelRequestEmailError.get();
                         }
 
 
-                        // read viewmodel.request.latError.get() == null
-                        viewmodelRequestLatErrorJavaLangObjectNull = (viewmodelRequestLatErrorGet) == (null);
+                        // read viewmodel.request.emailError.get() == null
+                        viewmodelRequestEmailErrorJavaLangObjectNull = (viewmodelRequestEmailErrorGet) == (null);
                     if((dirtyFlags & 0xb1L) != 0) {
-                        if(viewmodelRequestLatErrorJavaLangObjectNull) {
+                        if(viewmodelRequestEmailErrorJavaLangObjectNull) {
                                 dirtyFlags |= 0x200000L;
                         }
                         else {
@@ -423,8 +423,8 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
                     }
 
 
-                        // read viewmodel.request.latError.get() == null ? false : true
-                        viewmodelRequestLatErrorJavaLangObjectNullBooleanFalseBooleanTrue = ((viewmodelRequestLatErrorJavaLangObjectNull) ? (false) : (true));
+                        // read viewmodel.request.emailError.get() == null ? false : true
+                        viewmodelRequestEmailErrorJavaLangObjectNullBooleanFalseBooleanTrue = ((viewmodelRequestEmailErrorJavaLangObjectNull) ? (false) : (true));
                 }
                 if ((dirtyFlags & 0xb2L) != 0) {
 
@@ -610,7 +610,7 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
         if ((dirtyFlags & 0x80L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback27);
+            this.appCompatButtonNext.setOnClickListener(mCallback21);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.auto, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, autoandroidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView6, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView6androidTextAttrChanged);
@@ -620,15 +620,15 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.auto, viewmodelRequestName);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView4, viewmodelRequestLocation);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView4, viewmodelRequestEmail);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView6, viewmodelRequestPhone);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView8, viewmodelRequestPassword);
         }
         if ((dirtyFlags & 0xb1L) != 0) {
             // api target 1
 
-            this.inputEmail.setError(viewmodelRequestLatErrorGet);
-            this.inputEmail.setErrorEnabled(viewmodelRequestLatErrorJavaLangObjectNullBooleanFalseBooleanTrue);
+            this.inputEmail.setError(viewmodelRequestEmailErrorGet);
+            this.inputEmail.setErrorEnabled(viewmodelRequestEmailErrorJavaLangObjectNullBooleanFalseBooleanTrue);
         }
         if ((dirtyFlags & 0xb4L) != 0) {
             // api target 1
@@ -670,7 +670,7 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): viewmodel.request.latError
+        flag 0 (0x1L): viewmodel.request.emailError
         flag 1 (0x2L): viewmodel.request.passwordError
         flag 2 (0x3L): viewmodel.request.nameError
         flag 3 (0x4L): viewmodel.request.phoneError
@@ -690,8 +690,8 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
         flag 17 (0x12L): viewmodel.request.passwordError.get() == null ? false : true
         flag 18 (0x13L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
         flag 19 (0x14L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
-        flag 20 (0x15L): viewmodel.request.latError.get() == null ? false : true
-        flag 21 (0x16L): viewmodel.request.latError.get() == null ? false : true
+        flag 20 (0x15L): viewmodel.request.emailError.get() == null ? false : true
+        flag 21 (0x16L): viewmodel.request.emailError.get() == null ? false : true
         flag 22 (0x17L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
         flag 23 (0x18L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
         flag 24 (0x19L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false

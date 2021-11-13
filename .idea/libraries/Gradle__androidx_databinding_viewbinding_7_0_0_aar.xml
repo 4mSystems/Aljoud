@@ -2,9 +2,9 @@
   <library name="Gradle: androidx.databinding:viewbinding:7.0.0@aar">
     <CLASSES>
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/890ead7a225e8e8adbabf1126908806d/transformed/jetified-viewbinding-7.0.0/res" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/4db0e65e8b0136ba0bdf296570634278/transformed/jetified-viewbinding-7.0.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/4db0e65e8b0136ba0bdf296570634278/transformed/jetified-viewbinding-7.0.0/res" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/4db0e65e8b0136ba0bdf296570634278/transformed/jetified-viewbinding-7.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/890ead7a225e8e8adbabf1126908806d/transformed/jetified-viewbinding-7.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/890ead7a225e8e8adbabf1126908806d/transformed/jetified-viewbinding-7.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

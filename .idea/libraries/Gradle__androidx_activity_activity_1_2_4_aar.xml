@@ -4,7 +4,7 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/168f707ef29439461a3554d40ffff1f5/jetified-activity-1.2.4/annotations.zip!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/168f707ef29439461a3554d40ffff1f5/jetified-activity-1.2.4/annotations.zip!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/168f707ef29439461a3554d40ffff1f5/jetified-activity-1.2.4/annotations.zip!/" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/16bdb11fbb5dc0274a6fe1e0b510194e/transformed/jetified-activity-1.2.4/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/f0727e18754303d1e3315ddda5dbdbda/transformed/jetified-activity-1.2.4/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/168f707ef29439461a3554d40ffff1f5/jetified-activity-1.2.4/jars/classes.jar!/" />
@@ -17,9 +17,9 @@
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/168f707ef29439461a3554d40ffff1f5/jetified-activity-1.2.4/res" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/7e04fc1065c73d398d98d3e7210cf09f/jetified-activity-1.2.4/res" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/f0727e18754303d1e3315ddda5dbdbda/transformed/jetified-activity-1.2.4/res" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/16bdb11fbb5dc0274a6fe1e0b510194e/transformed/jetified-activity-1.2.4/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/16bdb11fbb5dc0274a6fe1e0b510194e/transformed/jetified-activity-1.2.4/res" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/16bdb11fbb5dc0274a6fe1e0b510194e/transformed/jetified-activity-1.2.4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/f0727e18754303d1e3315ddda5dbdbda/transformed/jetified-activity-1.2.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/f0727e18754303d1e3315ddda5dbdbda/transformed/jetified-activity-1.2.4/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

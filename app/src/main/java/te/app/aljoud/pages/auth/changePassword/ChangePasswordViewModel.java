@@ -31,6 +31,7 @@ public class ChangePasswordViewModel extends BaseViewModel {
 
     public void submit() {
         if (UserHelper.getInstance(MyApplication.getInstance()).getUserData() == null) {
+            getRequest().setEmail(getPassingObject().getObject());
             if (request.isPasswordsValid()) {
                 if (Validate.isMatchPassword(getRequest().getPassword(), getRequest().getConfirmPassword())) {
                     setMessage(Constants.SHOW_PROGRESS);

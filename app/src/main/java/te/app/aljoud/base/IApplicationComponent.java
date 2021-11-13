@@ -12,12 +12,17 @@ import te.app.aljoud.pages.auth.confirmCode.ConfirmCodeFragment;
 import te.app.aljoud.pages.auth.forgetPassword.ForgetPasswordFragment;
 import te.app.aljoud.pages.auth.login.LoginFragment;
 import te.app.aljoud.pages.auth.register.RegisterFragment;
-import te.app.aljoud.pages.univerity.FragmentCategorySections;
+import te.app.aljoud.pages.chat.view.ChatFragment;
+import te.app.aljoud.pages.conversations.ConversationsFragment;
+import te.app.aljoud.pages.courseDetails.FragmentCourseDetails;
+import te.app.aljoud.pages.courseDetails.FragmentCourseLessons;
+import te.app.aljoud.pages.courseDetails.FragmentLessonDetails;
+import te.app.aljoud.pages.university.FragmentCategorySections;
 import te.app.aljoud.pages.home.HomeFragment;
 import te.app.aljoud.pages.settings.AboutAppFragment;
 import te.app.aljoud.pages.settings.ContactFragment;
 import te.app.aljoud.pages.splash.SplashFragment;
-import te.app.aljoud.pages.univerity.FragmentUniversityDetails;
+import te.app.aljoud.pages.university.FragmentUniversityDetails;
 import te.app.aljoud.utils.locations.MapAddressActivity;
 
 @Singleton
@@ -50,6 +55,16 @@ public interface IApplicationComponent {
     void inject(FragmentCategorySections fragmentCategorySections);
 
     void inject(FragmentUniversityDetails fragmentUniversityDetails);
+
+    void inject(FragmentCourseDetails fragmentCourseDetails);
+
+    void inject(FragmentCourseLessons fragmentCourseLessons);
+
+    void inject(FragmentLessonDetails fragmentLessonDetails);
+
+    void inject(ConversationsFragment conversationsFragment);
+
+    void inject(ChatFragment chatFragment);
 
     @Component.Builder
     interface Builder {

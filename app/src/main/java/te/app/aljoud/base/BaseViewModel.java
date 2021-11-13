@@ -26,7 +26,6 @@ public class BaseViewModel extends ViewModel implements Observable {
     private PassingObject passingObject = new PassingObject();
     public String lang = LanguagesHelper.getCurrentLanguage();
 
-
     public BaseViewModel() {
         mCallBacks = new PropertyChangeRegistry();
     }

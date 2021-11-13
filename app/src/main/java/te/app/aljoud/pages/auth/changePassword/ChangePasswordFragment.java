@@ -27,7 +27,6 @@ public class ChangePasswordFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) requireActivity().getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
-
         setEvent();
         return binding.getRoot();
     }

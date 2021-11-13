@@ -11,37 +11,26 @@ import te.app.aljoud.utils.validation.Validate;
 public class RegisterRequest {
     @SerializedName("name")
     private String name;
-    @SerializedName("lat")
-    private String lat;
-    @SerializedName("lng")
-    private String lng;
     @SerializedName("phone")
     private String phone;
-    @SerializedName("address")
-    private String address;
+    @SerializedName("email")
+    private String email;
     @SerializedName("password")
     private String password;
     @SerializedName("old_password")
     @Expose
     private String oldPassword;
     private String confirmPassword;
-    @SerializedName("token")
+    @SerializedName("fcm_token")
     private String token;
-    @SerializedName("type")
-    private String type = "1";
-    @SerializedName("mac_address")
+    @SerializedName("device_id")
     private String macAddress;
-
-    private transient String file;
-    private transient String location;
     public transient ObservableField<String> nameError = new ObservableField<>();
+    public transient ObservableField<String> emailError = new ObservableField<>();
     public transient ObservableField<String> phoneError = new ObservableField<>();
     public transient ObservableField<String> passwordError = new ObservableField<>();
     public transient ObservableField<String> oldError = new ObservableField<>();
     public transient ObservableField<String> confirmPasswordError = new ObservableField<>();
-    public transient ObservableField<String> latError = new ObservableField<>();
-    public transient ObservableField<String> addressError = new ObservableField<>();
-    public transient ObservableField<String> fileError = new ObservableField<>();
 
     public RegisterRequest() {
     }
@@ -51,29 +40,20 @@ public class RegisterRequest {
         if (!Validate.isValid(name, Constants.FIELD)) {
             nameError.set(Validate.error);
             valid = false;
-        } else if (!Validate.isValid(phone, Constants.FIELD)) {
+        }
+        if (!Validate.isValid(email, Constants.EMAIL)) {
+            emailError.set(Validate.error);
+            valid = false;
+        }
+        if (!Validate.isValid(phone, Constants.FIELD)) {
             phoneError.set(Validate.error);
             valid = false;
-        } else if (!Validate.isValid(lat, Constants.FIELD)) {
-            latError.set(Validate.error);
-            valid = false;
-        } else if (!Validate.isValid(address, Constants.FIELD)) {
-            addressError.set(Validate.error);
-            valid = false;
-        } else if (!Validate.isValid(password, Constants.CHANGE_PASSWORD)) {
+        }
+        if (!Validate.isValid(password, Constants.CHANGE_PASSWORD)) {
             passwordError.set(Validate.error);
             valid = false;
         }
         return valid;
-//        else if (type.equals("2")) {
-//            if (!Validate.isValid(file, Constants.FIELD)) {
-//                fileError.set(Validate.error);
-//                valid = false;
-//            } else if (!Validate.isValid(special, Constants.FIELD)) {
-//                specialError.set(Validate.error);
-//                valid = false;
-//            }
-//        }
     }
 
 
@@ -157,14 +137,6 @@ public class RegisterRequest {
         this.confirmPassword = confirmPassword;
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
     public String getOldPassword() {
         return oldPassword;
     }
@@ -174,47 +146,13 @@ public class RegisterRequest {
         this.oldPassword = oldPassword;
     }
 
-    public String getFile() {
-        return file;
+    public String getEmail() {
+        return email;
     }
 
-    public void setFile(String file) {
-        fileError.set(null);
-        this.file = file;
-    }
-
-    public String getLat() {
-        return lat;
-    }
-
-    public void setLat(String lat) {
-        latError.set(null);
-        this.lat = lat;
-    }
-
-    public String getLng() {
-        return lng;
-    }
-
-    public void setLng(String lng) {
-        this.lng = lng;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        addressError.set(null);
-        this.address = address;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
+    public void setEmail(String email) {
+        emailError.set(null);
+        this.email = email;
     }
 
     public String getMacAddress() {

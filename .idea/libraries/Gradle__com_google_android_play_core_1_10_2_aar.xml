@@ -2,15 +2,15 @@
   <library name="Gradle: com.google.android.play:core:1.10.2@aar">
     <ANNOTATIONS>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d1bbbf71a7380d14eaf01db1363d3044/jetified-core-1.10.2/annotations.zip!/" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/a54ff4c39cb3242472b85f8a34e12df8/transformed/jetified-core-1.10.2/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/cd62d35d0c4f550a150d8f1dba8ce73d/transformed/jetified-core-1.10.2/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d1bbbf71a7380d14eaf01db1363d3044/jetified-core-1.10.2/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d1bbbf71a7380d14eaf01db1363d3044/jetified-core-1.10.2/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d1bbbf71a7380d14eaf01db1363d3044/jetified-core-1.10.2/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/a54ff4c39cb3242472b85f8a34e12df8/transformed/jetified-core-1.10.2/res" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/a54ff4c39cb3242472b85f8a34e12df8/transformed/jetified-core-1.10.2/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/a54ff4c39cb3242472b85f8a34e12df8/transformed/jetified-core-1.10.2/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/cd62d35d0c4f550a150d8f1dba8ce73d/transformed/jetified-core-1.10.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/cd62d35d0c4f550a150d8f1dba8ce73d/transformed/jetified-core-1.10.2/res" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/cd62d35d0c4f550a150d8f1dba8ce73d/transformed/jetified-core-1.10.2/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

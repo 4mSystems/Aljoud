@@ -22,11 +22,11 @@ public class FragmentContactsBindingImpl extends FragmentContactsBinding impleme
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback5;
+    private final android.view.View.OnClickListener mCallback3;
     @Nullable
-    private final android.view.View.OnClickListener mCallback6;
+    private final android.view.View.OnClickListener mCallback1;
     @Nullable
-    private final android.view.View.OnClickListener mCallback4;
+    private final android.view.View.OnClickListener mCallback2;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -49,9 +49,9 @@ public class FragmentContactsBindingImpl extends FragmentContactsBinding impleme
         this.youtube.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback5 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
-        mCallback6 = new te.app.aljoud.generated.callback.OnClickListener(this, 3);
-        mCallback4 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback3 = new te.app.aljoud.generated.callback.OnClickListener(this, 3);
+        mCallback1 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback2 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -125,32 +125,15 @@ public class FragmentContactsBindingImpl extends FragmentContactsBinding impleme
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.faceBook.setOnClickListener(mCallback4);
-            this.whats.setOnClickListener(mCallback6);
-            this.youtube.setOnClickListener(mCallback5);
+            this.faceBook.setOnClickListener(mCallback1);
+            this.whats.setOnClickListener(mCallback3);
+            this.youtube.setOnClickListener(mCallback2);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.aljoud.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.toYoutube();
-                }
-                break;
-            }
             case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -182,6 +165,23 @@ public class FragmentContactsBindingImpl extends FragmentContactsBinding impleme
 
 
                     viewmodel.toFacebook();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.aljoud.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.toYoutube();
                 }
                 break;
             }

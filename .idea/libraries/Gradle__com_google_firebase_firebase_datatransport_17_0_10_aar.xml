@@ -12,9 +12,9 @@
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/eab87ddae578e8f4ea9ce61f1a9b21b2/jetified-firebase-datatransport-17.0.10/res" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/e9b97c58fee113b9cd04562da2956845/jetified-firebase-datatransport-17.0.10/res" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/d22c593373d4e997878313a5e80cf76b/transformed/jetified-firebase-datatransport-17.0.10/res" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/fbdadddef44c9c555a2de22740b0ea8d/transformed/jetified-firebase-datatransport-17.0.10/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/fbdadddef44c9c555a2de22740b0ea8d/transformed/jetified-firebase-datatransport-17.0.10/res" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/fbdadddef44c9c555a2de22740b0ea8d/transformed/jetified-firebase-datatransport-17.0.10/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/d22c593373d4e997878313a5e80cf76b/transformed/jetified-firebase-datatransport-17.0.10/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/d22c593373d4e997878313a5e80cf76b/transformed/jetified-firebase-datatransport-17.0.10/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/modules-2/files-2.1/com.google.firebase/firebase-datatransport/17.0.10/de83e2d6f9c9315c359babdcf03dec170fd6980b/firebase-datatransport-17.0.10-javadoc.jar!/" />

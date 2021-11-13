@@ -62,7 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="start"
-                android:background="@color/white"
+                android:background="@color/colorPrimary"
                 android:orientation="vertical">
 
                 <androidx.core.widget.NestedScrollView
@@ -75,41 +75,29 @@
                         android:layout_below="@+id/rl_navigation_drawer_logo"
                         android:orientation="vertical">
 
-                        <de.hdodenhof.circleimageview.CircleImageView
+                        <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/vv_navigation_drawer_image"
                             android:layout_width="@dimen/dp60h"
                             android:layout_height="@dimen/dp60h"
                             android:layout_gravity="center"
                             android:layout_marginTop="@dimen/dp25h"
-                            android:src="@drawable/logo"
-                            app:civ_border_color="@color/colorPrimary"
-                            app:civ_border_width="2dp"
-                            android:tag="binding_1"                                          />
+                            android:src="@drawable/logo" />
+
 
                         <te.app.aljoud.customViews.views.CustomTextViewMedium
-                            android:id="@+id/tv_user_login"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="@dimen/dp8h"
-                            android:tag="binding_2"                                        
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="@color/colorPrimaryDark" />
-
-                        <te.app.aljoud.customViews.views.CustomTextViewMedium
-                            android:id="@+id/tv_members"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/dp12w"
-                            android:layout_marginTop="@dimen/dp15h"
+                            android:layout_marginTop="@dimen/dp25h"
                             android:layout_marginEnd="@dimen/dp12w"
-                            android:drawableStart="@drawable/ic_more_members"
+                            android:drawableStart="@drawable/ic_chat"
                             android:drawablePadding="@dimen/dp8w"
+                            android:drawableTint="@color/white"
                             android:gravity="center_vertical"
-                            android:tag="binding_3"                                               
-                            android:text="@string/members"
+                            android:tag="binding_1"                                               
+                            android:text="@string/inbox"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="@color/colordark"
+                            android:textColor="@color/white"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -118,10 +106,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="@dimen/dp15h"
-                            android:background="@color/line_color"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/tv_members" />
+                            android:background="@color/line_color" />
 
                         <te.app.aljoud.customViews.views.CustomTextViewMedium
                             android:id="@+id/tv_agents"
@@ -130,13 +115,13 @@
                             android:layout_marginStart="@dimen/dp12w"
                             android:layout_marginTop="@dimen/dp15h"
                             android:layout_marginEnd="@dimen/dp12w"
-                            android:drawableStart="@drawable/ic_more_members"
+                            android:drawableStart="@drawable/ic_assignment"
                             android:drawablePadding="@dimen/dp8w"
                             android:gravity="center_vertical"
-                            android:tag="binding_4"                                              
-                            android:text="@string/agents"
+                            android:tag="binding_2"                                              
+                            android:text="@string/my_courses"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="@color/colordark"
+                            android:textColor="@color/white"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/view_profile" />
 
@@ -157,13 +142,13 @@
                             android:layout_marginStart="@dimen/dp12w"
                             android:layout_marginTop="@dimen/dp15h"
                             android:layout_marginEnd="@dimen/dp12w"
-                            android:drawableStart="@drawable/ic_support_agent"
+                            android:drawableStart="@drawable/ic_offer"
                             android:drawablePadding="@dimen/dp8w"
                             android:gravity="center_vertical"
-                            android:tag="binding_5"                                                          
-                            android:text="@string/customer_service"
+                            android:tag="binding_3"                                                          
+                            android:text="@string/offers"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="@color/colordark"
+                            android:textColor="@color/white"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/view_agent" />
 
@@ -178,6 +163,33 @@
                             app:layout_constraintTop_toBottomOf="@id/tv_contact" />
 
                         <te.app.aljoud.customViews.views.CustomTextViewMedium
+                            android:id="@+id/tv_terms"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp15h"
+                            android:layout_marginEnd="@dimen/dp12w"
+                            android:drawableStart="@drawable/ic_request_course"
+                            android:drawablePadding="@dimen/dp8w"
+                            android:tag="binding_4"                                              
+                            android:text="@string/request_course"
+                            android:textAlignment="viewStart"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/view_support" />
+
+                        <View
+                            android:id="@+id/view_terms"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp15h"
+                            android:background="@color/line_color"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_terms" />
+
+                        <te.app.aljoud.customViews.views.CustomTextViewMedium
                             android:id="@+id/tv_contact"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -187,10 +199,10 @@
                             android:drawableStart="@drawable/ic_more_contact"
                             android:drawablePadding="@dimen/dp8w"
                             android:gravity="center_vertical"
-                            android:tag="binding_6"                                                
+                            android:tag="binding_5"                                                
                             android:text="@string/contact_us"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="@color/colordark"
+                            android:textColor="@color/white"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/view_agent" />
 
@@ -214,11 +226,11 @@
                             android:layout_marginEnd="@dimen/dp12w"
                             android:drawableStart="@drawable/ic_more_admin_support"
                             android:drawablePadding="@dimen/dp8w"
-                            android:tag="binding_7"                                              
+                            android:tag="binding_6"                                              
                             android:text="@string/about"
                             android:textAlignment="viewStart"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="@color/colordark"
+                            android:textColor="@color/white"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/view_contact" />
@@ -232,33 +244,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_support" />
-                        <!--Terms App-->
-                        <te.app.aljoud.customViews.views.CustomTextViewMedium
-                            android:id="@+id/tv_terms"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/dp12w"
-                            android:layout_marginTop="@dimen/dp15h"
-                            android:layout_marginEnd="@dimen/dp12w"
-                            android:drawableStart="@drawable/ic_more_terms"
-                            android:drawablePadding="@dimen/dp8w"
-                            android:tag="binding_8"                                              
-                            android:text="@string/suggest"
-                            android:textAlignment="viewStart"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="@color/colordark"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/view_support" />
 
-                        <View
-                            android:id="@+id/view_terms"
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_marginTop="@dimen/dp15h"
-                            android:background="@color/line_color"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/tv_terms" />
                         <!--Share App-->
                         <te.app.aljoud.customViews.views.CustomTextViewMedium
                             android:id="@+id/tv_share"
@@ -269,11 +255,11 @@
                             android:layout_marginEnd="@dimen/dp12w"
                             android:drawableStart="@drawable/ic_more_share"
                             android:drawablePadding="@dimen/dp12w"
-                            android:tag="binding_9"                                                  
+                            android:tag="binding_7"                                                  
                             android:text="@string/share"
                             android:textAlignment="viewStart"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="@color/colordark"
+                            android:textColor="@color/white"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/view_terms" />
 
@@ -296,11 +282,11 @@
                             android:layout_marginEnd="@dimen/dp12w"
                             android:drawableStart="@drawable/ic_more_rate"
                             android:drawablePadding="@dimen/dp8w"
-                            android:tag="binding_10"                                                
+                            android:tag="binding_8"                                                 
                             android:text="@string/rate"
                             android:textAlignment="viewStart"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="@color/colordark"
+                            android:textColor="@color/white"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/view_share" />
 
@@ -322,11 +308,11 @@
                             android:layout_marginEnd="@dimen/dp12w"
                             android:drawableStart="@drawable/ic_language"
                             android:drawablePadding="@dimen/dp8w"
-                            android:tag="binding_11"                                                
+                            android:tag="binding_9"                                                 
                             android:text="@string/language"
                             android:textAlignment="viewStart"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="@color/colordark"
+                            android:textColor="@color/white"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_rate" />
 
@@ -348,11 +334,10 @@
                             android:drawableStart="@drawable/ic_logout"
                             android:drawablePadding="@dimen/dp6w"
                             android:gravity="center"
-                            android:tag="binding_12"                                              
+                            android:tag="binding_10"                                              
                             android:text="@string/logout"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="@color/colordark"
-                            android:visibility="gone" />
+                            android:textColor="@color/white" />
 
                         <te.app.aljoud.customViews.tesDialog.TesImageDialog
                             android:id="@+id/grand_logo"

@@ -26,23 +26,23 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
     private final androidx.appcompat.widget.AppCompatEditText mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback23;
+    private final android.view.View.OnClickListener mCallback16;
     // values
     // listeners
     // Inverse Binding Event Handlers
     private androidx.databinding.InverseBindingListener mboundView1androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
-            // Inverse of viewmodel.request.phone
-            //         is viewmodel.request.setPhone((java.lang.String) callbackArg_0)
+            // Inverse of viewmodel.request.email
+            //         is viewmodel.request.setEmail((java.lang.String) callbackArg_0)
             java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView1);
             // localize variables for thread safety
             // viewmodel != null
             boolean viewmodelJavaLangObjectNull = false;
+            // viewmodel.request.email
+            java.lang.String viewmodelRequestEmail = null;
             // viewmodel.request
             te.app.aljoud.pages.auth.models.ForgetPasswordRequest viewmodelRequest = null;
-            // viewmodel.request.phone
-            java.lang.String viewmodelRequestPhone = null;
             // viewmodel
             te.app.aljoud.pages.auth.forgetPassword.ForgetPasswordViewModel viewmodel = mViewmodel;
             // viewmodel.request != null
@@ -62,7 +62,7 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
 
 
 
-                    viewmodelRequest.setPhone(((java.lang.String) (callbackArg_0)));
+                    viewmodelRequest.setEmail(((java.lang.String) (callbackArg_0)));
                 }
             }
         }
@@ -88,7 +88,7 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback23 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback16 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -164,10 +164,10 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
             mDirtyFlags = 0;
         }
         te.app.aljoud.pages.auth.models.ForgetPasswordRequest viewmodelRequest = null;
-        java.lang.String viewmodelRequestPhone = null;
         boolean textUtilsIsEmptyViewmodelMessage = false;
         boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = false;
         boolean TextUtilsIsEmptyViewmodelMessage1 = false;
+        java.lang.String viewmodelRequestEmail = null;
         boolean viewmodelMessageEqualsConstantsSHOWPROGRESS = false;
         android.graphics.drawable.Drawable textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSAppCompatButtonNextAndroidDrawableCornerViewPrimaryDarkAppCompatButtonNextAndroidDrawableCornerViewPrimaryMedium = null;
         java.lang.String viewmodelMessage = null;
@@ -189,8 +189,8 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
 
 
                     if (viewmodelRequest != null) {
-                        // read viewmodel.request.phone
-                        viewmodelRequestPhone = viewmodelRequest.getPhone();
+                        // read viewmodel.request.email
+                        viewmodelRequestEmail = viewmodelRequest.getEmail();
                     }
             }
 
@@ -284,13 +284,13 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback23);
+            this.appCompatButtonNext.setOnClickListener(mCallback16);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView1, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView1androidTextAttrChanged);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView1, viewmodelRequestPhone);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView1, viewmodelRequestEmail);
         }
     }
     // Listener Stub Implementations

@@ -4,29 +4,14 @@ import com.google.gson.annotations.SerializedName;
 
 public class UserData {
 
-	@SerializedName("suspend")
-	private String suspend;
-
 	@SerializedName("image")
 	private String image;
 
-	@SerializedName("address")
-	private String address;
-
-	@SerializedName("lng")
-	private String lng;
-
-	@SerializedName("jwt")
+	@SerializedName("api_token")
 	private String jwt;
-
-	@SerializedName("active")
-	private String active;
 
 	@SerializedName("type")
 	private String type;
-
-	@SerializedName("token")
-	private String token;
 
 	@SerializedName("phone")
 	private String phone;
@@ -43,47 +28,24 @@ public class UserData {
 	@SerializedName("email")
 	private Object email;
 
-	@SerializedName("lat")
-	private String lat;
+	@SerializedName("qr_image")
+	private String qr_image;
 
-	public String getSuspend(){
-		return suspend;
-	}
 
 	public String getImage(){
 		return image;
-	}
-
-	public String getAddress(){
-		return address;
-	}
-
-	public String getLng(){
-		return lng;
 	}
 
 	public String getJwt(){
 		return jwt;
 	}
 
-	public String getActive(){
-		return active;
-	}
-
 	public String getType(){
 		return type;
 	}
 
-	public String getToken(){
-		return token;
-	}
-
 	public String getPhone(){
 		return phone;
-	}
-
-	public String getMacAddress(){
-		return macAddress;
 	}
 
 	public String getName(){
@@ -98,7 +60,11 @@ public class UserData {
 		return email;
 	}
 
-	public String getLat(){
-		return lat;
+	public String getMacAddress() {
+		return macAddress;
+	}
+
+	public String getQr_image() {
+		return qr_image;
 	}
 }

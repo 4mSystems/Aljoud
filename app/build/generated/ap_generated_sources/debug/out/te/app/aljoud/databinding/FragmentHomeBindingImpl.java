@@ -1,8 +1,6 @@
 package te.app.aljoud.databinding;
 import te.app.aljoud.R;
 import te.app.aljoud.BR;
-import te.app.aljoud.pages.home.adapters.UniversityAdapter;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
@@ -117,7 +115,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        UniversityAdapter viewmodelUniversityAdapter = null;
+        te.app.aljoud.pages.home.adapters.UniversityAdapter viewmodelCategoriesAdapter = null;
         te.app.aljoud.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
 
         if ((dirtyFlags & 0x7L) != 0) {
@@ -126,14 +124,14 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
 
                 if (viewmodel != null) {
                     // read viewmodel.categoriesAdapter
-                    viewmodelUniversityAdapter = viewmodel.getCategoriesAdapter();
+                    viewmodelCategoriesAdapter = viewmodel.getCategoriesAdapter();
                 }
         }
         // batch finished
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
-            te.app.aljoud.base.ApplicationBinding.getItemsV2Binding(this.mboundView1, viewmodelUniversityAdapter, "2", "1");
+            te.app.aljoud.base.ApplicationBinding.getItemsV2Binding(this.mboundView1, viewmodelCategoriesAdapter, "2", "1");
         }
     }
     // Listener Stub Implementations

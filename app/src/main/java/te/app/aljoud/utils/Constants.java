@@ -3,7 +3,7 @@ package te.app.aljoud.utils;
 public class Constants {
 
     public static final int PRODUCTS = 1;
-    public static final String BRAND_MODEL_RESPONSE = "BRAND_MODEL_RESPONSE";
+    public static final String IMAGE = "IMAGE";
 
     public final static String CART = "CART";
     public final static String SEARCH = "SEARCH";
@@ -74,6 +74,7 @@ public class Constants {
     public static final String EXTERNAL_ACCESSORIES = "10"; //اكسسوار خارجى
     public static final int WEB_VIEW_REQUEST = 10000;
     public static final String TELECOM_NETWORKS = "TELECOM_NETWORKS";
+    public static  boolean DATA_CHANGED = false;
     public static int PART_REQUEST = 4000;
     public static int BRAND_REQUEST = 5000;
     public static int MODEL_REQUEST = 7000;

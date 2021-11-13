@@ -54,7 +54,7 @@ public class ParentActivity extends AppCompatActivity implements
         immediateUpdateActivity = new ImmediateUpdateActivity(this);
         ConnectionLiveData = new MutableLiveData<>();
         initializeLanguage();
-//        initializeToken();
+        initializeToken();
         initializeProgress();
     }
 

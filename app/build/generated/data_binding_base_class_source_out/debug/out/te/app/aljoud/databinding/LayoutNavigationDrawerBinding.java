@@ -9,11 +9,11 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.drawerlayout.widget.DrawerLayout;
-import de.hdodenhof.circleimageview.CircleImageView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.aljoud.R;
@@ -53,9 +53,6 @@ public abstract class LayoutNavigationDrawerBinding extends ViewDataBinding {
   public final CustomTextViewMedium tvLanguage;
 
   @NonNull
-  public final CustomTextViewMedium tvMembers;
-
-  @NonNull
   public final CustomTextViewMedium tvRate;
 
   @NonNull
@@ -66,9 +63,6 @@ public abstract class LayoutNavigationDrawerBinding extends ViewDataBinding {
 
   @NonNull
   public final CustomTextViewMedium tvTerms;
-
-  @NonNull
-  public final CustomTextViewMedium tvUserLogin;
 
   @NonNull
   public final View viewAgent;
@@ -92,7 +86,7 @@ public abstract class LayoutNavigationDrawerBinding extends ViewDataBinding {
   public final View viewTerms;
 
   @NonNull
-  public final CircleImageView vvNavigationDrawerImage;
+  public final AppCompatImageView vvNavigationDrawerImage;
 
   @Bindable
   protected MenuViewModel mMenuViewModel;
@@ -103,11 +97,10 @@ public abstract class LayoutNavigationDrawerBinding extends ViewDataBinding {
       RelativeLayout rlNavigationDrawer, RelativeLayout rlNavigationDrawerHeader,
       CustomTextViewMedium tvAgents, CustomTextViewMedium tvContact,
       CustomTextViewMedium tvCustomerService, CustomTextViewMedium tvLanguage,
-      CustomTextViewMedium tvMembers, CustomTextViewMedium tvRate, CustomTextViewMedium tvShare,
-      CustomTextViewMedium tvSupport, CustomTextViewMedium tvTerms,
-      CustomTextViewMedium tvUserLogin, View viewAgent, View viewContact, View viewCustomerService,
+      CustomTextViewMedium tvRate, CustomTextViewMedium tvShare, CustomTextViewMedium tvSupport,
+      CustomTextViewMedium tvTerms, View viewAgent, View viewContact, View viewCustomerService,
       View viewProfile, View viewShare, View viewSupport, View viewTerms,
-      CircleImageView vvNavigationDrawerImage) {
+      AppCompatImageView vvNavigationDrawerImage) {
     super(_bindingComponent, _root, _localFieldCount);
     this.dlMainNavigationMenu = dlMainNavigationMenu;
     this.flHomeContainer = flHomeContainer;
@@ -119,12 +112,10 @@ public abstract class LayoutNavigationDrawerBinding extends ViewDataBinding {
     this.tvContact = tvContact;
     this.tvCustomerService = tvCustomerService;
     this.tvLanguage = tvLanguage;
-    this.tvMembers = tvMembers;
     this.tvRate = tvRate;
     this.tvShare = tvShare;
     this.tvSupport = tvSupport;
     this.tvTerms = tvTerms;
-    this.tvUserLogin = tvUserLogin;
     this.viewAgent = viewAgent;
     this.viewContact = viewContact;
     this.viewCustomerService = viewCustomerService;

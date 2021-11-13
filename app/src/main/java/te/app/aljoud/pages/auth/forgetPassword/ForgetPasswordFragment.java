@@ -46,7 +46,7 @@ public class ForgetPasswordFragment extends BaseFragment {
             if (((Mutable) o).message.equals(Constants.FORGET_PASSWORD)) {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
                 finishActivity();
-                MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(Constants.CHECK_CONFIRM_NAV_FORGET, viewModel.getRequest().getPhone()), null, ConfirmCodeFragment.class.getName(), null);
+                MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(Constants.CHECK_CONFIRM_NAV_FORGET, viewModel.getRequest().getEmail()), null, ConfirmCodeFragment.class.getName(), null);
             }
         });
     }

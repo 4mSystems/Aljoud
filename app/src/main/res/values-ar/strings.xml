@@ -47,10 +47,10 @@
     <string name="suggest_title">يسعدنا تلقى اقتراحاتكم وشكواكم ونسعى جاهدا لحلها</string>
     <string name="contact_title">تواصل معنا للرد على استفسارتك</string>
     <string name="about">عن التطبيق</string>
-    <string name="suggest">الشكاوى والمقترحات</string>
+    <string name="request_course">الشكاوى والمقترحات</string>
     <string name="share">مشاركة التطبيق</string>
     <string name="rate">تقييم التطبيق</string>
-    <string name="members">العملاء</string>
+    <string name="inbox">العملاء</string>
     <string name="agents">الوكلاء</string>
     <string name="startApp">بدأ التطبيق</string>
     <string name="next">التالى</string>
@@ -123,7 +123,7 @@
     <string name="logout">تسجيل الخروج</string>
     <string name="cancel">إلغاء</string>
     <string name="logout_warning">هل تريد تسجيل الخروج</string>
-    <string name="customer_service">الدعم الفنى</string>
+    <string name="offers">الدعم الفنى</string>
     <string name="suggestions"><u>التوافقات المختارة (</u></string>
     <string name="brackts"><u>)</u></string>
     <string name="selected_suggestions_title">التوافقات المختاره</string>
@@ -145,5 +145,30 @@
     <string name="subjects">Subjects</string>
     <string name="lessons">Lessons</string>
     <string name="students">Students :</string>
+    <string name="instructor_card_title">Instractor</string>
+    <string name="course_card_title">This course includes</string>
+    <string name="course_content">Course content</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="course_ask">Ask In Course</string>
+    <string name="reply">Reply...</string>
+    <string name="course_time">Hours on-demand video</string>
+    <string name="course_article">Articles</string>
+    <string name="course_quiz">Quiz</string>
+    <string name="course_access">Full lifetime access</string>
+    <string name="course_discuss">Private discuss on every lessons</string>
+    <string name="course_certificate">Certificate of completion</string>
+    <string name="account_number">Account number :</string>
+    <string name="policy_warning">لا احلل النشر والبيع</string>
+    <string name="policy_warning1">لا يسمح التطبيق بخاصية التقاط الشاشة او تصوير الفيديو ومن بفعل ذلك بطرق اخرى خارج التطبيق يعرض نفسه للمسألة القانونية </string>
+    <string name="account_qr">Account QR</string>
+    <string name="rate_course">Rate course</string>
+    <string name="rate_now">Rate now</string>
+    <string name="exam">Exams</string>
+    <string name="ask_lesson">Ask in lesson</string>
+    <string name="videos">Videos</string>
+    <string name="quizzes">Quizzes</string>
+    <string name="articles">Articles</string>
+    <string name="no">No</string>
+    <string name="invalidEmail">Invlaid email ,Aljoud@gmail.com</string>
 
 </resources>

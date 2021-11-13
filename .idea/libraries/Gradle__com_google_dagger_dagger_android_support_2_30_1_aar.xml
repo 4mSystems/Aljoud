@@ -10,9 +10,9 @@
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/041f26131918778a7d2a713c11cc56a0/jetified-dagger-android-support-2.30.1/res" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/6a26cecb8c7da089fdc40fbffeeef749/jetified-dagger-android-support-2.30.1/res" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/d81f22e68535883a1facc880eaad4d6b/transformed/jetified-dagger-android-support-2.30.1/res" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/b5ebc86f3af9ad2962745700d37c124b/transformed/jetified-dagger-android-support-2.30.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/b5ebc86f3af9ad2962745700d37c124b/transformed/jetified-dagger-android-support-2.30.1/res" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/b5ebc86f3af9ad2962745700d37c124b/transformed/jetified-dagger-android-support-2.30.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/d81f22e68535883a1facc880eaad4d6b/transformed/jetified-dagger-android-support-2.30.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/d81f22e68535883a1facc880eaad4d6b/transformed/jetified-dagger-android-support-2.30.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/modules-2/files-2.1/com.google.dagger/dagger-android-support/2.30.1/a57324d8268eb3bdd816ab1fe43a21e4dd7c235/dagger-android-support-2.30.1-javadoc.jar!/" />

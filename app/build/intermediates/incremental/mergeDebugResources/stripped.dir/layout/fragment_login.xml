@@ -20,7 +20,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/logo" android:tag="layout/fragment_login_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" tools:context="te.app.moon.views.fragments.SplashFragment">
+        android:background="@color/colorPrimary" android:tag="layout/fragment_login_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" tools:context="te.app.moon.views.fragments.SplashFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -43,10 +43,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp10h"
-                app:cardBackgroundColor="@color/overlayBackground"
+                app:cardBackgroundColor="@color/circle_shadow"
                 app:cardCornerRadius="@dimen/dp8h"
-                app:cardElevation="2dp"
-                app:cardUseCompatPadding="true"
                 app:layout_constraintTop_toBottomOf="@id/btn_lang">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -152,7 +150,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/dp14w"
-                        android:tag="binding_4"                             
+                        android:tag="binding_4"                       
                         android:text="@string/signup"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/white"

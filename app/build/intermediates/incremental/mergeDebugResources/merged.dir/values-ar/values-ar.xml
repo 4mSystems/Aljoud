@@ -36,19 +36,25 @@
     <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"مشاركة مع <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
     <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"تصغير"</string>
     <string name="about">عن التطبيق</string>
+    <string name="account_number">Account number :</string>
+    <string name="account_qr">Account QR</string>
     <string name="account_type">نوع الحساب</string>
     <string name="add_cart">أضف الى عربه السله</string>
     <string name="add_cart_successfully">تم الاضافه بنجاح الى السلة</string>
     <string name="add_match">اقتراح توافق</string>
     <string name="agents">الوكلاء</string>
+    <string name="all">All</string>
     <string name="all_courses">All courses</string>
     <string name="app_name">Aljoud</string>
     <string name="arabic">العربية</string>
+    <string name="articles">Articles</string>
+    <string name="ask_lesson">Ask in lesson</string>
     <string name="bottomsheet_action_expand_halfway">توسيع البطاقة السفلية</string>
     <string name="brackts"><u>)</u></string>
     <string name="brand">الماركة :</string>
     <string name="brand_cart"><font fgcolor="#0076BC">الماركة :</font></string>
     <string name="brand_name_hint">اختار الماركة من هنا</string>
+    <string name="buy_now">Buy Now</string>
     <string name="call">Call</string>
     <string name="cancel">إلغاء</string>
     <string name="cart">السلة</string>
@@ -97,7 +103,15 @@
     <string name="contact_us">تواصل معنا</string>
     <string name="continue_buy">نشوف حاجة تانية ؟</string>
     <string name="country_hint">اختار الدولة</string>
-    <string name="customer_service">الدعم الفنى</string>
+    <string name="course_access">Full lifetime access</string>
+    <string name="course_article">Articles</string>
+    <string name="course_ask">Ask In Course</string>
+    <string name="course_card_title">This course includes</string>
+    <string name="course_certificate">Certificate of completion</string>
+    <string name="course_content">Course content</string>
+    <string name="course_discuss">Private discuss on every lessons</string>
+    <string name="course_quiz">Quiz</string>
+    <string name="course_time">Hours on-demand video</string>
     <string name="department"><font fgcolor="#0076BC">القسم :</font></string>
     <string name="department_name_hint">اختار القسم من هنا</string>
     <string name="description">معلومات إضافية</string>
@@ -108,6 +122,7 @@
     <string name="email_hint">E-mail</string>
     <string name="english">English</string>
     <string name="error_icon_content_description">خطأ</string>
+    <string name="exam">Exams</string>
     <string name="exposed_dropdown_menu_content_description">عرض القائمة المنسدلة</string>
     <string msgid="4133737464567140336" name="fcm_fallback_notification_channel_label">"متنوعة"</string>
     <string name="fieldRequired">حقل مطلوب</string>
@@ -126,9 +141,13 @@
     <string name="ic_name_title">إسم  iC</string>
     <string name="ic_warning">يرجى اختيار ic</string>
     <string name="icon_content_description">رمز مربع الحوار</string>
+    <string name="inbox">العملاء</string>
+    <string name="instructor_card_title">Instractor</string>
+    <string name="invalidEmail">Invlaid email ,Aljoud@gmail.com</string>
     <string name="invalidPassword">كلمة المرور ضعيفة ، على الأقل 8 أحرف وأرقام</string>
     <string name="item_view_role_description">علامة تبويب</string>
     <string name="language">تغيير اللغة</string>
+    <string name="lessons">Lessons</string>
     <string name="location">يرجى اختيار العنوان</string>
     <string name="location_address">يرجى إدخال عنوانك</string>
     <string name="location_selected">تم اختيار موقعك بنجاح</string>
@@ -152,7 +171,6 @@
     <string name="material_timepicker_pm">مساءً</string>
     <string name="material_timepicker_select_time">اختيار الوقت</string>
     <string name="material_timepicker_text_input_mode_description">يُرجى التبديل إلى وضع إدخال النص لإدخال الوقت.</string>
-    <string name="members">العملاء</string>
     <string name="menuHome">الرئيسيه</string>
     <string name="menuMore">اخرى</string>
     <string name="menuProducts">منتجات المنقذ</string>
@@ -196,6 +214,8 @@
     <string name="mtrl_picker_toggle_to_year_selection">انقر للتبديل إلى اختيار عام</string>
     <string name="my_courses">My courses</string>
     <string name="next">التالى</string>
+    <string name="no">No</string>
+    <string name="offers">الدعم الفنى</string>
     <string name="old_password">كلمة المرور القديمة</string>
     <string name="on_hand">عند الاستلام :</string>
     <string name="part_warning_warning">اختار القسم اولا</string>
@@ -207,6 +227,8 @@
     <string name="password_toggle_content_description">عرض كلمة المرور</string>
     <string name="phone_hint">رقم الهاتف</string>
     <string name="please_select_another_file">Please select another file</string>
+    <string name="policy_warning">لا احلل النشر والبيع</string>
+    <string name="policy_warning1">لا يسمح التطبيق بخاصية التقاط الشاشة او تصوير الفيديو ومن بفعل ذلك بطرق اخرى خارج التطبيق يعرض نفسه للمسألة القانونية </string>
     <string name="prePayment_text">مقدم الحجز :</string>
     <string name="product_color_hint">اختار لون المنتج :</string>
     <string name="product_color_warning">اختر اللون</string>
@@ -215,9 +237,14 @@
     <string name="product_warning2">سيتم فتح باب الحجز ابتداء من ---- الى ---</string>
     <string name="product_warning3">تم غلق باب الحجز لشهر ---</string>
     <string name="quanity">الكمية</string>
+    <string name="quizzes">Quizzes</string>
     <string name="rate">تقييم التطبيق</string>
+    <string name="rate_course">Rate course</string>
+    <string name="rate_now">Rate now</string>
     <string name="register_header">أخبرنا عن نفسك لإنشاء حساب مثالي لك</string>
     <string name="register_name">الاسم</string>
+    <string name="reply">Reply...</string>
+    <string name="request_course">الشكاوى والمقترحات</string>
     <string name="right_reserved">\@2021 A</string>
     <string name="search">اكتب اللى بتدور عليه…</string>
     <string name="search_btn">ابحث</string>
@@ -231,9 +258,11 @@
     <string name="share">مشاركة التطبيق</string>
     <string name="shop"> فنى صيانه</string>
     <string name="signup">SignUp</string>
+    <string name="special">Specialties :</string>
     <string name="startApp">بدأ التطبيق</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
-    <string name="suggest">الشكاوى والمقترحات</string>
+    <string name="students">Students :</string>
+    <string name="subjects">Subjects</string>
     <string name="suggest_title">يسعدنا تلقى اقتراحاتكم وشكواكم ونسعى جاهدا لحلها</string>
     <string name="suggestions"><u>التوافقات المختارة (</u></string>
     <string name="suggestions_warning">يجب إختيار توافق واحد ع الاقل</string>
@@ -246,6 +275,7 @@
     <string name="user">عميل</string>
     <string name="verify">تأكيد</string>
     <string name="verify_phone">التحقق من الهاتف</string>
+    <string name="videos">Videos</string>
     <string name="whats">Whatsapp</string>
     <string name="write_ic">اكتب رقم ال IC بنفسك</string>
     <string name="write_ic_number">اكتب رقم ال IC</string>

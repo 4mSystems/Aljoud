@@ -14,9 +14,9 @@
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/d4bd40e49f6448cea437a4c8894f06af/palette-1.0.0/res" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/229edcbf6464dcc6b4c4ba3769807540/palette-1.0.0/res" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/c90ab4f5cbc5610dcba38e18c4a26f5e/transformed/palette-1.0.0/res" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/cd6d68b3c697b5e2b2e879a60ad2583d/transformed/palette-1.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/cd6d68b3c697b5e2b2e879a60ad2583d/transformed/palette-1.0.0/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/cd6d68b3c697b5e2b2e879a60ad2583d/transformed/palette-1.0.0/res" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/c90ab4f5cbc5610dcba38e18c4a26f5e/transformed/palette-1.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/c90ab4f5cbc5610dcba38e18c4a26f5e/transformed/palette-1.0.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

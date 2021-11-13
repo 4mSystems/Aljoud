@@ -8,7 +8,7 @@
 
         <variable
             name="viewmodel"
-            type="te.app.aljoud.pages.univerity.viewModel.UniversityViewModel" />
+            type="te.app.aljoud.pages.university.viewModel.UniversityViewModel" />
     </data>
 
 

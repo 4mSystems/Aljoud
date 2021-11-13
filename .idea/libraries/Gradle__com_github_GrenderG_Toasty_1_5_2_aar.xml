@@ -4,9 +4,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/886a104b6332c92832707090bef33be7/jetified-Toasty-1.5.2/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/886a104b6332c92832707090bef33be7/jetified-Toasty-1.5.2/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/886a104b6332c92832707090bef33be7/jetified-Toasty-1.5.2/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/485b5847438cdebd10f7bf77be725936/transformed/jetified-Toasty-1.5.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/485b5847438cdebd10f7bf77be725936/transformed/jetified-Toasty-1.5.2/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/485b5847438cdebd10f7bf77be725936/transformed/jetified-Toasty-1.5.2/res" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/d17bbd0870c4cfc10e2844cde64388e8/transformed/jetified-Toasty-1.5.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/d17bbd0870c4cfc10e2844cde64388e8/transformed/jetified-Toasty-1.5.2/res" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/d17bbd0870c4cfc10e2844cde64388e8/transformed/jetified-Toasty-1.5.2/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

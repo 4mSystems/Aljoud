@@ -79,8 +79,7 @@ public class ConfirmCodeFragment extends BaseFragment {
             if (((Mutable) o).message.equals(Constants.CONFIRM_CODE)) {
                 toastMessage(((UsersResponse) mutable.object).mMessage);
                 if (viewModel.getPassingObject().getId() != Constants.CHECK_CONFIRM_NAV_REGISTER) {
-                    UserHelper.getInstance(requireActivity()).addJwt(((UsersResponse) ((Mutable) o).object).getUserData().getJwt());
-                    MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(((UsersResponse)mutable.object).getUserData().getType()),null,ChangePasswordFragment.class.getName(), null);
+                    MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getPassingObject().getObject()),null,ChangePasswordFragment.class.getName(), null);
                 }
                 viewModel.goBack(requireActivity());
             } else if (((Mutable) o).message.equals(Constants.FORGET_PASSWORD)) {

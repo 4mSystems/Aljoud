@@ -7,9 +7,9 @@
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/c6e1a4363bd9e8ccc4de2d66c6d0253b/jetified-Android-AdvancedWebView-v3.2.1/res" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/6b5992d6d48f6857b8a1048236ed829e/jetified-Android-AdvancedWebView-v3.2.1/res" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/a4030889fb7ad4858402fdaf7b4e66dd/transformed/jetified-Android-AdvancedWebView-v3.2.1/res" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/1393e64cbc60ff51408dd072cdee8cfc/transformed/jetified-Android-AdvancedWebView-v3.2.1/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/1393e64cbc60ff51408dd072cdee8cfc/transformed/jetified-Android-AdvancedWebView-v3.2.1/res" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/1393e64cbc60ff51408dd072cdee8cfc/transformed/jetified-Android-AdvancedWebView-v3.2.1/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/a4030889fb7ad4858402fdaf7b4e66dd/transformed/jetified-Android-AdvancedWebView-v3.2.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/a4030889fb7ad4858402fdaf7b4e66dd/transformed/jetified-Android-AdvancedWebView-v3.2.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/modules-2/files-2.1/com.github.delight-im/Android-AdvancedWebView/v3.2.1/3f98c7418d3f202f27942c57d4a5ca3d1d8803e3/Android-AdvancedWebView-v3.2.1-javadoc.jar!/" />
