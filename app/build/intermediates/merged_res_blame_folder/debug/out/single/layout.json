@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_splash.xml",
-        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_splash.xml"
-    },
-    {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_conversation.xml",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/item_conversation.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_splash.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_splash.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_action_bar_home.xml",

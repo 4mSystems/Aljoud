@@ -3143,6 +3143,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_note
+drawable ic_notifications
 drawable ic_offer
 drawable ic_password
 drawable ic_pdf
