@@ -10,12 +10,19 @@ import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.aljoud.R;
 import te.app.aljoud.pages.university.viewModel.UniversityViewModel;
 
 public abstract class FragmentCategorySectionsBinding extends ViewDataBinding {
+  @NonNull
+  public final CircularProgressIndicator prCourse;
+
+  @NonNull
+  public final CircularProgressIndicator prLevels;
+
   @NonNull
   public final RecyclerView rcCategories;
 
@@ -26,8 +33,11 @@ public abstract class FragmentCategorySectionsBinding extends ViewDataBinding {
   protected UniversityViewModel mViewmodel;
 
   protected FragmentCategorySectionsBinding(Object _bindingComponent, View _root,
-      int _localFieldCount, RecyclerView rcCategories, RecyclerView rcLevels) {
+      int _localFieldCount, CircularProgressIndicator prCourse, CircularProgressIndicator prLevels,
+      RecyclerView rcCategories, RecyclerView rcLevels) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.prCourse = prCourse;
+    this.prLevels = prLevels;
     this.rcCategories = rcCategories;
     this.rcLevels = rcLevels;
   }

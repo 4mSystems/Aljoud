@@ -40,7 +40,7 @@ public class ConversationsViewModel extends BaseViewModel {
 
     @Bindable
     public void setConversationsMain(ConversationsMain conversationsMain) {
-        if (conversationsMain.getMeta().getCurrentPage() > 1) {
+        if (conversationsMain.getCurrentPage() > 1) {
             getConversationsAdapter().loadMore(conversationsMain.getData());
         } else {
             getConversationsAdapter().update(conversationsMain.getData());

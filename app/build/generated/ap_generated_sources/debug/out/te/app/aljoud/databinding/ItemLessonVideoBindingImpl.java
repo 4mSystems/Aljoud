@@ -21,7 +21,7 @@ public class ItemLessonVideoBindingImpl extends ItemLessonVideoBinding implement
     private final com.google.android.material.card.MaterialCardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback10;
+    private final android.view.View.OnClickListener mCallback11;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -39,7 +39,7 @@ public class ItemLessonVideoBindingImpl extends ItemLessonVideoBinding implement
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback10 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback11 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -65,7 +65,7 @@ public class ItemLessonVideoBindingImpl extends ItemLessonVideoBinding implement
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.itemViewModel == variableId) {
-            setItemViewModel((te.app.aljoud.pages.home.viewModels.ItemCategoryViewModel) variable);
+            setItemViewModel((te.app.aljoud.pages.home.viewModels.ItemUniversityViewModel) variable);
         }
         else {
             variableSet = false;
@@ -73,7 +73,7 @@ public class ItemLessonVideoBindingImpl extends ItemLessonVideoBinding implement
             return variableSet;
     }
 
-    public void setItemViewModel(@Nullable te.app.aljoud.pages.home.viewModels.ItemCategoryViewModel ItemViewModel) {
+    public void setItemViewModel(@Nullable te.app.aljoud.pages.home.viewModels.ItemUniversityViewModel ItemViewModel) {
         updateRegistration(0, ItemViewModel);
         this.mItemViewModel = ItemViewModel;
         synchronized(this) {
@@ -87,18 +87,18 @@ public class ItemLessonVideoBindingImpl extends ItemLessonVideoBinding implement
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeItemViewModel((te.app.aljoud.pages.home.viewModels.ItemCategoryViewModel) object, fieldId);
+                return onChangeItemViewModel((te.app.aljoud.pages.home.viewModels.ItemUniversityViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeItemViewModel(te.app.aljoud.pages.home.viewModels.ItemCategoryViewModel ItemViewModel, int fieldId) {
+    private boolean onChangeItemViewModel(te.app.aljoud.pages.home.viewModels.ItemUniversityViewModel ItemViewModel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
             }
             return true;
         }
-        else if (fieldId == BR.categoriesItem) {
+        else if (fieldId == BR.university) {
             synchronized(this) {
                     mDirtyFlags |= 0x2L;
             }
@@ -114,35 +114,35 @@ public class ItemLessonVideoBindingImpl extends ItemLessonVideoBinding implement
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        java.lang.String itemViewModelCategoriesItemImage = null;
-        te.app.aljoud.pages.home.models.CategoriesItem itemViewModelCategoriesItem = null;
-        te.app.aljoud.pages.home.viewModels.ItemCategoryViewModel itemViewModel = mItemViewModel;
+        te.app.aljoud.pages.home.viewModels.ItemUniversityViewModel itemViewModel = mItemViewModel;
+        te.app.aljoud.pages.home.models.home.University itemViewModelUniversity = null;
+        java.lang.String itemViewModelUniversityImage = null;
 
         if ((dirtyFlags & 0x7L) != 0) {
 
 
 
                 if (itemViewModel != null) {
-                    // read itemViewModel.categoriesItem
-                    itemViewModelCategoriesItem = itemViewModel.getCategoriesItem();
+                    // read itemViewModel.university
+                    itemViewModelUniversity = itemViewModel.getUniversity();
                 }
 
 
-                if (itemViewModelCategoriesItem != null) {
-                    // read itemViewModel.categoriesItem.image
-                    itemViewModelCategoriesItemImage = itemViewModelCategoriesItem.getImage();
+                if (itemViewModelUniversity != null) {
+                    // read itemViewModel.university.image
+                    itemViewModelUniversityImage = itemViewModelUniversity.getImage();
                 }
         }
         // batch finished
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
-            te.app.aljoud.base.ApplicationBinding.loadImage(this.catImage, itemViewModelCategoriesItemImage);
+            te.app.aljoud.base.ApplicationBinding.loadImage(this.catImage, itemViewModelUniversityImage);
         }
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView0.setOnClickListener(mCallback10);
+            this.mboundView0.setOnClickListener(mCallback11);
         }
     }
     // Listener Stub Implementations
@@ -150,7 +150,7 @@ public class ItemLessonVideoBindingImpl extends ItemLessonVideoBinding implement
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         // localize variables for thread safety
         // itemViewModel
-        te.app.aljoud.pages.home.viewModels.ItemCategoryViewModel itemViewModel = mItemViewModel;
+        te.app.aljoud.pages.home.viewModels.ItemUniversityViewModel itemViewModel = mItemViewModel;
         // itemViewModel != null
         boolean itemViewModelJavaLangObjectNull = false;
 
@@ -167,7 +167,7 @@ public class ItemLessonVideoBindingImpl extends ItemLessonVideoBinding implement
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): itemViewModel
-        flag 1 (0x2L): itemViewModel.categoriesItem
+        flag 1 (0x2L): itemViewModel.university
         flag 2 (0x3L): null
     flag mapping end*/
     //end

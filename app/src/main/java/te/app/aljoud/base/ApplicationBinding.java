@@ -2,6 +2,7 @@ package te.app.aljoud.base;
 
 import android.graphics.Color;
 import android.text.TextUtils;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -10,9 +11,11 @@ import androidx.databinding.BindingAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+
 import te.app.aljoud.R;
 import te.app.aljoud.customViews.CustomDrawable;
 import te.app.aljoud.utils.helper.AppHelper;
+import te.app.aljoud.utils.images.PhotoFullPopupWindow;
 import te.app.aljoud.utils.resources.ResourceManager;
 
 
@@ -21,6 +24,16 @@ public class ApplicationBinding {
     public static void loadImage(ImageView imageView, Object image) {
         if (image instanceof String && !TextUtils.isEmpty((String) image)) {
             Glide.with(imageView.getContext()).load((String) image).placeholder(R.drawable.logo).into(imageView);
+        } else if (image instanceof Integer) {
+            imageView.setImageResource((Integer) image);
+        }
+    }
+
+    @BindingAdapter("imageFullUrl")
+    public static void loadFullImage(ImageView imageView, Object image) {
+        if (image instanceof String && !TextUtils.isEmpty((String) image)) {
+            Glide.with(imageView.getContext()).load((String) image).placeholder(R.drawable.logo).into(imageView);
+            imageView.setOnClickListener(view -> new PhotoFullPopupWindow(MyApplication.getInstance(), R.layout.popup_photo_full, imageView, (String) image, null));
         } else if (image instanceof Integer) {
             imageView.setImageResource((Integer) image);
         }

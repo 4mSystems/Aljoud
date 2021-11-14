@@ -4,18 +4,19 @@ import androidx.databinding.Bindable;
 
 import te.app.aljoud.base.BaseViewModel;
 import te.app.aljoud.pages.home.models.CategoriesItem;
+import te.app.aljoud.pages.university.models.course.Course;
 import te.app.aljoud.utils.Constants;
 
 public class ItemSectionCategoryViewModel extends BaseViewModel {
-    public CategoriesItem categoriesItem;
+    public Course course;
 
-    public ItemSectionCategoryViewModel(CategoriesItem categoriesItem) {
-        this.categoriesItem = categoriesItem;
+    public ItemSectionCategoryViewModel(Course course) {
+        this.course = course;
     }
 
     @Bindable
-    public CategoriesItem getCategoriesItem() {
-        return categoriesItem;
+    public Course getCourse() {
+        return course;
     }
 
     public void itemAction() {

@@ -13,14 +13,14 @@ import androidx.databinding.ViewDataBinding;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.aljoud.R;
-import te.app.aljoud.pages.home.viewModels.ItemCategoryViewModel;
+import te.app.aljoud.pages.university.viewModel.ItemCollegesViewModel;
 
 public abstract class ItemUniversitySectionBinding extends ViewDataBinding {
   @NonNull
   public final AppCompatImageView catImage;
 
   @Bindable
-  protected ItemCategoryViewModel mItemViewModel;
+  protected ItemCollegesViewModel mItemViewModel;
 
   protected ItemUniversitySectionBinding(Object _bindingComponent, View _root, int _localFieldCount,
       AppCompatImageView catImage) {
@@ -28,10 +28,10 @@ public abstract class ItemUniversitySectionBinding extends ViewDataBinding {
     this.catImage = catImage;
   }
 
-  public abstract void setItemViewModel(@Nullable ItemCategoryViewModel itemViewModel);
+  public abstract void setItemViewModel(@Nullable ItemCollegesViewModel itemViewModel);
 
   @Nullable
-  public ItemCategoryViewModel getItemViewModel() {
+  public ItemCollegesViewModel getItemViewModel() {
     return mItemViewModel;
   }
 

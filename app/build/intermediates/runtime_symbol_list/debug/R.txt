@@ -3313,6 +3313,7 @@ int id bounceBoth 0x7f090068
 int id bounceEnd 0x7f090069
 int id bounceStart 0x7f09006a
 int id br 0x7f09006b
+int id bt_level 0x7f090286
 int id btn_lang 0x7f09006c
 int id btn_phone 0x7f09006d
 int id buttonPanel 0x7f09006e
@@ -3617,6 +3618,8 @@ int id pin 0x7f090198
 int id pin_Validate 0x7f090199
 int id position 0x7f09019a
 int id postLayout 0x7f09019b
+int id pr_course 0x7f090284
+int id pr_levels 0x7f090285
 int id progress 0x7f09019c
 int id progress_circular 0x7f09019d
 int id progress_horizontal 0x7f09019e
@@ -3957,9 +3960,9 @@ int layout fragment_register 0x7f0c003e
 int layout fragment_splash 0x7f0c003f
 int layout fragment_university_details 0x7f0c0040
 int layout instractor_sheet 0x7f0c0041
-int layout item_category 0x7f0c0042
 int layout item_chat 0x7f0c0043
 int layout item_conversation 0x7f0c0044
+int layout item_course 0x7f0c009f
 int layout item_course_lesson 0x7f0c0045
 int layout item_files 0x7f0c0046
 int layout item_home 0x7f0c0047
@@ -4176,6 +4179,7 @@ int string details 0x7f100071
 int string done 0x7f100072
 int string elmonkz_systems_text 0x7f100073
 int string email_hint 0x7f100074
+int string empty_courses 0x7f10012d
 int string english 0x7f100075
 int string error_icon_content_description 0x7f100076
 int string exam 0x7f100077

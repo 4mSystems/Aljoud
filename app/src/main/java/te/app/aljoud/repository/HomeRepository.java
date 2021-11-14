@@ -9,7 +9,11 @@ import javax.inject.Singleton;
 import io.reactivex.disposables.Disposable;
 import te.app.aljoud.connection.ConnectionHelper;
 import te.app.aljoud.model.base.Mutable;
-import te.app.aljoud.pages.home.models.HomeResponse;
+import te.app.aljoud.pages.courseDetails.models.CourseDetailsResponse;
+import te.app.aljoud.pages.home.models.home.HomeResponse;
+import te.app.aljoud.pages.university.models.UniversityDetailsResponse;
+import te.app.aljoud.pages.university.models.course.CourseResponse;
+import te.app.aljoud.pages.university.models.levels.LevelsResponse;
 import te.app.aljoud.utils.Constants;
 import te.app.aljoud.utils.URLS;
 
@@ -29,11 +33,30 @@ public class HomeRepository extends BaseRepository {
         connectionHelper.liveData = liveData;
     }
 
-    public Disposable getHomeData() {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.HOME, new Object(), HomeResponse.class,
-                Constants.HOME, true);
+    public Disposable universities(int page, boolean showProgress) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.HOME + page, new Object(), HomeResponse.class,
+                Constants.HOME, showProgress);
+    }
+
+    public Disposable universityDetails(int id) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.UNIVERSITY_DETAILS + id, new Object(), UniversityDetailsResponse.class,
+                Constants.DETAILS, true);
+    }
+
+    public Disposable levels(int id) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.LEVELS + id, new Object(), LevelsResponse.class,
+                Constants.LEVELS, false);
     }
 
 
+    public Disposable levelCourses(int levelId, int collegeId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.LEVEL_COURSES.concat(levelId == 0 ? "" : String.valueOf(levelId)) + "&college_id=" + collegeId, new Object(), CourseResponse.class,
+                Constants.LEVEL_COURSES, false);
+    }
+
+    public Disposable courseDetails(int courseId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.COURSE_DETAILS.concat(String.valueOf(courseId)), new Object(), CourseDetailsResponse.class,
+                Constants.COURSE_DETAILS, false);
+    }
 
 }

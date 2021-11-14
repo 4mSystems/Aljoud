@@ -1,6 +1,7 @@
 package te.app.aljoud.pages.university.adapters;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.MutableLiveData;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.jetbrains.annotations.NotNull;
@@ -16,27 +18,32 @@ import java.util.ArrayList;
 import java.util.List;
 
 import te.app.aljoud.R;
-import te.app.aljoud.databinding.ItemHomeBinding;
-import te.app.aljoud.pages.home.models.CategoriesItem;
-import te.app.aljoud.pages.home.viewModels.ItemCategoryViewModel;
+import te.app.aljoud.databinding.ItemLevelsBinding;
+import te.app.aljoud.pages.university.models.levels.LevelsData;
+import te.app.aljoud.pages.university.viewModel.ItemLevelsViewModel;
 import te.app.aljoud.utils.helper.MovementHelper;
+import te.app.aljoud.utils.resources.ResourceManager;
 
 
 public class LevelsAdapter extends RecyclerView.Adapter<LevelsAdapter.ViewHolder> {
-    List<CategoriesItem> categoriesDataList;
+    List<LevelsData> levelsDataList;
     Context context;
+    public MutableLiveData<Integer> liveData = new MutableLiveData<>();
+
     public LevelsAdapter() {
-        this.categoriesDataList = new ArrayList<>();
+        this.levelsDataList = new ArrayList<>();
     }
 
-    public List<CategoriesItem> getCategoriesDataList() {
-        return categoriesDataList;
+    public int lastSelected = 0;
+
+    public List<LevelsData> getLevelsDataList() {
+        return levelsDataList;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_home,
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_levels,
                 parent, false);
         this.context = parent.getContext();
         return new ViewHolder(itemView);
@@ -45,18 +52,25 @@ public class LevelsAdapter extends RecyclerView.Adapter<LevelsAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
-        CategoriesItem categoriesData = categoriesDataList.get(position);
-        ItemCategoryViewModel itemMenuViewModel = new ItemCategoryViewModel(categoriesData);
+        LevelsData categoriesData = levelsDataList.get(position);
+        ItemLevelsViewModel itemMenuViewModel = new ItemLevelsViewModel(categoriesData);
         itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {
-
+            lastSelected = categoriesData.getId();
+            liveData.setValue(categoriesData.getId());
+            notifyDataSetChanged();
         });
+        if (lastSelected == categoriesData.getId())
+            holder.itemMenuBinding.btLevel.setBackgroundTintList(ColorStateList.valueOf(ResourceManager.getColor(R.color.colorPrimary)));
+        else
+            holder.itemMenuBinding.btLevel.setBackgroundTintList(ColorStateList.valueOf(ResourceManager.getColor(R.color.white)));
         holder.setViewModel(itemMenuViewModel);
     }
 
 
-    public void update(List<CategoriesItem> dataList) {
-        this.categoriesDataList.clear();
-        categoriesDataList.addAll(dataList);
+    public void update(List<LevelsData> dataList) {
+        dataList.add(0, new LevelsData(ResourceManager.getString(R.string.all), 0));
+        this.levelsDataList.clear();
+        levelsDataList.addAll(dataList);
         notifyDataSetChanged();
     }
 
@@ -74,11 +88,11 @@ public class LevelsAdapter extends RecyclerView.Adapter<LevelsAdapter.ViewHolder
 
     @Override
     public int getItemCount() {
-        return categoriesDataList.size();
+        return levelsDataList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public ItemHomeBinding itemMenuBinding;
+        public ItemLevelsBinding itemMenuBinding;
 
         ViewHolder(View itemView) {
             super(itemView);
@@ -98,7 +112,7 @@ public class LevelsAdapter extends RecyclerView.Adapter<LevelsAdapter.ViewHolder
             }
         }
 
-        void setViewModel(ItemCategoryViewModel itemViewModels) {
+        void setViewModel(ItemLevelsViewModel itemViewModels) {
             if (itemMenuBinding != null) {
                 itemMenuBinding.setItemViewModel(itemViewModels);
             }

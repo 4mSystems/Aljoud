@@ -3314,6 +3314,7 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id br
+id bt_level
 id btn_lang
 id btn_phone
 id buttonPanel
@@ -3618,6 +3619,8 @@ id pin
 id pin_Validate
 id position
 id postLayout
+id pr_course
+id pr_levels
 id progress
 id progress_circular
 id progress_horizontal
@@ -3958,9 +3961,9 @@ layout fragment_register
 layout fragment_splash
 layout fragment_university_details
 layout instractor_sheet
-layout item_category
 layout item_chat
 layout item_conversation
+layout item_course
 layout item_course_lesson
 layout item_files
 layout item_home
@@ -4177,6 +4180,7 @@ string details
 string done
 string elmonkz_systems_text
 string email_hint
+string empty_courses
 string english
 string error_icon_content_description
 string exam

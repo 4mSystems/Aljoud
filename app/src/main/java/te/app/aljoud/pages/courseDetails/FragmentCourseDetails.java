@@ -9,19 +9,25 @@ import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.gson.Gson;
+
 import javax.inject.Inject;
 
 import te.app.aljoud.BR;
+import te.app.aljoud.PassingObject;
 import te.app.aljoud.R;
 import te.app.aljoud.base.BaseFragment;
 import te.app.aljoud.base.IApplicationComponent;
 import te.app.aljoud.base.MyApplication;
 import te.app.aljoud.databinding.FragmentCourseDetailsBinding;
-import te.app.aljoud.databinding.FragmentUniversityDetailsBinding;
+import te.app.aljoud.databinding.InstractorSheetBinding;
 import te.app.aljoud.model.base.Mutable;
+import te.app.aljoud.pages.courseDetails.models.CourseDetailsResponse;
 import te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel;
-import te.app.aljoud.pages.home.models.HomeResponse;
 import te.app.aljoud.pages.settings.AboutAppFragment;
+import te.app.aljoud.pages.university.models.course.Course;
+import te.app.aljoud.pages.university.models.course.CourseResponse;
 import te.app.aljoud.utils.Constants;
 import te.app.aljoud.utils.helper.MovementHelper;
 
@@ -37,7 +43,12 @@ public class FragmentCourseDetails extends BaseFragment {
         IApplicationComponent component = ((MyApplication) requireActivity().getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
-        viewModel.homeData();
+        Bundle bundle = this.getArguments();
+        if (bundle != null) {
+            String passingObject = bundle.getString(Constants.BUNDLE);
+            viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
+            viewModel.courseDetails();
+        }
         setEvent();
         return binding.getRoot();
     }
@@ -46,15 +57,21 @@ public class FragmentCourseDetails extends BaseFragment {
         viewModel.liveData.observe(requireActivity(), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-            if (Constants.HOME.equals(((Mutable) o).message)) {
-                viewModel.getCategoriesAdapter().update(((HomeResponse) mutable.object).getCategories());
-                viewModel.notifyChange(BR.categoriesAdapter);
-            } else if (Constants.ABOUT.equals(((Mutable) o).message)) {
-                MovementHelper.startActivity(requireActivity(), AboutAppFragment.class.getName(), getResources().getString(R.string.about), null);
+            if (Constants.COURSE_DETAILS.equals(((Mutable) o).message)) {
+                viewModel.setCourse(((CourseDetailsResponse) mutable.object).getCourse());
+            } else if (Constants.INSTRUCTOR.equals(((Mutable) o).message)) {
+                showInstructorInfo();
             }
         });
     }
 
+    private void showInstructorInfo() {
+        InstractorSheetBinding sortBinding = DataBindingUtil.inflate(LayoutInflater.from(requireActivity()), R.layout.instractor_sheet, null, false);
+        BottomSheetDialog sheetDialog = new BottomSheetDialog(requireActivity(), R.style.AppBottomSheetDialogTheme);
+        sheetDialog.setContentView(sortBinding.getRoot());
+        sortBinding.setViewmodel(viewModel);
+        sheetDialog.show();
+    }
 
     @Override
     public void onResume() {

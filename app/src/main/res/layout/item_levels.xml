@@ -6,14 +6,16 @@
 
         <variable
             name="itemViewModel"
-            type="te.app.aljoud.pages.home.viewModels.ItemCategoryViewModel" />
+            type="te.app.aljoud.pages.university.viewModel.ItemLevelsViewModel" />
     </data>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/bt_level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dp8h"
-        android:text="@string/all"
+        android:layout_margin="@dimen/dp4h"
+        android:onClick="@{()->itemViewModel.itemAction()}"
+        android:text="@{itemViewModel.levelsData.name}"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/black"

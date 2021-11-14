@@ -29,7 +29,7 @@ public class CourseLessonsViewModel extends BaseViewModel {
     }
 
     public void homeData() {
-        compositeDisposable.add(homeRepository.getHomeData());
+//        compositeDisposable.add(homeRepository.getHomeData());
     }
 
     @Bindable

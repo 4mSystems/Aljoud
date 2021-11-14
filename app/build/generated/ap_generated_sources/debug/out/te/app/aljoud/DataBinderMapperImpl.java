@@ -37,9 +37,9 @@ import te.app.aljoud.databinding.FragmentRegisterBindingImpl;
 import te.app.aljoud.databinding.FragmentSplashBindingImpl;
 import te.app.aljoud.databinding.FragmentUniversityDetailsBindingImpl;
 import te.app.aljoud.databinding.InstractorSheetBindingImpl;
-import te.app.aljoud.databinding.ItemCategoryBindingImpl;
 import te.app.aljoud.databinding.ItemChatBindingImpl;
 import te.app.aljoud.databinding.ItemConversationBindingImpl;
+import te.app.aljoud.databinding.ItemCourseBindingImpl;
 import te.app.aljoud.databinding.ItemCourseLessonBindingImpl;
 import te.app.aljoud.databinding.ItemFilesBindingImpl;
 import te.app.aljoud.databinding.ItemHomeBindingImpl;
@@ -96,11 +96,11 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_INSTRACTORSHEET = 22;
 
-  private static final int LAYOUT_ITEMCATEGORY = 23;
+  private static final int LAYOUT_ITEMCHAT = 23;
 
-  private static final int LAYOUT_ITEMCHAT = 24;
+  private static final int LAYOUT_ITEMCONVERSATION = 24;
 
-  private static final int LAYOUT_ITEMCONVERSATION = 25;
+  private static final int LAYOUT_ITEMCOURSE = 25;
 
   private static final int LAYOUT_ITEMCOURSELESSON = 26;
 
@@ -147,9 +147,9 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.fragment_splash, LAYOUT_FRAGMENTSPLASH);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.fragment_university_details, LAYOUT_FRAGMENTUNIVERSITYDETAILS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.instractor_sheet, LAYOUT_INSTRACTORSHEET);
-    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.item_category, LAYOUT_ITEMCATEGORY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.item_chat, LAYOUT_ITEMCHAT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.item_conversation, LAYOUT_ITEMCONVERSATION);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.item_course, LAYOUT_ITEMCOURSE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.item_course_lesson, LAYOUT_ITEMCOURSELESSON);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.item_files, LAYOUT_ITEMFILES);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.item_home, LAYOUT_ITEMHOME);
@@ -303,12 +303,6 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for instractor_sheet is invalid. Received: " + tag);
         }
-        case  LAYOUT_ITEMCATEGORY: {
-          if ("layout/item_category_0".equals(tag)) {
-            return new ItemCategoryBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_category is invalid. Received: " + tag);
-        }
         case  LAYOUT_ITEMCHAT: {
           if ("layout/item_chat_0".equals(tag)) {
             return new ItemChatBindingImpl(component, view);
@@ -320,6 +314,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new ItemConversationBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for item_conversation is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ITEMCOURSE: {
+          if ("layout/item_course_0".equals(tag)) {
+            return new ItemCourseBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_course is invalid. Received: " + tag);
         }
         case  LAYOUT_ITEMCOURSELESSON: {
           if ("layout/item_course_lesson_0".equals(tag)) {
@@ -426,7 +426,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(19);
+    static final SparseArray<String> sKeys = new SparseArray<String>(28);
 
     static {
       sKeys.put(0, "_all");
@@ -434,20 +434,29 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put(2, "adapter");
       sKeys.put(3, "baseViewModel");
       sKeys.put(4, "categoriesAdapter");
-      sKeys.put(5, "categoriesItem");
-      sKeys.put(6, "chat");
+      sKeys.put(5, "chat");
+      sKeys.put(6, "collegesAdapter");
       sKeys.put(7, "conversationsAdapter");
       sKeys.put(8, "conversationsData");
       sKeys.put(9, "conversationsMain");
-      sKeys.put(10, "itemChatViewModel");
-      sKeys.put(11, "itemViewModel");
-      sKeys.put(12, "mapAddressViewModel");
-      sKeys.put(13, "menuViewModel");
-      sKeys.put(14, "message");
-      sKeys.put(15, "passingObject");
-      sKeys.put(16, "request");
-      sKeys.put(17, "viewModel");
-      sKeys.put(18, "viewmodel");
+      sKeys.put(10, "course");
+      sKeys.put(11, "courseAdapter");
+      sKeys.put(12, "homeMainData");
+      sKeys.put(13, "itemChatViewModel");
+      sKeys.put(14, "itemViewModel");
+      sKeys.put(15, "levelsAdapter");
+      sKeys.put(16, "levelsData");
+      sKeys.put(17, "mapAddressViewModel");
+      sKeys.put(18, "menuViewModel");
+      sKeys.put(19, "message");
+      sKeys.put(20, "passingObject");
+      sKeys.put(21, "request");
+      sKeys.put(22, "specialistsItem");
+      sKeys.put(23, "university");
+      sKeys.put(24, "universityAdapter");
+      sKeys.put(25, "universityData");
+      sKeys.put(26, "viewModel");
+      sKeys.put(27, "viewmodel");
     }
   }
 
@@ -477,9 +486,9 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/fragment_splash_0", te.app.aljoud.R.layout.fragment_splash);
       sKeys.put("layout/fragment_university_details_0", te.app.aljoud.R.layout.fragment_university_details);
       sKeys.put("layout/instractor_sheet_0", te.app.aljoud.R.layout.instractor_sheet);
-      sKeys.put("layout/item_category_0", te.app.aljoud.R.layout.item_category);
       sKeys.put("layout/item_chat_0", te.app.aljoud.R.layout.item_chat);
       sKeys.put("layout/item_conversation_0", te.app.aljoud.R.layout.item_conversation);
+      sKeys.put("layout/item_course_0", te.app.aljoud.R.layout.item_course);
       sKeys.put("layout/item_course_lesson_0", te.app.aljoud.R.layout.item_course_lesson);
       sKeys.put("layout/item_files_0", te.app.aljoud.R.layout.item_files);
       sKeys.put("layout/item_home_0", te.app.aljoud.R.layout.item_home);

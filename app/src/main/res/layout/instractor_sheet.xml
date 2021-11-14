@@ -4,6 +4,9 @@
 
     <data>
 
+        <variable
+            name="viewmodel"
+            type="te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel" />
     </data>
 
     <androidx.core.widget.NestedScrollView
@@ -35,6 +38,7 @@
                 android:src="@color/overlayBackground"
                 app:civ_border_color="@color/colorPrimaryDark"
                 app:civ_border_width="4dp"
+                app:imageFullUrl="@{viewmodel.course.instructor.image}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_card_title" />
 
@@ -43,7 +47,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp6h"
-                android:text="Mostafa Elnagar"
+                android:text="@{viewmodel.course.instructor.name}"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/colorPrimaryDark"
@@ -57,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp6h"
                 android:layout_marginEnd="@dimen/dp6h"
-                android:text="Android developer"
+                android:text="@{viewmodel.course.instructor.jobTitle}"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colorPrimary"
@@ -70,7 +74,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp10h"
-                android:text="Android developer"
+                android:text="@{viewmodel.course.instructor.bio}"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/medium_color"

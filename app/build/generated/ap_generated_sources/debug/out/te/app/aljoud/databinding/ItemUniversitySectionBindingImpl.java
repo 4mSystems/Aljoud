@@ -22,7 +22,7 @@ public class ItemUniversitySectionBindingImpl extends ItemUniversitySectionBindi
     private final te.app.aljoud.customViews.views.CustomTextViewMedium mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback7;
+    private final android.view.View.OnClickListener mCallback8;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,7 +41,7 @@ public class ItemUniversitySectionBindingImpl extends ItemUniversitySectionBindi
         this.mboundView2.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback7 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback8 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -67,7 +67,7 @@ public class ItemUniversitySectionBindingImpl extends ItemUniversitySectionBindi
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.itemViewModel == variableId) {
-            setItemViewModel((te.app.aljoud.pages.home.viewModels.ItemCategoryViewModel) variable);
+            setItemViewModel((te.app.aljoud.pages.university.viewModel.ItemCollegesViewModel) variable);
         }
         else {
             variableSet = false;
@@ -75,7 +75,7 @@ public class ItemUniversitySectionBindingImpl extends ItemUniversitySectionBindi
             return variableSet;
     }
 
-    public void setItemViewModel(@Nullable te.app.aljoud.pages.home.viewModels.ItemCategoryViewModel ItemViewModel) {
+    public void setItemViewModel(@Nullable te.app.aljoud.pages.university.viewModel.ItemCollegesViewModel ItemViewModel) {
         updateRegistration(0, ItemViewModel);
         this.mItemViewModel = ItemViewModel;
         synchronized(this) {
@@ -89,18 +89,18 @@ public class ItemUniversitySectionBindingImpl extends ItemUniversitySectionBindi
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeItemViewModel((te.app.aljoud.pages.home.viewModels.ItemCategoryViewModel) object, fieldId);
+                return onChangeItemViewModel((te.app.aljoud.pages.university.viewModel.ItemCollegesViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeItemViewModel(te.app.aljoud.pages.home.viewModels.ItemCategoryViewModel ItemViewModel, int fieldId) {
+    private boolean onChangeItemViewModel(te.app.aljoud.pages.university.viewModel.ItemCollegesViewModel ItemViewModel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
             }
             return true;
         }
-        else if (fieldId == BR.categoriesItem) {
+        else if (fieldId == BR.specialistsItem) {
             synchronized(this) {
                     mDirtyFlags |= 0x2L;
             }
@@ -116,39 +116,39 @@ public class ItemUniversitySectionBindingImpl extends ItemUniversitySectionBindi
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        java.lang.String itemViewModelCategoriesItemImage = null;
-        te.app.aljoud.pages.home.models.CategoriesItem itemViewModelCategoriesItem = null;
-        java.lang.String itemViewModelCategoriesItemTitle = null;
-        te.app.aljoud.pages.home.viewModels.ItemCategoryViewModel itemViewModel = mItemViewModel;
+        java.lang.String itemViewModelSpecialistsItemImage = null;
+        te.app.aljoud.pages.university.models.SpecialistsItem itemViewModelSpecialistsItem = null;
+        te.app.aljoud.pages.university.viewModel.ItemCollegesViewModel itemViewModel = mItemViewModel;
+        java.lang.String itemViewModelSpecialistsItemName = null;
 
         if ((dirtyFlags & 0x7L) != 0) {
 
 
 
                 if (itemViewModel != null) {
-                    // read itemViewModel.categoriesItem
-                    itemViewModelCategoriesItem = itemViewModel.getCategoriesItem();
+                    // read itemViewModel.specialistsItem
+                    itemViewModelSpecialistsItem = itemViewModel.getSpecialistsItem();
                 }
 
 
-                if (itemViewModelCategoriesItem != null) {
-                    // read itemViewModel.categoriesItem.image
-                    itemViewModelCategoriesItemImage = itemViewModelCategoriesItem.getImage();
-                    // read itemViewModel.categoriesItem.title
-                    itemViewModelCategoriesItemTitle = itemViewModelCategoriesItem.getTitle();
+                if (itemViewModelSpecialistsItem != null) {
+                    // read itemViewModel.specialistsItem.image
+                    itemViewModelSpecialistsItemImage = itemViewModelSpecialistsItem.getImage();
+                    // read itemViewModel.specialistsItem.name
+                    itemViewModelSpecialistsItemName = itemViewModelSpecialistsItem.getName();
                 }
         }
         // batch finished
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
-            te.app.aljoud.base.ApplicationBinding.loadImage(this.catImage, itemViewModelCategoriesItemImage);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, itemViewModelCategoriesItemTitle);
+            te.app.aljoud.base.ApplicationBinding.loadImage(this.catImage, itemViewModelSpecialistsItemImage);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, itemViewModelSpecialistsItemName);
         }
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView0.setOnClickListener(mCallback7);
+            this.mboundView0.setOnClickListener(mCallback8);
         }
     }
     // Listener Stub Implementations
@@ -156,7 +156,7 @@ public class ItemUniversitySectionBindingImpl extends ItemUniversitySectionBindi
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         // localize variables for thread safety
         // itemViewModel
-        te.app.aljoud.pages.home.viewModels.ItemCategoryViewModel itemViewModel = mItemViewModel;
+        te.app.aljoud.pages.university.viewModel.ItemCollegesViewModel itemViewModel = mItemViewModel;
         // itemViewModel != null
         boolean itemViewModelJavaLangObjectNull = false;
 
@@ -173,7 +173,7 @@ public class ItemUniversitySectionBindingImpl extends ItemUniversitySectionBindi
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): itemViewModel
-        flag 1 (0x2L): itemViewModel.categoriesItem
+        flag 1 (0x2L): itemViewModel.specialistsItem
         flag 2 (0x3L): null
     flag mapping end*/
     //end

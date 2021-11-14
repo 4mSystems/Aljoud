@@ -9,23 +9,29 @@ import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.button.MaterialButton;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.aljoud.R;
-import te.app.aljoud.pages.home.viewModels.ItemCategoryViewModel;
+import te.app.aljoud.pages.university.viewModel.ItemLevelsViewModel;
 
 public abstract class ItemLevelsBinding extends ViewDataBinding {
-  @Bindable
-  protected ItemCategoryViewModel mItemViewModel;
+  @NonNull
+  public final MaterialButton btLevel;
 
-  protected ItemLevelsBinding(Object _bindingComponent, View _root, int _localFieldCount) {
+  @Bindable
+  protected ItemLevelsViewModel mItemViewModel;
+
+  protected ItemLevelsBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      MaterialButton btLevel) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.btLevel = btLevel;
   }
 
-  public abstract void setItemViewModel(@Nullable ItemCategoryViewModel itemViewModel);
+  public abstract void setItemViewModel(@Nullable ItemLevelsViewModel itemViewModel);
 
   @Nullable
-  public ItemCategoryViewModel getItemViewModel() {
+  public ItemLevelsViewModel getItemViewModel() {
     return mItemViewModel;
   }
 

@@ -16,12 +16,9 @@ import te.app.aljoud.R;
 import te.app.aljoud.base.BaseFragment;
 import te.app.aljoud.base.IApplicationComponent;
 import te.app.aljoud.base.MyApplication;
-import te.app.aljoud.databinding.FragmentCourseDetailsBinding;
 import te.app.aljoud.databinding.FragmentCourseLessonsBinding;
 import te.app.aljoud.model.base.Mutable;
 import te.app.aljoud.pages.courseDetails.viewModels.CourseLessonsViewModel;
-import te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel;
-import te.app.aljoud.pages.home.models.HomeResponse;
 import te.app.aljoud.pages.settings.AboutAppFragment;
 import te.app.aljoud.utils.Constants;
 import te.app.aljoud.utils.helper.MovementHelper;
@@ -38,7 +35,7 @@ public class FragmentCourseLessons extends BaseFragment {
         IApplicationComponent component = ((MyApplication) requireActivity().getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
-        viewModel.homeData();
+//        viewModel.homeData();
         setEvent();
         return binding.getRoot();
     }
@@ -48,7 +45,7 @@ public class FragmentCourseLessons extends BaseFragment {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             if (Constants.HOME.equals(((Mutable) o).message)) {
-                viewModel.getCategoriesAdapter().update(((HomeResponse) mutable.object).getCategories());
+//                viewModel.getCategoriesAdapter().update(((HomeResponse) mutable.object).getCategories());
                 viewModel.notifyChange(BR.categoriesAdapter);
             } else if (Constants.ABOUT.equals(((Mutable) o).message)) {
                 MovementHelper.startActivity(requireActivity(), AboutAppFragment.class.getName(), getResources().getString(R.string.about), null);

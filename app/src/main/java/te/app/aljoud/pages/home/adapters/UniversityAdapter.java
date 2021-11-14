@@ -14,22 +14,22 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import te.app.aljoud.PassingObject;
 import te.app.aljoud.R;
 import te.app.aljoud.databinding.ItemHomeBinding;
-import te.app.aljoud.pages.home.models.CategoriesItem;
-import te.app.aljoud.pages.home.viewModels.ItemCategoryViewModel;
+import te.app.aljoud.pages.home.models.home.University;
+import te.app.aljoud.pages.home.viewModels.ItemUniversityViewModel;
+import te.app.aljoud.pages.university.FragmentUniversityDetails;
 import te.app.aljoud.utils.helper.MovementHelper;
 
 
 public class UniversityAdapter extends RecyclerView.Adapter<UniversityAdapter.ViewHolder> {
-    List<CategoriesItem> categoriesDataList;
+    List<University> universities;
     Context context;
-    public UniversityAdapter() {
-        this.categoriesDataList = new ArrayList<>();
-    }
 
-    public List<CategoriesItem> getCategoriesDataList() {
-        return categoriesDataList;
+    public UniversityAdapter() {
+        this.universities = new ArrayList<>();
     }
 
     @NonNull
@@ -44,18 +44,18 @@ public class UniversityAdapter extends RecyclerView.Adapter<UniversityAdapter.Vi
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
-        CategoriesItem categoriesData = categoriesDataList.get(position);
-        ItemCategoryViewModel itemMenuViewModel = new ItemCategoryViewModel(categoriesData);
+        University categoriesData = universities.get(position);
+        ItemUniversityViewModel itemMenuViewModel = new ItemUniversityViewModel(categoriesData);
         itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {
-
+            MovementHelper.startActivityWithBundle(context, new PassingObject(categoriesData.getId()), categoriesData.getName(), FragmentUniversityDetails.class.getName(), null);
         });
         holder.setViewModel(itemMenuViewModel);
     }
 
 
-    public void update(List<CategoriesItem> dataList) {
-        this.categoriesDataList.clear();
-        categoriesDataList.addAll(dataList);
+    public void update(List<University> dataList) {
+        this.universities.clear();
+        universities.addAll(dataList);
         notifyDataSetChanged();
     }
 
@@ -73,7 +73,7 @@ public class UniversityAdapter extends RecyclerView.Adapter<UniversityAdapter.Vi
 
     @Override
     public int getItemCount() {
-        return categoriesDataList.size();
+        return universities.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -97,7 +97,7 @@ public class UniversityAdapter extends RecyclerView.Adapter<UniversityAdapter.Vi
             }
         }
 
-        void setViewModel(ItemCategoryViewModel itemViewModels) {
+        void setViewModel(ItemUniversityViewModel itemViewModels) {
             if (itemMenuBinding != null) {
                 itemMenuBinding.setItemViewModel(itemViewModels);
             }

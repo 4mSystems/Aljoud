@@ -1,25 +1,23 @@
 package te.app.aljoud.pages.courseDetails.viewModels;
 
 import androidx.databinding.Bindable;
-import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
+import te.app.aljoud.BR;
 import te.app.aljoud.base.BaseViewModel;
 import te.app.aljoud.model.base.Mutable;
-import te.app.aljoud.pages.home.adapters.UniversityAdapter;
+import te.app.aljoud.pages.university.models.course.Course;
 import te.app.aljoud.repository.HomeRepository;
 
 public class CourseViewModel extends BaseViewModel {
-
     public MutableLiveData<Mutable> liveData;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     @Inject
     HomeRepository homeRepository;
-    UniversityAdapter universityAdapter;
-    LiveData<String> cartCount;
+    Course course;
 
     @Inject
     public CourseViewModel(HomeRepository homeRepository) {
@@ -28,15 +26,23 @@ public class CourseViewModel extends BaseViewModel {
         homeRepository.setLiveData(liveData);
     }
 
-    public void homeData() {
-        compositeDisposable.add(homeRepository.getHomeData());
+    public void courseDetails() {
+        compositeDisposable.add(homeRepository.courseDetails(getPassingObject().getId()));
     }
 
     @Bindable
-    public UniversityAdapter getCategoriesAdapter() {
-        return this.universityAdapter == null ? this.universityAdapter = new UniversityAdapter() : this.universityAdapter;
+    public Course getCourse() {
+        return course;
     }
 
+    public void setCourse(Course course) {
+        notifyChange(BR.course);
+        this.course = course;
+    }
+
+    public void action(String action) {
+        liveData.setValue(new Mutable(action));
+    }
 
     public HomeRepository getHomeRepository() {
         return homeRepository;

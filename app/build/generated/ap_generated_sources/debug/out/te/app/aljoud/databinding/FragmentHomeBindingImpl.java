@@ -99,7 +99,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
             }
             return true;
         }
-        else if (fieldId == BR.categoriesAdapter) {
+        else if (fieldId == BR.universityAdapter) {
             synchronized(this) {
                     mDirtyFlags |= 0x2L;
             }
@@ -115,7 +115,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        te.app.aljoud.pages.home.adapters.UniversityAdapter viewmodelCategoriesAdapter = null;
+        te.app.aljoud.pages.home.adapters.UniversityAdapter viewmodelUniversityAdapter = null;
         te.app.aljoud.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
 
         if ((dirtyFlags & 0x7L) != 0) {
@@ -123,15 +123,15 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
 
 
                 if (viewmodel != null) {
-                    // read viewmodel.categoriesAdapter
-                    viewmodelCategoriesAdapter = viewmodel.getCategoriesAdapter();
+                    // read viewmodel.universityAdapter
+                    viewmodelUniversityAdapter = viewmodel.getUniversityAdapter();
                 }
         }
         // batch finished
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
-            te.app.aljoud.base.ApplicationBinding.getItemsV2Binding(this.mboundView1, viewmodelCategoriesAdapter, "2", "1");
+            te.app.aljoud.base.ApplicationBinding.getItemsV2Binding(this.mboundView1, viewmodelUniversityAdapter, "2", "1");
         }
     }
     // Listener Stub Implementations
@@ -140,7 +140,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewmodel
-        flag 1 (0x2L): viewmodel.categoriesAdapter
+        flag 1 (0x2L): viewmodel.universityAdapter
         flag 2 (0x3L): null
     flag mapping end*/
     //end

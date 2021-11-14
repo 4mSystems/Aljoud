@@ -171,4 +171,5 @@
     <string name="articles">Articles</string>
     <string name="no">No</string>
     <string name="invalidEmail">Invlaid email ,Aljoud@gmail.com</string>
+    <string name="empty_courses">There is no courses right now.</string>
 </resources>

@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -13,6 +14,7 @@ import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.aljoud.R;
 import te.app.aljoud.customViews.views.CustomTextViewMedium;
+import te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel;
 
 public abstract class InstractorSheetBinding extends ViewDataBinding {
   @NonNull
@@ -30,6 +32,9 @@ public abstract class InstractorSheetBinding extends ViewDataBinding {
   @NonNull
   public final CustomTextViewMedium tvInstractorProfession;
 
+  @Bindable
+  protected CourseViewModel mViewmodel;
+
   protected InstractorSheetBinding(Object _bindingComponent, View _root, int _localFieldCount,
       CircleImageView icInstructor, CustomTextViewMedium tvCardTitle,
       CustomTextViewMedium tvInstractorDesc, CustomTextViewMedium tvInstractorName,
@@ -40,6 +45,13 @@ public abstract class InstractorSheetBinding extends ViewDataBinding {
     this.tvInstractorDesc = tvInstractorDesc;
     this.tvInstractorName = tvInstractorName;
     this.tvInstractorProfession = tvInstractorProfession;
+  }
+
+  public abstract void setViewmodel(@Nullable CourseViewModel viewmodel);
+
+  @Nullable
+  public CourseViewModel getViewmodel() {
+    return mViewmodel;
   }
 
   @NonNull

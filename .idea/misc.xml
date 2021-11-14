@@ -55,11 +55,11 @@
         <entry key="app/src/main/res/layout/fragment_confirm_code.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_contacts.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_conversations.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/fragment_course_details.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_course_details.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_course_lessons.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_forget_password.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.3109375" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.3109375" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.28606719367588934" />
         <entry key="app/src/main/res/layout/fragment_lesson_details.xml" value="0.30520833333333336" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_more.xml" value="0.3109375" />
@@ -74,7 +74,7 @@
         <entry key="app/src/main/res/layout/fragment_telecom.xml" value="0.3463541666666667" />
         <entry key="app/src/main/res/layout/fragment_telecom_search.xml" value="0.3463541666666667" />
         <entry key="app/src/main/res/layout/fragment_university_categories.xml" value="0.28676153514445885" />
-        <entry key="app/src/main/res/layout/fragment_university_details.xml" value="0.3463541666666667" />
+        <entry key="app/src/main/res/layout/fragment_university_details.xml" value="0.1" />
         <entry key="app/src/main/res/layout/instractor_sheet.xml" value="0.30520833333333336" />
         <entry key="app/src/main/res/layout/item_brand_suggest.xml" value="0.29483695652173914" />
         <entry key="app/src/main/res/layout/item_category.xml" value="0.3463541666666667" />
@@ -92,6 +92,7 @@
         <entry key="app/src/main/res/layout/item_selected_suggestions.xml" value="0.3109375" />
         <entry key="app/src/main/res/layout/item_telecom.xml" value="0.3463541666666667" />
         <entry key="app/src/main/res/layout/item_telecom_code.xml" value="0.3463541666666667" />
+        <entry key="app/src/main/res/layout/item_university_section.xml" value="0.15416666666666667" />
         <entry key="app/src/main/res/layout/item_unversity_sections.xml" value="0.3463541666666667" />
         <entry key="app/src/main/res/layout/layout_action_bar_back.xml" value="0.3109375" />
         <entry key="app/src/main/res/layout/layout_action_bar_home.xml" value="0.3109375" />

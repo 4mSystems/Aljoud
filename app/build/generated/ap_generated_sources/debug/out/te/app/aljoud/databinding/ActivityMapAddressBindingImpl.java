@@ -26,7 +26,7 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
     private final androidx.appcompat.widget.AppCompatButton mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback20;
+    private final android.view.View.OnClickListener mCallback22;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -47,7 +47,7 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
         this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback20 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback22 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -121,7 +121,7 @@ public class ActivityMapAddressBindingImpl extends ActivityMapAddressBinding imp
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.mboundView1.setOnClickListener(mCallback20);
+            this.mboundView1.setOnClickListener(mCallback22);
         }
     }
     // Listener Stub Implementations

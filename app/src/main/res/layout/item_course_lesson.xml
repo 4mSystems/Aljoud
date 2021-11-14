@@ -6,7 +6,7 @@
 
         <variable
             name="itemViewModel"
-            type="te.app.aljoud.pages.home.viewModels.ItemCategoryViewModel" />
+            type="te.app.aljoud.pages.home.viewModels.ItemUniversityViewModel" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
@@ -28,7 +28,7 @@
                 android:layout_margin="@dimen/dp8h"
                 android:scaleType="centerCrop"
                 android:src="@color/medium_color"
-                app:imageUrl="@{itemViewModel.categoriesItem.image}"
+                app:imageUrl="@{itemViewModel.university.image}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

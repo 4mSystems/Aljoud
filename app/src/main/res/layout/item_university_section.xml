@@ -6,7 +6,7 @@
 
         <variable
             name="itemViewModel"
-            type="te.app.aljoud.pages.home.viewModels.ItemCategoryViewModel" />
+            type="te.app.aljoud.pages.university.viewModel.ItemCollegesViewModel" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
@@ -29,14 +29,14 @@
                 android:layout_height="@dimen/dp150h"
                 android:scaleType="centerCrop"
                 android:src="@color/overlayBackground"
-                app:imageUrl="@{itemViewModel.categoriesItem.image}"
+                app:imageUrl="@{itemViewModel.specialistsItem.image}"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <te.app.aljoud.customViews.views.CustomTextViewMedium
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/dp10h"
-                android:text="@{itemViewModel.categoriesItem.title}"
+                android:text="@{itemViewModel.specialistsItem.name}"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colorPrimary"

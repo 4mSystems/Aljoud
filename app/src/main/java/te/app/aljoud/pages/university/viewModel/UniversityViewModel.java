@@ -1,15 +1,18 @@
 package te.app.aljoud.pages.university.viewModel;
 
 import androidx.databinding.Bindable;
-import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
+import te.app.aljoud.BR;
 import te.app.aljoud.base.BaseViewModel;
 import te.app.aljoud.model.base.Mutable;
-import te.app.aljoud.pages.home.adapters.UniversityAdapter;
+import te.app.aljoud.pages.university.adapters.CourseAdapter;
+import te.app.aljoud.pages.university.adapters.LevelsAdapter;
+import te.app.aljoud.pages.university.adapters.UniversityCollegesAdapter;
+import te.app.aljoud.pages.university.models.UniversityData;
 import te.app.aljoud.repository.HomeRepository;
 
 public class UniversityViewModel extends BaseViewModel {
@@ -18,8 +21,10 @@ public class UniversityViewModel extends BaseViewModel {
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     @Inject
     HomeRepository homeRepository;
-    UniversityAdapter universityAdapter;
-    LiveData<String> cartCount;
+    UniversityCollegesAdapter collegesAdapter;
+    UniversityData universityData;
+    LevelsAdapter levelsAdapter;
+    CourseAdapter courseAdapter;
 
     @Inject
     public UniversityViewModel(HomeRepository homeRepository) {
@@ -28,13 +33,42 @@ public class UniversityViewModel extends BaseViewModel {
         homeRepository.setLiveData(liveData);
     }
 
-    public void homeData() {
-        compositeDisposable.add(homeRepository.getHomeData());
+    public void universityDetails() {
+        compositeDisposable.add(homeRepository.universityDetails(getPassingObject().getId()));
+    }
+
+    public void levels() {
+        compositeDisposable.add(homeRepository.levels(getPassingObject().getId()));
+    }
+
+    public void levelCourses() {
+        compositeDisposable.add(homeRepository.levelCourses(getLevelsAdapter().lastSelected, getPassingObject().getId()));
     }
 
     @Bindable
-    public UniversityAdapter getCategoriesAdapter() {
-        return this.universityAdapter == null ? this.universityAdapter = new UniversityAdapter() : this.universityAdapter;
+    public UniversityData getUniversityData() {
+        return this.universityData == null ? this.universityData = new UniversityData() : this.universityData;
+    }
+
+    public void setUniversityData(UniversityData universityData) {
+        getCollegesAdapter().update(universityData.getSpecialists());
+        notifyChange(BR.universityData);
+        this.universityData = universityData;
+    }
+
+    @Bindable
+    public UniversityCollegesAdapter getCollegesAdapter() {
+        return this.collegesAdapter == null ? this.collegesAdapter = new UniversityCollegesAdapter() : this.collegesAdapter;
+    }
+
+    @Bindable
+    public LevelsAdapter getLevelsAdapter() {
+        return this.levelsAdapter == null ? this.levelsAdapter = new LevelsAdapter() : this.levelsAdapter;
+    }
+
+    @Bindable
+    public CourseAdapter getCourseAdapter() {
+        return this.courseAdapter == null ? this.courseAdapter = new CourseAdapter() : this.courseAdapter;
     }
 
 

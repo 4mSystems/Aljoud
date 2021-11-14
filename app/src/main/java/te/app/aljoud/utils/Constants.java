@@ -2,15 +2,13 @@ package te.app.aljoud.utils;
 
 public class Constants {
 
-    public static final int PRODUCTS = 1;
     public static final String IMAGE = "IMAGE";
-
-    public final static String CART = "CART";
-    public final static String SEARCH = "SEARCH";
-    public final static String ADD_TO_CART = "ADD_TO_CART";
+    public final static String DETAILS = "DETAILS";
+    public final static String LEVELS = "LEVELS";
+    public final static String LEVEL_COURSES = "LEVEL_COURSES";
     public final static String NOT_VERIFIED = "NOT_VERIFIED";
-    public final static String MINUS = "MINUS";
-    public static final String PLUS = "PLUS";
+    public final static String COURSE_DETAILS = "COURSE_DETAILS";
+    public static final String INSTRUCTOR = "INSTRUCTOR";
     public static final String REMOVE_FROM_CART = "REMOVE_FROM_CART";
     public static final String FINISH_ORDER = "FINISH_ORDER";
     public static final String SEND_ORDER = "SEND_ORDER";
