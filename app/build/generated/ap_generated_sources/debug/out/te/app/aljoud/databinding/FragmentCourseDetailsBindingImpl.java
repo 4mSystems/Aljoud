@@ -14,46 +14,50 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.card_info, 15);
-        sViewsWithIds.put(R.id.br, 16);
-        sViewsWithIds.put(R.id.tv_card_title, 17);
-        sViewsWithIds.put(R.id.card_course_include, 18);
-        sViewsWithIds.put(R.id.tv_card_course, 19);
-        sViewsWithIds.put(R.id.tv_course_access, 20);
-        sViewsWithIds.put(R.id.tv_course_discuss, 21);
-        sViewsWithIds.put(R.id.tv_course_certificate, 22);
-        sViewsWithIds.put(R.id.card_course_action, 23);
+        sViewsWithIds.put(R.id.card_info, 16);
+        sViewsWithIds.put(R.id.br, 17);
+        sViewsWithIds.put(R.id.tv_card_title, 18);
+        sViewsWithIds.put(R.id.card_course_include, 19);
+        sViewsWithIds.put(R.id.tv_card_course, 20);
+        sViewsWithIds.put(R.id.tv_course_access, 21);
+        sViewsWithIds.put(R.id.tv_course_discuss, 22);
+        sViewsWithIds.put(R.id.tv_course_certificate, 23);
+        sViewsWithIds.put(R.id.card_course_action, 24);
     }
     // views
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
+    @NonNull
+    private final com.google.android.material.button.MaterialButton mboundView15;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback23;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback24;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public FragmentCourseDetailsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 24, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 25, sIncludes, sViewsWithIds));
     }
     private FragmentCourseDetailsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.constraintlayout.widget.Barrier) bindings[16]
-            , (androidx.cardview.widget.CardView) bindings[23]
-            , (androidx.cardview.widget.CardView) bindings[18]
-            , (androidx.cardview.widget.CardView) bindings[15]
+            , (androidx.constraintlayout.widget.Barrier) bindings[17]
+            , (androidx.cardview.widget.CardView) bindings[24]
+            , (androidx.cardview.widget.CardView) bindings[19]
+            , (androidx.cardview.widget.CardView) bindings[16]
             , (androidx.cardview.widget.CardView) bindings[7]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[11]
             , (de.hdodenhof.circleimageview.CircleImageView) bindings[8]
             , (com.google.android.material.imageview.ShapeableImageView) bindings[3]
             , (androidx.appcompat.widget.AppCompatRatingBar) bindings[6]
-            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[19]
-            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[17]
-            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[20]
-            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[13]
-            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[22]
+            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[20]
+            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[18]
             , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[21]
+            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[13]
+            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[23]
+            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[22]
             , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[14]
             , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[12]
             , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[9]
@@ -69,6 +73,8 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
         this.icUniversity.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
+        this.mboundView15 = (com.google.android.material.button.MaterialButton) bindings[15];
+        this.mboundView15.setTag(null);
         this.offerItemDesc.setTag(null);
         this.tvCourseArticle.setTag(null);
         this.tvCourseQuiz.setTag(null);
@@ -82,6 +88,7 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
         setRootTag(root);
         // listeners
         mCallback23 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback24 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -304,26 +311,51 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
             // api target 1
 
             this.icArrowRight.setOnClickListener(mCallback23);
+            this.mboundView15.setOnClickListener(mCallback24);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
-        // localize variables for thread safety
-        // viewmodel != null
-        boolean viewmodelJavaLangObjectNull = false;
-        // viewmodel
-        te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel viewmodel = mViewmodel;
+        switch(sourceId) {
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel viewmodel = mViewmodel;
 
 
 
-        viewmodelJavaLangObjectNull = (viewmodel) != (null);
-        if (viewmodelJavaLangObjectNull) {
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
 
 
 
 
-            viewmodel.action(te.app.aljoud.utils.Constants.INSTRUCTOR);
+                    viewmodel.action(te.app.aljoud.utils.Constants.INSTRUCTOR);
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.action(te.app.aljoud.utils.Constants.COURSE_LESSONS);
+                }
+                break;
+            }
         }
     }
     // dirty flag

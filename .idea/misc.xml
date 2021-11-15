@@ -20,6 +20,7 @@
         <entry key="app/src/main/res/drawable/ic_forget.xml" value="0.33125" />
         <entry key="app/src/main/res/drawable/ic_free.xml" value="0.3255208333333333" />
         <entry key="app/src/main/res/drawable/ic_home.xml" value="0.30745658835546474" />
+        <entry key="app/src/main/res/drawable/ic_lock.xml" value="0.321875" />
         <entry key="app/src/main/res/drawable/ic_logout.xml" value="0.33125" />
         <entry key="app/src/main/res/drawable/ic_menu.xml" value="0.33125" />
         <entry key="app/src/main/res/drawable/ic_more_admin_support.xml" value="0.3255208333333333" />
@@ -27,6 +28,7 @@
         <entry key="app/src/main/res/drawable/ic_more_rate.xml" value="0.3255208333333333" />
         <entry key="app/src/main/res/drawable/ic_more_share.xml" value="0.3255208333333333" />
         <entry key="app/src/main/res/drawable/ic_note.xml" value="0.3255208333333333" />
+        <entry key="app/src/main/res/drawable/ic_open.xml" value="0.321875" />
         <entry key="app/src/main/res/drawable/ic_right.xml" value="0.3255208333333333" />
         <entry key="app/src/main/res/drawable/ic_send.xml" value="0.3255208333333333" />
         <entry key="app/src/main/res/drawable/ic_shop.xml" value="0.33125" />
@@ -56,7 +58,7 @@
         <entry key="app/src/main/res/layout/fragment_contacts.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_conversations.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_course_details.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/fragment_course_lessons.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_course_lessons.xml" value="0.3630094043887147" />
         <entry key="app/src/main/res/layout/fragment_forget_password.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.3109375" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.28606719367588934" />

@@ -3128,6 +3128,7 @@ int drawable ic_language 0x7f0700a2
 int drawable ic_list_fav 0x7f0700a3
 int drawable ic_location 0x7f0700a4
 int drawable ic_location_city 0x7f0700a5
+int drawable ic_lock 0x7f0700f3
 int drawable ic_logout 0x7f0700a6
 int drawable ic_menu 0x7f0700a7
 int drawable ic_more 0x7f0700a8
@@ -3144,6 +3145,7 @@ int drawable ic_mtrl_chip_close_circle 0x7f0700b2
 int drawable ic_note 0x7f0700b3
 int drawable ic_notifications 0x7f0700b4
 int drawable ic_offer 0x7f0700b5
+int drawable ic_open 0x7f0700f4
 int drawable ic_password 0x7f0700b6
 int drawable ic_pdf 0x7f0700b7
 int drawable ic_products 0x7f0700b8
@@ -3782,6 +3784,7 @@ int id tv_card_course 0x7f09023c
 int id tv_card_title 0x7f09023d
 int id tv_change_new_password 0x7f09023e
 int id tv_contact 0x7f09023f
+int id tv_count 0x7f090287
 int id tv_course_access 0x7f090240
 int id tv_course_article 0x7f090241
 int id tv_course_certificate 0x7f090242

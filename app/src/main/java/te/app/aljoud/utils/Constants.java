@@ -9,8 +9,8 @@ public class Constants {
     public final static String NOT_VERIFIED = "NOT_VERIFIED";
     public final static String COURSE_DETAILS = "COURSE_DETAILS";
     public static final String INSTRUCTOR = "INSTRUCTOR";
-    public static final String REMOVE_FROM_CART = "REMOVE_FROM_CART";
-    public static final String FINISH_ORDER = "FINISH_ORDER";
+    public static final String COURSE_LESSONS = "COURSE_LESSONS";
+    public static final String LESSON_VIDEOS = "LESSON_VIDEOS";
     public static final String SEND_ORDER = "SEND_ORDER";
 
     public final static String MENU_HOME = "MENU_HOME";

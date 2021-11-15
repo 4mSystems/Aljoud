@@ -6,6 +6,8 @@
 
     <data>
 
+        <import type="te.app.aljoud.utils.session.UserHelper" />
+
         <variable
             name="viewmodel"
             type="te.app.aljoud.pages.courseDetails.viewModels.CourseLessonsViewModel" />
@@ -13,13 +15,12 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/line_color">
+        android:layout_height="match_parent">
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="@dimen/dp6h"
+            android:layout_marginBottom="@dimen/dp10h"
             app:layout_constraintBottom_toTopOf="@+id/rate_container"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -45,13 +46,12 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/dp6h"
-                            android:text="@string/account_number"
+                            android:text="@{@string/account_number.concat(` `).concat(String.valueOf(UserHelper.getInstance(context).userData.id))}"
                             android:textAlignment="viewStart"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@color/colorPrimaryDark"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
-
 
                         <te.app.aljoud.customViews.views.CustomTextViewRegular
                             android:id="@+id/tv_policy_warning1"
@@ -90,7 +90,8 @@
                             android:layout_height="@dimen/dp50h"
                             android:layout_marginTop="@dimen/dp10h"
                             android:layout_marginEnd="@dimen/dp12w"
-                            android:src="@color/colordark"
+                            android:src="@color/overlayBackground"
+                            app:imageUrl="@{UserHelper.getInstance(context).userData.qr_image}"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -101,7 +102,7 @@
                             android:text="@string/account_qr"
                             android:textAlignment="center"
                             android:textColor="@color/colordark"
-                            android:textSize="@dimen/sp6"
+                            android:textSize="@dimen/sp10"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="@+id/ic_qr"
                             app:layout_constraintStart_toStartOf="@+id/ic_qr"
@@ -128,7 +129,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/dp6h"
-                            android:text="course name"
+                            android:text="@{viewmodel.lessonMainData.courseData.name}"
                             android:textAlignment="viewStart"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@color/colorPrimaryDark"
@@ -141,7 +142,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/dp6h"
-                            android:text="@string/description"
+                            android:text="@{viewmodel.lessonMainData.courseData.desc}"
                             android:textAlignment="viewStart"
                             android:textAppearance="@style/TextAppearance.AppCompat.Small"
                             android:textColor="@color/colorPrimaryDark"
@@ -154,7 +155,8 @@
                             android:layout_width="@dimen/dp80h"
                             android:layout_height="@dimen/dp80h"
                             android:layout_margin="@dimen/dp6h"
-                            android:src="@color/medium_color"
+                            android:src="@color/overlayBackground"
+                            app:imageFullUrl="@{viewmodel.lessonMainData.courseData.image}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -167,7 +169,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/dp8h"
+                    app:adapter="@{viewmodel.lessonsAdapter}"
                     app:layout_constraintTop_toBottomOf="@id/card_info"
+                    app:orientation="@{`1`}"
+                    app:span="@{`1`}"
                     tools:listitem="@layout/item_course_lesson" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -177,7 +182,6 @@
             android:id="@+id/rate_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/line_color"
             app:layout_constraintBottom_toBottomOf="parent">
 
             <com.google.android.material.button.MaterialButton

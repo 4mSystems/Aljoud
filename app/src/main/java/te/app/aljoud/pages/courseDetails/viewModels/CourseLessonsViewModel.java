@@ -1,15 +1,16 @@
 package te.app.aljoud.pages.courseDetails.viewModels;
 
 import androidx.databinding.Bindable;
-import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
+import te.app.aljoud.BR;
 import te.app.aljoud.base.BaseViewModel;
 import te.app.aljoud.model.base.Mutable;
-import te.app.aljoud.pages.home.adapters.UniversityAdapter;
+import te.app.aljoud.pages.courseDetails.adapters.LessonsAdapter;
+import te.app.aljoud.pages.courseDetails.models.lessons.LessonMainData;
 import te.app.aljoud.repository.HomeRepository;
 
 public class CourseLessonsViewModel extends BaseViewModel {
@@ -18,8 +19,8 @@ public class CourseLessonsViewModel extends BaseViewModel {
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     @Inject
     HomeRepository homeRepository;
-    UniversityAdapter universityAdapter;
-    LiveData<String> cartCount;
+    LessonsAdapter lessonsAdapter;
+    LessonMainData lessonMainData;
 
     @Inject
     public CourseLessonsViewModel(HomeRepository homeRepository) {
@@ -28,15 +29,26 @@ public class CourseLessonsViewModel extends BaseViewModel {
         homeRepository.setLiveData(liveData);
     }
 
-    public void homeData() {
-//        compositeDisposable.add(homeRepository.getHomeData());
+    public void courseLessons() {
+        compositeDisposable.add(homeRepository.getCourseLessons(getPassingObject().getId()));
     }
 
     @Bindable
-    public UniversityAdapter getCategoriesAdapter() {
-        return this.universityAdapter == null ? this.universityAdapter = new UniversityAdapter() : this.universityAdapter;
+    public LessonsAdapter getLessonsAdapter() {
+        return this.lessonsAdapter == null ? this.lessonsAdapter = new LessonsAdapter() : this.lessonsAdapter;
     }
 
+    @Bindable
+    public LessonMainData getLessonMainData() {
+        return lessonMainData;
+    }
+
+    @Bindable
+    public void setLessonMainData(LessonMainData lessonMainData) {
+        getLessonsAdapter().update(lessonMainData.getLessons());
+        notifyChange(BR.lessonMainData);
+        this.lessonMainData = lessonMainData;
+    }
 
     public HomeRepository getHomeRepository() {
         return homeRepository;

@@ -14,7 +14,8 @@ public class ItemLessonVideoBindingImpl extends ItemLessonVideoBinding implement
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.tv_title, 2);
+        sViewsWithIds.put(R.id.cat_image, 2);
+        sViewsWithIds.put(R.id.tv_count, 3);
     }
     // views
     @NonNull
@@ -27,16 +28,17 @@ public class ItemLessonVideoBindingImpl extends ItemLessonVideoBinding implement
     // Inverse Binding Event Handlers
 
     public ItemLessonVideoBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
     }
     private ItemLessonVideoBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (de.hdodenhof.circleimageview.CircleImageView) bindings[1]
-            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[2]
+            , (de.hdodenhof.circleimageview.CircleImageView) bindings[2]
+            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[3]
+            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[1]
             );
-        this.catImage.setTag(null);
         this.mboundView0 = (com.google.android.material.card.MaterialCardView) bindings[0];
         this.mboundView0.setTag(null);
+        this.tvTitle.setTag(null);
         setRootTag(root);
         // listeners
         mCallback11 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
@@ -65,7 +67,7 @@ public class ItemLessonVideoBindingImpl extends ItemLessonVideoBinding implement
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.itemViewModel == variableId) {
-            setItemViewModel((te.app.aljoud.pages.home.viewModels.ItemUniversityViewModel) variable);
+            setItemViewModel((te.app.aljoud.pages.courseDetails.viewModels.ItemLessonVideoViewModel) variable);
         }
         else {
             variableSet = false;
@@ -73,7 +75,7 @@ public class ItemLessonVideoBindingImpl extends ItemLessonVideoBinding implement
             return variableSet;
     }
 
-    public void setItemViewModel(@Nullable te.app.aljoud.pages.home.viewModels.ItemUniversityViewModel ItemViewModel) {
+    public void setItemViewModel(@Nullable te.app.aljoud.pages.courseDetails.viewModels.ItemLessonVideoViewModel ItemViewModel) {
         updateRegistration(0, ItemViewModel);
         this.mItemViewModel = ItemViewModel;
         synchronized(this) {
@@ -87,18 +89,18 @@ public class ItemLessonVideoBindingImpl extends ItemLessonVideoBinding implement
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeItemViewModel((te.app.aljoud.pages.home.viewModels.ItemUniversityViewModel) object, fieldId);
+                return onChangeItemViewModel((te.app.aljoud.pages.courseDetails.viewModels.ItemLessonVideoViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeItemViewModel(te.app.aljoud.pages.home.viewModels.ItemUniversityViewModel ItemViewModel, int fieldId) {
+    private boolean onChangeItemViewModel(te.app.aljoud.pages.courseDetails.viewModels.ItemLessonVideoViewModel ItemViewModel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
             }
             return true;
         }
-        else if (fieldId == BR.university) {
+        else if (fieldId == BR.videoData) {
             synchronized(this) {
                     mDirtyFlags |= 0x2L;
             }
@@ -114,35 +116,35 @@ public class ItemLessonVideoBindingImpl extends ItemLessonVideoBinding implement
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        te.app.aljoud.pages.home.viewModels.ItemUniversityViewModel itemViewModel = mItemViewModel;
-        te.app.aljoud.pages.home.models.home.University itemViewModelUniversity = null;
-        java.lang.String itemViewModelUniversityImage = null;
+        te.app.aljoud.pages.courseDetails.viewModels.ItemLessonVideoViewModel itemViewModel = mItemViewModel;
+        te.app.aljoud.pages.courseDetails.models.videos.VideoData itemViewModelVideoData = null;
+        java.lang.String itemViewModelVideoDataName = null;
 
         if ((dirtyFlags & 0x7L) != 0) {
 
 
 
                 if (itemViewModel != null) {
-                    // read itemViewModel.university
-                    itemViewModelUniversity = itemViewModel.getUniversity();
+                    // read itemViewModel.videoData
+                    itemViewModelVideoData = itemViewModel.getVideoData();
                 }
 
 
-                if (itemViewModelUniversity != null) {
-                    // read itemViewModel.university.image
-                    itemViewModelUniversityImage = itemViewModelUniversity.getImage();
+                if (itemViewModelVideoData != null) {
+                    // read itemViewModel.videoData.name
+                    itemViewModelVideoDataName = itemViewModelVideoData.getName();
                 }
         }
         // batch finished
-        if ((dirtyFlags & 0x7L) != 0) {
-            // api target 1
-
-            te.app.aljoud.base.ApplicationBinding.loadImage(this.catImage, itemViewModelUniversityImage);
-        }
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
             this.mboundView0.setOnClickListener(mCallback11);
+        }
+        if ((dirtyFlags & 0x7L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvTitle, itemViewModelVideoDataName);
         }
     }
     // Listener Stub Implementations
@@ -150,7 +152,7 @@ public class ItemLessonVideoBindingImpl extends ItemLessonVideoBinding implement
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         // localize variables for thread safety
         // itemViewModel
-        te.app.aljoud.pages.home.viewModels.ItemUniversityViewModel itemViewModel = mItemViewModel;
+        te.app.aljoud.pages.courseDetails.viewModels.ItemLessonVideoViewModel itemViewModel = mItemViewModel;
         // itemViewModel != null
         boolean itemViewModelJavaLangObjectNull = false;
 
@@ -167,7 +169,7 @@ public class ItemLessonVideoBindingImpl extends ItemLessonVideoBinding implement
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): itemViewModel
-        flag 1 (0x2L): itemViewModel.university
+        flag 1 (0x2L): itemViewModel.videoData
         flag 2 (0x3L): null
     flag mapping end*/
     //end

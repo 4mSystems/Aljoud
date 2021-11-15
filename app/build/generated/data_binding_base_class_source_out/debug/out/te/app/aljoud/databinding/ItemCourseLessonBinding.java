@@ -15,7 +15,8 @@ import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.aljoud.R;
 import te.app.aljoud.customViews.views.CustomTextViewMedium;
-import te.app.aljoud.pages.home.viewModels.ItemUniversityViewModel;
+import te.app.aljoud.customViews.views.CustomTextViewRegular;
+import te.app.aljoud.pages.courseDetails.viewModels.ItemLessonViewModel;
 
 public abstract class ItemCourseLessonBinding extends ViewDataBinding {
   @NonNull
@@ -25,23 +26,28 @@ public abstract class ItemCourseLessonBinding extends ViewDataBinding {
   public final AppCompatImageView icStatus;
 
   @NonNull
+  public final CustomTextViewRegular tvCount;
+
+  @NonNull
   public final CustomTextViewMedium tvTitle;
 
   @Bindable
-  protected ItemUniversityViewModel mItemViewModel;
+  protected ItemLessonViewModel mItemViewModel;
 
   protected ItemCourseLessonBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CircleImageView catImage, AppCompatImageView icStatus, CustomTextViewMedium tvTitle) {
+      CircleImageView catImage, AppCompatImageView icStatus, CustomTextViewRegular tvCount,
+      CustomTextViewMedium tvTitle) {
     super(_bindingComponent, _root, _localFieldCount);
     this.catImage = catImage;
     this.icStatus = icStatus;
+    this.tvCount = tvCount;
     this.tvTitle = tvTitle;
   }
 
-  public abstract void setItemViewModel(@Nullable ItemUniversityViewModel itemViewModel);
+  public abstract void setItemViewModel(@Nullable ItemLessonViewModel itemViewModel);
 
   @Nullable
-  public ItemUniversityViewModel getItemViewModel() {
+  public ItemLessonViewModel getItemViewModel() {
     return mItemViewModel;
   }
 

@@ -4,17 +4,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
-
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.gson.Gson;
-
 import javax.inject.Inject;
-
-import te.app.aljoud.BR;
 import te.app.aljoud.PassingObject;
 import te.app.aljoud.R;
 import te.app.aljoud.base.BaseFragment;
@@ -25,9 +20,6 @@ import te.app.aljoud.databinding.InstractorSheetBinding;
 import te.app.aljoud.model.base.Mutable;
 import te.app.aljoud.pages.courseDetails.models.CourseDetailsResponse;
 import te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel;
-import te.app.aljoud.pages.settings.AboutAppFragment;
-import te.app.aljoud.pages.university.models.course.Course;
-import te.app.aljoud.pages.university.models.course.CourseResponse;
 import te.app.aljoud.utils.Constants;
 import te.app.aljoud.utils.helper.MovementHelper;
 
@@ -61,6 +53,8 @@ public class FragmentCourseDetails extends BaseFragment {
                 viewModel.setCourse(((CourseDetailsResponse) mutable.object).getCourse());
             } else if (Constants.INSTRUCTOR.equals(((Mutable) o).message)) {
                 showInstructorInfo();
+            } else if (Constants.COURSE_LESSONS.equals(((Mutable) o).message)) {
+                MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getCourse().getId()), viewModel.getCourse().getName(), FragmentCourseLessons.class.getName(), null);
             }
         });
     }

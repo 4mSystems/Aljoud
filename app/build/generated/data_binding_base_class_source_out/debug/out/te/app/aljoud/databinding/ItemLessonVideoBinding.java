@@ -14,29 +14,34 @@ import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.aljoud.R;
 import te.app.aljoud.customViews.views.CustomTextViewMedium;
-import te.app.aljoud.pages.home.viewModels.ItemUniversityViewModel;
+import te.app.aljoud.customViews.views.CustomTextViewRegular;
+import te.app.aljoud.pages.courseDetails.viewModels.ItemLessonVideoViewModel;
 
 public abstract class ItemLessonVideoBinding extends ViewDataBinding {
   @NonNull
   public final CircleImageView catImage;
 
   @NonNull
+  public final CustomTextViewRegular tvCount;
+
+  @NonNull
   public final CustomTextViewMedium tvTitle;
 
   @Bindable
-  protected ItemUniversityViewModel mItemViewModel;
+  protected ItemLessonVideoViewModel mItemViewModel;
 
   protected ItemLessonVideoBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CircleImageView catImage, CustomTextViewMedium tvTitle) {
+      CircleImageView catImage, CustomTextViewRegular tvCount, CustomTextViewMedium tvTitle) {
     super(_bindingComponent, _root, _localFieldCount);
     this.catImage = catImage;
+    this.tvCount = tvCount;
     this.tvTitle = tvTitle;
   }
 
-  public abstract void setItemViewModel(@Nullable ItemUniversityViewModel itemViewModel);
+  public abstract void setItemViewModel(@Nullable ItemLessonVideoViewModel itemViewModel);
 
   @Nullable
-  public ItemUniversityViewModel getItemViewModel() {
+  public ItemLessonVideoViewModel getItemViewModel() {
     return mItemViewModel;
   }
 

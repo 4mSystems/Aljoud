@@ -352,10 +352,12 @@
                         android:layout_marginStart="@dimen/dp8h"
                         android:layout_marginTop="@dimen/dp8h"
                         android:layout_marginEnd="@dimen/dp8h"
+                        android:onClick="@{()->viewmodel.action(Constants.COURSE_LESSONS)}"
                         android:text="@string/course_content"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="@color/colorAccent"
                         app:backgroundTint="@color/white"
+                        app:rippleColor="@color/overlayBackground"
                         app:strokeColor="@color/colorAccent"
                         app:strokeWidth="1dp" />
 

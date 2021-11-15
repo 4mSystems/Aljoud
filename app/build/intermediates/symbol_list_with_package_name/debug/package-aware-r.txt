@@ -3129,6 +3129,7 @@ drawable ic_language
 drawable ic_list_fav
 drawable ic_location
 drawable ic_location_city
+drawable ic_lock
 drawable ic_logout
 drawable ic_menu
 drawable ic_more
@@ -3145,6 +3146,7 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_note
 drawable ic_notifications
 drawable ic_offer
+drawable ic_open
 drawable ic_password
 drawable ic_pdf
 drawable ic_products
@@ -3783,6 +3785,7 @@ id tv_card_course
 id tv_card_title
 id tv_change_new_password
 id tv_contact
+id tv_count
 id tv_course_access
 id tv_course_article
 id tv_course_certificate

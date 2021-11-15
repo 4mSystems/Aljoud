@@ -426,37 +426,42 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(28);
+    static final SparseArray<String> sKeys = new SparseArray<String>(33);
 
     static {
       sKeys.put(0, "_all");
       sKeys.put(1, "aboutMain");
       sKeys.put(2, "adapter");
       sKeys.put(3, "baseViewModel");
-      sKeys.put(4, "categoriesAdapter");
-      sKeys.put(5, "chat");
-      sKeys.put(6, "collegesAdapter");
-      sKeys.put(7, "conversationsAdapter");
-      sKeys.put(8, "conversationsData");
-      sKeys.put(9, "conversationsMain");
-      sKeys.put(10, "course");
-      sKeys.put(11, "courseAdapter");
-      sKeys.put(12, "homeMainData");
-      sKeys.put(13, "itemChatViewModel");
-      sKeys.put(14, "itemViewModel");
-      sKeys.put(15, "levelsAdapter");
-      sKeys.put(16, "levelsData");
-      sKeys.put(17, "mapAddressViewModel");
-      sKeys.put(18, "menuViewModel");
-      sKeys.put(19, "message");
-      sKeys.put(20, "passingObject");
-      sKeys.put(21, "request");
-      sKeys.put(22, "specialistsItem");
-      sKeys.put(23, "university");
-      sKeys.put(24, "universityAdapter");
-      sKeys.put(25, "universityData");
-      sKeys.put(26, "viewModel");
-      sKeys.put(27, "viewmodel");
+      sKeys.put(4, "chat");
+      sKeys.put(5, "collegesAdapter");
+      sKeys.put(6, "conversationsAdapter");
+      sKeys.put(7, "conversationsData");
+      sKeys.put(8, "conversationsMain");
+      sKeys.put(9, "course");
+      sKeys.put(10, "courseAdapter");
+      sKeys.put(11, "homeMainData");
+      sKeys.put(12, "itemChatViewModel");
+      sKeys.put(13, "itemViewModel");
+      sKeys.put(14, "lessonMainData");
+      sKeys.put(15, "lessonVideosAdapter");
+      sKeys.put(16, "lessonsAdapter");
+      sKeys.put(17, "lessonsItem");
+      sKeys.put(18, "levelsAdapter");
+      sKeys.put(19, "levelsData");
+      sKeys.put(20, "mapAddressViewModel");
+      sKeys.put(21, "menuViewModel");
+      sKeys.put(22, "message");
+      sKeys.put(23, "passingObject");
+      sKeys.put(24, "request");
+      sKeys.put(25, "specialistsItem");
+      sKeys.put(26, "university");
+      sKeys.put(27, "universityAdapter");
+      sKeys.put(28, "universityData");
+      sKeys.put(29, "videoData");
+      sKeys.put(30, "videosMainData");
+      sKeys.put(31, "viewModel");
+      sKeys.put(32, "viewmodel");
     }
   }
 

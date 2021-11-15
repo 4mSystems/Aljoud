@@ -8,6 +8,8 @@ public class URLS {
     public final static String LEVELS = "home/college/levels/";
     public final static String LEVEL_COURSES = "home/level/courses?level_id=";
     public final static String COURSE_DETAILS = "course/details/";
+    public final static String COURSE_LESSONS = "course/lessons/";
+    public final static String LESSON_VIDEOS = "lesson/videos/";
     public final static String ABOUT = "app/about-us";
     public static final String CHANGE_PROFILE_PASSWORD = "user/change-password";
     public static final String CHANGE_PASSWORD = "password/change";

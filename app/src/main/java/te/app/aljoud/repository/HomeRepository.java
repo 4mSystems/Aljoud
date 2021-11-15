@@ -10,6 +10,8 @@ import io.reactivex.disposables.Disposable;
 import te.app.aljoud.connection.ConnectionHelper;
 import te.app.aljoud.model.base.Mutable;
 import te.app.aljoud.pages.courseDetails.models.CourseDetailsResponse;
+import te.app.aljoud.pages.courseDetails.models.lessons.CourseLessonsResponse;
+import te.app.aljoud.pages.courseDetails.models.videos.VideosResponse;
 import te.app.aljoud.pages.home.models.home.HomeResponse;
 import te.app.aljoud.pages.university.models.UniversityDetailsResponse;
 import te.app.aljoud.pages.university.models.course.CourseResponse;
@@ -57,6 +59,16 @@ public class HomeRepository extends BaseRepository {
     public Disposable courseDetails(int courseId) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.COURSE_DETAILS.concat(String.valueOf(courseId)), new Object(), CourseDetailsResponse.class,
                 Constants.COURSE_DETAILS, false);
+    }
+
+    public Disposable getCourseLessons(int courseId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.COURSE_LESSONS.concat(String.valueOf(courseId)), new Object(), CourseLessonsResponse.class,
+                Constants.COURSE_LESSONS, false);
+    }
+
+    public Disposable getLessonVideos(int lessonId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.LESSON_VIDEOS.concat(String.valueOf(lessonId)), new Object(), VideosResponse.class,
+                Constants.LESSON_VIDEOS, false);
     }
 
 }
