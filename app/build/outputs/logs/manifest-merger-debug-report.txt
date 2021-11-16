@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-72:12
-INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-72:12
-INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-72:12
-INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-72:12
+ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-71:12
+INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-71:12
+INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-71:12
+INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-71:12
 MERGED from [androidx.databinding:databinding-adapters:7.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/991aad63ed8beda19300543ef0f85b84/transformed/databinding-adapters-7.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.databinding:databinding-runtime:7.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/409ff78f14f2de3c166139aafeac8343/transformed/databinding-runtime-7.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.material:material:1.4.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/a4db12b072650e13bc36a4fc9443bd47/transformed/material-1.4.0/AndroidManifest.xml:17:1-24:12
@@ -50,6 +50,8 @@ MERGED from [androidx.loader:loader:1.0.0] /home/elnagar/android-studio-2020.3.1
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.4.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/0a9ab96a17aad350bcd33f71612a7ccb/transformed/lifecycle-viewmodel-2.4.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.4.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/9a66e0e8156b051304799052434b053b/transformed/lifecycle-livedata-2.4.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.room:room-runtime:2.3.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/e025a7e91ae44c7310653744ca163cc9/transformed/room-runtime-2.3.0/AndroidManifest.xml:17:1-31:12
+MERGED from [com.google.android.exoplayer:exoplayer:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/197888f56d3d77df4a4a9718e4a82daf/transformed/jetified-exoplayer-2.15.1/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-ui:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/0693d4be218fdb5beaaee740d8f51288/transformed/jetified-exoplayer-ui-2.15.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.recyclerview:recyclerview:1.2.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/0cb6f782f4aa16784e68141bc8b7b9fa/transformed/recyclerview-1.2.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/73024ad51a4df5238a90a9d634a365dd/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/6c911914c1222f9734997a07801d2bb6/transformed/jetified-circleimageview-3.1.0/AndroidManifest.xml:2:1-11:12
@@ -57,6 +59,13 @@ MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] /home/elnagar
 MERGED from [com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c4d08d76aee2029eeea2e492c635d5cd/transformed/jetified-picasso-2.71828/AndroidManifest.xml:2:1-14:12
 MERGED from [com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/cd62d35d0c4f550a150d8f1dba8ce73d/transformed/jetified-core-1.10.2/AndroidManifest.xml:2:1-46:12
 MERGED from [com.github.delight-im:Android-AdvancedWebView:v3.2.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/a4030889fb7ad4858402fdaf7b4e66dd/transformed/jetified-Android-AdvancedWebView-v3.2.1/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/f12df03edae069300dabee3a938d535f/transformed/jetified-exoplayer-dash-2.15.1/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/e8bb7d33dfc64415bfe88de301a3e1b5/transformed/jetified-exoplayer-smoothstreaming-2.15.1/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/5cfc55bf013e658f90653a4ef184b4d9/transformed/jetified-exoplayer-hls-2.15.1/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-rtsp:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/06b615f707618c6e84648f47551feb2e/transformed/jetified-exoplayer-rtsp-2.15.1/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-transformer:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/a7021acbcfd39854993af9ad8236b6b0/transformed/jetified-exoplayer-transformer-2.15.1/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/8c2b62755951828fcf8bc217075a934a/transformed/jetified-exoplayer-core-2.15.1/AndroidManifest.xml:17:1-26:12
+MERGED from [es.voghdev.pdfviewpager:library:1.1.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/0b96c35990a8d4c8dd8a1ba1db3095d5/transformed/jetified-library-1.1.2/AndroidManifest.xml:2:1-18:12
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/17a159ce8ab972dec45044c5700032c9/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.firebase:firebase-encoders-json:17.1.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3ba25e10c79def0bc339dd1d43326617/transformed/jetified-firebase-encoders-json-17.1.0/AndroidManifest.xml:15:1-23:12
 MERGED from [androidx.appcompat:appcompat-resources:1.3.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fb82cd814d6b88b1ca417815991711ed/transformed/jetified-appcompat-resources-1.3.1/AndroidManifest.xml:17:1-24:12
@@ -65,10 +74,10 @@ MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/elnagar/a
 MERGED from [androidx.transition:transition:1.2.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/06e956728079b62473f9071c0ed43744/transformed/transition-1.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fdd32f901d4bb1d5d33bddeb84a905c7/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/29de5575f9927728f2259ca80dea1987/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.media:media:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/cabc7bf9fcd04c9bc88fe0c2ed8f8af4/transformed/media-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/5b6087d2a888dc8cd66652dafdfd98d8/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/dbe6632ea1830f7b528d4645a38df2bc/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.customview:customview:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/bd33b12c49278f934d4edec5459af236/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.3.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/ee68d4aad336dd05fff421c77e49bef1/transformed/media-1.3.1/AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/179bb343f7a6cb4f265a076d12a07093/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/0d6128869f3f5054df81b46d7aeb5c68/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.5.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/a6ed9dfb3abf7d8541f7a1d01bf1d39b/transformed/core-1.5.0/AndroidManifest.xml:17:1-26:12
@@ -86,6 +95,8 @@ MERGED from [androidx.sqlite:sqlite:2.1.0] /home/elnagar/android-studio-2020.3.1
 MERGED from [com.google.dagger:dagger-android:2.30.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/1fd56a34125ecfba477755f5a39d4b75/transformed/jetified-dagger-android-2.30.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.exifinterface:exifinterface:1.2.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/efd230262f34ce1ea4a0e8d8cdefdf58/transformed/exifinterface-1.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/de0449d0b9021b4a525a3d97e421b0b9/transformed/jetified-gifdecoder-4.12.0/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.exoplayer:exoplayer-extractor:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/b0dcdea9562de50edced3b8cf4514ed4/transformed/jetified-exoplayer-extractor-2.15.1/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/39dfd81fb50161f37db6aa5714953dc8/transformed/jetified-exoplayer-common-2.15.1/AndroidManifest.xml:17:1-26:12
 MERGED from [com.google.firebase:firebase-components:16.1.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/0434e645f063f29e8b57e0f8a239269e/transformed/jetified-firebase-components-16.1.0/AndroidManifest.xml:15:1-23:12
 MERGED from [androidx.tracing:tracing:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/e8ef85e514fc42cbbad75b9b3a8e6cfc/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/607ff11b516ddc96487249f810d47dc2/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -96,22 +107,22 @@ MERGED from [com.google.android.datatransport:transport-runtime:2.2.5] /home/eln
 MERGED from [com.google.android.datatransport:transport-api:2.2.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/f767f5c1919969a6a1bd6db1826b28c1/transformed/jetified-transport-api-2.2.1/AndroidManifest.xml:15:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/355962095dccb4a30332cf5f5fb4291d/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.dagger:dagger-lint-aar:2.30.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/6eaa1ce960e9819a3fcde9e3445683f4/transformed/jetified-dagger-lint-aar-2.30.1/AndroidManifest.xml:16:1-19:12
-INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-72:12
-INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-72:12
-INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-72:12
+INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-71:12
+INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-71:12
+INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-71:12
 	package
 		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:4:5-28
 		INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml
 		INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-72:12
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-71:12
 		INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-72:12
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-71:12
 		INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:11-69
@@ -151,8 +162,12 @@ MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] /home/
 MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/b40d675db1d8c4f3d4c27b6c92ca64e7/transformed/jetified-play-services-cloud-messaging-16.0.0/AndroidManifest.xml:7:5-79
 MERGED from [com.google.firebase:firebase-installations:16.3.5] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/45e41cbda638b3b5cfb356650ad3685f/transformed/jetified-firebase-installations-16.3.5/AndroidManifest.xml:10:5-79
 MERGED from [com.google.firebase:firebase-installations:16.3.5] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/45e41cbda638b3b5cfb356650ad3685f/transformed/jetified-firebase-installations-16.3.5/AndroidManifest.xml:10:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/8c2b62755951828fcf8bc217075a934a/transformed/jetified-exoplayer-core-2.15.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/8c2b62755951828fcf8bc217075a934a/transformed/jetified-exoplayer-core-2.15.1/AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/17a159ce8ab972dec45044c5700032c9/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:5-79
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/17a159ce8ab972dec45044c5700032c9/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/39dfd81fb50161f37db6aa5714953dc8/transformed/jetified-exoplayer-common-2.15.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/39dfd81fb50161f37db6aa5714953dc8/transformed/jetified-exoplayer-common-2.15.1/AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/474bbbbb105ceb1133d34848b7fc8904/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:22:5-79
 MERGED from [com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/474bbbbb105ceb1133d34848b7fc8904/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:22:5-79
 	android:name
@@ -162,15 +177,15 @@ ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xm
 	android:name
 		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:11:22-73
 uses-permission#android.permission.SEND_SMS
-ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:12:5-66
+ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:12:5-67
 	android:name
 		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:12:22-64
 uses-permission#android.permission.RECEIVE_SMS
-ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:14:5-69
+ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:14:5-70
 	android:name
 		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:14:22-67
 application
-ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:15:5-70:19
+ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:16:5-69:19
 MERGED from [com.google.android.material:material:1.4.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/a4db12b072650e13bc36a4fc9443bd47/transformed/material-1.4.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/a4db12b072650e13bc36a4fc9443bd47/transformed/material-1.4.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/66ff56fb595a495ee70bba0fa573cb3a/transformed/constraintlayout-2.1.1/AndroidManifest.xml:9:5-20
@@ -225,6 +240,8 @@ MERGED from [com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2
 MERGED from [com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/cd62d35d0c4f550a150d8f1dba8ce73d/transformed/jetified-core-1.10.2/AndroidManifest.xml:15:5-44:19
 MERGED from [com.github.delight-im:Android-AdvancedWebView:v3.2.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/a4030889fb7ad4858402fdaf7b4e66dd/transformed/jetified-Android-AdvancedWebView-v3.2.1/AndroidManifest.xml:9:5-20
 MERGED from [com.github.delight-im:Android-AdvancedWebView:v3.2.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/a4030889fb7ad4858402fdaf7b4e66dd/transformed/jetified-Android-AdvancedWebView-v3.2.1/AndroidManifest.xml:9:5-20
+MERGED from [es.voghdev.pdfviewpager:library:1.1.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/0b96c35990a8d4c8dd8a1ba1db3095d5/transformed/jetified-library-1.1.2/AndroidManifest.xml:11:5-16:19
+MERGED from [es.voghdev.pdfviewpager:library:1.1.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/0b96c35990a8d4c8dd8a1ba1db3095d5/transformed/jetified-library-1.1.2/AndroidManifest.xml:11:5-16:19
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/17a159ce8ab972dec45044c5700032c9/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/17a159ce8ab972dec45044c5700032c9/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:28:5-36:19
 MERGED from [androidx.core:core:1.5.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/a6ed9dfb3abf7d8541f7a1d01bf1d39b/transformed/core-1.5.0/AndroidManifest.xml:24:5-89
@@ -240,113 +257,112 @@ MERGED from [com.google.android.datatransport:transport-runtime:2.2.5] /home/eln
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.5.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/a6ed9dfb3abf7d8541f7a1d01bf1d39b/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:22:9-35
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:23:9-35
 	android:label
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:20:9-41
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:21:9-41
 		REJECTED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/a50496e96513ddfe5b5fbc9dd9636a6f/transformed/jetified-autoimageslider-1.4.0-appcompat/AndroidManifest.xml:13:9-41
+		REJECTED from [es.voghdev.pdfviewpager:library:1.1.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/0b96c35990a8d4c8dd8a1ba1db3095d5/transformed/jetified-library-1.1.2/AndroidManifest.xml:11:18-50
 	android:launchMode
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:21:9-40
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:22:9-40
 	android:hardwareAccelerated
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:18:9-43
-	tools:targetApi
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:26:9-28
-	android:icon
 		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:19:9-43
+	tools:targetApi
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:27:9-28
+	android:icon
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:20:9-43
 	android:allowBackup
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:17:9-36
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:18:9-36
 		REJECTED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/a50496e96513ddfe5b5fbc9dd9636a6f/transformed/jetified-autoimageslider-1.4.0-appcompat/AndroidManifest.xml:12:9-35
 	android:theme
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:23:9-40
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:24:9-40
 	tools:replace
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:25:9-58
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:26:9-58
 	android:usesCleartextTraffic
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:24:9-44
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:25:9-44
 	android:name
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:16:9-56
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:17:9-56
 meta-data#com.google.firebase.messaging.default_notification_icon
-ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:27:9-29:54
+ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:28:9-30:54
 	android:resource
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:29:13-51
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:30:13-51
 	android:name
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:28:13-83
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:29:13-83
 meta-data#com.google.firebase.messaging.default_notification_color
-ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:30:9-32:54
+ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:31:9-33:54
 	android:resource
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:32:13-51
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:33:13-51
 	android:name
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:31:13-84
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:32:13-84
 meta-data#com.google.android.geo.API_KEY
-ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:33:9-35:50
+ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:34:9-36:50
 	android:value
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:35:13-47
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:36:13-47
 	android:name
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:34:13-58
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:35:13-58
 meta-data#com.google.android.gms.version
-ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:36:9-38:69
+ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:37:9-39:69
 MERGED from [com.google.android.gms:play-services-basement:17.5.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/4e47f34fef273f1ed37b379a4603c6d2/transformed/jetified-play-services-basement-17.5.0/AndroidManifest.xml:23:9-25:69
 MERGED from [com.google.android.gms:play-services-basement:17.5.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/4e47f34fef273f1ed37b379a4603c6d2/transformed/jetified-play-services-basement-17.5.0/AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:38:13-66
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:39:13-66
 	android:name
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:37:13-58
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:38:13-58
 activity#te.app.aljoud.utils.locations.MapAddressActivity
-ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:40:9-44:70
+ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:41:9-45:70
 	android:screenOrientation
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:43:13-49
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:44:13-49
 	android:windowSoftInputMode
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:44:13-67
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:45:13-67
 	android:configChanges
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:42:13-74
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:43:13-74
 	android:name
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:41:13-76
-activity#te.app.aljoud.activity.SupportActivity
-ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:45:9-50:70
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:42:13-76
+activity#te.app.aljoud.activity.RemotePDFActivity
+ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:46:9-64
+	android:name
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:46:19-61
+activity#te.app.aljoud.activity.ExoPlayerActivity
+ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:47:9-49:54
 	android:screenOrientation
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:49:13-49
-	android:clearTaskOnLaunch
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:47:13-45
-	android:windowSoftInputMode
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:50:13-67
-	android:configChanges
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:48:13-74
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:49:13-51
 	android:name
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:46:13-66
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:48:13-55
 activity#te.app.aljoud.activity.MainActivity
-ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:51:9-55:70
+ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:50:9-54:70
 	android:screenOrientation
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:54:13-49
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:53:13-49
 	android:windowSoftInputMode
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:55:13-67
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:54:13-67
 	android:configChanges
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:53:13-74
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:52:13-74
 	android:name
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:52:13-63
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:51:13-63
 activity#te.app.aljoud.activity.BaseActivity
-ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:57:9-69:20
+ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:56:9-68:20
 	android:screenOrientation
 		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:60:13-49
 	android:windowSoftInputMode
 		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:61:13-67
 	android:exported
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:62:13-36
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:59:13-36
 	android:configChanges
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:59:13-74
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:58:13-74
 	android:name
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:58:13-63
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:57:13-63
 intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.VIEW+category:name:android.intent.category.LAUNCHER
-ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:63:13-68:29
+ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:62:13-67:29
 action#android.intent.action.MAIN
+ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:63:17-69
+	android:name
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:63:25-66
+action#android.intent.action.VIEW
 ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:64:17-69
 	android:name
 		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:64:25-66
-action#android.intent.action.VIEW
-ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:65:17-69
-	android:name
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:65:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:67:17-77
+ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:66:17-77
 	android:name
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:67:27-74
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:66:27-74
 uses-sdk
 INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml
@@ -443,6 +459,10 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.4.0] /home/elnagar/android-
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.4.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/9a66e0e8156b051304799052434b053b/transformed/lifecycle-livedata-2.4.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.room:room-runtime:2.3.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/e025a7e91ae44c7310653744ca163cc9/transformed/room-runtime-2.3.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.room:room-runtime:2.3.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/e025a7e91ae44c7310653744ca163cc9/transformed/room-runtime-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/197888f56d3d77df4a4a9718e4a82daf/transformed/jetified-exoplayer-2.15.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/197888f56d3d77df4a4a9718e4a82daf/transformed/jetified-exoplayer-2.15.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-ui:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/0693d4be218fdb5beaaee740d8f51288/transformed/jetified-exoplayer-ui-2.15.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-ui:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/0693d4be218fdb5beaaee740d8f51288/transformed/jetified-exoplayer-ui-2.15.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview:1.2.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/0cb6f782f4aa16784e68141bc8b7b9fa/transformed/recyclerview-1.2.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview:1.2.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/0cb6f782f4aa16784e68141bc8b7b9fa/transformed/recyclerview-1.2.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cardview:cardview:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/73024ad51a4df5238a90a9d634a365dd/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
@@ -457,6 +477,20 @@ MERGED from [com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2
 MERGED from [com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/cd62d35d0c4f550a150d8f1dba8ce73d/transformed/jetified-core-1.10.2/AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.delight-im:Android-AdvancedWebView:v3.2.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/a4030889fb7ad4858402fdaf7b4e66dd/transformed/jetified-Android-AdvancedWebView-v3.2.1/AndroidManifest.xml:5:5-7:41
 MERGED from [com.github.delight-im:Android-AdvancedWebView:v3.2.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/a4030889fb7ad4858402fdaf7b4e66dd/transformed/jetified-Android-AdvancedWebView-v3.2.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/f12df03edae069300dabee3a938d535f/transformed/jetified-exoplayer-dash-2.15.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/f12df03edae069300dabee3a938d535f/transformed/jetified-exoplayer-dash-2.15.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/e8bb7d33dfc64415bfe88de301a3e1b5/transformed/jetified-exoplayer-smoothstreaming-2.15.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/e8bb7d33dfc64415bfe88de301a3e1b5/transformed/jetified-exoplayer-smoothstreaming-2.15.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/5cfc55bf013e658f90653a4ef184b4d9/transformed/jetified-exoplayer-hls-2.15.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/5cfc55bf013e658f90653a4ef184b4d9/transformed/jetified-exoplayer-hls-2.15.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-rtsp:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/06b615f707618c6e84648f47551feb2e/transformed/jetified-exoplayer-rtsp-2.15.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-rtsp:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/06b615f707618c6e84648f47551feb2e/transformed/jetified-exoplayer-rtsp-2.15.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-transformer:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/a7021acbcfd39854993af9ad8236b6b0/transformed/jetified-exoplayer-transformer-2.15.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-transformer:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/a7021acbcfd39854993af9ad8236b6b0/transformed/jetified-exoplayer-transformer-2.15.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/8c2b62755951828fcf8bc217075a934a/transformed/jetified-exoplayer-core-2.15.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/8c2b62755951828fcf8bc217075a934a/transformed/jetified-exoplayer-core-2.15.1/AndroidManifest.xml:20:5-22:41
+MERGED from [es.voghdev.pdfviewpager:library:1.1.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/0b96c35990a8d4c8dd8a1ba1db3095d5/transformed/jetified-library-1.1.2/AndroidManifest.xml:7:5-9:41
+MERGED from [es.voghdev.pdfviewpager:library:1.1.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/0b96c35990a8d4c8dd8a1ba1db3095d5/transformed/jetified-library-1.1.2/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/17a159ce8ab972dec45044c5700032c9/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/17a159ce8ab972dec45044c5700032c9/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-encoders-json:17.1.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3ba25e10c79def0bc339dd1d43326617/transformed/jetified-firebase-encoders-json-17.1.0/AndroidManifest.xml:19:5-21:41
@@ -473,14 +507,14 @@ MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/elnaga
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fdd32f901d4bb1d5d33bddeb84a905c7/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/29de5575f9927728f2259ca80dea1987/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/29de5575f9927728f2259ca80dea1987/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.media:media:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/cabc7bf9fcd04c9bc88fe0c2ed8f8af4/transformed/media-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.media:media:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/cabc7bf9fcd04c9bc88fe0c2ed8f8af4/transformed/media-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/5b6087d2a888dc8cd66652dafdfd98d8/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/5b6087d2a888dc8cd66652dafdfd98d8/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/dbe6632ea1830f7b528d4645a38df2bc/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/dbe6632ea1830f7b528d4645a38df2bc/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/bd33b12c49278f934d4edec5459af236/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/bd33b12c49278f934d4edec5459af236/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.3.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/ee68d4aad336dd05fff421c77e49bef1/transformed/media-1.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.3.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/ee68d4aad336dd05fff421c77e49bef1/transformed/media-1.3.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/179bb343f7a6cb4f265a076d12a07093/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/179bb343f7a6cb4f265a076d12a07093/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/0d6128869f3f5054df81b46d7aeb5c68/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
@@ -515,6 +549,10 @@ MERGED from [androidx.exifinterface:exifinterface:1.2.0] /home/elnagar/android-s
 MERGED from [androidx.exifinterface:exifinterface:1.2.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/efd230262f34ce1ea4a0e8d8cdefdf58/transformed/exifinterface-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/de0449d0b9021b4a525a3d97e421b0b9/transformed/jetified-gifdecoder-4.12.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/de0449d0b9021b4a525a3d97e421b0b9/transformed/jetified-gifdecoder-4.12.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.exoplayer:exoplayer-extractor:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/b0dcdea9562de50edced3b8cf4514ed4/transformed/jetified-exoplayer-extractor-2.15.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-extractor:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/b0dcdea9562de50edced3b8cf4514ed4/transformed/jetified-exoplayer-extractor-2.15.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/39dfd81fb50161f37db6aa5714953dc8/transformed/jetified-exoplayer-common-2.15.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.15.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/39dfd81fb50161f37db6aa5714953dc8/transformed/jetified-exoplayer-common-2.15.1/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-components:16.1.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/0434e645f063f29e8b57e0f8a239269e/transformed/jetified-firebase-components-16.1.0/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-components:16.1.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/0434e645f063f29e8b57e0f8a239269e/transformed/jetified-firebase-components-16.1.0/AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.tracing:tracing:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/e8ef85e514fc42cbbad75b9b3a8e6cfc/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
@@ -553,6 +591,8 @@ ADDED from [com.google.android.gms:play-services-maps:18.0.0] /home/elnagar/andr
 		ADDED from [com.google.android.gms:play-services-maps:18.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/eb9f2076609ab4f6c88627d361a4423f/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:28:9-32
 queries
 ADDED from [com.google.android.gms:play-services-maps:18.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/eb9f2076609ab4f6c88627d361a4423f/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:30:5-34:15
+MERGED from [androidx.media:media:1.3.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/ee68d4aad336dd05fff421c77e49bef1/transformed/media-1.3.1/AndroidManifest.xml:24:5-28:15
+MERGED from [androidx.media:media:1.3.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/ee68d4aad336dd05fff421c77e49bef1/transformed/media-1.3.1/AndroidManifest.xml:24:5-28:15
 package#com.google.android.apps.maps
 ADDED from [com.google.android.gms:play-services-maps:18.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/eb9f2076609ab4f6c88627d361a4423f/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:33:9-64
 	android:name
@@ -745,6 +785,12 @@ ADDED from [com.google.android.play:core:1.10.2] /home/elnagar/android-studio-20
 		ADDED from [com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/cd62d35d0c4f550a150d8f1dba8ce73d/transformed/jetified-core-1.10.2/AndroidManifest.xml:43:13-37
 	android:name
 		ADDED from [com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/cd62d35d0c4f550a150d8f1dba8ce73d/transformed/jetified-core-1.10.2/AndroidManifest.xml:41:13-95
+service#es.voghdev.pdfviewpager.library.service.CopyAssetService
+ADDED from [es.voghdev.pdfviewpager:library:1.1.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/0b96c35990a8d4c8dd8a1ba1db3095d5/transformed/jetified-library-1.1.2/AndroidManifest.xml:12:9-15:19
+	android:exported
+		ADDED from [es.voghdev.pdfviewpager:library:1.1.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/0b96c35990a8d4c8dd8a1ba1db3095d5/transformed/jetified-library-1.1.2/AndroidManifest.xml:14:13-37
+	android:name
+		ADDED from [es.voghdev.pdfviewpager:library:1.1.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/0b96c35990a8d4c8dd8a1ba1db3095d5/transformed/jetified-library-1.1.2/AndroidManifest.xml:13:13-84
 service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery
 ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/17a159ce8ab972dec45044c5700032c9/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:29:9-35:19
 MERGED from [com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/474bbbbb105ceb1133d34848b7fc8904/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:36:9-38:40
@@ -759,6 +805,12 @@ ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /home/
 		ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/17a159ce8ab972dec45044c5700032c9/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:34:17-36
 	android:name
 		ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/17a159ce8ab972dec45044c5700032c9/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:33:17-94
+intent#action:name:android.media.browse.MediaBrowserService
+ADDED from [androidx.media:media:1.3.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/ee68d4aad336dd05fff421c77e49bef1/transformed/media-1.3.1/AndroidManifest.xml:25:9-27:18
+action#android.media.browse.MediaBrowserService
+ADDED from [androidx.media:media:1.3.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/ee68d4aad336dd05fff421c77e49bef1/transformed/media-1.3.1/AndroidManifest.xml:26:13-79
+	android:name
+		ADDED from [androidx.media:media:1.3.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/ee68d4aad336dd05fff421c77e49bef1/transformed/media-1.3.1/AndroidManifest.xml:26:21-76
 provider#androidx.lifecycle.ProcessLifecycleOwnerInitializer
 ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/9e9716a6b5a53826b5dfb8872c142038/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
 	android:authorities

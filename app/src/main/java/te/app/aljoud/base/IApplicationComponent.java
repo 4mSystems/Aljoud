@@ -16,7 +16,10 @@ import te.app.aljoud.pages.chat.view.ChatFragment;
 import te.app.aljoud.pages.conversations.ConversationsFragment;
 import te.app.aljoud.pages.courseDetails.FragmentCourseDetails;
 import te.app.aljoud.pages.courseDetails.FragmentCourseLessons;
+import te.app.aljoud.pages.courseDetails.FragmentLessonArticles;
 import te.app.aljoud.pages.courseDetails.FragmentLessonDetails;
+import te.app.aljoud.pages.courseDetails.FragmentLessonQuizzes;
+import te.app.aljoud.pages.courseDetails.FragmentLessonVideos;
 import te.app.aljoud.pages.university.FragmentCategorySections;
 import te.app.aljoud.pages.home.HomeFragment;
 import te.app.aljoud.pages.settings.AboutAppFragment;
@@ -61,6 +64,12 @@ public interface IApplicationComponent {
     void inject(FragmentCourseLessons fragmentCourseLessons);
 
     void inject(FragmentLessonDetails fragmentLessonDetails);
+
+    void inject(FragmentLessonVideos fragmentLessonVideos);
+
+    void inject(FragmentLessonQuizzes fragmentLessonQuizzes);
+
+    void inject(FragmentLessonArticles fragmentLessonArticles);
 
     void inject(ConversationsFragment conversationsFragment);
 

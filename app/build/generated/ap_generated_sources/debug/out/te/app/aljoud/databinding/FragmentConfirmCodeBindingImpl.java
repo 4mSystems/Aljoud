@@ -26,9 +26,9 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
     @Nullable
     private final android.view.View.OnClickListener mCallback27;
     @Nullable
-    private final android.view.View.OnClickListener mCallback28;
+    private final android.view.View.OnClickListener mCallback29;
     @Nullable
-    private final android.view.View.OnClickListener mCallback26;
+    private final android.view.View.OnClickListener mCallback28;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -94,9 +94,9 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
         this.tvLoginForget.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback27 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
-        mCallback28 = new te.app.aljoud.generated.callback.OnClickListener(this, 3);
-        mCallback26 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback27 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback29 = new te.app.aljoud.generated.callback.OnClickListener(this, 3);
+        mCallback28 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -292,10 +292,10 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback28);
-            this.back.setOnClickListener(mCallback26);
+            this.appCompatButtonNext.setOnClickListener(mCallback29);
+            this.back.setOnClickListener(mCallback27);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.pinValidate, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, pinValidateandroidTextAttrChanged);
-            this.tvLoginForget.setOnClickListener(mCallback27);
+            this.tvLoginForget.setOnClickListener(mCallback28);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
@@ -307,7 +307,7 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
+            case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -320,7 +320,8 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.resendCode();
+
+                    viewmodel.goBack(getRoot().getContext());
                 }
                 break;
             }
@@ -341,7 +342,7 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
                 }
                 break;
             }
-            case 1: {
+            case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -354,8 +355,7 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
                 if (viewmodelJavaLangObjectNull) {
 
 
-
-                    viewmodel.goBack(getRoot().getContext());
+                    viewmodel.resendCode();
                 }
                 break;
             }

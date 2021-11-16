@@ -8,6 +8,8 @@ te/app/aljoud/utils/images/PhotoFullPopupWindow.java
  te.app.aljoud.utils.images.PhotoFullPopupWindow
  te.app.aljoud.utils.images.PhotoFullPopupWindow$1
  te.app.aljoud.utils.images.PhotoFullPopupWindow$2
+te/app/aljoud/databinding/ActivityRemotePdfBinding.java
+ te.app.aljoud.databinding.ActivityRemotePdfBinding
 te/app/aljoud/pages/auth/confirmCode/ConfirmViewModel.java
  te.app.aljoud.pages.auth.confirmCode.ConfirmViewModel
 te/app/aljoud/pages/university/adapters/UniversityCollegesAdapter.java
@@ -27,6 +29,9 @@ te/app/aljoud/DataBindingTriggerClass.java
  te.app.aljoud.DataBindingTriggerClass
 te/app/aljoud/pages/home/models/home/HomeMainData.java
  te.app.aljoud.pages.home.models.home.HomeMainData
+te/app/aljoud/pages/courseDetails/FragmentLessonQuizzes.java
+ te.app.aljoud.pages.courseDetails.FragmentLessonQuizzes
+ te.app.aljoud.pages.courseDetails.FragmentLessonQuizzes$1
 te/app/aljoud/utils/locations/GPSAllowListener.java
  te.app.aljoud.utils.locations.GPSAllowListener
 te/app/aljoud/pages/courseDetails/viewModels/ItemLessonVideoViewModel.java
@@ -39,6 +44,9 @@ te/app/aljoud/customViews/actionbar/MenuActionBarView.java
  te.app.aljoud.customViews.actionbar.MenuActionBarView
 te/app/aljoud/utils/locations/models/Duration.java
  te.app.aljoud.utils.locations.models.Duration
+te/app/aljoud/pages/courseDetails/FragmentLessonVideos.java
+ te.app.aljoud.pages.courseDetails.FragmentLessonVideos
+ te.app.aljoud.pages.courseDetails.FragmentLessonVideos$1
 te/app/aljoud/pages/courseDetails/FragmentCourseDetails.java
  te.app.aljoud.pages.courseDetails.FragmentCourseDetails
 te/app/aljoud/pages/chat/view/ChatFragment.java
@@ -54,6 +62,8 @@ te/app/aljoud/pages/auth/models/SpecialistResponse.java
  te.app.aljoud.pages.auth.models.SpecialistResponse
 te/app/aljoud/pages/courseDetails/models/CourseDetailsResponse.java
  te.app.aljoud.pages.courseDetails.models.CourseDetailsResponse
+te/app/aljoud/databinding/FragmentLessonArticlesBinding.java
+ te.app.aljoud.databinding.FragmentLessonArticlesBinding
 te/app/aljoud/databinding/FragmentAboutBinding.java
  te.app.aljoud.databinding.FragmentAboutBinding
 te/app/aljoud/pages/chat/adapter/ChatAdapter.java
@@ -65,6 +75,8 @@ te/app/aljoud/utils/images/ImageConstants.java
  te.app.aljoud.utils.images.ImageConstants
 te/app/aljoud/databinding/FragmentCourseDetailsBinding.java
  te.app.aljoud.databinding.FragmentCourseDetailsBinding
+te/app/aljoud/pages/courseDetails/viewModels/ItemLessonQuizViewModel.java
+ te.app.aljoud.pages.courseDetails.viewModels.ItemLessonQuizViewModel
 te/app/aljoud/pages/courseDetails/adapters/LessonsAdapter.java
  te.app.aljoud.pages.courseDetails.adapters.LessonsAdapter
  te.app.aljoud.pages.courseDetails.adapters.LessonsAdapter$ViewHolder
@@ -113,6 +125,8 @@ te/app/aljoud/pages/university/models/UniversityDetailsResponse.java
  te.app.aljoud.pages.university.models.UniversityDetailsResponse
 te/app/aljoud/pages/chat/model/ChatResponse.java
  te.app.aljoud.pages.chat.model.ChatResponse
+te/app/aljoud/databinding/ItemLessonArticleBinding.java
+ te.app.aljoud.databinding.ItemLessonArticleBinding
 te/app/aljoud/utils/PopUp/PopUpMenuHelper.java
  te.app.aljoud.utils.PopUp.PopUpMenuHelper
 te/app/aljoud/databinding/FragmentCategorySectionsBinding.java
@@ -127,6 +141,8 @@ te/app/aljoud/databinding/FragmentRegisterBinding.java
  te.app.aljoud.databinding.FragmentRegisterBinding
 te/app/aljoud/databinding/ExitLayoutBinding.java
  te.app.aljoud.databinding.ExitLayoutBinding
+te/app/aljoud/pages/courseDetails/viewModels/ItemLessonArticleViewModel.java
+ te.app.aljoud.pages.courseDetails.viewModels.ItemLessonArticleViewModel
 te/app/aljoud/databinding/FragmentConversationsBinding.java
  te.app.aljoud.databinding.FragmentConversationsBinding
 te/app/aljoud/utils/locations/GPSLocation.java
@@ -142,6 +158,8 @@ te/app/aljoud/pages/university/models/UniversityData.java
  te.app.aljoud.pages.university.models.UniversityData
 te/app/aljoud/pages/auth/models/ForgetPasswordRequest.java
  te.app.aljoud.pages.auth.models.ForgetPasswordRequest
+te/app/aljoud/databinding/ActivityExoPlayerBinding.java
+ te.app.aljoud.databinding.ActivityExoPlayerBinding
 te/app/aljoud/pages/settings/models/News.java
  te.app.aljoud.pages.settings.models.News
 te/app/aljoud/utils/locations/models/RowsItem.java
@@ -152,11 +170,20 @@ te/app/aljoud/utils/URLS.java
  te.app.aljoud.utils.URLS
 te/app/aljoud/activity/BaseActivity.java
  te.app.aljoud.activity.BaseActivity
+te/app/aljoud/pages/courseDetails/FragmentLessonArticles.java
+ te.app.aljoud.pages.courseDetails.FragmentLessonArticles
+ te.app.aljoud.pages.courseDetails.FragmentLessonArticles$1
 te/app/aljoud/pages/auth/confirmCode/ConfirmCodeFragment.java
  te.app.aljoud.pages.auth.confirmCode.ConfirmCodeFragment
  te.app.aljoud.pages.auth.confirmCode.ConfirmCodeFragment$1
+te/app/aljoud/databinding/FragmentLessonVideosBinding.java
+ te.app.aljoud.databinding.FragmentLessonVideosBinding
 te/app/aljoud/databinding/ItemUniversitySectionBinding.java
  te.app.aljoud.databinding.ItemUniversitySectionBinding
+te/app/aljoud/activity/ExoPlayerActivity.java
+ te.app.aljoud.activity.ExoPlayerActivity
+ te.app.aljoud.activity.ExoPlayerActivity$PlayerErrorMessageProvider
+ te.app.aljoud.activity.ExoPlayerActivity$PlayerEventListener
 te/app/aljoud/repository/AuthRepository.java
  te.app.aljoud.repository.AuthRepository
 te/app/aljoud/pages/courseDetails/viewModels/LessonDetailsViewModel.java
@@ -229,6 +256,7 @@ te/app/aljoud/pages/courseDetails/viewModels/CourseLessonsViewModel.java
  te.app.aljoud.pages.courseDetails.viewModels.CourseLessonsViewModel
 te/app/aljoud/pages/courseDetails/FragmentLessonDetails.java
  te.app.aljoud.pages.courseDetails.FragmentLessonDetails
+ te.app.aljoud.pages.courseDetails.FragmentLessonDetails$1
 te/app/aljoud/base/ImmediateUpdateActivity.java
  te.app.aljoud.base.ImmediateUpdateActivity
 te/app/aljoud/databinding/FragmentCourseLessonsBinding.java
@@ -246,6 +274,8 @@ te/app/aljoud/pages/conversations/ConversationsFragment.java
  te.app.aljoud.pages.conversations.ConversationsFragment
 te/app/aljoud/pages/university/models/SpecialistsItem.java
  te.app.aljoud.pages.university.models.SpecialistsItem
+te/app/aljoud/activity/RemotePDFActivity.java
+ te.app.aljoud.activity.RemotePDFActivity
 te/app/aljoud/base/BaseFragment.java
  te.app.aljoud.base.BaseFragment
 te/app/aljoud/pages/splash/models/SettingData.java
@@ -270,6 +300,8 @@ te/app/aljoud/databinding/FragmentConfirmCodeBinding.java
  te.app.aljoud.databinding.FragmentConfirmCodeBinding
 te/app/aljoud/databinding/FragmentLoginBinding.java
  te.app.aljoud.databinding.FragmentLoginBinding
+te/app/aljoud/databinding/ItemLessonQuizBinding.java
+ te.app.aljoud.databinding.ItemLessonQuizBinding
 te/app/aljoud/pages/auth/models/UsersResponse.java
  te.app.aljoud.pages.auth.models.UsersResponse
 te/app/aljoud/customViews/CustomDrawable.java
@@ -314,6 +346,9 @@ te/app/aljoud/customViews/menu/NavigationDrawerView.java
  te.app.aljoud.customViews.menu.NavigationDrawerView
 te/app/aljoud/pages/courseDetails/models/videos/VideoData.java
  te.app.aljoud.pages.courseDetails.models.videos.VideoData
+te/app/aljoud/pages/courseDetails/adapters/LessonArticlesAdapter.java
+ te.app.aljoud.pages.courseDetails.adapters.LessonArticlesAdapter
+ te.app.aljoud.pages.courseDetails.adapters.LessonArticlesAdapter$ViewHolder
 te/app/aljoud/customViews/menu/MenuViewModel.java
  te.app.aljoud.customViews.menu.MenuViewModel
 te/app/aljoud/databinding/LayoutTesBinding.java
@@ -381,6 +416,9 @@ te/app/aljoud/base/ApplicationComponent.java
  te.app.aljoud.base.ApplicationComponent
 te/app/aljoud/utils/Constants.java
  te.app.aljoud.utils.Constants
+te/app/aljoud/pages/courseDetails/adapters/LessonQuizzesAdapter.java
+ te.app.aljoud.pages.courseDetails.adapters.LessonQuizzesAdapter
+ te.app.aljoud.pages.courseDetails.adapters.LessonQuizzesAdapter$ViewHolder
 te/app/aljoud/customViews/views/BaseEditText.java
  te.app.aljoud.customViews.views.BaseEditText
  te.app.aljoud.customViews.views.BaseEditText$1
@@ -399,6 +437,8 @@ te/app/aljoud/pages/auth/forgetPassword/ForgetPasswordFragment.java
 te/app/aljoud/pages/home/adapters/UniversityAdapter.java
  te.app.aljoud.pages.home.adapters.UniversityAdapter
  te.app.aljoud.pages.home.adapters.UniversityAdapter$ViewHolder
+te/app/aljoud/databinding/FragmentLessonQuizzesBinding.java
+ te.app.aljoud.databinding.FragmentLessonQuizzesBinding
 te/app/aljoud/databinding/ItemCourseLessonBinding.java
  te.app.aljoud.databinding.ItemCourseLessonBinding
 te/app/aljoud/utils/locations/MapAddressActivity.java

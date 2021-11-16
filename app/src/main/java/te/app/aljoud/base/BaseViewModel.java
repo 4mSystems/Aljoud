@@ -25,6 +25,7 @@ public class BaseViewModel extends ViewModel implements Observable {
     private PropertyChangeRegistry mCallBacks;
     private PassingObject passingObject = new PassingObject();
     public String lang = LanguagesHelper.getCurrentLanguage();
+    int searchProgressVisible = View.GONE;
 
     public BaseViewModel() {
         mCallBacks = new PropertyChangeRegistry();
@@ -44,7 +45,16 @@ public class BaseViewModel extends ViewModel implements Observable {
         notifyChange(BR.message);
         this.message = message;
     }
+    @Bindable
+    public int getSearchProgressVisible() {
+        return searchProgressVisible;
+    }
 
+    @Bindable
+    public void setSearchProgressVisible(int searchProgressVisible) {
+        notifyChange(BR.searchProgressVisible);
+        this.searchProgressVisible = searchProgressVisible;
+    }
     public String getString(int stringRes) {
         return ResourceManager.getString(stringRes);
     }

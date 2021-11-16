@@ -25,7 +25,7 @@ public class ItemConversationBindingImpl extends ItemConversationBinding impleme
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback4;
+    private final android.view.View.OnClickListener mCallback5;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -47,7 +47,7 @@ public class ItemConversationBindingImpl extends ItemConversationBinding impleme
         this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback4 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback5 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -157,7 +157,7 @@ public class ItemConversationBindingImpl extends ItemConversationBinding impleme
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView1.setOnClickListener(mCallback4);
+            this.mboundView1.setOnClickListener(mCallback5);
         }
     }
     // Listener Stub Implementations

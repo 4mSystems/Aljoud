@@ -50,8 +50,14 @@ import te.app.aljoud.pages.courseDetails.FragmentCourseDetails;
 import te.app.aljoud.pages.courseDetails.FragmentCourseDetails_MembersInjector;
 import te.app.aljoud.pages.courseDetails.FragmentCourseLessons;
 import te.app.aljoud.pages.courseDetails.FragmentCourseLessons_MembersInjector;
+import te.app.aljoud.pages.courseDetails.FragmentLessonArticles;
+import te.app.aljoud.pages.courseDetails.FragmentLessonArticles_MembersInjector;
 import te.app.aljoud.pages.courseDetails.FragmentLessonDetails;
 import te.app.aljoud.pages.courseDetails.FragmentLessonDetails_MembersInjector;
+import te.app.aljoud.pages.courseDetails.FragmentLessonQuizzes;
+import te.app.aljoud.pages.courseDetails.FragmentLessonQuizzes_MembersInjector;
+import te.app.aljoud.pages.courseDetails.FragmentLessonVideos;
+import te.app.aljoud.pages.courseDetails.FragmentLessonVideos_MembersInjector;
 import te.app.aljoud.pages.courseDetails.viewModels.CourseLessonsViewModel;
 import te.app.aljoud.pages.courseDetails.viewModels.CourseLessonsViewModel_Factory;
 import te.app.aljoud.pages.courseDetails.viewModels.CourseLessonsViewModel_MembersInjector;
@@ -282,6 +288,21 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   @Override
+  public void inject(FragmentLessonVideos fragmentLessonVideos) {
+    injectFragmentLessonVideos(fragmentLessonVideos);
+  }
+
+  @Override
+  public void inject(FragmentLessonQuizzes fragmentLessonQuizzes) {
+    injectFragmentLessonQuizzes(fragmentLessonQuizzes);
+  }
+
+  @Override
+  public void inject(FragmentLessonArticles fragmentLessonArticles) {
+    injectFragmentLessonArticles(fragmentLessonArticles);
+  }
+
+  @Override
   public void inject(ConversationsFragment conversationsFragment) {
     injectConversationsFragment(conversationsFragment);
   }
@@ -431,6 +452,21 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private FragmentLessonDetails injectFragmentLessonDetails(FragmentLessonDetails instance) {
     FragmentLessonDetails_MembersInjector.injectViewModel(instance, lessonDetailsViewModel());
+    return instance;
+  }
+
+  private FragmentLessonVideos injectFragmentLessonVideos(FragmentLessonVideos instance) {
+    FragmentLessonVideos_MembersInjector.injectViewModel(instance, lessonDetailsViewModel());
+    return instance;
+  }
+
+  private FragmentLessonQuizzes injectFragmentLessonQuizzes(FragmentLessonQuizzes instance) {
+    FragmentLessonQuizzes_MembersInjector.injectViewModel(instance, lessonDetailsViewModel());
+    return instance;
+  }
+
+  private FragmentLessonArticles injectFragmentLessonArticles(FragmentLessonArticles instance) {
+    FragmentLessonArticles_MembersInjector.injectViewModel(instance, lessonDetailsViewModel());
     return instance;
   }
 

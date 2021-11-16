@@ -4,6 +4,7 @@ package te.app.aljoud.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
@@ -32,6 +33,9 @@ public abstract class FragmentLessonDetailsBinding extends ViewDataBinding {
   public final AppCompatImageView icQr;
 
   @NonNull
+  public final FrameLayout lessonFrame;
+
+  @NonNull
   public final ConstraintLayout rateContainer;
 
   @NonNull
@@ -54,13 +58,14 @@ public abstract class FragmentLessonDetailsBinding extends ViewDataBinding {
 
   protected FragmentLessonDetailsBinding(Object _bindingComponent, View _root, int _localFieldCount,
       CardView cardInstructor, MaterialCardView cardTabs, AppCompatImageView icQr,
-      ConstraintLayout rateContainer, TabLayout tabs, CustomTextViewRegular tvAccountQr,
-      CustomTextViewMedium tvCardTitle, CustomTextViewRegular tvInstractorProfession,
-      CustomTextViewRegular tvPolicyWarning1) {
+      FrameLayout lessonFrame, ConstraintLayout rateContainer, TabLayout tabs,
+      CustomTextViewRegular tvAccountQr, CustomTextViewMedium tvCardTitle,
+      CustomTextViewRegular tvInstractorProfession, CustomTextViewRegular tvPolicyWarning1) {
     super(_bindingComponent, _root, _localFieldCount);
     this.cardInstructor = cardInstructor;
     this.cardTabs = cardTabs;
     this.icQr = icQr;
+    this.lessonFrame = lessonFrame;
     this.rateContainer = rateContainer;
     this.tabs = tabs;
     this.tvAccountQr = tvAccountQr;

@@ -11,11 +11,11 @@ public class Constants {
     public static final String INSTRUCTOR = "INSTRUCTOR";
     public static final String COURSE_LESSONS = "COURSE_LESSONS";
     public static final String LESSON_VIDEOS = "LESSON_VIDEOS";
-    public static final String SEND_ORDER = "SEND_ORDER";
+    public static final String LESSON_QUIZZES = "LESSON_QUIZZES";
 
     public final static String MENU_HOME = "MENU_HOME";
     public final static String EMAIL = "email";
-    public final static String MENU_MORE = "MENU_MORE";
+    public final static String LESSON_ARTICLES = "LESSON_ARTICLES";
     public final static String SELECT_BRAND = "SELECT_BRAND";
 
     public final static String NEXT = "NEXT";

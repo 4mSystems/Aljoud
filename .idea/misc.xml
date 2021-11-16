@@ -42,8 +42,10 @@
         <entry key="app/src/main/res/drawable/tab_color_selector.xml" value="0.3625" />
         <entry key="app/src/main/res/layout/account_type_sheet.xml" value="0.3109375" />
         <entry key="app/src/main/res/layout/activity_base.xml" value="0.3463541666666667" />
+        <entry key="app/src/main/res/layout/activity_exo_player.xml" value="0.4995685936151855" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3109375" />
         <entry key="app/src/main/res/layout/activity_map_address.xml" value="0.3109375" />
+        <entry key="app/src/main/res/layout/activity_remote_pdf.xml" value="0.3015625" />
         <entry key="app/src/main/res/layout/activity_support.xml" value="0.3109375" />
         <entry key="app/src/main/res/layout/ask_sheet.xml" value="0.30520833333333336" />
         <entry key="app/src/main/res/layout/exit_layout.xml" value="0.3109375" />
@@ -62,7 +64,10 @@
         <entry key="app/src/main/res/layout/fragment_forget_password.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.3109375" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.28606719367588934" />
+        <entry key="app/src/main/res/layout/fragment_lesson_articles.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_lesson_details.xml" value="0.30520833333333336" />
+        <entry key="app/src/main/res/layout/fragment_lesson_quizzes.xml" value="0.3015625" />
+        <entry key="app/src/main/res/layout/fragment_lesson_videos.xml" value="0.3015625" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_more.xml" value="0.3109375" />
         <entry key="app/src/main/res/layout/fragment_products.xml" value="0.3109375" />
@@ -87,6 +92,8 @@
         <entry key="app/src/main/res/layout/item_files.xml" value="0.30520833333333336" />
         <entry key="app/src/main/res/layout/item_gallery.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/item_home.xml" value="0.3109375" />
+        <entry key="app/src/main/res/layout/item_lesson_article.xml" value="0.3015625" />
+        <entry key="app/src/main/res/layout/item_lesson_quiz.xml" value="0.3015625" />
         <entry key="app/src/main/res/layout/item_lesson_video.xml" value="0.30520833333333336" />
         <entry key="app/src/main/res/layout/item_levels.xml" value="0.3463541666666667" />
         <entry key="app/src/main/res/layout/item_refactory_center.xml" value="0.3463541666666667" />

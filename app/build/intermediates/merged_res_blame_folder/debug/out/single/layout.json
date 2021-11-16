@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_lesson_article.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/item_lesson_article.xml"
+    },
+    {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_splash.xml",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_splash.xml"
     },
@@ -20,12 +24,20 @@
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_about.xml"
     },
     {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_remote_pdf.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/activity_remote_pdf.xml"
+    },
+    {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_levels.xml",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/item_levels.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_confirm_code.xml",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_confirm_code.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_exo_player.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/activity_exo_player.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_course_lessons.xml",
@@ -52,6 +64,10 @@
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_home.xml"
     },
     {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_lesson_quiz.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/item_lesson_quiz.xml"
+    },
+    {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_register.xml",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_register.xml"
     },
@@ -64,12 +80,12 @@
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/activity_base.xml"
     },
     {
-        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_chat.xml",
-        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/item_chat.xml"
-    },
-    {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_course.xml",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/item_course.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_chat.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/item_chat.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_action_bar_back.xml",
@@ -82,6 +98,10 @@
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_chat.xml",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_chat.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_lesson_quizzes.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_lesson_quizzes.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_course_details.xml",
@@ -124,12 +144,16 @@
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_contacts.xml"
     },
     {
-        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
-        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/activity_main.xml"
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_lesson_videos.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_lesson_videos.xml"
     },
     {
-        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_category.xml",
-        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/item_category.xml"
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_lesson_articles.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_lesson_articles.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/activity_main.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_tes.xml",

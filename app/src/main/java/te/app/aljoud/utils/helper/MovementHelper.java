@@ -63,6 +63,15 @@ public class MovementHelper {
         fragmentTransaction.commit();
     }
 
+    public static void replaceLessonFragment(Context context, Fragment fragment, String backStackText) {
+        FragmentManager fragmentManager = ((FragmentActivity) context).getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction().replace(R.id.lesson_frame, fragment);
+        if (!backStackText.equals("")) {
+            fragmentTransaction.addToBackStack(backStackText);
+        }
+        fragmentTransaction.commit();
+    }
+
     //-----------Activities-----------------//
 
     public static void startActivityWithBundle(Context from, PassingObject passingObject, String name, String page, String shareBar) {

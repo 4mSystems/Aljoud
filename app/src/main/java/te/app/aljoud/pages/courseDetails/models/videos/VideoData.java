@@ -4,79 +4,37 @@ import com.google.gson.annotations.SerializedName;
 
 public class VideoData {
 
-	@SerializedName("updated_at")
-	private String updatedAt;
+    @SerializedName("id")
+    private int id;
 
-	@SerializedName("name_ar")
-	private String nameAr;
+    @SerializedName("lesson_id")
+    private String lessonId;
 
-	@SerializedName("show")
-	private String show;
+    @SerializedName("url")
+    private String url;
+    @SerializedName("file")
+    private String file;
 
-	@SerializedName("created_at")
-	private String createdAt;
+    @SerializedName("name")
+    private String name;
 
-	@SerializedName("id")
-	private int id;
+    public int getId() {
+        return id;
+    }
 
-	@SerializedName("time")
-	private String time;
+    public String getLessonId() {
+        return lessonId;
+    }
 
-	@SerializedName("sort")
-	private String sort;
+    public String getUrl() {
+        return url;
+    }
 
-	@SerializedName("lesson_id")
-	private String lessonId;
+    public String getFile() {
+        return file;
+    }
 
-	@SerializedName("url")
-	private String url;
-
-	@SerializedName("name_en")
-	private String nameEn;
-@SerializedName("name")
-	private String name;
-
-	public String getUpdatedAt(){
-		return updatedAt;
-	}
-
-	public String getNameAr(){
-		return nameAr;
-	}
-
-	public String getShow(){
-		return show;
-	}
-
-	public String getCreatedAt(){
-		return createdAt;
-	}
-
-	public int getId(){
-		return id;
-	}
-
-	public String getTime(){
-		return time;
-	}
-
-	public String getSort(){
-		return sort;
-	}
-
-	public String getLessonId(){
-		return lessonId;
-	}
-
-	public String getUrl(){
-		return url;
-	}
-
-	public String getNameEn(){
-		return nameEn;
-	}
-
-	public String getName() {
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 }

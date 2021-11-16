@@ -25,6 +25,10 @@
 
         <!-- Needs to be explicitly declared on Android R+ -->
         <package android:name="com.google.android.apps.maps" />
+
+        <intent>
+            <action android:name="android.media.browse.MediaBrowserService" />
+        </intent>
     </queries>
 
     <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
@@ -64,12 +68,10 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name="te.app.aljoud.activity.RemotePDFActivity" />
         <activity
-            android:name="te.app.aljoud.activity.SupportActivity"
-            android:clearTaskOnLaunch="true"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden|adjustResize" />
+            android:name="te.app.aljoud.activity.ExoPlayerActivity"
+            android:screenOrientation="fullSensor" />
         <activity
             android:name="te.app.aljoud.activity.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -187,6 +189,10 @@
             android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService"
             android:enabled="false"
             android:exported="false" />
+        <service
+            android:name="es.voghdev.pdfviewpager.library.service.CopyAssetService"
+            android:exported="false" >
+        </service>
         <service
             android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
             android:exported="false" >

@@ -31,9 +31,9 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
     private final com.google.android.material.button.MaterialButton mboundView15;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback23;
-    @Nullable
     private final android.view.View.OnClickListener mCallback24;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback25;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -87,8 +87,8 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
         this.tvSubjects.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback23 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
-        mCallback24 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
+        mCallback24 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback25 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -310,8 +310,8 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.icArrowRight.setOnClickListener(mCallback23);
-            this.mboundView15.setOnClickListener(mCallback24);
+            this.icArrowRight.setOnClickListener(mCallback24);
+            this.mboundView15.setOnClickListener(mCallback25);
         }
     }
     // Listener Stub Implementations

@@ -1,6 +1,7 @@
 package te.app.aljoud.pages.courseDetails.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,8 @@ import java.util.List;
 
 import te.app.aljoud.PassingObject;
 import te.app.aljoud.R;
+import te.app.aljoud.activity.ExoPlayerActivity;
+import te.app.aljoud.base.MyApplication;
 import te.app.aljoud.databinding.ItemCourseLessonBinding;
 import te.app.aljoud.databinding.ItemLessonVideoBinding;
 import te.app.aljoud.pages.courseDetails.FragmentLessonDetails;
@@ -54,7 +57,9 @@ public class LessonVideosAdapter extends RecyclerView.Adapter<LessonVideosAdapte
         VideoData categoriesData = lessonsItemList.get(position);
         ItemLessonVideoViewModel itemMenuViewModel = new ItemLessonVideoViewModel(categoriesData);
         itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {
-//                MovementHelper.startActivityWithBundle(context, new PassingObject(categoriesData.getId()), categoriesData.getName(), FragmentLessonDetails.class.getName(), null);
+            Intent mIntent = ExoPlayerActivity.getStartIntent(MyApplication.getInstance(), categoriesData.getUrl());
+            mIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            MyApplication.getInstance().startActivity(mIntent);
         });
         holder.itemMenuBinding.tvCount.setText(String.valueOf(position + 1));
         holder.setViewModel(itemMenuViewModel);

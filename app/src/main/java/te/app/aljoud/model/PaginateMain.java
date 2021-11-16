@@ -11,7 +11,7 @@ public class PaginateMain {
     private int lastPage;
 
     @SerializedName("next_page_url")
-    private Object nextPageUrl;
+    private String nextPageUrl;
 
     @SerializedName("prev_page_url")
     private Object prevPageUrl;
@@ -48,7 +48,7 @@ public class PaginateMain {
         return lastPage;
     }
 
-    public Object getNextPageUrl(){
+    public String getNextPageUrl(){
         return nextPageUrl;
     }
 

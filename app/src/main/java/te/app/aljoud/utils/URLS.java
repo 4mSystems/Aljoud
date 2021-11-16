@@ -10,6 +10,8 @@ public class URLS {
     public final static String COURSE_DETAILS = "course/details/";
     public final static String COURSE_LESSONS = "course/lessons/";
     public final static String LESSON_VIDEOS = "lesson/videos/";
+    public final static String LESSON_QUIZZES = "lesson/quizzes/";
+    public final static String LESSON_ARTICLES = "lesson/articles/";
     public final static String ABOUT = "app/about-us";
     public static final String CHANGE_PROFILE_PASSWORD = "user/change-password";
     public static final String CHANGE_PASSWORD = "password/change";
