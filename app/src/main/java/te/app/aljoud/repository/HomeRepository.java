@@ -1,6 +1,8 @@
 package te.app.aljoud.repository;
 
 
+import android.text.TextUtils;
+
 import androidx.lifecycle.MutableLiveData;
 
 import javax.inject.Inject;
@@ -9,10 +11,14 @@ import javax.inject.Singleton;
 import io.reactivex.disposables.Disposable;
 import te.app.aljoud.connection.ConnectionHelper;
 import te.app.aljoud.model.base.Mutable;
+import te.app.aljoud.model.base.StatusMessage;
+import te.app.aljoud.pages.courseDetails.models.AskRequest;
 import te.app.aljoud.pages.courseDetails.models.CourseDetailsResponse;
+import te.app.aljoud.pages.courseDetails.models.RateRequest;
 import te.app.aljoud.pages.courseDetails.models.lessons.CourseLessonsResponse;
 import te.app.aljoud.pages.courseDetails.models.videos.VideosResponse;
 import te.app.aljoud.pages.home.models.home.HomeResponse;
+import te.app.aljoud.pages.offers.models.OffersResponse;
 import te.app.aljoud.pages.university.models.UniversityDetailsResponse;
 import te.app.aljoud.pages.university.models.course.CourseResponse;
 import te.app.aljoud.pages.university.models.levels.LevelsResponse;
@@ -75,9 +81,28 @@ public class HomeRepository extends BaseRepository {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.LESSON_QUIZZES.concat(String.valueOf(lessonId)), new Object(), VideosResponse.class,
                 Constants.LESSON_QUIZZES, showProgress);
     }
- public Disposable getLessonArticles(int lessonId, int page, boolean showProgress) {
+
+    public Disposable getLessonArticles(int lessonId, int page, boolean showProgress) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.LESSON_ARTICLES.concat(String.valueOf(lessonId)), new Object(), VideosResponse.class,
                 Constants.LESSON_ARTICLES, showProgress);
     }
 
+    public Disposable rateCourse(RateRequest rateRequest) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.RATE_REQUEST, rateRequest, StatusMessage.class,
+                Constants.RATE_APP, true);
+    }
+
+    public Disposable ask(AskRequest askRequest) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, !TextUtils.isEmpty(askRequest.getCourseId()) ? URLS.ASK_COURSE : URLS.ASK_LESSON, askRequest, StatusMessage.class,
+                Constants.ASK, true);
+    }
+    public Disposable offers(int page, boolean showProgress) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.OFFERS + page, new Object(), OffersResponse.class,
+                Constants.OFFERS, showProgress);
+    }
+
+    public Disposable buyOffer(int offerId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.BUY_OFFER + offerId, new Object(), StatusMessage.class,
+                Constants.BUY_OFFER, true);
+    }
 }

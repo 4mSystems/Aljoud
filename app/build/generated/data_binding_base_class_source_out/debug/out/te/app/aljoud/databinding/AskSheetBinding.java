@@ -7,12 +7,14 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.google.android.material.textfield.TextInputLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.aljoud.R;
+import te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel;
 
 public abstract class AskSheetBinding extends ViewDataBinding {
   @NonNull
@@ -21,11 +23,21 @@ public abstract class AskSheetBinding extends ViewDataBinding {
   @NonNull
   public final TextInputLayout inputReply;
 
+  @Bindable
+  protected CourseViewModel mViewModel;
+
   protected AskSheetBinding(Object _bindingComponent, View _root, int _localFieldCount,
       AppCompatImageView icFile, TextInputLayout inputReply) {
     super(_bindingComponent, _root, _localFieldCount);
     this.icFile = icFile;
     this.inputReply = inputReply;
+  }
+
+  public abstract void setViewModel(@Nullable CourseViewModel viewModel);
+
+  @Nullable
+  public CourseViewModel getViewModel() {
+    return mViewModel;
   }
 
   @NonNull

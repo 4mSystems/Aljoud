@@ -379,6 +379,7 @@
                         android:layout_marginBottom="@dimen/dp12h"
                         android:padding="@dimen/dp6h"
                         android:text="@string/course_ask"
+                        android:onClick="@{()->viewmodel.action(Constants.ASK)}"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/black"
                         app:backgroundTint="@color/baby_blue" />

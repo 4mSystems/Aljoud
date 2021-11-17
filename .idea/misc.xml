@@ -60,7 +60,7 @@
         <entry key="app/src/main/res/layout/fragment_contacts.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_conversations.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_course_details.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/fragment_course_lessons.xml" value="0.3630094043887147" />
+        <entry key="app/src/main/res/layout/fragment_course_lessons.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_forget_password.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.3109375" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.28606719367588934" />
@@ -70,6 +70,7 @@
         <entry key="app/src/main/res/layout/fragment_lesson_videos.xml" value="0.3015625" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_more.xml" value="0.3109375" />
+        <entry key="app/src/main/res/layout/fragment_offers.xml" value="0.2857847976307996" />
         <entry key="app/src/main/res/layout/fragment_products.xml" value="0.3109375" />
         <entry key="app/src/main/res/layout/fragment_refactory_center.xml" value="0.3463541666666667" />
         <entry key="app/src/main/res/layout/fragment_refactory_center_details.xml" value="0.33229166666666665" />
@@ -96,6 +97,7 @@
         <entry key="app/src/main/res/layout/item_lesson_quiz.xml" value="0.3015625" />
         <entry key="app/src/main/res/layout/item_lesson_video.xml" value="0.30520833333333336" />
         <entry key="app/src/main/res/layout/item_levels.xml" value="0.3463541666666667" />
+        <entry key="app/src/main/res/layout/item_offer.xml" value="0.5" />
         <entry key="app/src/main/res/layout/item_refactory_center.xml" value="0.3463541666666667" />
         <entry key="app/src/main/res/layout/item_search.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/item_selected_suggestions.xml" value="0.3109375" />

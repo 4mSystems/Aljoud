@@ -16,12 +16,12 @@ public class Constants {
     public final static String MENU_HOME = "MENU_HOME";
     public final static String EMAIL = "email";
     public final static String LESSON_ARTICLES = "LESSON_ARTICLES";
-    public final static String SELECT_BRAND = "SELECT_BRAND";
+    public final static String ASK = "ASK";
 
-    public final static String NEXT = "NEXT";
+    public final static String OFFERS = "OFFERS";
 
 
-    public final static String BOARD = "BOARD";
+    public final static String BUY_OFFER = "BUY_OFFER";
     public final static String GALLERY = "GALLERY";
     public final static int SYSTEM_PRODUCTS = 3;
     public final static int GALLERY_ID = 5;

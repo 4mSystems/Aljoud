@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class FragmentCourseLessonsBindingImpl extends FragmentCourseLessonsBinding  {
+public class FragmentCourseLessonsBindingImpl extends FragmentCourseLessonsBinding implements te.app.aljoud.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -14,43 +14,47 @@ public class FragmentCourseLessonsBindingImpl extends FragmentCourseLessonsBindi
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.card_instructor, 7);
-        sViewsWithIds.put(R.id.tv_policy_warning1, 8);
-        sViewsWithIds.put(R.id.tv_instractor_profession, 9);
-        sViewsWithIds.put(R.id.tv_account_qr, 10);
-        sViewsWithIds.put(R.id.card_info, 11);
-        sViewsWithIds.put(R.id.rate_container, 12);
-        sViewsWithIds.put(R.id.card_rate, 13);
-        sViewsWithIds.put(R.id.tv_rate_course, 14);
-        sViewsWithIds.put(R.id.rate, 15);
+        sViewsWithIds.put(R.id.card_instructor, 9);
+        sViewsWithIds.put(R.id.tv_policy_warning1, 10);
+        sViewsWithIds.put(R.id.tv_instractor_profession, 11);
+        sViewsWithIds.put(R.id.tv_account_qr, 12);
+        sViewsWithIds.put(R.id.card_info, 13);
+        sViewsWithIds.put(R.id.rate_container, 14);
+        sViewsWithIds.put(R.id.card_rate, 15);
+        sViewsWithIds.put(R.id.tv_rate_course, 16);
     }
     // views
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     @NonNull
     private final androidx.recyclerview.widget.RecyclerView mboundView6;
+    @NonNull
+    private final com.google.android.material.button.MaterialButton mboundView8;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback24;
     // values
     // listeners
+    private OnRatingBarChangeListenerImpl mViewmodelOnRateChangeAndroidWidgetRatingBarOnRatingBarChangeListener;
     // Inverse Binding Event Handlers
 
     public FragmentCourseLessonsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 16, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 17, sIncludes, sViewsWithIds));
     }
     private FragmentCourseLessonsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.cardview.widget.CardView) bindings[11]
-            , (androidx.cardview.widget.CardView) bindings[7]
             , (androidx.cardview.widget.CardView) bindings[13]
+            , (androidx.cardview.widget.CardView) bindings[9]
+            , (androidx.cardview.widget.CardView) bindings[15]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[2]
             , (com.google.android.material.imageview.ShapeableImageView) bindings[5]
-            , (androidx.appcompat.widget.AppCompatRatingBar) bindings[15]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[12]
-            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[10]
+            , (androidx.appcompat.widget.AppCompatRatingBar) bindings[7]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[14]
+            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[12]
             , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[1]
-            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[9]
-            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[8]
-            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[14]
+            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[11]
+            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[10]
+            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[16]
             , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[3]
             , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[4]
             );
@@ -60,11 +64,15 @@ public class FragmentCourseLessonsBindingImpl extends FragmentCourseLessonsBindi
         this.mboundView0.setTag(null);
         this.mboundView6 = (androidx.recyclerview.widget.RecyclerView) bindings[6];
         this.mboundView6.setTag(null);
+        this.mboundView8 = (com.google.android.material.button.MaterialButton) bindings[8];
+        this.mboundView8.setTag(null);
+        this.rate.setTag(null);
         this.tvCardTitle.setTag(null);
         this.tvSpecial.setTag(null);
         this.tvSubjects.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback24 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -156,6 +164,7 @@ public class FragmentCourseLessonsBindingImpl extends FragmentCourseLessonsBindi
         te.app.aljoud.pages.courseDetails.models.lessons.LessonMainData viewmodelLessonMainData = null;
         java.lang.String viewmodelLessonMainDataCourseDataName = null;
         java.lang.String stringValueOfUserHelperGetInstanceContextUserDataId = null;
+        android.widget.RatingBar.OnRatingBarChangeListener viewmodelOnRateChangeAndroidWidgetRatingBarOnRatingBarChangeListener = null;
         te.app.aljoud.pages.courseDetails.viewModels.CourseLessonsViewModel viewmodel = mViewmodel;
 
         if ((dirtyFlags & 0x8L) != 0) {
@@ -212,12 +221,20 @@ public class FragmentCourseLessonsBindingImpl extends FragmentCourseLessonsBindi
                         viewmodelLessonMainDataCourseDataName = viewmodelLessonMainDataCourseData.getName();
                     }
             }
+            if ((dirtyFlags & 0x9L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel::onRateChange
+                        viewmodelOnRateChangeAndroidWidgetRatingBarOnRatingBarChangeListener = (((mViewmodelOnRateChangeAndroidWidgetRatingBarOnRatingBarChangeListener == null) ? (mViewmodelOnRateChangeAndroidWidgetRatingBarOnRatingBarChangeListener = new OnRatingBarChangeListenerImpl()) : mViewmodelOnRateChangeAndroidWidgetRatingBarOnRatingBarChangeListener).setValue(viewmodel));
+                    }
+            }
         }
         // batch finished
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
             te.app.aljoud.base.ApplicationBinding.loadImage(this.icQr, userHelperGetInstanceContextUserDataQrImage);
+            this.mboundView8.setOnClickListener(mCallback24);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvCardTitle, tvCardTitleAndroidStringAccountNumberConcatJavaLangStringConcatStringValueOfUserHelperGetInstanceContextUserDataId);
         }
         if ((dirtyFlags & 0xbL) != 0) {
@@ -232,9 +249,41 @@ public class FragmentCourseLessonsBindingImpl extends FragmentCourseLessonsBindi
 
             te.app.aljoud.base.ApplicationBinding.getItemsV2Binding(this.mboundView6, viewmodelLessonsAdapter, "1", "1");
         }
+        if ((dirtyFlags & 0x9L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.RatingBarBindingAdapter.setListeners(this.rate, (android.widget.RatingBar.OnRatingBarChangeListener)viewmodelOnRateChangeAndroidWidgetRatingBarOnRatingBarChangeListener, (androidx.databinding.InverseBindingListener)null);
+        }
     }
     // Listener Stub Implementations
+    public static class OnRatingBarChangeListenerImpl implements android.widget.RatingBar.OnRatingBarChangeListener{
+        private te.app.aljoud.pages.courseDetails.viewModels.CourseLessonsViewModel value;
+        public OnRatingBarChangeListenerImpl setValue(te.app.aljoud.pages.courseDetails.viewModels.CourseLessonsViewModel value) {
+            this.value = value;
+            return value == null ? null : this;
+        }
+        @Override
+        public void onRatingChanged(android.widget.RatingBar arg0, float arg1, boolean arg2) {
+            this.value.onRateChange(arg0, arg1, arg2); 
+        }
+    }
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        // localize variables for thread safety
+        // viewmodel != null
+        boolean viewmodelJavaLangObjectNull = false;
+        // viewmodel
+        te.app.aljoud.pages.courseDetails.viewModels.CourseLessonsViewModel viewmodel = mViewmodel;
+
+
+
+        viewmodelJavaLangObjectNull = (viewmodel) != (null);
+        if (viewmodelJavaLangObjectNull) {
+
+
+            viewmodel.rateCourse();
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping

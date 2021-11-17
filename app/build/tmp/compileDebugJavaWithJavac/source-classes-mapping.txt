@@ -15,8 +15,12 @@ te/app/aljoud/pages/auth/confirmCode/ConfirmViewModel.java
 te/app/aljoud/pages/university/adapters/UniversityCollegesAdapter.java
  te.app.aljoud.pages.university.adapters.UniversityCollegesAdapter
  te.app.aljoud.pages.university.adapters.UniversityCollegesAdapter$ViewHolder
+te/app/aljoud/pages/offers/OffersFragment.java
+ te.app.aljoud.pages.offers.OffersFragment
 te/app/aljoud/pages/home/HomeFragment.java
  te.app.aljoud.pages.home.HomeFragment
+te/app/aljoud/pages/offers/viewModel/ItemOfferViewModel.java
+ te.app.aljoud.pages.offers.viewModel.ItemOfferViewModel
 te/app/aljoud/pages/auth/login/LoginFragment.java
  te.app.aljoud.pages.auth.login.LoginFragment
 te/app/aljoud/connection/ConnectionListenerInterFace.java
@@ -92,6 +96,8 @@ te/app/aljoud/pages/chat/model/ChatSendResponse.java
  te.app.aljoud.pages.chat.model.ChatSendResponse
 te/app/aljoud/databinding/FragmentLessonDetailsBinding.java
  te.app.aljoud.databinding.FragmentLessonDetailsBinding
+te/app/aljoud/pages/offers/models/OfferItem.java
+ te.app.aljoud.pages.offers.models.OfferItem
 te/app/aljoud/repository/ChatRepository.java
  te.app.aljoud.repository.ChatRepository
 te/app/aljoud/pages/conversations/viewModels/ItemConversationsViewModel.java
@@ -123,6 +129,8 @@ te/app/aljoud/pages/settings/models/AboutData.java
  te.app.aljoud.pages.settings.models.AboutData
 te/app/aljoud/pages/university/models/UniversityDetailsResponse.java
  te.app.aljoud.pages.university.models.UniversityDetailsResponse
+te/app/aljoud/pages/courseDetails/models/AskRequest.java
+ te.app.aljoud.pages.courseDetails.models.AskRequest
 te/app/aljoud/pages/chat/model/ChatResponse.java
  te.app.aljoud.pages.chat.model.ChatResponse
 te/app/aljoud/databinding/ItemLessonArticleBinding.java
@@ -148,6 +156,8 @@ te/app/aljoud/databinding/FragmentConversationsBinding.java
 te/app/aljoud/utils/locations/GPSLocation.java
  te.app.aljoud.utils.locations.GPSLocation
  te.app.aljoud.utils.locations.GPSLocation$1
+te/app/aljoud/utils/helper/LauncherHelper.java
+ te.app.aljoud.utils.helper.LauncherHelper
 te/app/aljoud/pages/university/models/course/Course.java
  te.app.aljoud.pages.university.models.course.Course
 te/app/aljoud/pages/home/models/CategoriesItem.java
@@ -173,6 +183,8 @@ te/app/aljoud/activity/BaseActivity.java
 te/app/aljoud/pages/courseDetails/FragmentLessonArticles.java
  te.app.aljoud.pages.courseDetails.FragmentLessonArticles
  te.app.aljoud.pages.courseDetails.FragmentLessonArticles$1
+te/app/aljoud/databinding/FragmentOffersBinding.java
+ te.app.aljoud.databinding.FragmentOffersBinding
 te/app/aljoud/pages/auth/confirmCode/ConfirmCodeFragment.java
  te.app.aljoud.pages.auth.confirmCode.ConfirmCodeFragment
  te.app.aljoud.pages.auth.confirmCode.ConfirmCodeFragment$1
@@ -240,6 +252,8 @@ te/app/aljoud/pages/auth/login/LoginViewModel.java
  te.app.aljoud.pages.auth.login.LoginViewModel
 te/app/aljoud/pages/auth/models/RegisterRequest.java
  te.app.aljoud.pages.auth.models.RegisterRequest
+te/app/aljoud/pages/offers/viewModel/OffersViewModel.java
+ te.app.aljoud.pages.offers.viewModel.OffersViewModel
 te/app/aljoud/pages/settings/AboutAppFragment.java
  te.app.aljoud.pages.settings.AboutAppFragment
 te/app/aljoud/databinding/AskSheetBinding.java
@@ -250,6 +264,8 @@ te/app/aljoud/utils/upload/FileUpload.java
  te.app.aljoud.utils.upload.FileUpload
 te/app/aljoud/pages/settings/models/ContactRequest.java
  te.app.aljoud.pages.settings.models.ContactRequest
+te/app/aljoud/pages/courseDetails/models/RateRequest.java
+ te.app.aljoud.pages.courseDetails.models.RateRequest
 te/app/aljoud/customViews/views/CustomTextViewRegular.java
  te.app.aljoud.customViews.views.CustomTextViewRegular
 te/app/aljoud/pages/courseDetails/viewModels/CourseLessonsViewModel.java
@@ -276,8 +292,15 @@ te/app/aljoud/pages/university/models/SpecialistsItem.java
  te.app.aljoud.pages.university.models.SpecialistsItem
 te/app/aljoud/activity/RemotePDFActivity.java
  te.app.aljoud.activity.RemotePDFActivity
+te/app/aljoud/pages/offers/adapters/OffersAdapter.java
+ te.app.aljoud.pages.offers.adapters.OffersAdapter
+ te.app.aljoud.pages.offers.adapters.OffersAdapter$ViewHolder
 te/app/aljoud/base/BaseFragment.java
  te.app.aljoud.base.BaseFragment
+te/app/aljoud/utils/helper/LauncherInterface.java
+ te.app.aljoud.utils.helper.LauncherInterface
+ te.app.aljoud.utils.helper.LauncherInterface$activityResultInterface
+ te.app.aljoud.utils.helper.LauncherInterface$permissionInterface
 te/app/aljoud/pages/splash/models/SettingData.java
  te.app.aljoud.pages.splash.models.SettingData
 te/app/aljoud/base/MyApplication.java
@@ -332,6 +355,8 @@ te/app/aljoud/pages/courseDetails/models/lessons/LessonMainData.java
  te.app.aljoud.pages.courseDetails.models.lessons.LessonMainData
 te/app/aljoud/pages/conversations/models/ConversationsMain.java
  te.app.aljoud.pages.conversations.models.ConversationsMain
+te/app/aljoud/databinding/ItemOfferBinding.java
+ te.app.aljoud.databinding.ItemOfferBinding
 te/app/aljoud/model/PaginateMain.java
  te.app.aljoud.model.PaginateMain
 te/app/aljoud/pages/splash/SplashViewModel.java
@@ -359,6 +384,8 @@ te/app/aljoud/pages/chat/model/ChatRequest.java
  te.app.aljoud.pages.chat.model.ChatRequest
 te/app/aljoud/databinding/ItemChatBinding.java
  te.app.aljoud.databinding.ItemChatBinding
+te/app/aljoud/pages/offers/models/OffersMainData.java
+ te.app.aljoud.pages.offers.models.OffersMainData
 te/app/aljoud/customViews/actionbar/HomeActionBarView.java
  te.app.aljoud.customViews.actionbar.HomeActionBarView
 te/app/aljoud/utils/resources/ResourceManager.java
@@ -445,6 +472,8 @@ te/app/aljoud/utils/locations/MapAddressActivity.java
  te.app.aljoud.utils.locations.MapAddressActivity
 te/app/aljoud/utils/validation/Validate.java
  te.app.aljoud.utils.validation.Validate
+te/app/aljoud/pages/offers/models/OffersResponse.java
+ te.app.aljoud.pages.offers.models.OffersResponse
 te/app/aljoud/model/base/Mutable.java
  te.app.aljoud.model.base.Mutable
 te/app/aljoud/utils/PopUp/PopUpInterface.java

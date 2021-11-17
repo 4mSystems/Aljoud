@@ -12,6 +12,11 @@ public class URLS {
     public final static String LESSON_VIDEOS = "lesson/videos/";
     public final static String LESSON_QUIZZES = "lesson/quizzes/";
     public final static String LESSON_ARTICLES = "lesson/articles/";
+    public final static String RATE_REQUEST = "make/course/rate";
+    public final static String ASK_COURSE = "Ask-in-course";
+    public final static String ASK_LESSON = "Ask-in-lesson";
+    public final static String OFFERS = "offers?page=";
+    public final static String BUY_OFFER = "student/buy/offer/";
     public final static String ABOUT = "app/about-us";
     public static final String CHANGE_PROFILE_PASSWORD = "user/change-password";
     public static final String CHANGE_PASSWORD = "password/change";

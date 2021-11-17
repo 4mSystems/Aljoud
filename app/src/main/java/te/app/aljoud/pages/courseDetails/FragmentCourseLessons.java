@@ -20,6 +20,7 @@ import te.app.aljoud.base.IApplicationComponent;
 import te.app.aljoud.base.MyApplication;
 import te.app.aljoud.databinding.FragmentCourseLessonsBinding;
 import te.app.aljoud.model.base.Mutable;
+import te.app.aljoud.model.base.StatusMessage;
 import te.app.aljoud.pages.courseDetails.models.lessons.CourseLessonsResponse;
 import te.app.aljoud.pages.courseDetails.viewModels.CourseLessonsViewModel;
 import te.app.aljoud.utils.Constants;
@@ -52,6 +53,8 @@ public class FragmentCourseLessons extends BaseFragment {
             handleActions(mutable);
             if (Constants.COURSE_LESSONS.equals(((Mutable) o).message)) {
                 viewModel.setLessonMainData(((CourseLessonsResponse) mutable.object).getLessonMainData());
+            } else if (Constants.RATE_APP.equals(((Mutable) o).message)) {
+                toastMessage(((StatusMessage) mutable.object).mMessage);
             }
         });
     }

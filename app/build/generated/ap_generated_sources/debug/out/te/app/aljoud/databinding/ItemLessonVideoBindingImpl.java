@@ -22,7 +22,7 @@ public class ItemLessonVideoBindingImpl extends ItemLessonVideoBinding implement
     private final com.google.android.material.card.MaterialCardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback12;
+    private final android.view.View.OnClickListener mCallback13;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,7 +41,7 @@ public class ItemLessonVideoBindingImpl extends ItemLessonVideoBinding implement
         this.tvTitle.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback12 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback13 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -139,7 +139,7 @@ public class ItemLessonVideoBindingImpl extends ItemLessonVideoBinding implement
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView0.setOnClickListener(mCallback12);
+            this.mboundView0.setOnClickListener(mCallback13);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

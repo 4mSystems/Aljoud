@@ -1444,6 +1444,7 @@ color normalColor
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
+color open_camera_bg
 color orange
 color overlayBackground
 color pdfViewPager_ab_color
@@ -1477,6 +1478,7 @@ color test_mtrl_calendar_day
 color test_mtrl_calendar_day_selected
 color tooltip_background_dark
 color tooltip_background_light
+color transparent_background
 color warningColor
 color white
 color zxing_transparent
@@ -2682,6 +2684,7 @@ dimen exo_styled_progress_touch_target_height
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
+dimen grid_spacing
 dimen highlight_alpha_material_colored
 dimen highlight_alpha_material_dark
 dimen highlight_alpha_material_light
@@ -3274,8 +3277,10 @@ drawable ic_arrow_down
 drawable ic_article
 drawable ic_assignment
 drawable ic_attach
+drawable ic_audio
 drawable ic_back
 drawable ic_call_white
+drawable ic_camera
 drawable ic_chat
 drawable ic_chat_send
 drawable ic_check_white_24dp
@@ -3289,6 +3294,7 @@ drawable ic_exit_dialog
 drawable ic_facebook
 drawable ic_favorite_border
 drawable ic_favorite_fill
+drawable ic_file
 drawable ic_filter
 drawable ic_forget
 drawable ic_free
@@ -3328,12 +3334,14 @@ drawable ic_remove
 drawable ic_request_course
 drawable ic_right
 drawable ic_search
+drawable ic_selected
 drawable ic_send
 drawable ic_shop
 drawable ic_shopping_cart
 drawable ic_support_agent
 drawable ic_verify
 drawable ic_video
+drawable ic_videocam
 drawable ic_whatsapp
 drawable ic_youtube
 drawable left_chat
@@ -3381,6 +3389,7 @@ drawable test_custom_background
 drawable toast_frame
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable transparent_background
 font medium
 font roboto_medium_numbers
 id ALT
@@ -3468,6 +3477,7 @@ id animateToStart
 id antiClockwise
 id anticipate
 id appCompatButtonNext
+id app_bar
 id arc
 id asConfigured
 id async
@@ -3491,6 +3501,7 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id br
+id bt_get_offer
 id bt_level
 id btn_lang
 id btn_phone
@@ -3572,6 +3583,7 @@ id disablePostScroll
 id disableScroll
 id disjoint
 id dl_main_navigation_menu
+id done
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -3648,6 +3660,13 @@ id expand_activities_button
 id expanded_menu
 id face_book
 id fade
+id file_duration
+id file_gallery
+id file_name
+id file_open_camera
+id file_open_video_camera
+id file_selected
+id file_thumbnail
 id fill
 id fill_horizontal
 id fill_vertical
@@ -4007,6 +4026,7 @@ id toast_icon
 id toast_root
 id toast_text
 id toggle
+id toolbar
 id top
 id topPanel
 id touch_outside
@@ -4033,6 +4053,7 @@ id tv_course_discuss
 id tv_course_quiz
 id tv_course_time
 id tv_customer_service
+id tv_desc
 id tv_forget_timer
 id tv_grand_phone
 id tv_grand_url
@@ -4043,13 +4064,16 @@ id tv_instractor_name
 id tv_instractor_profession
 id tv_language
 id tv_lessons
+id tv_level
 id tv_login_forget
 id tv_login_title
 id tv_login_title1
 id tv_new_price
+id tv_offer_name
 id tv_old_price
 id tv_partner
 id tv_policy_warning1
+id tv_price
 id tv_rate
 id tv_rate_course
 id tv_reserved
@@ -4061,6 +4085,7 @@ id tv_subjects
 id tv_support
 id tv_terms
 id tv_title
+id tv_university
 id tv_verify_phone
 id unchecked
 id uniform
@@ -4206,6 +4231,8 @@ layout exo_styled_settings_list
 layout exo_styled_settings_list_item
 layout exo_styled_sub_settings_list_item
 layout exo_track_selection_dialog
+layout filegallery_item
+layout filepicker_gallery
 layout fragment_about
 layout fragment_category_sections
 layout fragment_change_password
@@ -4222,6 +4249,7 @@ layout fragment_lesson_details
 layout fragment_lesson_quizzes
 layout fragment_lesson_videos
 layout fragment_login
+layout fragment_offers
 layout fragment_register
 layout fragment_splash
 layout fragment_university_details
@@ -4236,6 +4264,7 @@ layout item_lesson_article
 layout item_lesson_quiz
 layout item_lesson_video
 layout item_levels
+layout item_offer
 layout item_university_section
 layout layout_action_bar_back
 layout layout_action_bar_home
@@ -4323,6 +4352,7 @@ layout text_view_without_line_height
 layout toast_layout
 layout view_pdf_page
 menu bottom_navigation_menu
+menu filegallery_menu
 mipmap grand
 mipmap grand_exit
 mipmap grand_g
@@ -4517,10 +4547,12 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string fcm_fallback_notification_channel_label
 string fieldRequired
+string file_thumbnail
 string finish_order
 string forget_body
 string gcm_defaultSenderId
 string generate_code
+string get_offer
 string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
@@ -4625,6 +4657,7 @@ string no
 string offers
 string old_password
 string on_hand
+string open_camera
 string part_warning_warning
 string partner
 string password
@@ -4637,6 +4670,7 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string pdfvp_ready_to_download
+string permission_not_given
 string phone_hint
 string please_select_another_file
 string policy_warning
@@ -4666,6 +4700,7 @@ string search_result
 string select_brand
 string select_ic
 string selected_suggestions_title
+string selection_count
 string send_contact
 string send_match
 string send_successfully
@@ -4707,6 +4742,7 @@ style AppBottomSheetDialogTheme
 style AppModalStyle
 style AppTheme
 style AppTheme_AppBarOverlay
+style AppTheme_NoActionBar
 style AppTheme_PopupOverlay
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
@@ -5628,6 +5664,7 @@ styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
 styleable include constraintSet
+xml com_jaiselrahman_filepicker_provider_paths
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start

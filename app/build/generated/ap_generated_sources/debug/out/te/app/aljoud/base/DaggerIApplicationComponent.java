@@ -72,6 +72,11 @@ import te.app.aljoud.pages.home.HomeFragment_MembersInjector;
 import te.app.aljoud.pages.home.viewModels.HomeViewModel;
 import te.app.aljoud.pages.home.viewModels.HomeViewModel_Factory;
 import te.app.aljoud.pages.home.viewModels.HomeViewModel_MembersInjector;
+import te.app.aljoud.pages.offers.OffersFragment;
+import te.app.aljoud.pages.offers.OffersFragment_MembersInjector;
+import te.app.aljoud.pages.offers.viewModel.OffersViewModel;
+import te.app.aljoud.pages.offers.viewModel.OffersViewModel_Factory;
+import te.app.aljoud.pages.offers.viewModel.OffersViewModel_MembersInjector;
 import te.app.aljoud.pages.settings.AboutAppFragment;
 import te.app.aljoud.pages.settings.AboutAppFragment_MembersInjector;
 import te.app.aljoud.pages.settings.ContactFragment;
@@ -193,6 +198,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectChatViewModel(ChatViewModel_Factory.newInstance(chatRepositoryProvider.get()));
   }
 
+  private OffersViewModel offersViewModel() {
+    return injectOffersViewModel(OffersViewModel_Factory.newInstance(homeRepositoryProvider.get()));
+  }
+
   @SuppressWarnings("unchecked")
   private void initialize(final ConnectionModule connectionModuleParam) {
     this.webServiceProvider = DoubleCheck.provider(ConnectionModule_WebServiceFactory.create(connectionModuleParam));
@@ -310,6 +319,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(ChatFragment chatFragment) {
     injectChatFragment(chatFragment);
+  }
+
+  @Override
+  public void inject(OffersFragment offersFragment) {
+    injectOffersFragment(offersFragment);
   }
 
   private HomeViewModel injectHomeViewModel(HomeViewModel instance) {
@@ -487,6 +501,16 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private ChatFragment injectChatFragment(ChatFragment instance) {
     ChatFragment_MembersInjector.injectViewModel(instance, chatViewModel());
+    return instance;
+  }
+
+  private OffersViewModel injectOffersViewModel(OffersViewModel instance) {
+    OffersViewModel_MembersInjector.injectHomeRepository(instance, homeRepositoryProvider.get());
+    return instance;
+  }
+
+  private OffersFragment injectOffersFragment(OffersFragment instance) {
+    OffersFragment_MembersInjector.injectViewModel(instance, offersViewModel());
     return instance;
   }
 

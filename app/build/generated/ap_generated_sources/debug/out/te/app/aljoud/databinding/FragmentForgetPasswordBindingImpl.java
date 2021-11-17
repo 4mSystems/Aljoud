@@ -26,7 +26,7 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
     private final androidx.appcompat.widget.AppCompatEditText mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback19;
+    private final android.view.View.OnClickListener mCallback20;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -88,7 +88,7 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback19 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback20 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -284,7 +284,7 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback19);
+            this.appCompatButtonNext.setOnClickListener(mCallback20);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView1, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView1androidTextAttrChanged);
         }
         if ((dirtyFlags & 0x5L) != 0) {

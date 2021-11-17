@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResultLauncher;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -36,6 +37,7 @@ import te.app.aljoud.model.base.Mutable;
 import te.app.aljoud.pages.auth.login.LoginFragment;
 import te.app.aljoud.utils.Constants;
 import te.app.aljoud.utils.helper.AppHelper;
+import te.app.aljoud.utils.helper.LauncherHelper;
 import te.app.aljoud.utils.helper.MovementHelper;
 import te.app.aljoud.utils.resources.ResourceManager;
 import te.app.aljoud.utils.session.LanguagesHelper;
@@ -47,6 +49,7 @@ public class ParentActivity extends AppCompatActivity implements
     public MutableLiveData<Boolean> ConnectionLiveData;
     ConnectivityReceiver connectivityReceiver = new ConnectivityReceiver();
     ImmediateUpdateActivity immediateUpdateActivity;
+    public ActivityResultLauncher<Intent> someActivityResultLauncher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +59,7 @@ public class ParentActivity extends AppCompatActivity implements
         initializeLanguage();
         initializeToken();
         initializeProgress();
+        launchActivityResult();
     }
 
     protected boolean notification_checked = false;
@@ -158,7 +162,7 @@ public class ParentActivity extends AppCompatActivity implements
             toastError((String) mutable.object);
         } else if (mutable.message.equals(Constants.FAILURE_CONNECTION)) {
             hideProgress();
-        }  else if (mutable.message.equals(Constants.LOGOUT)) {
+        } else if (mutable.message.equals(Constants.LOGOUT)) {
             if (UserHelper.getInstance(this).getUserData() != null) {
                 try {
                     // clearing app data
@@ -208,19 +212,33 @@ public class ParentActivity extends AppCompatActivity implements
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        try {
-            if (resultCode == RESULT_OK) {
+//    @Override
+//    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        try {
+//            if (resultCode == RESULT_OK) {
+//                Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.fl_home_container);
+//                assert fragment != null;
+//                fragment.onActivityResult(requestCode, resultCode, data);
+//            }
+//        } catch (Exception ex) {
+//            ex.printStackTrace();
+//            Toast.makeText(this, ResourceManager.getString(R.string.please_select_another_file), Toast.LENGTH_SHORT).show();
+//        }
+//    }
+
+    private void launchActivityResult() {
+        LauncherHelper.onActivityResult(this, (request, resultCode, result) -> {
+            Log.e("launchActivityResult", "launchActivityResult: " + result.getData());
+            try {
                 Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.fl_home_container);
                 assert fragment != null;
-                fragment.onActivityResult(requestCode, resultCode, data);
+                if (fragment instanceof BaseFragment)
+                    ((BaseFragment) fragment).launchActivityResult(request, resultCode, result);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                Toast.makeText(this, ResourceManager.getString(R.string.please_select_another_file), Toast.LENGTH_SHORT).show();
             }
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            Toast.makeText(this, ResourceManager.getString(R.string.please_select_another_file), Toast.LENGTH_SHORT).show();
-        }
+        });
     }
-
 }

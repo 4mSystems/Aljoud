@@ -1,7 +1,9 @@
 package te.app.aljoud.base;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +16,8 @@ import org.jetbrains.annotations.NotNull;
 import te.app.aljoud.R;
 import te.app.aljoud.activity.BaseActivity;
 import te.app.aljoud.model.base.Mutable;
+import te.app.aljoud.utils.Constants;
+import te.app.aljoud.utils.upload.FileOperations;
 
 
 public class BaseFragment extends Fragment {
@@ -29,8 +33,8 @@ public class BaseFragment extends Fragment {
 //        FileOperations.pickImage(context, BaseFragment.this, requestCode);
     }
 
-    protected void pickVideo() {
-//        FileOperations.pickVideo(context, BaseFragment.this, Constants.FILE_TYPE_VIDEO);
+    protected void pickDocs() {
+        FileOperations.pickDocuments(context, BaseFragment.this, Constants.FILE_TYPE_IMAGE);
     }
 
 
@@ -80,6 +84,10 @@ public class BaseFragment extends Fragment {
     public void onAttach(@NotNull Context context) {
         super.onAttach(context);
         this.context = context;
+    }
+
+    public void launchActivityResult(int request, int resultCode, Intent result) {
+        Log.e(TAG, "launchActivityResult: " + request);
     }
 
 }

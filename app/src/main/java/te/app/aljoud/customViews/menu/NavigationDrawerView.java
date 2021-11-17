@@ -23,6 +23,7 @@ import te.app.aljoud.customViews.actionbar.HomeActionBarView;
 import te.app.aljoud.databinding.ExitLayoutBinding;
 import te.app.aljoud.databinding.LayoutNavigationDrawerBinding;
 import te.app.aljoud.model.base.Mutable;
+import te.app.aljoud.pages.offers.OffersFragment;
 import te.app.aljoud.pages.settings.AboutAppFragment;
 import te.app.aljoud.pages.settings.ContactFragment;
 import te.app.aljoud.pages.splash.SplashFragment;
@@ -78,9 +79,11 @@ public class NavigationDrawerView extends RelativeLayout {
         menuViewModel.getLiveData().observe(context, o -> {
             if (Constants.ABOUT.equals(o)) {
                 MovementHelper.startActivity(context, AboutAppFragment.class.getName(), getResources().getString(R.string.about), null);
-            }   else if (Constants.CONTACT.equals(o)) {
+            } else if (Constants.CONTACT.equals(o)) {
                 MovementHelper.startActivity(context, ContactFragment.class.getName(), getResources().getString(R.string.contact_us), null);
-            }else if (Constants.SHARE_BAR.equals(o)) {
+            } else if (Constants.OFFERS.equals(o)) {
+                MovementHelper.startActivity(context, OffersFragment.class.getName(), getResources().getString(R.string.offers), null);
+            } else if (Constants.SHARE_BAR.equals(o)) {
                 AppHelper.shareApp(context);
             } else if (Constants.RATE_APP.equals(o)) {
                 AppHelper.rateApp(context);

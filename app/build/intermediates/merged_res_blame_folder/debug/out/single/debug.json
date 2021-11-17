@@ -80,6 +80,10 @@
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/mipmap-xxhdpi/whats.png"
     },
     {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/merged_res/debug/layout_item_offer.xml.flat",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/item_offer.xml"
+    },
+    {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/merged_res/debug/drawable_contact.png.flat",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/drawable/contact.png"
     },
@@ -96,12 +100,12 @@
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/exit_layout.xml"
     },
     {
-        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/merged_res/debug/drawable_ic_remove.xml.flat",
-        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/drawable/ic_remove.xml"
-    },
-    {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/merged_res/debug/layout_activity_remote_pdf.xml.flat",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/activity_remote_pdf.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/merged_res/debug/drawable_ic_remove.xml.flat",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/drawable/ic_remove.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/merged_res/debug/drawable_ic_email.xml.flat",
@@ -262,6 +266,10 @@
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/merged_res/debug/anim_dialog_slide_up.xml.flat",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/anim/dialog_slide_up.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/merged_res/debug/layout_fragment_offers.xml.flat",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_offers.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/merged_res/debug/drawable_logo.png.flat",
@@ -584,12 +592,12 @@
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/mipmap-xxhdpi/grand_exit.png"
     },
     {
-        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
-    },
-    {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/merged_res/debug/drawable_corner_view_border.xml.flat",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/drawable/corner_view_border.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/merged_res/debug/layout_item_conversation.xml.flat",

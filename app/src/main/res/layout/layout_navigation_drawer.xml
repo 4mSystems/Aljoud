@@ -145,7 +145,7 @@
                             android:drawableStart="@drawable/ic_offer"
                             android:drawablePadding="@dimen/dp8w"
                             android:gravity="center_vertical"
-                            android:onClick="@{()-> menuViewModel.buttonAction(Constants.CUSTOMER_SERVICES)}"
+                            android:onClick="@{()-> menuViewModel.buttonAction(Constants.OFFERS)}"
                             android:text="@string/offers"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@color/white"

@@ -66,11 +66,10 @@ public class ConnectionModule {
                 Request request = chain.request();
                 Request.Builder newRequest = request.newBuilder();
                 if (LanguagesHelper.getJwt() != null) {
-                    newRequest.header("jwt", LanguagesHelper.getJwt());
+                    newRequest.header("api_token", LanguagesHelper.getJwt());
                 }
+                Log.e(TAG, "webService: "+LanguagesHelper.getJwt() );
                 newRequest.addHeader("lang", LanguagesHelper.getCurrentLanguage());
-                newRequest.addHeader("version", String.valueOf(LanguagesHelper.versionCode()));
-                newRequest.addHeader("type", LanguagesHelper.accountType());
                 return chain.proceed(newRequest.build());
             });
 

@@ -22,7 +22,7 @@ public class ItemCourseBindingImpl extends ItemCourseBinding implements te.app.a
     private final te.app.aljoud.customViews.views.CustomTextViewMedium mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback18;
+    private final android.view.View.OnClickListener mCallback19;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,7 +41,7 @@ public class ItemCourseBindingImpl extends ItemCourseBinding implements te.app.a
         this.mboundView2.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback18 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback19 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -148,7 +148,7 @@ public class ItemCourseBindingImpl extends ItemCourseBinding implements te.app.a
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView0.setOnClickListener(mCallback18);
+            this.mboundView0.setOnClickListener(mCallback19);
         }
     }
     // Listener Stub Implementations

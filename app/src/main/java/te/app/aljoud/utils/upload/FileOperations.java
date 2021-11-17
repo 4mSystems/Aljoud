@@ -1,9 +1,12 @@
 package te.app.aljoud.utils.upload;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.ContentUris;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -13,6 +16,13 @@ import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.util.Base64;
+import android.util.Log;
+
+import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.Fragment;
+
+import com.jaiselrahman.filepicker.activity.FilePickerActivity;
+import com.jaiselrahman.filepicker.config.Configurations;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -26,6 +36,7 @@ import java.util.Objects;
 
 import te.app.aljoud.connection.FileObject;
 import te.app.aljoud.utils.Constants;
+import te.app.aljoud.utils.helper.LauncherHelper;
 
 
 @SuppressLint("NewApi")
@@ -284,6 +295,28 @@ public class FileOperations {
 //        volleyFileObject.setCompressObject(compressObject);
         volleyFileObject.setUri(dataUrl);
         return volleyFileObject;
+    }
+
+    public static void pickDocuments(final Context context, Fragment fragment, int requestCode) {
+        if (ActivityCompat.checkSelfPermission(context, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+            Intent intent = new Intent(fragment.getActivity(), FilePickerActivity.class);
+            intent.putExtra(FilePickerActivity.CONFIGS, new Configurations.Builder()
+                    .setCheckPermission(true)
+                    .setShowImages(true)
+                    .setShowVideos(false)
+                    .setShowFiles(true)
+                    .enableImageCapture(true)
+                    .setShowFiles(true)
+                    .setSuffixes("pdf", "csv", "doc", "docx", "ppt", "pptx", "pps",
+                            "xls", "xlsx")
+                    .setMaxSelection(4)
+                    .setSkipZeroSizeFiles(true)
+                    .build());
+            LauncherHelper.execute(intent, requestCode, context);
+
+        } else {
+            ActivityCompat.requestPermissions((Activity) context, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1007);
+        }
     }
 
 }

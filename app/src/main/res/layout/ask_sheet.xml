@@ -4,6 +4,11 @@
 
     <data>
 
+        <import type="te.app.aljoud.utils.Constants" />
+
+        <variable
+            name="viewModel"
+            type="te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel" />
     </data>
 
     <androidx.core.widget.NestedScrollView
@@ -35,7 +40,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dp100w"
                     android:gravity="top"
-                    android:inputType="phone"
+                    android:inputType="textImeMultiLine"
+                    android:text="@={viewModel.askRequest.message}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/overlayBackground" />
@@ -47,6 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp20w"
                 android:layout_marginTop="@dimen/dp8h"
+                android:onClick="@{()->viewModel.action(Constants.PICKED_SUCCESSFULLY)}"
                 android:src="@drawable/ic_note"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/input_reply"
@@ -57,6 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp8h"
                 android:text="@string/send_contact"
+                android:onClick="@{()->viewModel.ask()}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/white"
                 app:backgroundTint="@color/colorPrimary"
