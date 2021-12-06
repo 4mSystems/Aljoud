@@ -1,12 +1,13 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.exoplayer:exoplayer-extractor:2.15.1@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/b0dcdea9562de50edced3b8cf4514ed4/transformed/jetified-exoplayer-extractor-2.15.1/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/8a2d75fa9844d6d07861efdb6e9c26a6/transformed/jetified-exoplayer-extractor-2.15.1/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/b0dcdea9562de50edced3b8cf4514ed4/transformed/jetified-exoplayer-extractor-2.15.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/b0dcdea9562de50edced3b8cf4514ed4/transformed/jetified-exoplayer-extractor-2.15.1/res" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/b0dcdea9562de50edced3b8cf4514ed4/transformed/jetified-exoplayer-extractor-2.15.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/8a2d75fa9844d6d07861efdb6e9c26a6/transformed/jetified-exoplayer-extractor-2.15.1/res" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/8a2d75fa9844d6d07861efdb6e9c26a6/transformed/jetified-exoplayer-extractor-2.15.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/8a2d75fa9844d6d07861efdb6e9c26a6/transformed/jetified-exoplayer-extractor-2.15.1/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

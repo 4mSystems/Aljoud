@@ -49,6 +49,8 @@ anim rotate
 anim shake
 anim shake_vibrate
 anim slide
+anim slide_left_in
+anim slide_left_out
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -327,6 +329,10 @@ attr colorSecondary
 attr colorSecondaryVariant
 attr colorSurface
 attr colorSwitchThumbNormal
+attr color_checked
+attr color_tick
+attr color_unchecked
+attr color_unchecked_stroke
 attr commitIcon
 attr constraintRotate
 attr constraintSet
@@ -1011,6 +1017,7 @@ attr statusBarForeground
 attr statusBarScrim
 attr strokeColor
 attr strokeWidth
+attr stroke_width
 attr subMenuArrow
 attr submitBackground
 attr subtitle
@@ -1255,6 +1262,7 @@ color background_gray
 color background_material_dark
 color background_material_light
 color bg_grand_what
+color bg_gray
 color black
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
@@ -1268,7 +1276,9 @@ color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
+color checkbox_color
 color checkbox_themeable_attribute_color
+color checkbox_unchecked_color
 color circle_shadow
 color colorAccent
 color colorLight
@@ -1463,10 +1473,14 @@ color radiobutton_themeable_attribute_color
 color red
 color ripple_material_dark
 color ripple_material_light
+color row_active
+color search_icon_color
 color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
+color selector_tab_text_color
+color selector_tab_text_color_dark
 color successColor
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
@@ -1479,6 +1493,7 @@ color test_mtrl_calendar_day_selected
 color tooltip_background_dark
 color tooltip_background_light
 color transparent_background
+color transparent_black
 color warningColor
 color white
 color zxing_transparent
@@ -2684,6 +2699,10 @@ dimen exo_styled_progress_touch_target_height
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
+dimen file_icon_height
+dimen file_icon_width
+dimen file_item_checkbox_size
+dimen file_name_textSize
 dimen grid_spacing
 dimen highlight_alpha_material_colored
 dimen highlight_alpha_material_dark
@@ -3146,6 +3165,7 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable badge
+drawable badge_red
 drawable border_grand
 drawable border_grand_call
 drawable border_grand_whats
@@ -3269,6 +3289,7 @@ drawable exo_styled_controls_subtitle_off
 drawable exo_styled_controls_subtitle_on
 drawable exo_styled_controls_vr
 drawable flaticon_pdf_dummy
+drawable gallery_album_overlay
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_account
@@ -3284,10 +3305,12 @@ drawable ic_camera
 drawable ic_chat
 drawable ic_chat_send
 drawable ic_check_white_24dp
+drawable ic_circle
 drawable ic_clear_white_24dp
 drawable ic_clock_black_24dp
 drawable ic_contact
 drawable ic_delete
+drawable ic_deselect_all
 drawable ic_email
 drawable ic_error_outline_white_24dp
 drawable ic_exit_dialog
@@ -3328,12 +3351,14 @@ drawable ic_open
 drawable ic_password
 drawable ic_pdf
 drawable ic_pdfviewpager
+drawable ic_play_icon
 drawable ic_products
 drawable ic_quiz
 drawable ic_remove
 drawable ic_request_course
 drawable ic_right
 drawable ic_search
+drawable ic_select_all
 drawable ic_selected
 drawable ic_send
 drawable ic_shop
@@ -3344,6 +3369,12 @@ drawable ic_video
 drawable ic_videocam
 drawable ic_whatsapp
 drawable ic_youtube
+drawable icon_file_doc
+drawable icon_file_pdf
+drawable icon_file_ppt
+drawable icon_file_unknown
+drawable icon_file_xls
+drawable image_placeholder
 drawable left_chat
 drawable logo
 drawable map
@@ -3384,6 +3415,8 @@ drawable right_chat
 drawable rotate
 drawable rounded_dialog
 drawable tab_color_selector
+drawable tab_gray
+drawable tab_white
 drawable tes
 drawable test_custom_background
 drawable toast_frame
@@ -3454,12 +3487,14 @@ id action_bar_title
 id action_container
 id action_context_bar
 id action_divider
+id action_done
 id action_image
 id action_menu_divider
 id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_select
 id action_text
 id actions
 id activity_chooser_view_content
@@ -3478,6 +3513,7 @@ id antiClockwise
 id anticipate
 id appCompatButtonNext
 id app_bar
+id appbar_layout
 id arc
 id asConfigured
 id async
@@ -3496,11 +3532,13 @@ id beginning
 id bestChoice
 id blocking
 id bottom
+id bottomOverlay
 id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
 id br
+id bt_ask
 id bt_get_offer
 id bt_level
 id btn_lang
@@ -3601,6 +3639,7 @@ id easeOut
 id east
 id edit_query
 id elastic
+id empty_view
 id end
 id endToStart
 id end_padder
@@ -3662,11 +3701,15 @@ id face_book
 id fade
 id file_duration
 id file_gallery
+id file_iv
 id file_name
+id file_name_tv
 id file_open_camera
 id file_open_video_camera
 id file_selected
+id file_size_tv
 id file_thumbnail
+id file_type_tv
 id fill
 id fill_horizontal
 id fill_vertical
@@ -3679,6 +3722,8 @@ id fixed_width
 id fl_home_container
 id flip
 id floating
+id folder_count
+id folder_title
 id forever
 id fragment_container_view_tag
 id frost
@@ -3710,6 +3755,7 @@ id ic_file
 id ic_instructor
 id ic_logo
 id ic_qr
+id ic_remove
 id ic_status
 id ic_university
 id ic_verify
@@ -3744,6 +3790,7 @@ id italic
 id item_message
 id item_message_time
 id item_touch_helper_previous_elevation
+id iv_photo
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -3876,6 +3923,7 @@ id postLayout
 id pr_course
 id pr_levels
 id progress
+id progress_bar
 id progress_circular
 id progress_horizontal
 id radio
@@ -3892,6 +3940,7 @@ id rc_quizzes
 id rc_video
 id rectangle
 id rectangles
+id recyclerview
 id remote_pdf_root
 id restart
 id reverse
@@ -3921,6 +3970,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id search
 id search_badge
 id search_bar
 id search_button
@@ -4037,6 +4087,7 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id transparent_bg
 id triangle
 id tv_account_qr
 id tv_action_bar_title
@@ -4046,15 +4097,18 @@ id tv_card_title
 id tv_change_new_password
 id tv_contact
 id tv_count
+id tv_counter
 id tv_course_access
 id tv_course_article
 id tv_course_certificate
 id tv_course_discuss
 id tv_course_quiz
 id tv_course_time
+id tv_created_at
 id tv_customer_service
 id tv_desc
 id tv_forget_timer
+id tv_from
 id tv_grand_phone
 id tv_grand_url
 id tv_home_bar_text
@@ -4076,6 +4130,7 @@ id tv_policy_warning1
 id tv_price
 id tv_rate
 id tv_rate_course
+id tv_replies
 id tv_reserved
 id tv_share
 id tv_sign
@@ -4085,6 +4140,7 @@ id tv_subjects
 id tv_support
 id tv_terms
 id tv_title
+id tv_to
 id tv_university
 id tv_verify_phone
 id unchecked
@@ -4095,6 +4151,8 @@ id useLogo
 id vertical
 id vertical_only
 id video_decoder_gl_surface_view
+id video_icon
+id viewPager
 id view_agent
 id view_contact
 id view_customer_service
@@ -4199,9 +4257,12 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_base
 layout activity_exo_player
+layout activity_file_picker
 layout activity_main
 layout activity_map_address
+layout activity_media_details
 layout activity_remote_pdf
+layout ask_lesson_sheet
 layout ask_sheet
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -4242,6 +4303,7 @@ layout fragment_contacts
 layout fragment_conversations
 layout fragment_course_details
 layout fragment_course_lessons
+layout fragment_doc_picker
 layout fragment_forget_password
 layout fragment_home
 layout fragment_lesson_articles
@@ -4249,7 +4311,10 @@ layout fragment_lesson_details
 layout fragment_lesson_quizzes
 layout fragment_lesson_videos
 layout fragment_login
+layout fragment_media_folder_picker
+layout fragment_media_picker
 layout fragment_offers
+layout fragment_photo_picker
 layout fragment_register
 layout fragment_splash
 layout fragment_university_details
@@ -4258,13 +4323,17 @@ layout item_chat
 layout item_conversation
 layout item_course
 layout item_course_lesson
+layout item_doc_layout
 layout item_files
+layout item_folder_layout
 layout item_home
 layout item_lesson_article
 layout item_lesson_quiz
 layout item_lesson_video
 layout item_levels
 layout item_offer
+layout item_photo_layout
+layout item_pick_file
 layout item_university_section
 layout layout_action_bar_back
 layout layout_action_bar_home
@@ -4352,7 +4421,11 @@ layout text_view_without_line_height
 layout toast_layout
 layout view_pdf_page
 menu bottom_navigation_menu
+menu doc_picker_menu
 menu filegallery_menu
+menu media_detail_menu
+menu picker_menu
+menu select_menu
 mipmap grand
 mipmap grand_exit
 mipmap grand_g
@@ -4394,17 +4467,24 @@ string about
 string account_number
 string account_qr
 string account_type
+string action_settings
 string add_cart
 string add_cart_successfully
 string add_match
 string agents
 string all
 string all_courses
+string all_files
+string all_images
+string all_photos
+string all_videos
 string app_name
 string appbar_scrolling_view_behavior
 string arabic
 string articles
 string ask_lesson
+string attachments_num
+string attachments_title_text
 string bottom_sheet_behavior
 string bottomsheet_action_expand_halfway
 string brackts
@@ -4491,6 +4571,7 @@ string error_no_decoder
 string error_no_secure_decoder
 string error_querying_decoders
 string exam
+string excel_title
 string exo_controls_cc_disabled_description
 string exo_controls_cc_enabled_description
 string exo_controls_custom_playback_speed
@@ -4550,6 +4631,7 @@ string fieldRequired
 string file_thumbnail
 string finish_order
 string forget_body
+string gallery
 string gcm_defaultSenderId
 string generate_code
 string get_offer
@@ -4563,6 +4645,7 @@ string gov_order
 string have_account
 string have_not_account
 string have_not_account_bold
+string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string home
 string home_search_hint
@@ -4570,6 +4653,7 @@ string ic_name_hint
 string ic_name_title
 string ic_warning
 string icon_content_description
+string images
 string inbox
 string instructor_card_title
 string invalidEmail
@@ -4608,6 +4692,7 @@ string material_timepicker_minute
 string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
+string max_files
 string menuHome
 string menuMore
 string menuProducts
@@ -4654,6 +4739,8 @@ string mtrl_picker_toggle_to_year_selection
 string my_courses
 string next
 string no
+string no_camera_exists
+string no_files_found
 string offers
 string old_password
 string on_hand
@@ -4669,12 +4756,15 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string pdf_title
 string pdfvp_ready_to_download
+string permission_filepicker_rationale
 string permission_not_given
 string phone_hint
 string please_select_another_file
 string policy_warning
 string policy_warning1
+string ppt_title
 string prePayment_text
 string product_color_hint
 string product_color_warning
@@ -4690,6 +4780,7 @@ string rate_course
 string rate_now
 string register_header
 string register_name
+string replies
 string reply
 string request_course
 string right_reserved
@@ -4698,7 +4789,10 @@ string search_btn
 string search_menu_title
 string search_result
 string select_brand
+string select_doc_text
 string select_ic
+string select_image_from
+string select_photo_text
 string selected_suggestions_title
 string selection_count
 string send_contact
@@ -4721,6 +4815,7 @@ string telecom_search_hint
 string thank_you
 string toast_message
 string total
+string txt_title
 string update
 string update_version
 string user
@@ -4728,6 +4823,7 @@ string verify
 string verify_phone
 string videos
 string whats
+string word_title
 string write_ic
 string write_ic_number
 style AlertDialog_AppCompat
@@ -5001,6 +5097,8 @@ style ExoStyledControls_TimeText
 style ExoStyledControls_TimeText_Duration
 style ExoStyledControls_TimeText_Position
 style ExoStyledControls_TimeText_Separator
+style LibAppTheme
+style LibAppTheme_Dark
 style MaterialAlertDialog_MaterialComponents
 style MaterialAlertDialog_MaterialComponents_Body_Text
 style MaterialAlertDialog_MaterialComponents_Picker_Date_Calendar
@@ -5013,6 +5111,8 @@ style MaterialAlertDialog_MaterialComponents_Title_Text
 style MaterialAlertDialog_MaterialComponents_Title_Text_CenterStacked
 style PauseDialog
 style PauseDialogAnimation
+style PickerTabLayout
+style PickerTabLayout_Dark
 style PinWidget
 style PinWidget_PinView
 style Platform_AppCompat
@@ -5069,6 +5169,7 @@ style ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Year
 style ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox
 style ShapeAppearanceOverlay_TopLeftCut
 style ShapeAppearanceOverlay_TopRightDifferentCornerSize
+style SmoothCheckBoxStyle
 style Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day
 style Test_Theme_MaterialComponents_MaterialCalendar
 style Test_Widget_MaterialComponents_MaterialCalendar
@@ -5247,6 +5348,8 @@ style Theme_MaterialComponents_Light_NoActionBar_Bridge
 style Theme_MaterialComponents_NoActionBar
 style Theme_MaterialComponents_NoActionBar_Bridge
 style Theme_PlayCore_Transparent
+style ThemeOverlay_App_Toolbar_Dark
+style ThemeOverlay_App_Toolbar_Light
 style ThemeOverlay_AppCompat
 style ThemeOverlay_AppCompat_ActionBar
 style ThemeOverlay_AppCompat_Dark
@@ -5296,6 +5399,8 @@ style ThemeOverlay_MaterialComponents_TimePicker_Display
 style ThemeOverlay_MaterialComponents_Toolbar_Primary
 style ThemeOverlay_MaterialComponents_Toolbar_Surface
 style ThemeOverlayColorAccentRed
+style ToolbarTheme
+style ToolbarTheme_Dark
 style Widget_AppCompat_ActionBar
 style Widget_AppCompat_ActionBar_Solid
 style Widget_AppCompat_ActionBar_TabBar
@@ -5634,6 +5739,7 @@ styleable ShapeableImageView contentPadding contentPaddingBottom contentPaddingE
 styleable SignInButton buttonSize colorScheme scopeUris
 styleable Slider android_enabled android_value android_stepSize android_valueFrom android_valueTo haloColor haloRadius labelBehavior labelStyle thumbColor thumbElevation thumbRadius thumbStrokeColor thumbStrokeWidth tickColor tickColorActive tickColorInactive tickVisible trackColor trackColorActive trackColorInactive trackHeight
 styleable SliderView sliderAnimationDuration sliderAutoCycleDirection sliderAutoCycleEnabled sliderIndicatorAnimationDuration sliderIndicatorEnabled sliderIndicatorGravity sliderIndicatorMargin sliderIndicatorMarginBottom sliderIndicatorMarginLeft sliderIndicatorMarginRight sliderIndicatorMarginTop sliderIndicatorOrientation sliderIndicatorPadding sliderIndicatorRadius sliderIndicatorRtlMode sliderIndicatorSelectedColor sliderIndicatorUnselectedColor sliderScrollTimeInSec sliderStartAutoCycle
+styleable SmoothCheckBox color_checked color_tick color_unchecked color_unchecked_stroke duration stroke_width
 styleable Snackbar snackbarButtonStyle snackbarStyle snackbarTextViewStyle
 styleable SnackbarLayout android_maxWidth actionTextColorAlpha animationMode backgroundOverlayColorAlpha backgroundTint backgroundTintMode elevation maxActionInlineWidth
 styleable Spinner android_entries android_popupBackground android_prompt android_dropDownWidth popupTheme
@@ -5665,6 +5771,7 @@ styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
 styleable include constraintSet
 xml com_jaiselrahman_filepicker_provider_paths
+xml provider_paths
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start

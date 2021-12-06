@@ -20,6 +20,7 @@ import te.app.aljoud.databinding.ActivityExoPlayerBindingImpl;
 import te.app.aljoud.databinding.ActivityMainBindingImpl;
 import te.app.aljoud.databinding.ActivityMapAddressBindingImpl;
 import te.app.aljoud.databinding.ActivityRemotePdfBindingImpl;
+import te.app.aljoud.databinding.AskLessonSheetBindingImpl;
 import te.app.aljoud.databinding.AskSheetBindingImpl;
 import te.app.aljoud.databinding.ExitLayoutBindingImpl;
 import te.app.aljoud.databinding.FragmentAboutBindingImpl;
@@ -54,6 +55,7 @@ import te.app.aljoud.databinding.ItemLessonQuizBindingImpl;
 import te.app.aljoud.databinding.ItemLessonVideoBindingImpl;
 import te.app.aljoud.databinding.ItemLevelsBindingImpl;
 import te.app.aljoud.databinding.ItemOfferBindingImpl;
+import te.app.aljoud.databinding.ItemPickFileBindingImpl;
 import te.app.aljoud.databinding.ItemUniversitySectionBindingImpl;
 import te.app.aljoud.databinding.LayoutActionBarBackBindingImpl;
 import te.app.aljoud.databinding.LayoutActionBarHomeBindingImpl;
@@ -71,85 +73,89 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_ACTIVITYREMOTEPDF = 5;
 
-  private static final int LAYOUT_ASKSHEET = 6;
+  private static final int LAYOUT_ASKLESSONSHEET = 6;
 
-  private static final int LAYOUT_EXITLAYOUT = 7;
+  private static final int LAYOUT_ASKSHEET = 7;
 
-  private static final int LAYOUT_FRAGMENTABOUT = 8;
+  private static final int LAYOUT_EXITLAYOUT = 8;
 
-  private static final int LAYOUT_FRAGMENTCATEGORYSECTIONS = 9;
+  private static final int LAYOUT_FRAGMENTABOUT = 9;
 
-  private static final int LAYOUT_FRAGMENTCHANGEPASSWORD = 10;
+  private static final int LAYOUT_FRAGMENTCATEGORYSECTIONS = 10;
 
-  private static final int LAYOUT_FRAGMENTCHAT = 11;
+  private static final int LAYOUT_FRAGMENTCHANGEPASSWORD = 11;
 
-  private static final int LAYOUT_FRAGMENTCONFIRMCODE = 12;
+  private static final int LAYOUT_FRAGMENTCHAT = 12;
 
-  private static final int LAYOUT_FRAGMENTCONTACTS = 13;
+  private static final int LAYOUT_FRAGMENTCONFIRMCODE = 13;
 
-  private static final int LAYOUT_FRAGMENTCONVERSATIONS = 14;
+  private static final int LAYOUT_FRAGMENTCONTACTS = 14;
 
-  private static final int LAYOUT_FRAGMENTCOURSEDETAILS = 15;
+  private static final int LAYOUT_FRAGMENTCONVERSATIONS = 15;
 
-  private static final int LAYOUT_FRAGMENTCOURSELESSONS = 16;
+  private static final int LAYOUT_FRAGMENTCOURSEDETAILS = 16;
 
-  private static final int LAYOUT_FRAGMENTFORGETPASSWORD = 17;
+  private static final int LAYOUT_FRAGMENTCOURSELESSONS = 17;
 
-  private static final int LAYOUT_FRAGMENTHOME = 18;
+  private static final int LAYOUT_FRAGMENTFORGETPASSWORD = 18;
 
-  private static final int LAYOUT_FRAGMENTLESSONARTICLES = 19;
+  private static final int LAYOUT_FRAGMENTHOME = 19;
 
-  private static final int LAYOUT_FRAGMENTLESSONDETAILS = 20;
+  private static final int LAYOUT_FRAGMENTLESSONARTICLES = 20;
 
-  private static final int LAYOUT_FRAGMENTLESSONQUIZZES = 21;
+  private static final int LAYOUT_FRAGMENTLESSONDETAILS = 21;
 
-  private static final int LAYOUT_FRAGMENTLESSONVIDEOS = 22;
+  private static final int LAYOUT_FRAGMENTLESSONQUIZZES = 22;
 
-  private static final int LAYOUT_FRAGMENTLOGIN = 23;
+  private static final int LAYOUT_FRAGMENTLESSONVIDEOS = 23;
 
-  private static final int LAYOUT_FRAGMENTOFFERS = 24;
+  private static final int LAYOUT_FRAGMENTLOGIN = 24;
 
-  private static final int LAYOUT_FRAGMENTREGISTER = 25;
+  private static final int LAYOUT_FRAGMENTOFFERS = 25;
 
-  private static final int LAYOUT_FRAGMENTSPLASH = 26;
+  private static final int LAYOUT_FRAGMENTREGISTER = 26;
 
-  private static final int LAYOUT_FRAGMENTUNIVERSITYDETAILS = 27;
+  private static final int LAYOUT_FRAGMENTSPLASH = 27;
 
-  private static final int LAYOUT_INSTRACTORSHEET = 28;
+  private static final int LAYOUT_FRAGMENTUNIVERSITYDETAILS = 28;
 
-  private static final int LAYOUT_ITEMCHAT = 29;
+  private static final int LAYOUT_INSTRACTORSHEET = 29;
 
-  private static final int LAYOUT_ITEMCONVERSATION = 30;
+  private static final int LAYOUT_ITEMCHAT = 30;
 
-  private static final int LAYOUT_ITEMCOURSE = 31;
+  private static final int LAYOUT_ITEMCONVERSATION = 31;
 
-  private static final int LAYOUT_ITEMCOURSELESSON = 32;
+  private static final int LAYOUT_ITEMCOURSE = 32;
 
-  private static final int LAYOUT_ITEMFILES = 33;
+  private static final int LAYOUT_ITEMCOURSELESSON = 33;
 
-  private static final int LAYOUT_ITEMHOME = 34;
+  private static final int LAYOUT_ITEMFILES = 34;
 
-  private static final int LAYOUT_ITEMLESSONARTICLE = 35;
+  private static final int LAYOUT_ITEMHOME = 35;
 
-  private static final int LAYOUT_ITEMLESSONQUIZ = 36;
+  private static final int LAYOUT_ITEMLESSONARTICLE = 36;
 
-  private static final int LAYOUT_ITEMLESSONVIDEO = 37;
+  private static final int LAYOUT_ITEMLESSONQUIZ = 37;
 
-  private static final int LAYOUT_ITEMLEVELS = 38;
+  private static final int LAYOUT_ITEMLESSONVIDEO = 38;
 
-  private static final int LAYOUT_ITEMOFFER = 39;
+  private static final int LAYOUT_ITEMLEVELS = 39;
 
-  private static final int LAYOUT_ITEMUNIVERSITYSECTION = 40;
+  private static final int LAYOUT_ITEMOFFER = 40;
 
-  private static final int LAYOUT_LAYOUTACTIONBARBACK = 41;
+  private static final int LAYOUT_ITEMPICKFILE = 41;
 
-  private static final int LAYOUT_LAYOUTACTIONBARHOME = 42;
+  private static final int LAYOUT_ITEMUNIVERSITYSECTION = 42;
 
-  private static final int LAYOUT_LAYOUTNAVIGATIONDRAWER = 43;
+  private static final int LAYOUT_LAYOUTACTIONBARBACK = 43;
 
-  private static final int LAYOUT_LAYOUTTES = 44;
+  private static final int LAYOUT_LAYOUTACTIONBARHOME = 44;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(44);
+  private static final int LAYOUT_LAYOUTNAVIGATIONDRAWER = 45;
+
+  private static final int LAYOUT_LAYOUTTES = 46;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(46);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.activity_base, LAYOUT_ACTIVITYBASE);
@@ -157,6 +163,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.activity_main, LAYOUT_ACTIVITYMAIN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.activity_map_address, LAYOUT_ACTIVITYMAPADDRESS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.activity_remote_pdf, LAYOUT_ACTIVITYREMOTEPDF);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.ask_lesson_sheet, LAYOUT_ASKLESSONSHEET);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.ask_sheet, LAYOUT_ASKSHEET);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.exit_layout, LAYOUT_EXITLAYOUT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.fragment_about, LAYOUT_FRAGMENTABOUT);
@@ -191,6 +198,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.item_lesson_video, LAYOUT_ITEMLESSONVIDEO);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.item_levels, LAYOUT_ITEMLEVELS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.item_offer, LAYOUT_ITEMOFFER);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.item_pick_file, LAYOUT_ITEMPICKFILE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.item_university_section, LAYOUT_ITEMUNIVERSITYSECTION);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.layout_action_bar_back, LAYOUT_LAYOUTACTIONBARBACK);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.layout_action_bar_home, LAYOUT_LAYOUTACTIONBARHOME);
@@ -236,6 +244,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new ActivityRemotePdfBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for activity_remote_pdf is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ASKLESSONSHEET: {
+          if ("layout/ask_lesson_sheet_0".equals(tag)) {
+            return new AskLessonSheetBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for ask_lesson_sheet is invalid. Received: " + tag);
         }
         case  LAYOUT_ASKSHEET: {
           if ("layout/ask_sheet_0".equals(tag)) {
@@ -441,6 +455,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for item_offer is invalid. Received: " + tag);
         }
+        case  LAYOUT_ITEMPICKFILE: {
+          if ("layout/item_pick_file_0".equals(tag)) {
+            return new ItemPickFileBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_pick_file is invalid. Received: " + tag);
+        }
         case  LAYOUT_ITEMUNIVERSITYSECTION: {
           if ("layout/item_university_section_0".equals(tag)) {
             return new ItemUniversitySectionBindingImpl(component, view);
@@ -516,7 +536,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(44);
+    static final SparseArray<String> sKeys = new SparseArray<String>(45);
 
     static {
       sKeys.put(0, "_all");
@@ -534,40 +554,41 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put(12, "conversationsMain");
       sKeys.put(13, "course");
       sKeys.put(14, "courseAdapter");
-      sKeys.put(15, "homeMainData");
-      sKeys.put(16, "itemChatViewModel");
-      sKeys.put(17, "itemViewModel");
-      sKeys.put(18, "lessonMainData");
-      sKeys.put(19, "lessonQuizzesAdapter");
-      sKeys.put(20, "lessonVideosAdapter");
-      sKeys.put(21, "lessonsAdapter");
-      sKeys.put(22, "lessonsItem");
-      sKeys.put(23, "levelsAdapter");
-      sKeys.put(24, "levelsData");
-      sKeys.put(25, "mapAddressViewModel");
-      sKeys.put(26, "menuViewModel");
-      sKeys.put(27, "message");
-      sKeys.put(28, "offerItem");
-      sKeys.put(29, "offersAdapter");
-      sKeys.put(30, "offersMainData");
-      sKeys.put(31, "passingObject");
-      sKeys.put(32, "quizData");
-      sKeys.put(33, "quizMainData");
-      sKeys.put(34, "request");
-      sKeys.put(35, "searchProgressVisible");
-      sKeys.put(36, "specialistsItem");
-      sKeys.put(37, "university");
-      sKeys.put(38, "universityAdapter");
-      sKeys.put(39, "universityData");
-      sKeys.put(40, "videoData");
-      sKeys.put(41, "videosMainData");
-      sKeys.put(42, "viewModel");
-      sKeys.put(43, "viewmodel");
+      sKeys.put(15, "filesAdapter");
+      sKeys.put(16, "homeMainData");
+      sKeys.put(17, "itemChatViewModel");
+      sKeys.put(18, "itemViewModel");
+      sKeys.put(19, "lessonMainData");
+      sKeys.put(20, "lessonQuizzesAdapter");
+      sKeys.put(21, "lessonVideosAdapter");
+      sKeys.put(22, "lessonsAdapter");
+      sKeys.put(23, "lessonsItem");
+      sKeys.put(24, "levelsAdapter");
+      sKeys.put(25, "levelsData");
+      sKeys.put(26, "mapAddressViewModel");
+      sKeys.put(27, "menuViewModel");
+      sKeys.put(28, "message");
+      sKeys.put(29, "offerItem");
+      sKeys.put(30, "offersAdapter");
+      sKeys.put(31, "offersMainData");
+      sKeys.put(32, "passingObject");
+      sKeys.put(33, "quizData");
+      sKeys.put(34, "quizMainData");
+      sKeys.put(35, "request");
+      sKeys.put(36, "searchProgressVisible");
+      sKeys.put(37, "specialistsItem");
+      sKeys.put(38, "university");
+      sKeys.put(39, "universityAdapter");
+      sKeys.put(40, "universityData");
+      sKeys.put(41, "videoData");
+      sKeys.put(42, "videosMainData");
+      sKeys.put(43, "viewModel");
+      sKeys.put(44, "viewmodel");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(44);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(46);
 
     static {
       sKeys.put("layout/activity_base_0", te.app.aljoud.R.layout.activity_base);
@@ -575,6 +596,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/activity_main_0", te.app.aljoud.R.layout.activity_main);
       sKeys.put("layout/activity_map_address_0", te.app.aljoud.R.layout.activity_map_address);
       sKeys.put("layout/activity_remote_pdf_0", te.app.aljoud.R.layout.activity_remote_pdf);
+      sKeys.put("layout/ask_lesson_sheet_0", te.app.aljoud.R.layout.ask_lesson_sheet);
       sKeys.put("layout/ask_sheet_0", te.app.aljoud.R.layout.ask_sheet);
       sKeys.put("layout/exit_layout_0", te.app.aljoud.R.layout.exit_layout);
       sKeys.put("layout/fragment_about_0", te.app.aljoud.R.layout.fragment_about);
@@ -609,6 +631,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/item_lesson_video_0", te.app.aljoud.R.layout.item_lesson_video);
       sKeys.put("layout/item_levels_0", te.app.aljoud.R.layout.item_levels);
       sKeys.put("layout/item_offer_0", te.app.aljoud.R.layout.item_offer);
+      sKeys.put("layout/item_pick_file_0", te.app.aljoud.R.layout.item_pick_file);
       sKeys.put("layout/item_university_section_0", te.app.aljoud.R.layout.item_university_section);
       sKeys.put("layout/layout_action_bar_back_0", te.app.aljoud.R.layout.layout_action_bar_back);
       sKeys.put("layout/layout_action_bar_home_0", te.app.aljoud.R.layout.layout_action_bar_home);

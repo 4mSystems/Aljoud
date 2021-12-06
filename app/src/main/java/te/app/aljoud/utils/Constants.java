@@ -22,10 +22,8 @@ public class Constants {
 
 
     public final static String BUY_OFFER = "BUY_OFFER";
-    public final static String GALLERY = "GALLERY";
-    public final static int SYSTEM_PRODUCTS = 3;
-    public final static int GALLERY_ID = 5;
-    public final static String AGENTS = "AGENTS";
+    public final static String CONVERSATIONS = "CONVERSATIONS";
+    public final static String INBOX = "INBOX";
     public final static int CLIENTS_ID = 4;
     public final static String CLIENTS = "CLIENTS";
     public final static String GOVS = "GOVS";

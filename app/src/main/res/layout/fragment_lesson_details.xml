@@ -7,6 +7,7 @@
     <data>
 
         <import type="te.app.aljoud.utils.session.UserHelper" />
+        <import type="te.app.aljoud.utils.Constants" />
 
         <variable
             name="viewmodel"
@@ -181,6 +182,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colorPrimary"
                 app:backgroundTint="@color/white"
+                android:onClick="@{()->viewmodel.action(Constants.ASK)}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

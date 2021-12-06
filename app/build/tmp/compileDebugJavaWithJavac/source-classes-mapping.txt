@@ -123,6 +123,8 @@ te/app/aljoud/pages/splash/models/ReasonsItem.java
  te.app.aljoud.pages.splash.models.ReasonsItem
 te/app/aljoud/databinding/ItemFilesBinding.java
  te.app.aljoud.databinding.ItemFilesBinding
+te/app/aljoud/databinding/ItemPickFileBinding.java
+ te.app.aljoud.databinding.ItemPickFileBinding
 te/app/aljoud/connection/ConnectionModule.java
  te.app.aljoud.connection.ConnectionModule
 te/app/aljoud/pages/settings/models/AboutData.java
@@ -162,8 +164,6 @@ te/app/aljoud/pages/university/models/course/Course.java
  te.app.aljoud.pages.university.models.course.Course
 te/app/aljoud/pages/home/models/CategoriesItem.java
  te.app.aljoud.pages.home.models.CategoriesItem
-te/app/aljoud/model/govs/GovsResponse.java
- te.app.aljoud.model.govs.GovsResponse
 te/app/aljoud/pages/university/models/UniversityData.java
  te.app.aljoud.pages.university.models.UniversityData
 te/app/aljoud/pages/auth/models/ForgetPasswordRequest.java
@@ -190,6 +190,9 @@ te/app/aljoud/pages/auth/confirmCode/ConfirmCodeFragment.java
  te.app.aljoud.pages.auth.confirmCode.ConfirmCodeFragment$1
 te/app/aljoud/databinding/FragmentLessonVideosBinding.java
  te.app.aljoud.databinding.FragmentLessonVideosBinding
+te/app/aljoud/pages/courseDetails/adapters/pickFilesAdapter.java
+ te.app.aljoud.pages.courseDetails.adapters.pickFilesAdapter
+ te.app.aljoud.pages.courseDetails.adapters.pickFilesAdapter$ViewHolder
 te/app/aljoud/databinding/ItemUniversitySectionBinding.java
  te.app.aljoud.databinding.ItemUniversitySectionBinding
 te/app/aljoud/activity/ExoPlayerActivity.java
@@ -288,6 +291,7 @@ te/app/aljoud/base/IApplicationComponent.java
  te.app.aljoud.base.IApplicationComponent$Builder
 te/app/aljoud/pages/conversations/ConversationsFragment.java
  te.app.aljoud.pages.conversations.ConversationsFragment
+ te.app.aljoud.pages.conversations.ConversationsFragment$1
 te/app/aljoud/pages/university/models/SpecialistsItem.java
  te.app.aljoud.pages.university.models.SpecialistsItem
 te/app/aljoud/activity/RemotePDFActivity.java
@@ -431,14 +435,16 @@ te/app/aljoud/utils/locations/MapAddressViewModel.java
  te.app.aljoud.utils.locations.MapAddressViewModel
 te/app/aljoud/pages/university/viewModel/ItemLevelsViewModel.java
  te.app.aljoud.pages.university.viewModel.ItemLevelsViewModel
-te/app/aljoud/model/govs/GovsData.java
- te.app.aljoud.model.govs.GovsData
 te/app/aljoud/pages/auth/register/RegisterViewModel.java
  te.app.aljoud.pages.auth.register.RegisterViewModel
 te/app/aljoud/base/ParentActivity.java
  te.app.aljoud.base.ParentActivity
+te/app/aljoud/databinding/AskLessonSheetBinding.java
+ te.app.aljoud.databinding.AskLessonSheetBinding
 te/app/aljoud/pages/university/models/levels/LevelsResponse.java
  te.app.aljoud.pages.university.models.levels.LevelsResponse
+te/app/aljoud/model/File.java
+ te.app.aljoud.model.File
 te/app/aljoud/base/ApplicationComponent.java
  te.app.aljoud.base.ApplicationComponent
 te/app/aljoud/utils/Constants.java

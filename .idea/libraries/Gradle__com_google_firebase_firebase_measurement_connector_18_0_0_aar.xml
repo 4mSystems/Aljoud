@@ -13,8 +13,9 @@
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/6951b487aad71a154f1f2aded829c5ea/jetified-firebase-measurement-connector-18.0.0/res" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/64e6f1e304f2b779b27b632b6b333870/transformed/jetified-firebase-measurement-connector-18.0.0/res" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/20ad32e11575badab2517c463b08533c/transformed/jetified-firebase-measurement-connector-18.0.0/res" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/64e6f1e304f2b779b27b632b6b333870/transformed/jetified-firebase-measurement-connector-18.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/64e6f1e304f2b779b27b632b6b333870/transformed/jetified-firebase-measurement-connector-18.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/4059291076360edcb7ec57a5fb972a54/transformed/jetified-firebase-measurement-connector-18.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/4059291076360edcb7ec57a5fb972a54/transformed/jetified-firebase-measurement-connector-18.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/4059291076360edcb7ec57a5fb972a54/transformed/jetified-firebase-measurement-connector-18.0.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

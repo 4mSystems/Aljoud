@@ -2,25 +2,34 @@ package te.app.aljoud.pages.conversations.models;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 import te.app.aljoud.pages.auth.models.UserData;
+import te.app.aljoud.pages.courseDetails.models.videos.VideoData;
 
 
 public class ConversationsData {
 
-    @SerializedName("user")
+    @SerializedName("receiver")
     private UserData receiver;
 
-    @SerializedName("time")
+    @SerializedName("created_at")
     private String createdAt;
     @SerializedName("message")
     private String message;
-    @SerializedName("image")
-    private String image;
 
     @SerializedName("id")
     private int id;
-    @SerializedName("unread_count")
-    private int unreadCount;
+    @SerializedName("sender_id")
+    private String sender_id;
+    @SerializedName("receiver_id")
+    private String receiver_id;
+    @SerializedName("is_read")
+    private int is_read;
+    @SerializedName("is_lock")
+    private int is_lock;
+    @SerializedName("files")
+    private List<VideoData> videoData;
 
     public UserData getReceiver() {
         return receiver;
@@ -34,27 +43,27 @@ public class ConversationsData {
         return message;
     }
 
-    public String getImage() {
-        return image;
-    }
-
     public int getId() {
         return id;
     }
 
-    public int getUnreadCount() {
-        return unreadCount;
+    public String getSender_id() {
+        return sender_id;
     }
 
-    @Override
-    public String toString() {
-        return "ConversationsData{" +
-                "receiver=" + receiver +
-                ", createdAt='" + createdAt + '\'' +
-                ", message='" + message + '\'' +
-                ", image='" + image + '\'' +
-                ", id=" + id +
-                ", unreadCount=" + unreadCount +
-                '}';
+    public String getReceiver_id() {
+        return receiver_id;
+    }
+
+    public int getIs_read() {
+        return is_read;
+    }
+
+    public int getIs_lock() {
+        return is_lock;
+    }
+
+    public List<VideoData> getVideoData() {
+        return videoData;
     }
 }

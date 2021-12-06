@@ -4,7 +4,7 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5a20a52fec5f07408e6ac3763a929fbc/jetified-viewpager2-1.0.0/annotations.zip!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5a20a52fec5f07408e6ac3763a929fbc/jetified-viewpager2-1.0.0/annotations.zip!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5a20a52fec5f07408e6ac3763a929fbc/jetified-viewpager2-1.0.0/annotations.zip!/" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/11108c40f6b4b45114902fb5915eea42/transformed/jetified-viewpager2-1.0.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/fe65e1618cf37e2d8c115b451d963e98/transformed/jetified-viewpager2-1.0.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5a20a52fec5f07408e6ac3763a929fbc/jetified-viewpager2-1.0.0/AndroidManifest.xml" />
@@ -16,9 +16,9 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5a20a52fec5f07408e6ac3763a929fbc/jetified-viewpager2-1.0.0/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5a20a52fec5f07408e6ac3763a929fbc/jetified-viewpager2-1.0.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5a20a52fec5f07408e6ac3763a929fbc/jetified-viewpager2-1.0.0/res" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/11108c40f6b4b45114902fb5915eea42/transformed/jetified-viewpager2-1.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/11108c40f6b4b45114902fb5915eea42/transformed/jetified-viewpager2-1.0.0/res" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/11108c40f6b4b45114902fb5915eea42/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/fe65e1618cf37e2d8c115b451d963e98/transformed/jetified-viewpager2-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/fe65e1618cf37e2d8c115b451d963e98/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/fe65e1618cf37e2d8c115b451d963e98/transformed/jetified-viewpager2-1.0.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

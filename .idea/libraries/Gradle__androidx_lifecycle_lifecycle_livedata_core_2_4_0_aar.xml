@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.lifecycle:lifecycle-livedata-core:2.4.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/5e6caa3b9fd6a01489329310b9124215/transformed/lifecycle-livedata-core-2.4.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/5e6caa3b9fd6a01489329310b9124215/transformed/lifecycle-livedata-core-2.4.0/res" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/5e6caa3b9fd6a01489329310b9124215/transformed/lifecycle-livedata-core-2.4.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/f6d67a98f9f0950cb8ab2d0d06093313/transformed/lifecycle-livedata-core-2.4.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/f6d67a98f9f0950cb8ab2d0d06093313/transformed/lifecycle-livedata-core-2.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/f6d67a98f9f0950cb8ab2d0d06093313/transformed/lifecycle-livedata-core-2.4.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

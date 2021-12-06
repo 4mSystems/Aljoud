@@ -22,7 +22,7 @@ public class ItemLessonArticleBindingImpl extends ItemLessonArticleBinding imple
     private final com.google.android.material.card.MaterialCardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback45;
+    private final android.view.View.OnClickListener mCallback46;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,7 +41,7 @@ public class ItemLessonArticleBindingImpl extends ItemLessonArticleBinding imple
         this.tvTitle.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback45 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback46 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -139,7 +139,7 @@ public class ItemLessonArticleBindingImpl extends ItemLessonArticleBinding imple
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView0.setOnClickListener(mCallback45);
+            this.mboundView0.setOnClickListener(mCallback46);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

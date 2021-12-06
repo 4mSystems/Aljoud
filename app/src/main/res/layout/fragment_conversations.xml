@@ -28,7 +28,6 @@
             app:orientation="@{`1`}"
             app:span="@{`1`}"
             tools:listitem="@layout/item_conversation" />
-        <!--        android:visibility="@{viewmodel.searchProgressVisible?View.VISIBLE:View.GONE,default=gone}"-->
 
         <com.google.android.material.progressindicator.CircularProgressIndicator
             android:id="@+id/progress"
@@ -37,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/dp4h"
             android:indeterminate="true"
-            android:visibility="gone"
+            android:visibility="@{viewmodel.searchProgressVisible==View.VISIBLE?View.VISIBLE:View.GONE,default=gone}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

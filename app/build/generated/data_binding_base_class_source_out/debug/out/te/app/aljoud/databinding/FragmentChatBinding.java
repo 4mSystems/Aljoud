@@ -8,6 +8,7 @@ import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
@@ -17,11 +18,16 @@ import com.google.android.material.textfield.TextInputEditText;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.aljoud.R;
+import te.app.aljoud.customViews.views.CustomTextViewMedium;
+import te.app.aljoud.customViews.views.CustomTextViewRegular;
 import te.app.aljoud.pages.chat.viewmodel.ChatViewModel;
 
 public abstract class FragmentChatBinding extends ViewDataBinding {
   @NonNull
   public final AppCompatImageView attach;
+
+  @NonNull
+  public final CardView cardInfo;
 
   @NonNull
   public final ConstraintLayout chatActions;
@@ -36,21 +42,48 @@ public abstract class FragmentChatBinding extends ViewDataBinding {
   public final RecyclerView rcChat;
 
   @NonNull
+  public final RecyclerView rcFiles;
+
+  @NonNull
   public final TextInputEditText sendChat;
+
+  @NonNull
+  public final CustomTextViewMedium tvCreatedAt;
+
+  @NonNull
+  public final CustomTextViewRegular tvDesc;
+
+  @NonNull
+  public final CustomTextViewMedium tvFrom;
+
+  @NonNull
+  public final CustomTextViewMedium tvReplies;
+
+  @NonNull
+  public final CustomTextViewMedium tvTo;
 
   @Bindable
   protected ChatViewModel mViewmodel;
 
   protected FragmentChatBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatImageView attach, ConstraintLayout chatActions, AppCompatImageView more,
-      ProgressBar progress, RecyclerView rcChat, TextInputEditText sendChat) {
+      AppCompatImageView attach, CardView cardInfo, ConstraintLayout chatActions,
+      AppCompatImageView more, ProgressBar progress, RecyclerView rcChat, RecyclerView rcFiles,
+      TextInputEditText sendChat, CustomTextViewMedium tvCreatedAt, CustomTextViewRegular tvDesc,
+      CustomTextViewMedium tvFrom, CustomTextViewMedium tvReplies, CustomTextViewMedium tvTo) {
     super(_bindingComponent, _root, _localFieldCount);
     this.attach = attach;
+    this.cardInfo = cardInfo;
     this.chatActions = chatActions;
     this.more = more;
     this.progress = progress;
     this.rcChat = rcChat;
+    this.rcFiles = rcFiles;
     this.sendChat = sendChat;
+    this.tvCreatedAt = tvCreatedAt;
+    this.tvDesc = tvDesc;
+    this.tvFrom = tvFrom;
+    this.tvReplies = tvReplies;
+    this.tvTo = tvTo;
   }
 
   public abstract void setViewmodel(@Nullable ChatViewModel viewmodel);

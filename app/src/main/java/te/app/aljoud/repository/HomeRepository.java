@@ -5,11 +5,14 @@ import android.text.TextUtils;
 
 import androidx.lifecycle.MutableLiveData;
 
+import java.util.List;
+
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
 import io.reactivex.disposables.Disposable;
 import te.app.aljoud.connection.ConnectionHelper;
+import te.app.aljoud.connection.FileObject;
 import te.app.aljoud.model.base.Mutable;
 import te.app.aljoud.model.base.StatusMessage;
 import te.app.aljoud.pages.courseDetails.models.AskRequest;
@@ -92,10 +95,11 @@ public class HomeRepository extends BaseRepository {
                 Constants.RATE_APP, true);
     }
 
-    public Disposable ask(AskRequest askRequest) {
-        return connectionHelper.requestApi(Constants.POST_REQUEST, !TextUtils.isEmpty(askRequest.getCourseId()) ? URLS.ASK_COURSE : URLS.ASK_LESSON, askRequest, StatusMessage.class,
-                Constants.ASK, true);
+    public Disposable ask(AskRequest askRequest, List<FileObject> fileObjectList) {
+        return connectionHelper.requestApi(!TextUtils.isEmpty(askRequest.getCourseId()) ? URLS.ASK_COURSE : URLS.ASK_LESSON, askRequest, fileObjectList, StatusMessage.class,
+                Constants.DIALOG, true);
     }
+
     public Disposable offers(int page, boolean showProgress) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.OFFERS + page, new Object(), OffersResponse.class,
                 Constants.OFFERS, showProgress);

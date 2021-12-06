@@ -30,7 +30,7 @@ public class BaseFragment extends Fragment {
 
 
     protected void pickImageDialogSelect(int requestCode) {
-//        FileOperations.pickImage(context, BaseFragment.this, requestCode);
+        FileOperations.pickImage(context, BaseFragment.this, requestCode);
     }
 
     protected void pickDocs() {
@@ -58,6 +58,10 @@ public class BaseFragment extends Fragment {
 
     public void toastMessage(String message, int icon, int color) {
         ((ParentActivity) context).toastMessage(message, icon, color);
+    }
+
+    public void toastMessageError(String message) {
+        ((ParentActivity) context).toastError(message);
     }
 
     public void toastMessage(String message) {

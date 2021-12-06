@@ -1,17 +1,25 @@
 package te.app.aljoud.pages.courseDetails.viewModels;
 
+import android.text.TextUtils;
+
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
 import te.app.aljoud.BR;
 import te.app.aljoud.base.BaseViewModel;
+import te.app.aljoud.connection.FileObject;
 import te.app.aljoud.model.base.Mutable;
 import te.app.aljoud.pages.courseDetails.adapters.LessonArticlesAdapter;
 import te.app.aljoud.pages.courseDetails.adapters.LessonQuizzesAdapter;
 import te.app.aljoud.pages.courseDetails.adapters.LessonVideosAdapter;
+import te.app.aljoud.pages.courseDetails.adapters.pickFilesAdapter;
+import te.app.aljoud.pages.courseDetails.models.AskRequest;
 import te.app.aljoud.pages.courseDetails.models.videos.VideosMainData;
 import te.app.aljoud.repository.HomeRepository;
 
@@ -24,7 +32,9 @@ public class LessonDetailsViewModel extends BaseViewModel {
     LessonQuizzesAdapter lessonQuizzesAdapter;
     LessonArticlesAdapter articlesAdapter;
     VideosMainData videosMainData, quizMainData, articleMainData;
-
+    pickFilesAdapter filesAdapter;
+    List<FileObject> fileObjectList = new ArrayList<>();
+    AskRequest askRequest;
     @Inject
     public LessonDetailsViewModel(HomeRepository homeRepository) {
         this.homeRepository = homeRepository;
@@ -39,13 +49,21 @@ public class LessonDetailsViewModel extends BaseViewModel {
     public void lessonQuizzes(int lessonId, int page, boolean showProgress) {
         compositeDisposable.add(homeRepository.getLessonQuizzes(lessonId, page, showProgress));
     }
+
     public void lessonArticles(int lessonId, int page, boolean showProgress) {
         compositeDisposable.add(homeRepository.getLessonArticles(lessonId, page, showProgress));
     }
 
+    public void action(String action) {
+        liveData.setValue(new Mutable(action));
+    }
+    @Bindable
+    public AskRequest getAskRequest() {
+        return this.askRequest == null ? this.askRequest = new AskRequest() : this.askRequest;
+    }
     @Bindable
     public VideosMainData getVideosMainData() {
-        return this.videosMainData==null?this.videosMainData= new VideosMainData():this.videosMainData;
+        return this.videosMainData == null ? this.videosMainData = new VideosMainData() : this.videosMainData;
     }
 
     @Bindable
@@ -58,7 +76,13 @@ public class LessonDetailsViewModel extends BaseViewModel {
 
     @Bindable
     public VideosMainData getQuizMainData() {
-        return this.quizMainData==null?this.quizMainData= new VideosMainData():this.quizMainData;
+        return this.quizMainData == null ? this.quizMainData = new VideosMainData() : this.quizMainData;
+    }
+
+    public void ask() {
+        getAskRequest().setLessonId(String.valueOf(getPassingObject().getId()));
+        if (!TextUtils.isEmpty(getAskRequest().getMessage()))
+            compositeDisposable.add(homeRepository.ask(askRequest, getFileObjectList()));
     }
 
     @Bindable
@@ -68,10 +92,17 @@ public class LessonDetailsViewModel extends BaseViewModel {
         notifyChange(BR.quizMainData);
         this.quizMainData = quizMainData;
     }
+    @Bindable
+    public pickFilesAdapter getFilesAdapter() {
+        return this.filesAdapter == null ? this.filesAdapter = new pickFilesAdapter() : this.filesAdapter;
+    }
 
+    public List<FileObject> getFileObjectList() {
+        return fileObjectList;
+    }
     @Bindable
     public VideosMainData getArticleMainData() {
-        return this.articleMainData==null?this.articleMainData= new VideosMainData():this.articleMainData;
+        return this.articleMainData == null ? this.articleMainData = new VideosMainData() : this.articleMainData;
     }
 
     @Bindable

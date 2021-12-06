@@ -14,18 +14,17 @@ public class AskSheetBindingImpl extends AskSheetBinding implements te.app.aljou
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.input_reply, 4);
+        sViewsWithIds.put(R.id.input_reply, 5);
+        sViewsWithIds.put(R.id.br, 6);
     }
     // views
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
     @NonNull
     private final androidx.appcompat.widget.AppCompatEditText mboundView1;
-    @NonNull
-    private final com.google.android.material.button.MaterialButton mboundView3;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback43;
+    private final android.view.View.OnClickListener mCallback45;
     @Nullable
     private final android.view.View.OnClickListener mCallback44;
     // values
@@ -70,31 +69,34 @@ public class AskSheetBindingImpl extends AskSheetBinding implements te.app.aljou
     };
 
     public AskSheetBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 7, sIncludes, sViewsWithIds));
     }
     private AskSheetBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
+            , (androidx.constraintlayout.widget.Barrier) bindings[6]
+            , (com.google.android.material.button.MaterialButton) bindings[4]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[2]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[4]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[5]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[3]
             );
+        this.btAsk.setTag(null);
         this.icFile.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
         this.mboundView1 = (androidx.appcompat.widget.AppCompatEditText) bindings[1];
         this.mboundView1.setTag(null);
-        this.mboundView3 = (com.google.android.material.button.MaterialButton) bindings[3];
-        this.mboundView3.setTag(null);
+        this.rcFiles.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback43 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
-        mCallback44 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
+        mCallback45 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
+        mCallback44 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x4L;
+                mDirtyFlags = 0x8L;
         }
         requestRebind();
     }
@@ -152,6 +154,12 @@ public class AskSheetBindingImpl extends AskSheetBinding implements te.app.aljou
             }
             return true;
         }
+        else if (fieldId == BR.filesAdapter) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x4L;
+            }
+            return true;
+        }
         return false;
     }
 
@@ -163,42 +171,74 @@ public class AskSheetBindingImpl extends AskSheetBinding implements te.app.aljou
             mDirtyFlags = 0;
         }
         java.lang.String viewModelAskRequestMessage = null;
-        te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel viewModel = mViewModel;
         te.app.aljoud.pages.courseDetails.models.AskRequest viewModelAskRequest = null;
+        te.app.aljoud.pages.courseDetails.adapters.pickFilesAdapter viewModelFilesAdapter = null;
+        te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel viewModel = mViewModel;
 
-        if ((dirtyFlags & 0x7L) != 0) {
-
-
-
-                if (viewModel != null) {
-                    // read viewModel.askRequest
-                    viewModelAskRequest = viewModel.getAskRequest();
-                }
+        if ((dirtyFlags & 0xfL) != 0) {
 
 
-                if (viewModelAskRequest != null) {
-                    // read viewModel.askRequest.message
-                    viewModelAskRequestMessage = viewModelAskRequest.getMessage();
-                }
+            if ((dirtyFlags & 0xbL) != 0) {
+
+                    if (viewModel != null) {
+                        // read viewModel.askRequest
+                        viewModelAskRequest = viewModel.getAskRequest();
+                    }
+
+
+                    if (viewModelAskRequest != null) {
+                        // read viewModel.askRequest.message
+                        viewModelAskRequestMessage = viewModelAskRequest.getMessage();
+                    }
+            }
+            if ((dirtyFlags & 0xdL) != 0) {
+
+                    if (viewModel != null) {
+                        // read viewModel.filesAdapter
+                        viewModelFilesAdapter = viewModel.getFilesAdapter();
+                    }
+            }
         }
         // batch finished
-        if ((dirtyFlags & 0x4L) != 0) {
+        if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.icFile.setOnClickListener(mCallback43);
+            this.btAsk.setOnClickListener(mCallback45);
+            this.icFile.setOnClickListener(mCallback44);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView1, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView1androidTextAttrChanged);
-            this.mboundView3.setOnClickListener(mCallback44);
         }
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0xbL) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView1, viewModelAskRequestMessage);
+        }
+        if ((dirtyFlags & 0xdL) != 0) {
+            // api target 1
+
+            te.app.aljoud.base.ApplicationBinding.getItemsV2Binding(this.rcFiles, viewModelFilesAdapter, "1", "2");
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // viewModel
+                te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+                    viewModel.ask();
+                }
+                break;
+            }
             case 1: {
                 // localize variables for thread safety
                 // viewModel
@@ -218,23 +258,6 @@ public class AskSheetBindingImpl extends AskSheetBinding implements te.app.aljou
                 }
                 break;
             }
-            case 2: {
-                // localize variables for thread safety
-                // viewModel
-                te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel viewModel = mViewModel;
-                // viewModel != null
-                boolean viewModelJavaLangObjectNull = false;
-
-
-
-                viewModelJavaLangObjectNull = (viewModel) != (null);
-                if (viewModelJavaLangObjectNull) {
-
-
-                    viewModel.ask();
-                }
-                break;
-            }
         }
     }
     // dirty flag
@@ -242,7 +265,8 @@ public class AskSheetBindingImpl extends AskSheetBinding implements te.app.aljou
     /* flag mapping
         flag 0 (0x1L): viewModel
         flag 1 (0x2L): viewModel.askRequest
-        flag 2 (0x3L): null
+        flag 2 (0x3L): viewModel.filesAdapter
+        flag 3 (0x4L): null
     flag mapping end*/
     //end
 }

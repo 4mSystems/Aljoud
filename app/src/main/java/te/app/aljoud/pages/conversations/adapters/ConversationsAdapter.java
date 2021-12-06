@@ -18,6 +18,7 @@ import java.util.List;
 import te.app.aljoud.PassingObject;
 import te.app.aljoud.R;
 import te.app.aljoud.databinding.ItemConversationBinding;
+import te.app.aljoud.pages.chat.view.ChatFragment;
 import te.app.aljoud.pages.conversations.models.ConversationsData;
 import te.app.aljoud.pages.conversations.viewModels.ItemConversationsViewModel;
 import te.app.aljoud.utils.helper.MovementHelper;
@@ -49,7 +50,10 @@ public class ConversationsAdapter extends RecyclerView.Adapter<ConversationsAdap
     public void onBindViewHolder(@NonNull final MenuView holder, final int position) {
         ConversationsData menuModel = conversationsDataList.get(position);
         ItemConversationsViewModel itemMenuViewModel = new ItemConversationsViewModel(menuModel);
-//        itemMenuViewModel.getLiveData().observe(((LifecycleOwner) MovementHelper.unwrap(context)), o -> MovementHelper.startActivityWithBundle(context, new PassingObject(menuModel.getReceiver()), null, ChatFragment.class.getName(), null));
+        itemMenuViewModel.getLiveData().observe(((LifecycleOwner) MovementHelper.unwrap(context)), o -> {
+            if (menuModel.getIs_lock() == 0)
+                MovementHelper.startActivityWithBundle(context, new PassingObject(menuModel.getId()), null, ChatFragment.class.getName(), null);
+        });
         holder.setViewModel(itemMenuViewModel);
     }
 

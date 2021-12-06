@@ -18,6 +18,7 @@ import android.provider.MediaStore;
 import android.util.Base64;
 import android.util.Log;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
@@ -34,9 +35,11 @@ import java.io.OutputStream;
 import java.util.Date;
 import java.util.Objects;
 
+import te.app.aljoud.R;
 import te.app.aljoud.connection.FileObject;
 import te.app.aljoud.utils.Constants;
 import te.app.aljoud.utils.helper.LauncherHelper;
+import te.app.aljoud.utils.resources.ResourceManager;
 
 
 @SuppressLint("NewApi")
@@ -299,23 +302,51 @@ public class FileOperations {
 
     public static void pickDocuments(final Context context, Fragment fragment, int requestCode) {
         if (ActivityCompat.checkSelfPermission(context, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-            Intent intent = new Intent(fragment.getActivity(), FilePickerActivity.class);
-            intent.putExtra(FilePickerActivity.CONFIGS, new Configurations.Builder()
-                    .setCheckPermission(true)
-                    .setShowImages(true)
-                    .setShowVideos(false)
-                    .setShowFiles(true)
-                    .enableImageCapture(true)
-                    .setShowFiles(true)
-                    .setSuffixes("pdf", "csv", "doc", "docx", "ppt", "pptx", "pps",
-                            "xls", "xlsx")
-                    .setMaxSelection(4)
-                    .setSkipZeroSizeFiles(true)
-                    .build());
+//            Intent intent = new Intent(fragment.getActivity(), FilePickerActivity.class);
+//            intent.putExtra(FilePickerActivity.CONFIGS, new Configurations.Builder()
+//                    .setCheckPermission(true)
+//                    .setShowImages(true)
+//                    .setShowVideos(false)
+//                    .setShowFiles(true)
+//                    .enableImageCapture(true)
+//                    .setShowFiles(true)
+//                    .setSuffixes("pdf", "csv", "doc", "docx", "ppt", "pptx", "pps",
+//                            "xls", "xlsx")
+//                    .setMaxSelection(4)
+//                    .setSkipZeroSizeFiles(true)
+//                    .build());
+            Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+            intent.addCategory(Intent.CATEGORY_OPENABLE);
+            intent.setType("*/*");
             LauncherHelper.execute(intent, requestCode, context);
 
         } else {
             ActivityCompat.requestPermissions((Activity) context, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1007);
+        }
+    }
+
+    public static void pickImage(final Context context, Fragment fragment, int requestCode) {
+        if (ActivityCompat.checkSelfPermission(fragment.getActivity(), Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED &&
+                ActivityCompat.checkSelfPermission(fragment.getActivity(), Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED &&
+                ActivityCompat.checkSelfPermission(fragment.getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+            String[] choiceString = new String[]{ResourceManager.getString(R.string.gallery)};
+            AlertDialog.Builder dialog = new AlertDialog.Builder(context);
+            dialog.setIcon(R.mipmap.ic_launcher);
+            dialog.setTitle(ResourceManager.getString(R.string.select_image_from));
+            dialog.setItems(choiceString,
+                    (dialog1, which) -> {
+                        Intent intent;
+                        if (which == 0) {
+                            intent = new Intent(
+                                    Intent.ACTION_PICK,
+                                    MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                        } else {
+                            intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                        }
+                        LauncherHelper.execute(Intent.createChooser(intent, ResourceManager.getString(R.string.select_image_from)), requestCode, context);
+                    }).show();
+        } else {
+            ActivityCompat.requestPermissions(fragment.getActivity(), new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, 1007);
         }
     }
 

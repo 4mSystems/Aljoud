@@ -7,9 +7,12 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -18,19 +21,32 @@ import te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel;
 
 public abstract class AskSheetBinding extends ViewDataBinding {
   @NonNull
+  public final Barrier br;
+
+  @NonNull
+  public final MaterialButton btAsk;
+
+  @NonNull
   public final AppCompatImageView icFile;
 
   @NonNull
   public final TextInputLayout inputReply;
 
+  @NonNull
+  public final RecyclerView rcFiles;
+
   @Bindable
   protected CourseViewModel mViewModel;
 
-  protected AskSheetBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatImageView icFile, TextInputLayout inputReply) {
+  protected AskSheetBinding(Object _bindingComponent, View _root, int _localFieldCount, Barrier br,
+      MaterialButton btAsk, AppCompatImageView icFile, TextInputLayout inputReply,
+      RecyclerView rcFiles) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.br = br;
+    this.btAsk = btAsk;
     this.icFile = icFile;
     this.inputReply = inputReply;
+    this.rcFiles = rcFiles;
   }
 
   public abstract void setViewModel(@Nullable CourseViewModel viewModel);

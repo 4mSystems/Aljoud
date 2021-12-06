@@ -13,8 +13,9 @@
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/ee8d7e321e760d024af2df3c56f4b729/jetified-firebase-installations-16.3.5/res" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/45e41cbda638b3b5cfb356650ad3685f/transformed/jetified-firebase-installations-16.3.5/res" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/991f1566d2bc1a074f42ce1ce70f3bc0/transformed/jetified-firebase-installations-16.3.5/res" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/45e41cbda638b3b5cfb356650ad3685f/transformed/jetified-firebase-installations-16.3.5/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/45e41cbda638b3b5cfb356650ad3685f/transformed/jetified-firebase-installations-16.3.5/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/dd5a96a466a0bceb327231fc96e44730/transformed/jetified-firebase-installations-16.3.5/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/dd5a96a466a0bceb327231fc96e44730/transformed/jetified-firebase-installations-16.3.5/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/dd5a96a466a0bceb327231fc96e44730/transformed/jetified-firebase-installations-16.3.5/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/modules-2/files-2.1/com.google.firebase/firebase-installations/16.3.5/ba864fdfc85df3cb215b477c4a82732e6c4aad2/firebase-installations-16.3.5-javadoc.jar!/" />

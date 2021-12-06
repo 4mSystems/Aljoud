@@ -1,5 +1,7 @@
 package te.app.aljoud.pages.conversations.viewModels;
 
+import android.view.View;
+
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 
@@ -30,7 +32,7 @@ public class ConversationsViewModel extends BaseViewModel {
     }
 
     public void getConversations(int page, boolean showProgress) {
-//        compositeDisposable.add(repository.getConversations(page, showProgress));
+        compositeDisposable.add(repository.getConversations(page, showProgress));
     }
 
     @Bindable
@@ -46,7 +48,7 @@ public class ConversationsViewModel extends BaseViewModel {
             getConversationsAdapter().update(conversationsMain.getData());
             notifyChange(BR.conversationsAdapter);
         }
-//        searchProgressVisible.set(false);
+        setSearchProgressVisible(View.GONE);
         notifyChange(BR.conversationsMain);
         this.conversationsMain = conversationsMain;
     }

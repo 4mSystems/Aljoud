@@ -18,6 +18,7 @@ import te.app.aljoud.model.base.Mutable;
 import te.app.aljoud.pages.auth.models.UserData;
 import te.app.aljoud.pages.chat.adapter.ChatAdapter;
 import te.app.aljoud.pages.chat.model.ChatRequest;
+import te.app.aljoud.pages.conversations.models.ConversationsData;
 import te.app.aljoud.pages.conversations.models.ConversationsMain;
 import te.app.aljoud.repository.ChatRepository;
 import te.app.aljoud.utils.Constants;
@@ -32,7 +33,7 @@ public class ChatViewModel extends BaseViewModel {
     public ChatRequest request = new ChatRequest();
     public List<FileObject> fileObjectList = new ArrayList<>();
     CompositeDisposable compositeDisposable = new CompositeDisposable();
-    UserData conversationsData;
+    ConversationsData conversationsData;
     ConversationsMain conversationsMain;
 
     @Inject
@@ -65,8 +66,8 @@ public class ChatViewModel extends BaseViewModel {
     }
 
     @Bindable
-    public UserData getConversationsData() {
-        return this.conversationsData == null ? this.conversationsData = new UserData() : this.conversationsData;
+    public ConversationsData getConversationsData() {
+        return this.conversationsData == null ? this.conversationsData = new ConversationsData() : this.conversationsData;
     }
 
     @Bindable
@@ -75,7 +76,7 @@ public class ChatViewModel extends BaseViewModel {
     }
 
     @Bindable
-    public void setConversationsData(UserData conversationsData) {
+    public void setConversationsData(ConversationsData conversationsData) {
         notifyChange(BR.conversationsData);
         this.conversationsData = conversationsData;
         chat();

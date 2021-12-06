@@ -13,8 +13,7 @@ public class FragmentConversationsBindingImpl extends FragmentConversationsBindi
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
         sIncludes = null;
-        sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.progress, 2);
+        sViewsWithIds = null;
     }
     // views
     @NonNull
@@ -34,6 +33,7 @@ public class FragmentConversationsBindingImpl extends FragmentConversationsBindi
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.progress.setTag(null);
         this.rcChats.setTag(null);
         setRootTag(root);
         // listeners
@@ -43,7 +43,7 @@ public class FragmentConversationsBindingImpl extends FragmentConversationsBindi
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x4L;
+                mDirtyFlags = 0x8L;
         }
         requestRebind();
     }
@@ -101,6 +101,12 @@ public class FragmentConversationsBindingImpl extends FragmentConversationsBindi
             }
             return true;
         }
+        else if (fieldId == BR.searchProgressVisible) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x4L;
+            }
+            return true;
+        }
         return false;
     }
 
@@ -112,19 +118,52 @@ public class FragmentConversationsBindingImpl extends FragmentConversationsBindi
             mDirtyFlags = 0;
         }
         te.app.aljoud.pages.conversations.adapters.ConversationsAdapter viewmodelConversationsAdapter = null;
+        int viewmodelSearchProgressVisible = 0;
+        int viewmodelSearchProgressVisibleViewVISIBLEViewVISIBLEViewGONE = 0;
+        boolean viewmodelSearchProgressVisibleViewVISIBLE = false;
         te.app.aljoud.pages.conversations.viewModels.ConversationsViewModel viewmodel = mViewmodel;
 
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0xfL) != 0) {
 
 
+            if ((dirtyFlags & 0xbL) != 0) {
 
-                if (viewmodel != null) {
-                    // read viewmodel.conversationsAdapter
-                    viewmodelConversationsAdapter = viewmodel.getConversationsAdapter();
+                    if (viewmodel != null) {
+                        // read viewmodel.conversationsAdapter
+                        viewmodelConversationsAdapter = viewmodel.getConversationsAdapter();
+                    }
+            }
+            if ((dirtyFlags & 0xdL) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.searchProgressVisible
+                        viewmodelSearchProgressVisible = viewmodel.getSearchProgressVisible();
+                    }
+
+
+                    // read viewmodel.searchProgressVisible == View.VISIBLE
+                    viewmodelSearchProgressVisibleViewVISIBLE = (viewmodelSearchProgressVisible) == (android.view.View.VISIBLE);
+                if((dirtyFlags & 0xdL) != 0) {
+                    if(viewmodelSearchProgressVisibleViewVISIBLE) {
+                            dirtyFlags |= 0x20L;
+                    }
+                    else {
+                            dirtyFlags |= 0x10L;
+                    }
                 }
+
+
+                    // read viewmodel.searchProgressVisible == View.VISIBLE ? View.VISIBLE : View.GONE
+                    viewmodelSearchProgressVisibleViewVISIBLEViewVISIBLEViewGONE = ((viewmodelSearchProgressVisibleViewVISIBLE) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+            }
         }
         // batch finished
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0xdL) != 0) {
+            // api target 1
+
+            this.progress.setVisibility(viewmodelSearchProgressVisibleViewVISIBLEViewVISIBLEViewGONE);
+        }
+        if ((dirtyFlags & 0xbL) != 0) {
             // api target 1
 
             te.app.aljoud.base.ApplicationBinding.getItemsV2Binding(this.rcChats, viewmodelConversationsAdapter, "1", "1");
@@ -137,7 +176,10 @@ public class FragmentConversationsBindingImpl extends FragmentConversationsBindi
     /* flag mapping
         flag 0 (0x1L): viewmodel
         flag 1 (0x2L): viewmodel.conversationsAdapter
-        flag 2 (0x3L): null
+        flag 2 (0x3L): viewmodel.searchProgressVisible
+        flag 3 (0x4L): null
+        flag 4 (0x5L): viewmodel.searchProgressVisible == View.VISIBLE ? View.VISIBLE : View.GONE
+        flag 5 (0x6L): viewmodel.searchProgressVisible == View.VISIBLE ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

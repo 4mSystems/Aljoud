@@ -4,9 +4,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/24a80b2efa4c298d417f6fb5985104c1/constraintlayout-2.1.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/24a80b2efa4c298d417f6fb5985104c1/constraintlayout-2.1.1/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/24a80b2efa4c298d417f6fb5985104c1/constraintlayout-2.1.1/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/66ff56fb595a495ee70bba0fa573cb3a/transformed/constraintlayout-2.1.1/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/66ff56fb595a495ee70bba0fa573cb3a/transformed/constraintlayout-2.1.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/66ff56fb595a495ee70bba0fa573cb3a/transformed/constraintlayout-2.1.1/res" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/3fc3e3e341e228f82d7cfd82919a8f1b/transformed/constraintlayout-2.1.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/3fc3e3e341e228f82d7cfd82919a8f1b/transformed/constraintlayout-2.1.1/res" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/3fc3e3e341e228f82d7cfd82919a8f1b/transformed/constraintlayout-2.1.1/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

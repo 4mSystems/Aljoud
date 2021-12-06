@@ -47,29 +47,29 @@ public class ConversationsFragment extends BaseFragment {
         viewModel.liveData.observe(requireActivity(), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-//            if (((Mutable) o).message.equals(Constants.CONVERSATIONS)) {
-//                if (((ConversationsResponse) mutable.object).getConversationsMain() != null)
-//                    viewModel.setConversationsMain(((ConversationsResponse) mutable.object).getConversationsMain());
-//            }
+            if (((Mutable) o).message.equals(Constants.CONVERSATIONS)) {
+                if (((ConversationsResponse) mutable.object).getConversationsMain() != null)
+                    viewModel.setConversationsMain(((ConversationsResponse) mutable.object).getConversationsMain());
+            }
         });
-//        binding.rcChats.addOnScrollListener(new RecyclerView.OnScrollListener() {
-//            @Override
-//            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
-//                super.onScrollStateChanged(recyclerView, newState);
-//            }
-//
-//            @Override
-//            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
-//                super.onScrolled(recyclerView, dx, dy);
-//                LinearLayoutManager linearLayoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
-//                if (!viewModel.searchProgressVisible.get() && !TextUtils.isEmpty(viewModel.getConversationsMain().getLinks().getNext())) {
-//                    if (linearLayoutManager != null && linearLayoutManager.findLastCompletelyVisibleItemPosition() == viewModel.getConversationsAdapter().getConversationsDataList().size() - 1) {
-//                        viewModel.searchProgressVisible.set(true);
-//                        viewModel.getConversations((viewModel.getConversationsMain().getMeta().getCurrentPage() + 1), false);
-//                    }
-//                }
-//            }
-//        });
+        binding.rcChats.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                LinearLayoutManager linearLayoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
+                if (viewModel.getSearchProgressVisible() == View.GONE && !TextUtils.isEmpty(viewModel.getConversationsMain().getNextPageUrl())) {
+                    if (linearLayoutManager != null && linearLayoutManager.findLastCompletelyVisibleItemPosition() == viewModel.getConversationsAdapter().getConversationsDataList().size() - 1) {
+                        viewModel.setSearchProgressVisible(View.VISIBLE);
+                        viewModel.getConversations((viewModel.getConversationsMain().getCurrentPage() + 1), false);
+                    }
+                }
+            }
+        });
     }
 
     @Override

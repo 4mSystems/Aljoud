@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class FragmentLessonDetailsBindingImpl extends FragmentLessonDetailsBinding  {
+public class FragmentLessonDetailsBindingImpl extends FragmentLessonDetailsBinding implements te.app.aljoud.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -14,45 +14,52 @@ public class FragmentLessonDetailsBindingImpl extends FragmentLessonDetailsBindi
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.card_instructor, 3);
-        sViewsWithIds.put(R.id.tv_policy_warning1, 4);
-        sViewsWithIds.put(R.id.tv_instractor_profession, 5);
-        sViewsWithIds.put(R.id.tv_account_qr, 6);
-        sViewsWithIds.put(R.id.card_tabs, 7);
-        sViewsWithIds.put(R.id.tabs, 8);
-        sViewsWithIds.put(R.id.lesson_frame, 9);
-        sViewsWithIds.put(R.id.rate_container, 10);
+        sViewsWithIds.put(R.id.card_instructor, 4);
+        sViewsWithIds.put(R.id.tv_policy_warning1, 5);
+        sViewsWithIds.put(R.id.tv_instractor_profession, 6);
+        sViewsWithIds.put(R.id.tv_account_qr, 7);
+        sViewsWithIds.put(R.id.card_tabs, 8);
+        sViewsWithIds.put(R.id.tabs, 9);
+        sViewsWithIds.put(R.id.lesson_frame, 10);
+        sViewsWithIds.put(R.id.rate_container, 11);
     }
     // views
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
+    @NonNull
+    private final com.google.android.material.button.MaterialButton mboundView3;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback11;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public FragmentLessonDetailsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 11, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 12, sIncludes, sViewsWithIds));
     }
     private FragmentLessonDetailsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.cardview.widget.CardView) bindings[3]
-            , (com.google.android.material.card.MaterialCardView) bindings[7]
+            , (androidx.cardview.widget.CardView) bindings[4]
+            , (com.google.android.material.card.MaterialCardView) bindings[8]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[2]
-            , (android.widget.FrameLayout) bindings[9]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[10]
-            , (com.google.android.material.tabs.TabLayout) bindings[8]
-            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[6]
+            , (android.widget.FrameLayout) bindings[10]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[11]
+            , (com.google.android.material.tabs.TabLayout) bindings[9]
+            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[7]
             , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[1]
+            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[6]
             , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[5]
-            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[4]
             );
         this.icQr.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.mboundView3 = (com.google.android.material.button.MaterialButton) bindings[3];
+        this.mboundView3.setTag(null);
         this.tvCardTitle.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback11 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -87,7 +94,13 @@ public class FragmentLessonDetailsBindingImpl extends FragmentLessonDetailsBindi
     }
 
     public void setViewmodel(@Nullable te.app.aljoud.pages.courseDetails.viewModels.LessonDetailsViewModel Viewmodel) {
+        updateRegistration(0, Viewmodel);
         this.mViewmodel = Viewmodel;
+        synchronized(this) {
+            mDirtyFlags |= 0x1L;
+        }
+        notifyPropertyChanged(BR.viewmodel);
+        super.requestRebind();
     }
 
     @Override
@@ -117,9 +130,10 @@ public class FragmentLessonDetailsBindingImpl extends FragmentLessonDetailsBindi
         }
         te.app.aljoud.pages.auth.models.UserData userHelperGetInstanceContextUserData = null;
         java.lang.String tvCardTitleAndroidStringAccountNumberConcatJavaLangStringConcatStringValueOfUserHelperGetInstanceContextUserDataId = null;
-        java.lang.String stringValueOfUserHelperGetInstanceContextUserDataId = null;
         java.lang.String userHelperGetInstanceContextUserDataQrImage = null;
         int userHelperGetInstanceContextUserDataId = 0;
+        java.lang.String stringValueOfUserHelperGetInstanceContextUserDataId = null;
+        te.app.aljoud.pages.courseDetails.viewModels.LessonDetailsViewModel viewmodel = mViewmodel;
 
         if ((dirtyFlags & 0x2L) != 0) {
 
@@ -147,11 +161,30 @@ public class FragmentLessonDetailsBindingImpl extends FragmentLessonDetailsBindi
             // api target 1
 
             te.app.aljoud.base.ApplicationBinding.loadImage(this.icQr, userHelperGetInstanceContextUserDataQrImage);
+            this.mboundView3.setOnClickListener(mCallback11);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvCardTitle, tvCardTitleAndroidStringAccountNumberConcatJavaLangStringConcatStringValueOfUserHelperGetInstanceContextUserDataId);
         }
     }
     // Listener Stub Implementations
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        // localize variables for thread safety
+        // viewmodel != null
+        boolean viewmodelJavaLangObjectNull = false;
+        // viewmodel
+        te.app.aljoud.pages.courseDetails.viewModels.LessonDetailsViewModel viewmodel = mViewmodel;
+
+
+
+        viewmodelJavaLangObjectNull = (viewmodel) != (null);
+        if (viewmodelJavaLangObjectNull) {
+
+
+
+
+            viewmodel.action(te.app.aljoud.utils.Constants.ASK);
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping

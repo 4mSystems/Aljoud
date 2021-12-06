@@ -13,6 +13,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.aljoud.R;
+import te.app.aljoud.customViews.views.CustomTextViewMedium;
 import te.app.aljoud.customViews.views.CustomTextViewRegular;
 import te.app.aljoud.pages.conversations.viewModels.ItemConversationsViewModel;
 
@@ -29,17 +30,22 @@ public abstract class ItemConversationBinding extends ViewDataBinding {
   @NonNull
   public final CircleImageView conUserImage;
 
+  @NonNull
+  public final CustomTextViewMedium tvCounter;
+
   @Bindable
   protected ItemConversationsViewModel mItemViewModel;
 
   protected ItemConversationBinding(Object _bindingComponent, View _root, int _localFieldCount,
       CustomTextViewRegular conTime, CustomTextViewRegular conTitle,
-      CustomTextViewRegular conTitleAddress, CircleImageView conUserImage) {
+      CustomTextViewRegular conTitleAddress, CircleImageView conUserImage,
+      CustomTextViewMedium tvCounter) {
     super(_bindingComponent, _root, _localFieldCount);
     this.conTime = conTime;
     this.conTitle = conTitle;
     this.conTitleAddress = conTitleAddress;
     this.conUserImage = conUserImage;
+    this.tvCounter = tvCounter;
   }
 
   public abstract void setItemViewModel(@Nullable ItemConversationsViewModel itemViewModel);

@@ -121,16 +121,15 @@ public class ItemChatBindingImpl extends ItemChatBinding  {
         java.lang.String userHelperGetInstanceContextUserDataImage = null;
         te.app.aljoud.pages.auth.models.UserData itemChatViewModelChatReceiver = null;
         te.app.aljoud.pages.conversations.models.ConversationsData itemChatViewModelChat = null;
+        int textUtilsIsEmptyItemChatViewModelChatReceiverImageViewGONEViewVISIBLE = 0;
         int itemChatViewModelChatReceiverId = 0;
-        boolean textUtilsIsEmptyItemChatViewModelChatImage = false;
-        int textUtilsIsEmptyItemChatViewModelChatImageViewGONEViewVISIBLE = 0;
         int userHelperGetInstanceContextUserDataId = 0;
+        boolean textUtilsIsEmptyItemChatViewModelChatReceiverImage = false;
         java.lang.String itemChatViewModelChatReceiverImage = null;
-        java.lang.String itemChatViewModelChatImage = null;
         boolean itemChatViewModelChatReceiverIdUserHelperGetInstanceContextUserDataId = false;
         te.app.aljoud.pages.chat.viewmodel.ItemChatViewModel itemChatViewModel = mItemChatViewModel;
         android.graphics.drawable.Drawable itemChatViewModelChatReceiverIdUserHelperGetInstanceContextUserDataIdMboundView3AndroidDrawableRightChatMboundView3AndroidDrawableLeftChat = null;
-        boolean TextUtilsIsEmptyItemChatViewModelChatImage1 = false;
+        boolean TextUtilsIsEmptyItemChatViewModelChatReceiverImage1 = false;
         java.lang.String itemChatViewModelChatReceiverIdUserHelperGetInstanceContextUserDataIdUserHelperGetInstanceContextUserDataImageItemChatViewModelChatReceiverImage = null;
 
         if ((dirtyFlags & 0x7L) != 0) {
@@ -153,23 +152,21 @@ public class ItemChatBindingImpl extends ItemChatBinding  {
                 if (itemChatViewModelChat != null) {
                     // read itemChatViewModel.chat.receiver
                     itemChatViewModelChatReceiver = itemChatViewModelChat.getReceiver();
-                    // read itemChatViewModel.chat.image
-                    itemChatViewModelChatImage = itemChatViewModelChat.getImage();
                 }
 
 
                 if (itemChatViewModelChatReceiver != null) {
                     // read itemChatViewModel.chat.receiver.id
                     itemChatViewModelChatReceiverId = itemChatViewModelChatReceiver.getId();
+                    // read itemChatViewModel.chat.receiver.image
+                    itemChatViewModelChatReceiverImage = itemChatViewModelChatReceiver.getImage();
                 }
-                // read TextUtils.isEmpty(itemChatViewModel.chat.image)
-                TextUtilsIsEmptyItemChatViewModelChatImage1 = android.text.TextUtils.isEmpty(itemChatViewModelChatImage);
 
 
                 // read itemChatViewModel.chat.receiver.id == UserHelper.getInstance(context).userData.id
                 itemChatViewModelChatReceiverIdUserHelperGetInstanceContextUserDataId = (itemChatViewModelChatReceiverId) == (userHelperGetInstanceContextUserDataId);
-                // read !TextUtils.isEmpty(itemChatViewModel.chat.image)
-                textUtilsIsEmptyItemChatViewModelChatImage = !TextUtilsIsEmptyItemChatViewModelChatImage1;
+                // read TextUtils.isEmpty(itemChatViewModel.chat.receiver.image)
+                TextUtilsIsEmptyItemChatViewModelChatReceiverImage1 = android.text.TextUtils.isEmpty(itemChatViewModelChatReceiverImage);
             if((dirtyFlags & 0x7L) != 0) {
                 if(itemChatViewModelChatReceiverIdUserHelperGetInstanceContextUserDataId) {
                         dirtyFlags |= 0x40L;
@@ -180,8 +177,14 @@ public class ItemChatBindingImpl extends ItemChatBinding  {
                         dirtyFlags |= 0x80L;
                 }
             }
+
+
+                // read itemChatViewModel.chat.receiver.id == UserHelper.getInstance(context).userData.id ? @android:drawable/right_chat : @android:drawable/left_chat
+                itemChatViewModelChatReceiverIdUserHelperGetInstanceContextUserDataIdMboundView3AndroidDrawableRightChatMboundView3AndroidDrawableLeftChat = ((itemChatViewModelChatReceiverIdUserHelperGetInstanceContextUserDataId) ? (androidx.appcompat.content.res.AppCompatResources.getDrawable(mboundView3.getContext(), R.drawable.right_chat)) : (androidx.appcompat.content.res.AppCompatResources.getDrawable(mboundView3.getContext(), R.drawable.left_chat)));
+                // read !TextUtils.isEmpty(itemChatViewModel.chat.receiver.image)
+                textUtilsIsEmptyItemChatViewModelChatReceiverImage = !TextUtilsIsEmptyItemChatViewModelChatReceiverImage1;
             if((dirtyFlags & 0x7L) != 0) {
-                if(textUtilsIsEmptyItemChatViewModelChatImage) {
+                if(textUtilsIsEmptyItemChatViewModelChatReceiverImage) {
                         dirtyFlags |= 0x10L;
                 }
                 else {
@@ -190,10 +193,8 @@ public class ItemChatBindingImpl extends ItemChatBinding  {
             }
 
 
-                // read itemChatViewModel.chat.receiver.id == UserHelper.getInstance(context).userData.id ? @android:drawable/right_chat : @android:drawable/left_chat
-                itemChatViewModelChatReceiverIdUserHelperGetInstanceContextUserDataIdMboundView3AndroidDrawableRightChatMboundView3AndroidDrawableLeftChat = ((itemChatViewModelChatReceiverIdUserHelperGetInstanceContextUserDataId) ? (androidx.appcompat.content.res.AppCompatResources.getDrawable(mboundView3.getContext(), R.drawable.right_chat)) : (androidx.appcompat.content.res.AppCompatResources.getDrawable(mboundView3.getContext(), R.drawable.left_chat)));
-                // read !TextUtils.isEmpty(itemChatViewModel.chat.image) ? View.GONE : View.VISIBLE
-                textUtilsIsEmptyItemChatViewModelChatImageViewGONEViewVISIBLE = ((textUtilsIsEmptyItemChatViewModelChatImage) ? (android.view.View.GONE) : (android.view.View.VISIBLE));
+                // read !TextUtils.isEmpty(itemChatViewModel.chat.receiver.image) ? View.GONE : View.VISIBLE
+                textUtilsIsEmptyItemChatViewModelChatReceiverImageViewGONEViewVISIBLE = ((textUtilsIsEmptyItemChatViewModelChatReceiverImage) ? (android.view.View.GONE) : (android.view.View.VISIBLE));
         }
         // batch finished
 
@@ -202,13 +203,6 @@ public class ItemChatBindingImpl extends ItemChatBinding  {
                 if (userHelperGetInstanceContextUserData != null) {
                     // read UserHelper.getInstance(context).userData.image
                     userHelperGetInstanceContextUserDataImage = userHelperGetInstanceContextUserData.getImage();
-                }
-        }
-        if ((dirtyFlags & 0x80L) != 0) {
-
-                if (itemChatViewModelChatReceiver != null) {
-                    // read itemChatViewModel.chat.receiver.image
-                    itemChatViewModelChatReceiverImage = itemChatViewModelChatReceiver.getImage();
                 }
         }
 
@@ -222,7 +216,7 @@ public class ItemChatBindingImpl extends ItemChatBinding  {
             // api target 1
 
             te.app.aljoud.base.ApplicationBinding.loadImage(this.driverImage, itemChatViewModelChatReceiverIdUserHelperGetInstanceContextUserDataIdUserHelperGetInstanceContextUserDataImageItemChatViewModelChatReceiverImage);
-            this.itemMessage.setVisibility(textUtilsIsEmptyItemChatViewModelChatImageViewGONEViewVISIBLE);
+            this.itemMessage.setVisibility(textUtilsIsEmptyItemChatViewModelChatReceiverImageViewGONEViewVISIBLE);
             androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.mboundView3, itemChatViewModelChatReceiverIdUserHelperGetInstanceContextUserDataIdMboundView3AndroidDrawableRightChatMboundView3AndroidDrawableLeftChat);
             te.app.aljoud.pages.chat.viewmodel.ItemChatViewModel.chatAdminDirection(this.rlItemChat, itemChatViewModelChatReceiverId);
         }
@@ -235,8 +229,8 @@ public class ItemChatBindingImpl extends ItemChatBinding  {
         flag 0 (0x1L): itemChatViewModel
         flag 1 (0x2L): itemChatViewModel.chat
         flag 2 (0x3L): null
-        flag 3 (0x4L): !TextUtils.isEmpty(itemChatViewModel.chat.image) ? View.GONE : View.VISIBLE
-        flag 4 (0x5L): !TextUtils.isEmpty(itemChatViewModel.chat.image) ? View.GONE : View.VISIBLE
+        flag 3 (0x4L): !TextUtils.isEmpty(itemChatViewModel.chat.receiver.image) ? View.GONE : View.VISIBLE
+        flag 4 (0x5L): !TextUtils.isEmpty(itemChatViewModel.chat.receiver.image) ? View.GONE : View.VISIBLE
         flag 5 (0x6L): itemChatViewModel.chat.receiver.id == UserHelper.getInstance(context).userData.id ? @android:drawable/right_chat : @android:drawable/left_chat
         flag 6 (0x7L): itemChatViewModel.chat.receiver.id == UserHelper.getInstance(context).userData.id ? @android:drawable/right_chat : @android:drawable/left_chat
         flag 7 (0x8L): itemChatViewModel.chat.receiver.id == UserHelper.getInstance(context).userData.id ? UserHelper.getInstance(context).userData.image : itemChatViewModel.chat.receiver.image

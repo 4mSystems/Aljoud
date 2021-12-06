@@ -13,8 +13,9 @@
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/69ec27212d171c31d4c0436c52e440df/jetified-transport-api-2.2.1/res" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/f767f5c1919969a6a1bd6db1826b28c1/transformed/jetified-transport-api-2.2.1/res" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/0eefe1543498eb2eb4b16e37ad500b3f/transformed/jetified-transport-api-2.2.1/res" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/f767f5c1919969a6a1bd6db1826b28c1/transformed/jetified-transport-api-2.2.1/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/f767f5c1919969a6a1bd6db1826b28c1/transformed/jetified-transport-api-2.2.1/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/6c33742388505c343f7a651f4f87c9af/transformed/jetified-transport-api-2.2.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/6c33742388505c343f7a651f4f87c9af/transformed/jetified-transport-api-2.2.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/6c33742388505c343f7a651f4f87c9af/transformed/jetified-transport-api-2.2.1/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/modules-2/files-2.1/com.google.android.datatransport/transport-api/2.2.1/44ab63fd6744b961c97d388fef15c888f99b561a/transport-api-2.2.1-javadoc.jar!/" />

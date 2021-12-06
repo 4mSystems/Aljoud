@@ -13,8 +13,9 @@
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/11cdf400121d7eed69654fbcc13be9ad/jetified-play-services-stats-17.0.0/res" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/17fc3d0cd62ae72a55e8f1c81af67290/transformed/jetified-play-services-stats-17.0.0/res" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/b000215e03742060006ae63b5909cc5a/transformed/jetified-play-services-stats-17.0.0/res" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/17fc3d0cd62ae72a55e8f1c81af67290/transformed/jetified-play-services-stats-17.0.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/17fc3d0cd62ae72a55e8f1c81af67290/transformed/jetified-play-services-stats-17.0.0/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/3fdd7643f91e97fefb8b377424c38745/transformed/jetified-play-services-stats-17.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/3fdd7643f91e97fefb8b377424c38745/transformed/jetified-play-services-stats-17.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/3fdd7643f91e97fefb8b377424c38745/transformed/jetified-play-services-stats-17.0.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

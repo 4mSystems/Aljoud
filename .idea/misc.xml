@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/badge.xml" value="0.3255208333333333" />
+        <entry key="app/src/main/res/drawable/badge_red.xml" value="0.321875" />
         <entry key="app/src/main/res/drawable/border_grand_call.xml" value="0.3625" />
         <entry key="app/src/main/res/drawable/border_grand_whats.xml" value="0.3625" />
         <entry key="app/src/main/res/drawable/corner_view_border.xml" value="0.3625" />
@@ -15,6 +16,7 @@
         <entry key="app/src/main/res/drawable/ic_back.xml" value="0.33125" />
         <entry key="app/src/main/res/drawable/ic_chat.xml" value="0.3255208333333333" />
         <entry key="app/src/main/res/drawable/ic_chat_send.xml" value="0.3234375" />
+        <entry key="app/src/main/res/drawable/ic_circle.xml" value="0.321875" />
         <entry key="app/src/main/res/drawable/ic_contact.xml" value="0.30745658835546474" />
         <entry key="app/src/main/res/drawable/ic_exit_dialog.xml" value="0.33125" />
         <entry key="app/src/main/res/drawable/ic_forget.xml" value="0.33125" />
@@ -47,6 +49,7 @@
         <entry key="app/src/main/res/layout/activity_map_address.xml" value="0.3109375" />
         <entry key="app/src/main/res/layout/activity_remote_pdf.xml" value="0.3015625" />
         <entry key="app/src/main/res/layout/activity_support.xml" value="0.3109375" />
+        <entry key="app/src/main/res/layout/ask_lesson_sheet.xml" value="0.3015625" />
         <entry key="app/src/main/res/layout/ask_sheet.xml" value="0.30520833333333336" />
         <entry key="app/src/main/res/layout/exit_layout.xml" value="0.3109375" />
         <entry key="app/src/main/res/layout/fragment_agents.xml" value="0.2210144927536232" />
@@ -54,7 +57,7 @@
         <entry key="app/src/main/res/layout/fragment_cart.xml" value="0.3463541666666667" />
         <entry key="app/src/main/res/layout/fragment_category_sections.xml" value="0.3463541666666667" />
         <entry key="app/src/main/res/layout/fragment_change_password.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/fragment_chat.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_chat.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_clients.xml" value="0.15237134207870837" />
         <entry key="app/src/main/res/layout/fragment_confirm_code.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_contacts.xml" value="0.1" />
@@ -98,6 +101,7 @@
         <entry key="app/src/main/res/layout/item_lesson_video.xml" value="0.30520833333333336" />
         <entry key="app/src/main/res/layout/item_levels.xml" value="0.3463541666666667" />
         <entry key="app/src/main/res/layout/item_offer.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/item_pick_file.xml" value="0.3015625" />
         <entry key="app/src/main/res/layout/item_refactory_center.xml" value="0.3463541666666667" />
         <entry key="app/src/main/res/layout/item_search.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/item_selected_suggestions.xml" value="0.3109375" />

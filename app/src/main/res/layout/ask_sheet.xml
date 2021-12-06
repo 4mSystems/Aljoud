@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -9,6 +10,7 @@
         <variable
             name="viewModel"
             type="te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel" />
+
     </data>
 
     <androidx.core.widget.NestedScrollView
@@ -59,19 +61,44 @@
                 app:layout_constraintTop_toBottomOf="@id/input_reply"
                 app:tint="@color/medium_color" />
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_files"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp8w"
+                android:layout_marginTop="@dimen/dp8h"
+                android:orientation="horizontal"
+                app:adapter="@{viewModel.filesAdapter}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ic_file"
+                app:layout_constraintTop_toBottomOf="@id/input_reply"
+                app:orientation="@{`2`}"
+                app:span="@{`1`}"
+                tools:listitem="@layout/item_pick_file" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/br"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:barrierMargin="@dimen/dp8h"
+                app:constraint_referenced_ids="ic_file,rc_files" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp8h"
                 android:text="@string/send_contact"
-                android:onClick="@{()->viewModel.ask()}"
+                android:id="@+id/bt_ask"
+                android:onClick="@{()-> viewModel.ask()}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/white"
                 app:backgroundTint="@color/colorPrimary"
                 app:icon="@drawable/ic_send"
                 app:iconGravity="textStart"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ic_file" />
+                app:layout_constraintTop_toBottomOf="@id/br" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>

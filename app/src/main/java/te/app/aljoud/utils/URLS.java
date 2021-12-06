@@ -1,7 +1,7 @@
 package te.app.aljoud.utils;
 
 public class URLS {
-    public final static String BASE_URL = "http://aljoud.golden-info.com/api/";
+    public final static String BASE_URL = "https://aljoud-edu.com/api/";
     public final static String CONTACT = "app/complains_suggestions";
     public final static String HOME = "home/university?page=";
     public final static String UNIVERSITY_DETAILS = "home/university/colleges/";
@@ -25,4 +25,5 @@ public class URLS {
     public static final String CONFIRM_CODE = "password/verify_code";
     public static final String REGISTER = "sign_up";
     public static final String LOGIN_PASSWORD = "login";
+    public static final String CONVERSATIONS = "inboxes?page=";
 }

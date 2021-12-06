@@ -151,7 +151,7 @@
     <string name="course_content">Course content</string>
     <string name="buy_now">Buy Now</string>
     <string name="course_ask">Ask In Course</string>
-    <string name="reply">Reply...</string>
+    <string name="reply">Reply</string>
     <string name="course_time">Hours on-demand video</string>
     <string name="course_article">Articles</string>
     <string name="course_quiz">Quiz</string>
@@ -181,5 +181,9 @@
     <string name="error_drm_unsupported_scheme">This device does not support the required DRM scheme</string>
     <string name="error_cleartext_not_permitted">Cleartext HTTP traffic not permitted. See https://exoplayer.dev/issues/cleartext-not-permitted</string>
     <string name="get_offer">Get Now</string>
+    <string name="max_files">Max files is 4</string>
+    <string name="gallery">Gallery</string>
+    <string name="select_image_from">Select image</string>
+    <string name="replies">Replies</string>
 
 </resources>

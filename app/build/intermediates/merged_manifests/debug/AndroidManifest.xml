@@ -209,6 +209,24 @@
             android:name="es.voghdev.pdfviewpager.library.service.CopyAssetService"
             android:exported="false" >
         </service>
+
+        <activity
+            android:name="droidninja.filepicker.FilePickerActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="droidninja.filepicker.MediaDetailsActivity"
+            android:configChanges="orientation|screenSize" />
+
+        <provider
+            android:name="droidninja.filepicker.utils.FilePickerProvider"
+            android:authorities="te.app.aljoud.droidninja.filepicker.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
         <service
             android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
             android:exported="false" >

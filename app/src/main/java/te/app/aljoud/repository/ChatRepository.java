@@ -32,12 +32,12 @@ public class ChatRepository extends BaseRepository {
         this.liveData = liveData;
         connectionHelper.liveData = liveData;
     }
-//
-//    public Disposable getConversations(int page, boolean showProgress) {
-//        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CONVERSATIONS + page, new Object(), ConversationsResponse.class,
-//                Constants.CONVERSATIONS, showProgress);
-//    }
-//
+
+    public Disposable getConversations(int page, boolean showProgress) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CONVERSATIONS + page, new Object(), ConversationsResponse.class,
+                Constants.CONVERSATIONS, showProgress);
+    }
+
 //    public Disposable getChat(int receiverId) {
 //        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CHAT + receiverId, new Object(), ConversationsResponse.class,
 //                Constants.CHAT, true);

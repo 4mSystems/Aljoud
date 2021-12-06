@@ -14,8 +14,15 @@ public class FragmentChatBindingImpl extends FragmentChatBinding implements te.a
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.chat_actions, 5);
-        sViewsWithIds.put(R.id.progress, 6);
+        sViewsWithIds.put(R.id.card_info, 5);
+        sViewsWithIds.put(R.id.tv_created_at, 6);
+        sViewsWithIds.put(R.id.tv_from, 7);
+        sViewsWithIds.put(R.id.tv_to, 8);
+        sViewsWithIds.put(R.id.tv_desc, 9);
+        sViewsWithIds.put(R.id.rc_files, 10);
+        sViewsWithIds.put(R.id.tv_replies, 11);
+        sViewsWithIds.put(R.id.chat_actions, 12);
+        sViewsWithIds.put(R.id.progress, 13);
     }
     // views
     @NonNull
@@ -67,16 +74,23 @@ public class FragmentChatBindingImpl extends FragmentChatBinding implements te.a
     };
 
     public FragmentChatBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 7, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 14, sIncludes, sViewsWithIds));
     }
     private FragmentChatBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (androidx.appcompat.widget.AppCompatImageView) bindings[2]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[5]
+            , (androidx.cardview.widget.CardView) bindings[5]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[12]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[4]
-            , (android.widget.ProgressBar) bindings[6]
+            , (android.widget.ProgressBar) bindings[13]
             , (androidx.recyclerview.widget.RecyclerView) bindings[1]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[10]
             , (com.google.android.material.textfield.TextInputEditText) bindings[3]
+            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[6]
+            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[9]
+            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[7]
+            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[11]
+            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[8]
             );
         this.attach.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];

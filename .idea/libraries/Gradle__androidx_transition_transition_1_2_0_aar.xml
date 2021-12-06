@@ -4,7 +4,7 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/51aa28824ac03f344e5d053d9d4f9317/transition-1.2.0/annotations.zip!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/51aa28824ac03f344e5d053d9d4f9317/transition-1.2.0/annotations.zip!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/51aa28824ac03f344e5d053d9d4f9317/transition-1.2.0/annotations.zip!/" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/06e956728079b62473f9071c0ed43744/transformed/transition-1.2.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/33dd718639a5da6394d3f2d1aa9c6114/transformed/transition-1.2.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/51aa28824ac03f344e5d053d9d4f9317/transition-1.2.0/res" />
@@ -16,9 +16,9 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/51aa28824ac03f344e5d053d9d4f9317/transition-1.2.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/51aa28824ac03f344e5d053d9d4f9317/transition-1.2.0/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/51aa28824ac03f344e5d053d9d4f9317/transition-1.2.0/jars/classes.jar!/" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/06e956728079b62473f9071c0ed43744/transformed/transition-1.2.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/06e956728079b62473f9071c0ed43744/transformed/transition-1.2.0/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/06e956728079b62473f9071c0ed43744/transformed/transition-1.2.0/res" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/33dd718639a5da6394d3f2d1aa9c6114/transformed/transition-1.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/33dd718639a5da6394d3f2d1aa9c6114/transformed/transition-1.2.0/res" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/33dd718639a5da6394d3f2d1aa9c6114/transformed/transition-1.2.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

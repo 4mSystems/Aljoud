@@ -15,8 +15,9 @@
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-2/files-2.1/9ef4aecd3a94c2c227e7723ef96b411e/asynclayoutinflater-1.0.0/res" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/0d6128869f3f5054df81b46d7aeb5c68/transformed/asynclayoutinflater-1.0.0/res" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/1d5929fdd2dd1eb6526d78cff549db56/transformed/asynclayoutinflater-1.0.0/res" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/0d6128869f3f5054df81b46d7aeb5c68/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/0d6128869f3f5054df81b46d7aeb5c68/transformed/asynclayoutinflater-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/de575bae765ab3fd914bc21d348089f4/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/de575bae765ab3fd914bc21d348089f4/transformed/asynclayoutinflater-1.0.0/res" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/de575bae765ab3fd914bc21d348089f4/transformed/asynclayoutinflater-1.0.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

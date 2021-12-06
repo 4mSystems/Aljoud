@@ -1,15 +1,12 @@
 package te.app.aljoud.pages.chat.view;
 
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 
@@ -23,12 +20,11 @@ import te.app.aljoud.base.BaseFragment;
 import te.app.aljoud.base.IApplicationComponent;
 import te.app.aljoud.base.MyApplication;
 import te.app.aljoud.databinding.FragmentChatBinding;
-import te.app.aljoud.pages.auth.models.UserData;
 import te.app.aljoud.pages.chat.viewmodel.ChatViewModel;
 import te.app.aljoud.utils.Constants;
 
 public class ChatFragment extends BaseFragment {
-    private FragmentChatBinding binding;
+     FragmentChatBinding binding;
     @Inject
     ChatViewModel viewModel;
 
@@ -42,7 +38,6 @@ public class ChatFragment extends BaseFragment {
         if (bundle != null) {
             String passingObject = bundle.getString(Constants.BUNDLE);
             viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
-            viewModel.setConversationsData(new Gson().fromJson(String.valueOf(viewModel.getPassingObject().getObjectClass()), UserData.class));
         }
         setEvent();
         return binding.getRoot();
