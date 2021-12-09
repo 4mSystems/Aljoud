@@ -24,9 +24,11 @@ import te.app.aljoud.databinding.ExitLayoutBinding;
 import te.app.aljoud.databinding.LayoutNavigationDrawerBinding;
 import te.app.aljoud.model.base.Mutable;
 import te.app.aljoud.pages.conversations.ConversationsFragment;
+import te.app.aljoud.pages.myCourses.MyCoursesFragment;
 import te.app.aljoud.pages.offers.OffersFragment;
 import te.app.aljoud.pages.settings.AboutAppFragment;
 import te.app.aljoud.pages.settings.ContactFragment;
+import te.app.aljoud.pages.settings.ServiceRequestFragment;
 import te.app.aljoud.pages.splash.SplashFragment;
 import te.app.aljoud.utils.Constants;
 import te.app.aljoud.utils.URLS;
@@ -82,8 +84,12 @@ public class NavigationDrawerView extends RelativeLayout {
                 MovementHelper.startActivity(context, AboutAppFragment.class.getName(), getResources().getString(R.string.about), null);
             } else if (Constants.CONTACT.equals(o)) {
                 MovementHelper.startActivity(context, ContactFragment.class.getName(), getResources().getString(R.string.contact_us), null);
+            } else if (Constants.SERVICES.equals(o)) {
+                MovementHelper.startActivity(context, ServiceRequestFragment.class.getName(), getResources().getString(R.string.request_course), null);
             } else if (Constants.OFFERS.equals(o)) {
                 MovementHelper.startActivity(context, OffersFragment.class.getName(), getResources().getString(R.string.offers), null);
+            } else if (Constants.MY_COURSES.equals(o)) {
+                MovementHelper.startActivity(context, MyCoursesFragment.class.getName(), getResources().getString(R.string.my_courses), null);
             } else if (Constants.INBOX.equals(o)) {
                 MovementHelper.startActivity(context, ConversationsFragment.class.getName(), getResources().getString(R.string.inbox), null);
             } else if (Constants.SHARE_BAR.equals(o)) {

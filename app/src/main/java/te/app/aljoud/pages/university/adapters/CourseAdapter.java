@@ -62,7 +62,11 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder
         courseList.addAll(dataList);
         notifyDataSetChanged();
     }
-
+    public void loadMore(@NotNull List<Course> dataList) {
+        int start = courseList.size();
+        courseList.addAll(dataList);
+        notifyItemRangeInserted(start, dataList.size());
+    }
     @Override
     public void onViewAttachedToWindow(@NotNull ViewHolder holder) {
         super.onViewAttachedToWindow(holder);

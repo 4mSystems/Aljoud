@@ -7,10 +7,12 @@ import androidx.appcompat.widget.PopupMenu;
 
 import java.util.List;
 
+import te.app.aljoud.pages.settings.models.services.ServiceItem;
+
 public class PopUpMenuHelper {
 
 
-    public static PopupMenu showSearchTypePopUp(Context context, View view, List<PopUp> types) {
+    public static PopupMenu showServicesPopUp(Context context, View view, List<ServiceItem> types) {
         PopupMenu typesPopUps;
         typesPopUps = new PopupMenu(context, view);
         for (int i = 0; i < types.size(); i++) {

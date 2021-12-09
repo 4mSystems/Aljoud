@@ -14,12 +14,11 @@ public class FragmentCourseLessonsBindingImpl extends FragmentCourseLessonsBindi
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.card_instructor, 9);
-        sViewsWithIds.put(R.id.tv_policy_warning1, 10);
-        sViewsWithIds.put(R.id.tv_instractor_profession, 11);
-        sViewsWithIds.put(R.id.tv_account_qr, 12);
-        sViewsWithIds.put(R.id.card_info, 13);
-        sViewsWithIds.put(R.id.rate_container, 14);
+        sViewsWithIds.put(R.id.card_instructor, 10);
+        sViewsWithIds.put(R.id.tv_policy_warning1, 11);
+        sViewsWithIds.put(R.id.tv_instractor_profession, 12);
+        sViewsWithIds.put(R.id.tv_account_qr, 13);
+        sViewsWithIds.put(R.id.card_info, 14);
         sViewsWithIds.put(R.id.card_rate, 15);
         sViewsWithIds.put(R.id.tv_rate_course, 16);
     }
@@ -29,10 +28,10 @@ public class FragmentCourseLessonsBindingImpl extends FragmentCourseLessonsBindi
     @NonNull
     private final androidx.recyclerview.widget.RecyclerView mboundView6;
     @NonNull
-    private final com.google.android.material.button.MaterialButton mboundView8;
+    private final com.google.android.material.button.MaterialButton mboundView9;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback25;
+    private final android.view.View.OnClickListener mCallback19;
     // values
     // listeners
     private OnRatingBarChangeListenerImpl mViewmodelOnRateChangeAndroidWidgetRatingBarOnRatingBarChangeListener;
@@ -43,17 +42,17 @@ public class FragmentCourseLessonsBindingImpl extends FragmentCourseLessonsBindi
     }
     private FragmentCourseLessonsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.cardview.widget.CardView) bindings[13]
-            , (androidx.cardview.widget.CardView) bindings[9]
+            , (androidx.cardview.widget.CardView) bindings[14]
+            , (androidx.cardview.widget.CardView) bindings[10]
             , (androidx.cardview.widget.CardView) bindings[15]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[2]
             , (com.google.android.material.imageview.ShapeableImageView) bindings[5]
-            , (androidx.appcompat.widget.AppCompatRatingBar) bindings[7]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[14]
-            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[12]
+            , (androidx.appcompat.widget.AppCompatRatingBar) bindings[8]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[7]
+            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[13]
             , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[1]
+            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[12]
             , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[11]
-            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[10]
             , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[16]
             , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[3]
             , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[4]
@@ -64,15 +63,16 @@ public class FragmentCourseLessonsBindingImpl extends FragmentCourseLessonsBindi
         this.mboundView0.setTag(null);
         this.mboundView6 = (androidx.recyclerview.widget.RecyclerView) bindings[6];
         this.mboundView6.setTag(null);
-        this.mboundView8 = (com.google.android.material.button.MaterialButton) bindings[8];
-        this.mboundView8.setTag(null);
+        this.mboundView9 = (com.google.android.material.button.MaterialButton) bindings[9];
+        this.mboundView9.setTag(null);
         this.rate.setTag(null);
+        this.rateContainer.setTag(null);
         this.tvCardTitle.setTag(null);
         this.tvSpecial.setTag(null);
         this.tvSubjects.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback25 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback19 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -155,16 +155,20 @@ public class FragmentCourseLessonsBindingImpl extends FragmentCourseLessonsBindi
         }
         te.app.aljoud.pages.courseDetails.adapters.LessonsAdapter viewmodelLessonsAdapter = null;
         te.app.aljoud.pages.auth.models.UserData userHelperGetInstanceContextUserData = null;
+        boolean viewmodelLessonMainDataCourseDataJavaLangObjectNull = false;
         java.lang.String viewmodelLessonMainDataCourseDataDesc = null;
         java.lang.String tvCardTitleAndroidStringAccountNumberConcatJavaLangStringConcatStringValueOfUserHelperGetInstanceContextUserDataId = null;
         java.lang.String viewmodelLessonMainDataCourseDataImage = null;
         java.lang.String userHelperGetInstanceContextUserDataQrImage = null;
         int userHelperGetInstanceContextUserDataId = 0;
         te.app.aljoud.pages.university.models.course.Course viewmodelLessonMainDataCourseData = null;
+        boolean userHelperGetInstanceContextUserDataJavaLangObjectNull = false;
         te.app.aljoud.pages.courseDetails.models.lessons.LessonMainData viewmodelLessonMainData = null;
         java.lang.String viewmodelLessonMainDataCourseDataName = null;
         java.lang.String stringValueOfUserHelperGetInstanceContextUserDataId = null;
+        int userHelperGetInstanceContextUserDataJavaLangObjectNullViewVISIBLEViewGONE = 0;
         android.widget.RatingBar.OnRatingBarChangeListener viewmodelOnRateChangeAndroidWidgetRatingBarOnRatingBarChangeListener = null;
+        int viewmodelLessonMainDataCourseDataJavaLangObjectNullViewVISIBLEViewGONE = 0;
         te.app.aljoud.pages.courseDetails.viewModels.CourseLessonsViewModel viewmodel = mViewmodel;
 
         if ((dirtyFlags & 0x8L) != 0) {
@@ -179,10 +183,22 @@ public class FragmentCourseLessonsBindingImpl extends FragmentCourseLessonsBindi
                     // read UserHelper.getInstance(context).userData.id
                     userHelperGetInstanceContextUserDataId = userHelperGetInstanceContextUserData.getId();
                 }
+                // read UserHelper.getInstance(context).userData != null
+                userHelperGetInstanceContextUserDataJavaLangObjectNull = (userHelperGetInstanceContextUserData) != (null);
+            if((dirtyFlags & 0x8L) != 0) {
+                if(userHelperGetInstanceContextUserDataJavaLangObjectNull) {
+                        dirtyFlags |= 0x20L;
+                }
+                else {
+                        dirtyFlags |= 0x10L;
+                }
+            }
 
 
                 // read String.valueOf(UserHelper.getInstance(context).userData.id)
                 stringValueOfUserHelperGetInstanceContextUserDataId = java.lang.String.valueOf(userHelperGetInstanceContextUserDataId);
+                // read UserHelper.getInstance(context).userData != null ? View.VISIBLE : View.GONE
+                userHelperGetInstanceContextUserDataJavaLangObjectNullViewVISIBLEViewGONE = ((userHelperGetInstanceContextUserDataJavaLangObjectNull) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
 
 
                 // read @android:string/account_number.concat(" ").concat(String.valueOf(UserHelper.getInstance(context).userData.id))
@@ -212,6 +228,16 @@ public class FragmentCourseLessonsBindingImpl extends FragmentCourseLessonsBindi
                     }
 
 
+                    // read viewmodel.lessonMainData.courseData != null
+                    viewmodelLessonMainDataCourseDataJavaLangObjectNull = (viewmodelLessonMainDataCourseData) != (null);
+                if((dirtyFlags & 0xbL) != 0) {
+                    if(viewmodelLessonMainDataCourseDataJavaLangObjectNull) {
+                            dirtyFlags |= 0x80L;
+                    }
+                    else {
+                            dirtyFlags |= 0x40L;
+                    }
+                }
                     if (viewmodelLessonMainDataCourseData != null) {
                         // read viewmodel.lessonMainData.courseData.desc
                         viewmodelLessonMainDataCourseDataDesc = viewmodelLessonMainDataCourseData.getDesc();
@@ -220,6 +246,10 @@ public class FragmentCourseLessonsBindingImpl extends FragmentCourseLessonsBindi
                         // read viewmodel.lessonMainData.courseData.name
                         viewmodelLessonMainDataCourseDataName = viewmodelLessonMainDataCourseData.getName();
                     }
+
+
+                    // read viewmodel.lessonMainData.courseData != null ? View.VISIBLE : View.GONE
+                    viewmodelLessonMainDataCourseDataJavaLangObjectNullViewVISIBLEViewGONE = ((viewmodelLessonMainDataCourseDataJavaLangObjectNull) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
             }
             if ((dirtyFlags & 0x9L) != 0) {
 
@@ -234,13 +264,15 @@ public class FragmentCourseLessonsBindingImpl extends FragmentCourseLessonsBindi
             // api target 1
 
             te.app.aljoud.base.ApplicationBinding.loadImage(this.icQr, userHelperGetInstanceContextUserDataQrImage);
-            this.mboundView8.setOnClickListener(mCallback25);
+            this.mboundView9.setOnClickListener(mCallback19);
+            this.rateContainer.setVisibility(userHelperGetInstanceContextUserDataJavaLangObjectNullViewVISIBLEViewGONE);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvCardTitle, tvCardTitleAndroidStringAccountNumberConcatJavaLangStringConcatStringValueOfUserHelperGetInstanceContextUserDataId);
         }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1
 
             te.app.aljoud.base.ApplicationBinding.loadFullImage(this.icUniversity, viewmodelLessonMainDataCourseDataImage);
+            this.mboundView0.setVisibility(viewmodelLessonMainDataCourseDataJavaLangObjectNullViewVISIBLEViewGONE);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvSpecial, viewmodelLessonMainDataCourseDataName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvSubjects, viewmodelLessonMainDataCourseDataDesc);
         }
@@ -291,6 +323,10 @@ public class FragmentCourseLessonsBindingImpl extends FragmentCourseLessonsBindi
         flag 1 (0x2L): viewmodel.lessonMainData
         flag 2 (0x3L): viewmodel.lessonsAdapter
         flag 3 (0x4L): null
+        flag 4 (0x5L): UserHelper.getInstance(context).userData != null ? View.VISIBLE : View.GONE
+        flag 5 (0x6L): UserHelper.getInstance(context).userData != null ? View.VISIBLE : View.GONE
+        flag 6 (0x7L): viewmodel.lessonMainData.courseData != null ? View.VISIBLE : View.GONE
+        flag 7 (0x8L): viewmodel.lessonMainData.courseData != null ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

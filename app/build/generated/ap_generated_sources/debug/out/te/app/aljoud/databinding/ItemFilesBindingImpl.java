@@ -20,7 +20,7 @@ public class ItemFilesBindingImpl extends ItemFilesBinding implements te.app.alj
     private final com.google.android.material.card.MaterialCardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback22;
+    private final android.view.View.OnClickListener mCallback16;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -37,7 +37,7 @@ public class ItemFilesBindingImpl extends ItemFilesBinding implements te.app.alj
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback22 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback16 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -140,7 +140,7 @@ public class ItemFilesBindingImpl extends ItemFilesBinding implements te.app.alj
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView0.setOnClickListener(mCallback22);
+            this.mboundView0.setOnClickListener(mCallback16);
         }
     }
     // Listener Stub Implementations

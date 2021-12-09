@@ -72,6 +72,13 @@ import te.app.aljoud.pages.home.HomeFragment_MembersInjector;
 import te.app.aljoud.pages.home.viewModels.HomeViewModel;
 import te.app.aljoud.pages.home.viewModels.HomeViewModel_Factory;
 import te.app.aljoud.pages.home.viewModels.HomeViewModel_MembersInjector;
+import te.app.aljoud.pages.home.viewModels.UniversitiesFragment;
+import te.app.aljoud.pages.home.viewModels.UniversitiesFragment_MembersInjector;
+import te.app.aljoud.pages.myCourses.MyCoursesFragment;
+import te.app.aljoud.pages.myCourses.MyCoursesFragment_MembersInjector;
+import te.app.aljoud.pages.myCourses.viewModels.MyCoursesViewModel;
+import te.app.aljoud.pages.myCourses.viewModels.MyCoursesViewModel_Factory;
+import te.app.aljoud.pages.myCourses.viewModels.MyCoursesViewModel_MembersInjector;
 import te.app.aljoud.pages.offers.OffersFragment;
 import te.app.aljoud.pages.offers.OffersFragment_MembersInjector;
 import te.app.aljoud.pages.offers.viewModel.OffersViewModel;
@@ -81,6 +88,8 @@ import te.app.aljoud.pages.settings.AboutAppFragment;
 import te.app.aljoud.pages.settings.AboutAppFragment_MembersInjector;
 import te.app.aljoud.pages.settings.ContactFragment;
 import te.app.aljoud.pages.settings.ContactFragment_MembersInjector;
+import te.app.aljoud.pages.settings.ServiceRequestFragment;
+import te.app.aljoud.pages.settings.ServiceRequestFragment_MembersInjector;
 import te.app.aljoud.pages.settings.viewModels.SettingsViewModel;
 import te.app.aljoud.pages.settings.viewModels.SettingsViewModel_Factory;
 import te.app.aljoud.pages.settings.viewModels.SettingsViewModel_MembersInjector;
@@ -202,6 +211,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectOffersViewModel(OffersViewModel_Factory.newInstance(homeRepositoryProvider.get()));
   }
 
+  private MyCoursesViewModel myCoursesViewModel() {
+    return injectMyCoursesViewModel(MyCoursesViewModel_Factory.newInstance(homeRepositoryProvider.get()));
+  }
+
   @SuppressWarnings("unchecked")
   private void initialize(final ConnectionModule connectionModuleParam) {
     this.webServiceProvider = DoubleCheck.provider(ConnectionModule_WebServiceFactory.create(connectionModuleParam));
@@ -234,6 +247,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(HomeFragment homeFragment) {
     injectHomeFragment(homeFragment);
+  }
+
+  @Override
+  public void inject(UniversitiesFragment universitiesFragment) {
+    injectUniversitiesFragment(universitiesFragment);
   }
 
   @Override
@@ -326,6 +344,16 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     injectOffersFragment(offersFragment);
   }
 
+  @Override
+  public void inject(MyCoursesFragment myCoursesFragment) {
+    injectMyCoursesFragment(myCoursesFragment);
+  }
+
+  @Override
+  public void inject(ServiceRequestFragment serviceRequestFragment) {
+    injectServiceRequestFragment(serviceRequestFragment);
+  }
+
   private HomeViewModel injectHomeViewModel(HomeViewModel instance) {
     HomeViewModel_MembersInjector.injectHomeRepository(instance, homeRepositoryProvider.get());
     return instance;
@@ -359,6 +387,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private HomeFragment injectHomeFragment(HomeFragment instance) {
     HomeFragment_MembersInjector.injectViewModel(instance, homeViewModel());
+    return instance;
+  }
+
+  private UniversitiesFragment injectUniversitiesFragment(UniversitiesFragment instance) {
+    UniversitiesFragment_MembersInjector.injectViewModel(instance, homeViewModel());
     return instance;
   }
 
@@ -511,6 +544,21 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private OffersFragment injectOffersFragment(OffersFragment instance) {
     OffersFragment_MembersInjector.injectViewModel(instance, offersViewModel());
+    return instance;
+  }
+
+  private MyCoursesViewModel injectMyCoursesViewModel(MyCoursesViewModel instance) {
+    MyCoursesViewModel_MembersInjector.injectHomeRepository(instance, homeRepositoryProvider.get());
+    return instance;
+  }
+
+  private MyCoursesFragment injectMyCoursesFragment(MyCoursesFragment instance) {
+    MyCoursesFragment_MembersInjector.injectViewModel(instance, myCoursesViewModel());
+    return instance;
+  }
+
+  private ServiceRequestFragment injectServiceRequestFragment(ServiceRequestFragment instance) {
+    ServiceRequestFragment_MembersInjector.injectViewModel(instance, settingsViewModel());
     return instance;
   }
 

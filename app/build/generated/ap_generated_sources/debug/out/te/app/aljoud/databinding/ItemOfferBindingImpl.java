@@ -20,7 +20,7 @@ public class ItemOfferBindingImpl extends ItemOfferBinding implements te.app.alj
     private final com.google.android.material.card.MaterialCardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback9;
+    private final android.view.View.OnClickListener mCallback6;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -51,7 +51,7 @@ public class ItemOfferBindingImpl extends ItemOfferBinding implements te.app.alj
         this.tvUniversity.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback9 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback6 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -193,7 +193,7 @@ public class ItemOfferBindingImpl extends ItemOfferBinding implements te.app.alj
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.btGetOffer.setOnClickListener(mCallback9);
+            this.btGetOffer.setOnClickListener(mCallback6);
         }
         if ((dirtyFlags & 0xdL) != 0) {
             // api target 1

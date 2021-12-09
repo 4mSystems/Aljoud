@@ -22,6 +22,7 @@ import te.app.aljoud.pages.chat.view.ChatFragment;
 import te.app.aljoud.pages.conversations.models.ConversationsData;
 import te.app.aljoud.pages.conversations.viewModels.ItemConversationsViewModel;
 import te.app.aljoud.utils.helper.MovementHelper;
+import te.app.aljoud.utils.resources.ResourceManager;
 
 
 public class ConversationsAdapter extends RecyclerView.Adapter<ConversationsAdapter.MenuView> {
@@ -52,7 +53,7 @@ public class ConversationsAdapter extends RecyclerView.Adapter<ConversationsAdap
         ItemConversationsViewModel itemMenuViewModel = new ItemConversationsViewModel(menuModel);
         itemMenuViewModel.getLiveData().observe(((LifecycleOwner) MovementHelper.unwrap(context)), o -> {
             if (menuModel.getIs_lock() == 0)
-                MovementHelper.startActivityWithBundle(context, new PassingObject(menuModel.getId()), null, ChatFragment.class.getName(), null);
+                MovementHelper.startActivityWithBundle(context, new PassingObject(menuModel.getId()), ResourceManager.getString(R.string.inbox), ChatFragment.class.getName(), null);
         });
         holder.setViewModel(itemMenuViewModel);
     }

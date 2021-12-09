@@ -14,15 +14,15 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.card_info, 17);
-        sViewsWithIds.put(R.id.br, 18);
-        sViewsWithIds.put(R.id.tv_card_title, 19);
-        sViewsWithIds.put(R.id.card_course_include, 20);
-        sViewsWithIds.put(R.id.tv_card_course, 21);
-        sViewsWithIds.put(R.id.tv_course_access, 22);
-        sViewsWithIds.put(R.id.tv_course_discuss, 23);
-        sViewsWithIds.put(R.id.tv_course_certificate, 24);
-        sViewsWithIds.put(R.id.card_course_action, 25);
+        sViewsWithIds.put(R.id.card_info, 18);
+        sViewsWithIds.put(R.id.br, 19);
+        sViewsWithIds.put(R.id.tv_card_title, 20);
+        sViewsWithIds.put(R.id.card_course_include, 21);
+        sViewsWithIds.put(R.id.tv_card_course, 22);
+        sViewsWithIds.put(R.id.tv_course_access, 23);
+        sViewsWithIds.put(R.id.tv_course_discuss, 24);
+        sViewsWithIds.put(R.id.tv_course_certificate, 25);
+        sViewsWithIds.put(R.id.card_course_action, 26);
     }
     // views
     @NonNull
@@ -31,37 +31,41 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
     private final com.google.android.material.button.MaterialButton mboundView15;
     @NonNull
     private final com.google.android.material.button.MaterialButton mboundView16;
+    @NonNull
+    private final com.google.android.material.button.MaterialButton mboundView17;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback27;
+    private final android.view.View.OnClickListener mCallback23;
     @Nullable
-    private final android.view.View.OnClickListener mCallback28;
+    private final android.view.View.OnClickListener mCallback21;
     @Nullable
-    private final android.view.View.OnClickListener mCallback29;
+    private final android.view.View.OnClickListener mCallback20;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback22;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public FragmentCourseDetailsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 26, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 27, sIncludes, sViewsWithIds));
     }
     private FragmentCourseDetailsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.constraintlayout.widget.Barrier) bindings[18]
-            , (androidx.cardview.widget.CardView) bindings[25]
-            , (androidx.cardview.widget.CardView) bindings[20]
-            , (androidx.cardview.widget.CardView) bindings[17]
+            , (androidx.constraintlayout.widget.Barrier) bindings[19]
+            , (androidx.cardview.widget.CardView) bindings[26]
+            , (androidx.cardview.widget.CardView) bindings[21]
+            , (androidx.cardview.widget.CardView) bindings[18]
             , (androidx.cardview.widget.CardView) bindings[7]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[11]
             , (de.hdodenhof.circleimageview.CircleImageView) bindings[8]
             , (com.google.android.material.imageview.ShapeableImageView) bindings[3]
             , (androidx.appcompat.widget.AppCompatRatingBar) bindings[6]
-            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[21]
-            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[19]
-            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[22]
-            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[13]
-            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[24]
+            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[22]
+            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[20]
             , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[23]
+            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[13]
+            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[25]
+            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[24]
             , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[14]
             , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[12]
             , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[9]
@@ -81,6 +85,8 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
         this.mboundView15.setTag(null);
         this.mboundView16 = (com.google.android.material.button.MaterialButton) bindings[16];
         this.mboundView16.setTag(null);
+        this.mboundView17 = (com.google.android.material.button.MaterialButton) bindings[17];
+        this.mboundView17.setTag(null);
         this.offerItemDesc.setTag(null);
         this.tvCourseArticle.setTag(null);
         this.tvCourseQuiz.setTag(null);
@@ -93,9 +99,10 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
         this.tvSubjects.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback27 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
-        mCallback28 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
-        mCallback29 = new te.app.aljoud.generated.callback.OnClickListener(this, 3);
+        mCallback23 = new te.app.aljoud.generated.callback.OnClickListener(this, 4);
+        mCallback21 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
+        mCallback20 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback22 = new te.app.aljoud.generated.callback.OnClickListener(this, 3);
         invalidateAll();
     }
 
@@ -170,13 +177,16 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        boolean viewmodelCourseNameJavaLangObjectNull = false;
         java.lang.String viewmodelCourseImage = null;
         java.lang.String viewmodelCourseCountVideosTimeConcatJavaLangStringConcatTvCourseTimeAndroidStringCourseTime = null;
+        boolean viewmodelCourseMyCourse = false;
         java.lang.String viewmodelCourseName = null;
         java.lang.String viewmodelCourseCountQuizzesConcatJavaLangString = null;
         java.lang.String viewmodelCourseDiscountConcatJavaLangStringConcatViewmodelCourseCurrencyCode = null;
         te.app.aljoud.pages.university.models.course.Course viewmodelCourse = null;
         java.lang.String viewmodelCourseDesc = null;
+        int viewmodelCourseNameJavaLangObjectNullViewVISIBLEViewGONE = 0;
         java.lang.String viewmodelCourseCurrencyCode = null;
         java.lang.String stringValueOfViewmodelCourseRate = null;
         java.lang.String viewmodelCourseCountVideosTime = null;
@@ -192,10 +202,12 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
         java.lang.String viewmodelCourseDiscountConcatJavaLangString = null;
         te.app.aljoud.pages.university.models.course.Currency viewmodelCourseCurrency = null;
         java.lang.String viewmodelCourseDiscount = null;
+        boolean ViewmodelCourseMyCourse1 = false;
         java.lang.String viewmodelCourseCountArticlesConcatJavaLangStringConcatTvCourseArticleAndroidStringCourseArticle = null;
         java.lang.String viewmodelCourseInstructorName = null;
         int viewmodelCourseInstructorJavaLangObjectNullViewVISIBLEViewGONE = 0;
         java.lang.String viewmodelCourseCountArticles = null;
+        int viewmodelCourseMyCourseViewVISIBLEViewGONE = 0;
         te.app.aljoud.pages.auth.models.UserData viewmodelCourseInstructor = null;
         te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel viewmodel = mViewmodel;
 
@@ -212,6 +224,8 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
                 if (viewmodelCourse != null) {
                     // read viewmodel.course.image
                     viewmodelCourseImage = viewmodelCourse.getImage();
+                    // read viewmodel.course.myCourse
+                    viewmodelCourseMyCourse = viewmodelCourse.isMyCourse();
                     // read viewmodel.course.name
                     viewmodelCourseName = viewmodelCourse.getName();
                     // read viewmodel.course.desc
@@ -235,22 +249,42 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
                 }
 
 
-                if (viewmodelCourseCountVideosTime != null) {
-                    // read viewmodel.course.countVideosTime.concat(" ")
-                    viewmodelCourseCountVideosTimeConcatJavaLangString = viewmodelCourseCountVideosTime.concat(" ");
-                }
+                // read !viewmodel.course.myCourse
+                ViewmodelCourseMyCourse1 = !viewmodelCourseMyCourse;
+                // read viewmodel.course.name != null
+                viewmodelCourseNameJavaLangObjectNull = (viewmodelCourseName) != (null);
                 // read String.valueOf(viewmodel.course.rate)
                 stringValueOfViewmodelCourseRate = java.lang.String.valueOf(viewmodelCourseRate);
                 // read viewmodel.course.instructor != null
                 viewmodelCourseInstructorJavaLangObjectNull = (viewmodelCourseInstructor) != (null);
             if((dirtyFlags & 0x7L) != 0) {
-                if(viewmodelCourseInstructorJavaLangObjectNull) {
+                if(ViewmodelCourseMyCourse1) {
+                        dirtyFlags |= 0x100L;
+                }
+                else {
+                        dirtyFlags |= 0x80L;
+                }
+            }
+            if((dirtyFlags & 0x7L) != 0) {
+                if(viewmodelCourseNameJavaLangObjectNull) {
                         dirtyFlags |= 0x10L;
                 }
                 else {
                         dirtyFlags |= 0x8L;
                 }
             }
+            if((dirtyFlags & 0x7L) != 0) {
+                if(viewmodelCourseInstructorJavaLangObjectNull) {
+                        dirtyFlags |= 0x40L;
+                }
+                else {
+                        dirtyFlags |= 0x20L;
+                }
+            }
+                if (viewmodelCourseCountVideosTime != null) {
+                    // read viewmodel.course.countVideosTime.concat(" ")
+                    viewmodelCourseCountVideosTimeConcatJavaLangString = viewmodelCourseCountVideosTime.concat(" ");
+                }
                 if (viewmodelCourseCountQuizzes != null) {
                     // read viewmodel.course.countQuizzes.concat(" ")
                     viewmodelCourseCountQuizzesConcatJavaLangString = viewmodelCourseCountQuizzes.concat(" ");
@@ -277,12 +311,16 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
                 }
 
 
+                // read !viewmodel.course.myCourse ? View.VISIBLE : View.GONE
+                viewmodelCourseMyCourseViewVISIBLEViewGONE = ((ViewmodelCourseMyCourse1) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+                // read viewmodel.course.name != null ? View.VISIBLE : View.GONE
+                viewmodelCourseNameJavaLangObjectNullViewVISIBLEViewGONE = ((viewmodelCourseNameJavaLangObjectNull) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+                // read viewmodel.course.instructor != null ? View.VISIBLE : View.GONE
+                viewmodelCourseInstructorJavaLangObjectNullViewVISIBLEViewGONE = ((viewmodelCourseInstructorJavaLangObjectNull) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
                 if (viewmodelCourseCountVideosTimeConcatJavaLangString != null) {
                     // read viewmodel.course.countVideosTime.concat(" ").concat(@android:string/course_time)
                     viewmodelCourseCountVideosTimeConcatJavaLangStringConcatTvCourseTimeAndroidStringCourseTime = viewmodelCourseCountVideosTimeConcatJavaLangString.concat(tvCourseTime.getResources().getString(R.string.course_time));
                 }
-                // read viewmodel.course.instructor != null ? View.VISIBLE : View.GONE
-                viewmodelCourseInstructorJavaLangObjectNullViewVISIBLEViewGONE = ((viewmodelCourseInstructorJavaLangObjectNull) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
                 if (viewmodelCourseCountQuizzesConcatJavaLangString != null) {
                     // read viewmodel.course.countQuizzes.concat(" ").concat(@android:string/course_quiz)
                     viewmodelCourseCountQuizzesConcatJavaLangStringConcatTvCourseQuizAndroidStringCourseQuiz = viewmodelCourseCountQuizzesConcatJavaLangString.concat(tvCourseQuiz.getResources().getString(R.string.course_quiz));
@@ -303,6 +341,8 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
             this.cardInstructor.setVisibility(viewmodelCourseInstructorJavaLangObjectNullViewVISIBLEViewGONE);
             te.app.aljoud.base.ApplicationBinding.loadFullImage(this.icInstructor, viewmodelCourseInstructorImage);
             te.app.aljoud.base.ApplicationBinding.loadFullImage(this.icUniversity, viewmodelCourseImage);
+            this.mboundView0.setVisibility(viewmodelCourseNameJavaLangObjectNullViewVISIBLEViewGONE);
+            this.mboundView16.setVisibility(viewmodelCourseMyCourseViewVISIBLEViewGONE);
             te.app.aljoud.base.ApplicationBinding.setRate(this.offerItemDesc, stringValueOfViewmodelCourseRate);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvCourseArticle, viewmodelCourseCountArticlesConcatJavaLangStringConcatTvCourseArticleAndroidStringCourseArticle);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvCourseQuiz, viewmodelCourseCountQuizzesConcatJavaLangStringConcatTvCourseQuizAndroidStringCourseQuiz);
@@ -317,16 +357,17 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.icArrowRight.setOnClickListener(mCallback27);
-            this.mboundView15.setOnClickListener(mCallback28);
-            this.mboundView16.setOnClickListener(mCallback29);
+            this.icArrowRight.setOnClickListener(mCallback20);
+            this.mboundView15.setOnClickListener(mCallback21);
+            this.mboundView16.setOnClickListener(mCallback22);
+            this.mboundView17.setOnClickListener(mCallback23);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
+            case 4: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -341,7 +382,7 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
 
 
 
-                    viewmodel.action(te.app.aljoud.utils.Constants.INSTRUCTOR);
+                    viewmodel.action(te.app.aljoud.utils.Constants.ASK);
                 }
                 break;
             }
@@ -364,7 +405,7 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
                 }
                 break;
             }
-            case 3: {
+            case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -379,7 +420,24 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
 
 
 
-                    viewmodel.action(te.app.aljoud.utils.Constants.ASK);
+                    viewmodel.action(te.app.aljoud.utils.Constants.INSTRUCTOR);
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.byCourse();
                 }
                 break;
             }
@@ -391,8 +449,12 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
         flag 0 (0x1L): viewmodel
         flag 1 (0x2L): viewmodel.course
         flag 2 (0x3L): null
-        flag 3 (0x4L): viewmodel.course.instructor != null ? View.VISIBLE : View.GONE
-        flag 4 (0x5L): viewmodel.course.instructor != null ? View.VISIBLE : View.GONE
+        flag 3 (0x4L): viewmodel.course.name != null ? View.VISIBLE : View.GONE
+        flag 4 (0x5L): viewmodel.course.name != null ? View.VISIBLE : View.GONE
+        flag 5 (0x6L): viewmodel.course.instructor != null ? View.VISIBLE : View.GONE
+        flag 6 (0x7L): viewmodel.course.instructor != null ? View.VISIBLE : View.GONE
+        flag 7 (0x8L): !viewmodel.course.myCourse ? View.VISIBLE : View.GONE
+        flag 8 (0x9L): !viewmodel.course.myCourse ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

@@ -1,5 +1,7 @@
 package te.app.aljoud.pages.home.viewModels;
 
+import android.view.View;
+
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 import javax.inject.Inject;
@@ -38,7 +40,13 @@ public class HomeViewModel extends BaseViewModel {
 
     @Bindable
     public void setHomeMainData(HomeMainData homeMainData) {
-        getUniversityAdapter().update(homeMainData.getUniversityList());
+        if (homeMainData.getCurrentPage() > 1) {
+            getUniversityAdapter().loadMore(homeMainData.getUniversityList());
+        } else {
+            getUniversityAdapter().update(homeMainData.getUniversityList());
+            notifyChange(BR.universityAdapter);
+        }
+        setSearchProgressVisible(View.GONE);
         notifyChange(BR.homeMainData);
         this.homeMainData = homeMainData;
     }

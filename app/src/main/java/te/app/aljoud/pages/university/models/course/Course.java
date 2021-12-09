@@ -70,6 +70,8 @@ public class Course {
 
     @SerializedName("desc")
     private String desc;
+    @SerializedName("my_course")
+    private boolean myCourse;
 
     public String getImage() {
         return image;
@@ -157,5 +159,13 @@ public class Course {
 
     public String getDesc() {
         return desc;
+    }
+
+    public boolean isMyCourse() {
+        return myCourse;
+    }
+
+    public void setMyCourse(boolean myCourse) {
+        this.myCourse = myCourse;
     }
 }

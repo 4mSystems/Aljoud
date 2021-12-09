@@ -25,7 +25,7 @@ public class AskLessonSheetBindingImpl extends AskLessonSheetBinding implements 
     private final androidx.appcompat.widget.AppCompatEditText mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback47;
+    private final android.view.View.OnClickListener mCallback30;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -86,7 +86,7 @@ public class AskLessonSheetBindingImpl extends AskLessonSheetBinding implements 
         this.rcFiles.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback47 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback30 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -200,7 +200,7 @@ public class AskLessonSheetBindingImpl extends AskLessonSheetBinding implements 
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.icFile.setOnClickListener(mCallback47);
+            this.icFile.setOnClickListener(mCallback30);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView1, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView1androidTextAttrChanged);
         }
         if ((dirtyFlags & 0xbL) != 0) {

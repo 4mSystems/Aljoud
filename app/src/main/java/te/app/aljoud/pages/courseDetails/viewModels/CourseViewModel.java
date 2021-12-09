@@ -14,12 +14,15 @@ import javax.inject.Inject;
 import io.reactivex.disposables.CompositeDisposable;
 import te.app.aljoud.BR;
 import te.app.aljoud.base.BaseViewModel;
+import te.app.aljoud.base.MyApplication;
 import te.app.aljoud.connection.FileObject;
 import te.app.aljoud.model.base.Mutable;
 import te.app.aljoud.pages.courseDetails.adapters.pickFilesAdapter;
 import te.app.aljoud.pages.courseDetails.models.AskRequest;
 import te.app.aljoud.pages.university.models.course.Course;
 import te.app.aljoud.repository.HomeRepository;
+import te.app.aljoud.utils.Constants;
+import te.app.aljoud.utils.session.UserHelper;
 
 public class CourseViewModel extends BaseViewModel {
     public MutableLiveData<Mutable> liveData;
@@ -47,6 +50,13 @@ public class CourseViewModel extends BaseViewModel {
             compositeDisposable.add(homeRepository.ask(getAskRequest(), getFileObjectList()));
     }
 
+    public void byCourse() {
+        if (UserHelper.getInstance(MyApplication.getInstance()).getUserData() != null)
+            compositeDisposable.add(homeRepository.buyCourse(getPassingObject().getId()));
+        else
+            liveData.setValue(new Mutable(Constants.LOGIN));
+    }
+
     @Bindable
     public Course getCourse() {
         return course;
@@ -72,6 +82,8 @@ public class CourseViewModel extends BaseViewModel {
     }
 
     public void action(String action) {
+        if (action.equals(Constants.ASK) && UserHelper.getInstance(MyApplication.getInstance()).getUserData() == null)
+            action = Constants.LOGIN;
         liveData.setValue(new Mutable(action));
     }
 

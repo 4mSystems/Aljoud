@@ -24,9 +24,9 @@ public class AskSheetBindingImpl extends AskSheetBinding implements te.app.aljou
     private final androidx.appcompat.widget.AppCompatEditText mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback45;
+    private final android.view.View.OnClickListener mCallback27;
     @Nullable
-    private final android.view.View.OnClickListener mCallback44;
+    private final android.view.View.OnClickListener mCallback28;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -88,8 +88,8 @@ public class AskSheetBindingImpl extends AskSheetBinding implements te.app.aljou
         this.rcFiles.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback45 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
-        mCallback44 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback27 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback28 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -203,8 +203,8 @@ public class AskSheetBindingImpl extends AskSheetBinding implements te.app.aljou
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.btAsk.setOnClickListener(mCallback45);
-            this.icFile.setOnClickListener(mCallback44);
+            this.btAsk.setOnClickListener(mCallback28);
+            this.icFile.setOnClickListener(mCallback27);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView1, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView1androidTextAttrChanged);
         }
         if ((dirtyFlags & 0xbL) != 0) {
@@ -222,23 +222,6 @@ public class AskSheetBindingImpl extends AskSheetBinding implements te.app.aljou
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // viewModel
-                te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel viewModel = mViewModel;
-                // viewModel != null
-                boolean viewModelJavaLangObjectNull = false;
-
-
-
-                viewModelJavaLangObjectNull = (viewModel) != (null);
-                if (viewModelJavaLangObjectNull) {
-
-
-                    viewModel.ask();
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // viewModel
@@ -255,6 +238,23 @@ public class AskSheetBindingImpl extends AskSheetBinding implements te.app.aljou
 
 
                     viewModel.action(te.app.aljoud.utils.Constants.PICKED_SUCCESSFULLY);
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewModel
+                te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+                    viewModel.ask();
                 }
                 break;
             }

@@ -7,43 +7,46 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.aljoud.R;
-import te.app.aljoud.customViews.views.CustomTextViewMedium;
 import te.app.aljoud.pages.settings.viewModels.SettingsViewModel;
 
 public abstract class FragmentContactsBinding extends ViewDataBinding {
   @NonNull
-  public final AppCompatImageView contactHeaderImg;
+  public final Barrier br;
 
   @NonNull
-  public final AppCompatImageView faceBook;
+  public final MaterialButton btAsk;
 
   @NonNull
-  public final CustomTextViewMedium text;
+  public final AppCompatImageView icFile;
 
   @NonNull
-  public final AppCompatImageView whats;
+  public final TextInputLayout inputReply;
 
   @NonNull
-  public final AppCompatImageView youtube;
+  public final RecyclerView rcFiles;
 
   @Bindable
   protected SettingsViewModel mViewmodel;
 
   protected FragmentContactsBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatImageView contactHeaderImg, AppCompatImageView faceBook, CustomTextViewMedium text,
-      AppCompatImageView whats, AppCompatImageView youtube) {
+      Barrier br, MaterialButton btAsk, AppCompatImageView icFile, TextInputLayout inputReply,
+      RecyclerView rcFiles) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.contactHeaderImg = contactHeaderImg;
-    this.faceBook = faceBook;
-    this.text = text;
-    this.whats = whats;
-    this.youtube = youtube;
+    this.br = br;
+    this.btAsk = btAsk;
+    this.icFile = icFile;
+    this.inputReply = inputReply;
+    this.rcFiles = rcFiles;
   }
 
   public abstract void setViewmodel(@Nullable SettingsViewModel viewmodel);

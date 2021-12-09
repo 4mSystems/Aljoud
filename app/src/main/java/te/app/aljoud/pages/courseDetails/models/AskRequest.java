@@ -9,6 +9,8 @@ public class AskRequest {
     private String courseId;
     @SerializedName("lesson_id")
     private String lessonId;
+    @SerializedName("service_id")
+    private String serviceId;
 
     public String getMessage() {
         return message;
@@ -32,5 +34,13 @@ public class AskRequest {
 
     public void setLessonId(String lessonId) {
         this.lessonId = lessonId;
+    }
+
+    public void setServiceId(String serviceId) {
+        this.serviceId = serviceId;
+    }
+
+    public String getServiceId() {
+        return serviceId;
     }
 }

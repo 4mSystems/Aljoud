@@ -14,51 +14,89 @@ public class FragmentContactsBindingImpl extends FragmentContactsBinding impleme
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.contact_header_img, 4);
-        sViewsWithIds.put(R.id.text, 5);
+        sViewsWithIds.put(R.id.input_reply, 5);
+        sViewsWithIds.put(R.id.br, 6);
     }
     // views
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
+    @NonNull
+    private final androidx.appcompat.widget.AppCompatEditText mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback3;
+    private final android.view.View.OnClickListener mCallback32;
     @Nullable
-    private final android.view.View.OnClickListener mCallback4;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback2;
+    private final android.view.View.OnClickListener mCallback31;
     // values
     // listeners
     // Inverse Binding Event Handlers
+    private androidx.databinding.InverseBindingListener mboundView1androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+        @Override
+        public void onChange() {
+            // Inverse of viewmodel.askRequest.message
+            //         is viewmodel.askRequest.setMessage((java.lang.String) callbackArg_0)
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView1);
+            // localize variables for thread safety
+            // viewmodel.askRequest.message
+            java.lang.String viewmodelAskRequestMessage = null;
+            // viewmodel != null
+            boolean viewmodelJavaLangObjectNull = false;
+            // viewmodel.askRequest != null
+            boolean viewmodelAskRequestJavaLangObjectNull = false;
+            // viewmodel.askRequest
+            te.app.aljoud.pages.courseDetails.models.AskRequest viewmodelAskRequest = null;
+            // viewmodel
+            te.app.aljoud.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
+
+
+
+            viewmodelJavaLangObjectNull = (viewmodel) != (null);
+            if (viewmodelJavaLangObjectNull) {
+
+
+                viewmodelAskRequest = viewmodel.getAskRequest();
+
+                viewmodelAskRequestJavaLangObjectNull = (viewmodelAskRequest) != (null);
+                if (viewmodelAskRequestJavaLangObjectNull) {
+
+
+
+
+                    viewmodelAskRequest.setMessage(((java.lang.String) (callbackArg_0)));
+                }
+            }
+        }
+    };
 
     public FragmentContactsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 7, sIncludes, sViewsWithIds));
     }
     private FragmentContactsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[4]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[1]
-            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[5]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[3]
+            , (androidx.constraintlayout.widget.Barrier) bindings[6]
+            , (com.google.android.material.button.MaterialButton) bindings[4]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[2]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[5]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[3]
             );
-        this.faceBook.setTag(null);
+        this.btAsk.setTag(null);
+        this.icFile.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
-        this.whats.setTag(null);
-        this.youtube.setTag(null);
+        this.mboundView1 = (androidx.appcompat.widget.AppCompatEditText) bindings[1];
+        this.mboundView1.setTag(null);
+        this.rcFiles.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback3 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
-        mCallback4 = new te.app.aljoud.generated.callback.OnClickListener(this, 3);
-        mCallback2 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback32 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
+        mCallback31 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x2L;
+                mDirtyFlags = 0x8L;
         }
         requestRebind();
     }
@@ -110,6 +148,18 @@ public class FragmentContactsBindingImpl extends FragmentContactsBinding impleme
             }
             return true;
         }
+        else if (fieldId == BR.askRequest) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x2L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.filesAdapter) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x4L;
+            }
+            return true;
+        }
         return false;
     }
 
@@ -120,14 +170,52 @@ public class FragmentContactsBindingImpl extends FragmentContactsBinding impleme
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        java.lang.String viewmodelAskRequestMessage = null;
+        te.app.aljoud.pages.courseDetails.models.AskRequest viewmodelAskRequest = null;
+        te.app.aljoud.pages.courseDetails.adapters.pickFilesAdapter viewmodelFilesAdapter = null;
         te.app.aljoud.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
+
+        if ((dirtyFlags & 0xfL) != 0) {
+
+
+            if ((dirtyFlags & 0xbL) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.askRequest
+                        viewmodelAskRequest = viewmodel.getAskRequest();
+                    }
+
+
+                    if (viewmodelAskRequest != null) {
+                        // read viewmodel.askRequest.message
+                        viewmodelAskRequestMessage = viewmodelAskRequest.getMessage();
+                    }
+            }
+            if ((dirtyFlags & 0xdL) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.filesAdapter
+                        viewmodelFilesAdapter = viewmodel.getFilesAdapter();
+                    }
+            }
+        }
         // batch finished
-        if ((dirtyFlags & 0x2L) != 0) {
+        if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.faceBook.setOnClickListener(mCallback2);
-            this.whats.setOnClickListener(mCallback4);
-            this.youtube.setOnClickListener(mCallback3);
+            this.btAsk.setOnClickListener(mCallback32);
+            this.icFile.setOnClickListener(mCallback31);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView1, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView1androidTextAttrChanged);
+        }
+        if ((dirtyFlags & 0xbL) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView1, viewmodelAskRequestMessage);
+        }
+        if ((dirtyFlags & 0xdL) != 0) {
+            // api target 1
+
+            te.app.aljoud.base.ApplicationBinding.getItemsV2Binding(this.rcFiles, viewmodelFilesAdapter, "1", "2");
         }
     }
     // Listener Stub Implementations
@@ -147,24 +235,7 @@ public class FragmentContactsBindingImpl extends FragmentContactsBinding impleme
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.toYoutube();
-                }
-                break;
-            }
-            case 3: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.aljoud.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.toWhats();
+                    viewmodel.sendContact();
                 }
                 break;
             }
@@ -181,7 +252,9 @@ public class FragmentContactsBindingImpl extends FragmentContactsBinding impleme
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.toFacebook();
+
+
+                    viewmodel.action(te.app.aljoud.utils.Constants.PICKED_SUCCESSFULLY);
                 }
                 break;
             }
@@ -191,7 +264,9 @@ public class FragmentContactsBindingImpl extends FragmentContactsBinding impleme
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewmodel
-        flag 1 (0x2L): null
+        flag 1 (0x2L): viewmodel.askRequest
+        flag 2 (0x3L): viewmodel.filesAdapter
+        flag 3 (0x4L): null
     flag mapping end*/
     //end
 }

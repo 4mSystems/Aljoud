@@ -46,7 +46,7 @@ public class TesImageDialog extends androidx.appcompat.widget.AppCompatImageView
 
 class TesDialog extends RelativeLayout {
 
-    private Context context;
+    Context context;
 
     public TesDialog(Context context) {
         super(context);

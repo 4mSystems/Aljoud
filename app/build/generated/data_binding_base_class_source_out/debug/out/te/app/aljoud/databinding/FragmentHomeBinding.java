@@ -4,6 +4,7 @@ package te.app.aljoud.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
@@ -21,15 +22,19 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
   public final MaterialCardView cardTabs;
 
   @NonNull
+  public final FrameLayout homeFrame;
+
+  @NonNull
   public final TabLayout tabs;
 
   @Bindable
   protected HomeViewModel mViewmodel;
 
   protected FragmentHomeBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      MaterialCardView cardTabs, TabLayout tabs) {
+      MaterialCardView cardTabs, FrameLayout homeFrame, TabLayout tabs) {
     super(_bindingComponent, _root, _localFieldCount);
     this.cardTabs = cardTabs;
+    this.homeFrame = homeFrame;
     this.tabs = tabs;
   }
 

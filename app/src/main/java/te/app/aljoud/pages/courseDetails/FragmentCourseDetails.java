@@ -2,7 +2,6 @@ package te.app.aljoud.pages.courseDetails;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -71,6 +70,12 @@ public class FragmentCourseDetails extends BaseFragment {
                 showInstructorInfo();
             } else if (Constants.ASK.equals(((Mutable) o).message)) {
                 showAsk();
+            } else if (Constants.BUY_COURSE.equals(((Mutable) o).message)) {
+                toastMessage(((StatusMessage) mutable.object).mMessage);
+            } else if (Constants.LOGIN.equals(((Mutable) o).message)) {
+                toastMessage(((StatusMessage) mutable.object).mMessage);
+                viewModel.getCourse().setMyCourse(true);
+                viewModel.notifyChange(BR.course);
             } else if (Constants.DIALOG.equals(((Mutable) o).message)) {
                 if (askDialog != null) {
                     toastMessage(((StatusMessage) mutable.object).mMessage);

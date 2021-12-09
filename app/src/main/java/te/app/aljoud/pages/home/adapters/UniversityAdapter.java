@@ -32,6 +32,10 @@ public class UniversityAdapter extends RecyclerView.Adapter<UniversityAdapter.Vi
         this.universities = new ArrayList<>();
     }
 
+    public List<University> getUniversities() {
+        return universities;
+    }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
@@ -57,6 +61,12 @@ public class UniversityAdapter extends RecyclerView.Adapter<UniversityAdapter.Vi
         this.universities.clear();
         universities.addAll(dataList);
         notifyDataSetChanged();
+    }
+
+    public void loadMore(@NotNull List<University> dataList) {
+        int start = universities.size();
+        universities.addAll(dataList);
+        notifyItemRangeInserted(start, dataList.size());
     }
 
     @Override

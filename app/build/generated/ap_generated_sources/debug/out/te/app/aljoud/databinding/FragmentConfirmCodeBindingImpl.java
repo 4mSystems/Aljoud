@@ -24,11 +24,11 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback33;
+    private final android.view.View.OnClickListener mCallback39;
     @Nullable
-    private final android.view.View.OnClickListener mCallback32;
+    private final android.view.View.OnClickListener mCallback40;
     @Nullable
-    private final android.view.View.OnClickListener mCallback31;
+    private final android.view.View.OnClickListener mCallback38;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -94,9 +94,9 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
         this.tvLoginForget.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback33 = new te.app.aljoud.generated.callback.OnClickListener(this, 3);
-        mCallback32 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
-        mCallback31 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback39 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
+        mCallback40 = new te.app.aljoud.generated.callback.OnClickListener(this, 3);
+        mCallback38 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -292,10 +292,10 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback33);
-            this.back.setOnClickListener(mCallback31);
+            this.appCompatButtonNext.setOnClickListener(mCallback40);
+            this.back.setOnClickListener(mCallback38);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.pinValidate, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, pinValidateandroidTextAttrChanged);
-            this.tvLoginForget.setOnClickListener(mCallback32);
+            this.tvLoginForget.setOnClickListener(mCallback39);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
@@ -307,23 +307,6 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 3: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.aljoud.pages.auth.confirmCode.ConfirmViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.confirmCode();
-                }
-                break;
-            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -338,6 +321,23 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
 
 
                     viewmodel.resendCode();
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.aljoud.pages.auth.confirmCode.ConfirmViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.confirmCode();
                 }
                 break;
             }

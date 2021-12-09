@@ -24,16 +24,12 @@ public class Constants {
     public final static String BUY_OFFER = "BUY_OFFER";
     public final static String CONVERSATIONS = "CONVERSATIONS";
     public final static String INBOX = "INBOX";
-    public final static int CLIENTS_ID = 4;
-    public final static String CLIENTS = "CLIENTS";
-    public final static String GOVS = "GOVS";
-    public final static String SHOW_GOVS = "SHOW_GOVS";
+    public final static String BUY_COURSE = "BUY_COURSE";
+    public final static String MY_COURSES = "MY_COURSES";
+    public final static String SERVICES = "SERVICES";
     public final static String HOME = "HOME";
-    public final static int PRESSURE_ID_IMAGE = 11; // صور المكبس
-    public final static int SMOKE_ID_IMAGE = 12; // صور غرفه الغاز
-
     public final static String LOGOUT = "logout";
-    public final static String SELECT_PART = "SELECT_PART";
+    public final static String GET_SERVICES = "GET_SERVICES";
     public final static String EMPTY_WARNING = "EMPTY_WARNING";
 
     public final static String SELECT_MODELS = "SELECT_MODELS";

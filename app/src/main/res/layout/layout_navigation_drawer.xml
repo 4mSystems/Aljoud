@@ -62,7 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="start"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorPrimaryDark"
                 android:orientation="vertical">
 
                 <androidx.core.widget.NestedScrollView
@@ -75,13 +75,20 @@
                         android:layout_below="@+id/rl_navigation_drawer_logo"
                         android:orientation="vertical">
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/vv_navigation_drawer_image"
-                            android:layout_width="@dimen/dp60h"
-                            android:layout_height="@dimen/dp60h"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="@dimen/dp25h"
-                            android:src="@drawable/logo" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_wave">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/vv_navigation_drawer_image"
+                                android:layout_width="@dimen/dp90h"
+                                android:layout_height="@dimen/dp90h"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:src="@drawable/logo" />
+
+                        </RelativeLayout>
 
 
                         <te.app.aljoud.customViews.views.CustomTextViewMedium
@@ -98,6 +105,7 @@
                             android:text="@string/inbox"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@color/white"
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -106,7 +114,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="@dimen/dp15h"
-                            android:background="@color/line_color" />
+
+                            android:background="@color/overlayBackground"
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}" />
 
                         <te.app.aljoud.customViews.views.CustomTextViewMedium
                             android:id="@+id/tv_agents"
@@ -118,10 +128,12 @@
                             android:drawableStart="@drawable/ic_assignment"
                             android:drawablePadding="@dimen/dp8w"
                             android:gravity="center_vertical"
-                            android:onClick="@{()->menuViewModel.buttonAction(Constants.INBOX)}"
+                            android:onClick="@{()->menuViewModel.buttonAction(Constants.MY_COURSES)}"
                             android:text="@string/my_courses"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
                             android:textColor="@color/white"
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/view_profile" />
 
@@ -130,7 +142,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="@dimen/dp15h"
-                            android:background="@color/line_color"
+                            android:background="@color/overlayBackground"
+
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_agents" />
@@ -148,7 +162,9 @@
                             android:onClick="@{()-> menuViewModel.buttonAction(Constants.OFFERS)}"
                             android:text="@string/offers"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
                             android:textColor="@color/white"
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/view_agent" />
 
@@ -157,7 +173,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="@dimen/dp15h"
-                            android:background="@color/line_color"
+                            android:background="@color/overlayBackground"
+
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_contact" />
@@ -171,11 +189,13 @@
                             android:layout_marginEnd="@dimen/dp12w"
                             android:drawableStart="@drawable/ic_request_course"
                             android:drawablePadding="@dimen/dp8w"
-                            android:onClick="@{()-> menuViewModel.buttonAction(Constants.TERMS)}"
+                            android:onClick="@{()-> menuViewModel.buttonAction(Constants.SERVICES)}"
                             android:text="@string/request_course"
                             android:textAlignment="viewStart"
+
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@color/white"
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/view_support" />
 
@@ -184,7 +204,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="@dimen/dp15h"
-                            android:background="@color/line_color"
+                            android:background="@color/overlayBackground"
+
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_terms" />
@@ -202,7 +224,9 @@
                             android:onClick="@{()-> menuViewModel.buttonAction(Constants.CONTACT)}"
                             android:text="@string/contact_us"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
                             android:textColor="@color/white"
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/view_agent" />
 
@@ -211,7 +235,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="@dimen/dp15h"
-                            android:background="@color/line_color"
+                            android:background="@color/overlayBackground"
+
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_contact" />
@@ -240,7 +266,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="@dimen/dp15h"
-                            android:background="@color/line_color"
+                            android:background="@color/overlayBackground"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_support" />
@@ -268,7 +294,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="@dimen/dp15h"
-                            android:background="@color/line_color"
+                            android:background="@color/overlayBackground"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_share" />
@@ -294,7 +320,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="@dimen/dp15h"
-                            android:background="@color/line_color"
+                            android:background="@color/overlayBackground"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_share" />
@@ -320,7 +346,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="@dimen/dp15h"
-                            android:background="@color/line_color"
+                            android:background="@color/overlayBackground"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_language" />
@@ -335,9 +361,11 @@
                             android:drawablePadding="@dimen/dp6w"
                             android:gravity="center"
                             android:onClick="@{()-> menuViewModel.buttonAction(Constants.DIALOG)}"
+
                             android:text="@string/logout"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="@color/white" />
+                            android:textColor="@color/white"
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}" />
 
                         <te.app.aljoud.customViews.tesDialog.TesImageDialog
                             android:id="@+id/grand_logo"

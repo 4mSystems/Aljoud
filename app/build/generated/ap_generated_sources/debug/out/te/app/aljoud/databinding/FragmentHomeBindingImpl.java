@@ -14,14 +14,13 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.card_tabs, 2);
-        sViewsWithIds.put(R.id.tabs, 3);
+        sViewsWithIds.put(R.id.card_tabs, 1);
+        sViewsWithIds.put(R.id.tabs, 2);
+        sViewsWithIds.put(R.id.home_frame, 3);
     }
     // views
     @NonNull
-    private final androidx.core.widget.NestedScrollView mboundView0;
-    @NonNull
-    private final androidx.recyclerview.widget.RecyclerView mboundView1;
+    private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     // values
     // listeners
@@ -32,13 +31,12 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
     }
     private FragmentHomeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (com.google.android.material.card.MaterialCardView) bindings[2]
-            , (com.google.android.material.tabs.TabLayout) bindings[3]
+            , (com.google.android.material.card.MaterialCardView) bindings[1]
+            , (android.widget.FrameLayout) bindings[3]
+            , (com.google.android.material.tabs.TabLayout) bindings[2]
             );
-        this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
+        this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView1 = (androidx.recyclerview.widget.RecyclerView) bindings[1];
-        this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();
@@ -47,7 +45,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x4L;
+                mDirtyFlags = 0x2L;
         }
         requestRebind();
     }
@@ -75,13 +73,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
     }
 
     public void setViewmodel(@Nullable te.app.aljoud.pages.home.viewModels.HomeViewModel Viewmodel) {
-        updateRegistration(0, Viewmodel);
         this.mViewmodel = Viewmodel;
-        synchronized(this) {
-            mDirtyFlags |= 0x1L;
-        }
-        notifyPropertyChanged(BR.viewmodel);
-        super.requestRebind();
     }
 
     @Override
@@ -99,12 +91,6 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
             }
             return true;
         }
-        else if (fieldId == BR.universityAdapter) {
-            synchronized(this) {
-                    mDirtyFlags |= 0x2L;
-            }
-            return true;
-        }
         return false;
     }
 
@@ -115,24 +101,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        te.app.aljoud.pages.home.adapters.UniversityAdapter viewmodelUniversityAdapter = null;
-        te.app.aljoud.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
-
-        if ((dirtyFlags & 0x7L) != 0) {
-
-
-
-                if (viewmodel != null) {
-                    // read viewmodel.universityAdapter
-                    viewmodelUniversityAdapter = viewmodel.getUniversityAdapter();
-                }
-        }
         // batch finished
-        if ((dirtyFlags & 0x7L) != 0) {
-            // api target 1
-
-            te.app.aljoud.base.ApplicationBinding.getItemsV2Binding(this.mboundView1, viewmodelUniversityAdapter, "2", "1");
-        }
     }
     // Listener Stub Implementations
     // callback impls
@@ -140,8 +109,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewmodel
-        flag 1 (0x2L): viewmodel.universityAdapter
-        flag 2 (0x3L): null
+        flag 1 (0x2L): null
     flag mapping end*/
     //end
 }

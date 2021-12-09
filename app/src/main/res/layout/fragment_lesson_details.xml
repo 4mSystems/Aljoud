@@ -8,6 +8,7 @@
 
         <import type="te.app.aljoud.utils.session.UserHelper" />
         <import type="te.app.aljoud.utils.Constants" />
+        <import type="android.view.View" />
 
         <variable
             name="viewmodel"
@@ -170,6 +171,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/line_color"
+            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}"
             app:layout_constraintBottom_toBottomOf="parent">
 
             <com.google.android.material.button.MaterialButton

@@ -2,7 +2,7 @@ package te.app.aljoud.utils;
 
 public class URLS {
     public final static String BASE_URL = "https://aljoud-edu.com/api/";
-    public final static String CONTACT = "app/complains_suggestions";
+    public final static String CONTACT = "store-inbox";
     public final static String HOME = "home/university?page=";
     public final static String UNIVERSITY_DETAILS = "home/university/colleges/";
     public final static String LEVELS = "home/college/levels/";
@@ -17,6 +17,7 @@ public class URLS {
     public final static String ASK_LESSON = "Ask-in-lesson";
     public final static String OFFERS = "offers?page=";
     public final static String BUY_OFFER = "student/buy/offer/";
+    public final static String BUY_COURSE = "student/buy/course/";
     public final static String ABOUT = "app/about-us";
     public static final String CHANGE_PROFILE_PASSWORD = "user/change-password";
     public static final String CHANGE_PASSWORD = "password/change";
@@ -26,4 +27,7 @@ public class URLS {
     public static final String REGISTER = "sign_up";
     public static final String LOGIN_PASSWORD = "login";
     public static final String CONVERSATIONS = "inboxes?page=";
+    public static final String MY_COURSES = "home/my_courses?page=";
+    public static final String SERVICES = "helpers/get_services";
+    public static final String SEND_SERVICE_REQUEST = "Request-service";
 }

@@ -4,22 +4,11 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class HomeMainData {
+import te.app.aljoud.model.PaginateMain;
+
+public class HomeMainData extends PaginateMain {
     @SerializedName("data")
     private List<University> universityList;
-//	@SerializedName("my_courses")
-//	private Object myCourses;
-//
-//	@SerializedName("universities")
-//	private Universities universities;
-//
-//	public Object getMyCourses(){
-//		return myCourses;
-//	}
-//
-//	public Universities getUniversities(){
-//		return universities;
-//	}
 
     public List<University> getUniversityList() {
         return universityList;

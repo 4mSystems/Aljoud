@@ -29,9 +29,9 @@ public class FragmentChatBindingImpl extends FragmentChatBinding implements te.a
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback6;
+    private final android.view.View.OnClickListener mCallback4;
     @Nullable
-    private final android.view.View.OnClickListener mCallback7;
+    private final android.view.View.OnClickListener mCallback3;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -100,8 +100,8 @@ public class FragmentChatBindingImpl extends FragmentChatBinding implements te.a
         this.sendChat.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback6 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
-        mCallback7 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
+        mCallback4 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
+        mCallback3 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -271,8 +271,8 @@ public class FragmentChatBindingImpl extends FragmentChatBinding implements te.a
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.attach.setOnClickListener(mCallback6);
-            this.more.setOnClickListener(mCallback7);
+            this.attach.setOnClickListener(mCallback3);
+            this.more.setOnClickListener(mCallback4);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.sendChat, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, sendChatandroidTextAttrChanged);
         }
         if ((dirtyFlags & 0xdL) != 0) {
@@ -295,23 +295,6 @@ public class FragmentChatBindingImpl extends FragmentChatBinding implements te.a
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.aljoud.pages.chat.viewmodel.ChatViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.sendMessage();
-                }
-                break;
-            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -326,6 +309,23 @@ public class FragmentChatBindingImpl extends FragmentChatBinding implements te.a
 
 
                     viewmodel.select();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.aljoud.pages.chat.viewmodel.ChatViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.sendMessage();
                 }
                 break;
             }

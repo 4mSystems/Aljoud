@@ -31,63 +31,65 @@ public class BR {
 
   public static final int courseAdapter = 14;
 
-  public static final int filesAdapter = 15;
+  public static final int courseMainData = 15;
 
-  public static final int homeMainData = 16;
+  public static final int filesAdapter = 16;
 
-  public static final int itemChatViewModel = 17;
+  public static final int homeMainData = 17;
 
-  public static final int itemViewModel = 18;
+  public static final int itemChatViewModel = 18;
 
-  public static final int lessonMainData = 19;
+  public static final int itemViewModel = 19;
 
-  public static final int lessonQuizzesAdapter = 20;
+  public static final int lessonMainData = 20;
 
-  public static final int lessonVideosAdapter = 21;
+  public static final int lessonQuizzesAdapter = 21;
 
-  public static final int lessonsAdapter = 22;
+  public static final int lessonVideosAdapter = 22;
 
-  public static final int lessonsItem = 23;
+  public static final int lessonsAdapter = 23;
 
-  public static final int levelsAdapter = 24;
+  public static final int lessonsItem = 24;
 
-  public static final int levelsData = 25;
+  public static final int levelsAdapter = 25;
 
-  public static final int mapAddressViewModel = 26;
+  public static final int levelsData = 26;
 
-  public static final int menuViewModel = 27;
+  public static final int mapAddressViewModel = 27;
 
-  public static final int message = 28;
+  public static final int menuViewModel = 28;
 
-  public static final int offerItem = 29;
+  public static final int message = 29;
 
-  public static final int offersAdapter = 30;
+  public static final int offerItem = 30;
 
-  public static final int offersMainData = 31;
+  public static final int offersAdapter = 31;
 
-  public static final int passingObject = 32;
+  public static final int offersMainData = 32;
 
-  public static final int quizData = 33;
+  public static final int passingObject = 33;
 
-  public static final int quizMainData = 34;
+  public static final int quizData = 34;
 
-  public static final int request = 35;
+  public static final int quizMainData = 35;
 
-  public static final int searchProgressVisible = 36;
+  public static final int request = 36;
 
-  public static final int specialistsItem = 37;
+  public static final int searchProgressVisible = 37;
 
-  public static final int university = 38;
+  public static final int specialistsItem = 38;
 
-  public static final int universityAdapter = 39;
+  public static final int university = 39;
 
-  public static final int universityData = 40;
+  public static final int universityAdapter = 40;
 
-  public static final int videoData = 41;
+  public static final int universityData = 41;
 
-  public static final int videosMainData = 42;
+  public static final int videoData = 42;
 
-  public static final int viewModel = 43;
+  public static final int videosMainData = 43;
 
-  public static final int viewmodel = 44;
+  public static final int viewModel = 44;
+
+  public static final int viewmodel = 45;
 }

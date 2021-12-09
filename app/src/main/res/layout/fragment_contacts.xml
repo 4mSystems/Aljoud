@@ -5,6 +5,7 @@
     tools:context="grand.app.moon.views.fragments.SplashFragment">
 
     <data>
+        <import type="te.app.aljoud.utils.Constants" />
 
         <variable
             name="viewmodel"
@@ -15,65 +16,88 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintTop_toTopOf="parent">
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp4h">
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/contact_header_img"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp150h"
-                android:src="@drawable/contact"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
-            <te.app.aljoud.customViews.views.CustomTextViewMedium
-                android:id="@+id/text"
-                android:layout_width="match_parent"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_reply"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dp12h"
-                android:text="@string/contact_title"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                android:textColor="@color/black"
-                app:layout_constraintTop_toBottomOf="@+id/contact_header_img" />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/face_book"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dp10h"
-                android:onClick="@{()-> viewmodel.toFacebook()}"
-                android:src="@drawable/ic_facebook"
-                app:layout_constraintEnd_toStartOf="@+id/youtube"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text" />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/youtube"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dp10h"
-                android:onClick="@{()-> viewmodel.toYoutube()}"
-                android:src="@drawable/ic_youtube"
-                app:layout_constraintEnd_toStartOf="@+id/whats"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/face_book"
-                app:layout_constraintTop_toBottomOf="@+id/text" />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/whats"
-                android:layout_width="@dimen/dp50w"
-                android:layout_height="@dimen/dp50h"
-                android:layout_marginTop="@dimen/dp10h"
-                android:onClick="@{()-> viewmodel.toWhats()}"
-                android:src="@drawable/ic_whatsapp"
+                android:layout_marginStart="@dimen/dp14w"
+                android:layout_marginTop="@dimen/dp8h"
+                android:layout_marginEnd="@dimen/dp14w"
+                android:hint="@string/contact_comment"
+                android:textColorHint="@color/medium_color"
+                app:helperTextTextColor="@color/black"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/youtube"
-                app:layout_constraintTop_toBottomOf="@+id/text" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp100w"
+                    android:gravity="top"
+                    android:inputType="textImeMultiLine"
+                    android:text="@={viewmodel.askRequest.message}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/overlayBackground" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp20w"
+                android:layout_marginTop="@dimen/dp8h"
+                android:onClick="@{()->viewmodel.action(Constants.PICKED_SUCCESSFULLY)}"
+                android:src="@drawable/ic_note"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/input_reply"
+                app:tint="@color/medium_color" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_files"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp8w"
+                android:layout_marginTop="@dimen/dp8h"
+                android:orientation="horizontal"
+                app:adapter="@{viewmodel.filesAdapter}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ic_file"
+                app:layout_constraintTop_toBottomOf="@id/input_reply"
+                app:orientation="@{`2`}"
+                app:span="@{`1`}"
+                tools:listitem="@layout/item_pick_file" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/br"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:barrierMargin="@dimen/dp8h"
+                app:constraint_referenced_ids="ic_file,rc_files" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8h"
+                android:text="@string/send_contact"
+                android:id="@+id/bt_ask"
+                android:onClick="@{()-> viewmodel.sendContact()}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/colorPrimary"
+                app:icon="@drawable/ic_send"
+                app:iconGravity="textStart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/br" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>

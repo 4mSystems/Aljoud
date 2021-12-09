@@ -44,11 +44,12 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rc_categories"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp10h"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/dp10h"
             app:adapter="@{viewmodel.courseAdapter}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintTop_toBottomOf="@id/rc_levels"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:orientation="@{`1`}"
             app:span="@{`1`}"
             tools:listitem="@layout/item_course" />

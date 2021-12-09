@@ -21,6 +21,7 @@ import te.app.aljoud.pages.courseDetails.models.RateRequest;
 import te.app.aljoud.pages.courseDetails.models.lessons.CourseLessonsResponse;
 import te.app.aljoud.pages.courseDetails.models.videos.VideosResponse;
 import te.app.aljoud.pages.home.models.home.HomeResponse;
+import te.app.aljoud.pages.myCourses.models.MyCourseResponse;
 import te.app.aljoud.pages.offers.models.OffersResponse;
 import te.app.aljoud.pages.university.models.UniversityDetailsResponse;
 import te.app.aljoud.pages.university.models.course.CourseResponse;
@@ -108,5 +109,14 @@ public class HomeRepository extends BaseRepository {
     public Disposable buyOffer(int offerId) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.BUY_OFFER + offerId, new Object(), StatusMessage.class,
                 Constants.BUY_OFFER, true);
+    }
+    public Disposable buyCourse(int courseId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.BUY_COURSE + courseId, new Object(), StatusMessage.class,
+                Constants.BUY_COURSE, true);
+    }
+
+    public Disposable myCourses(int page, boolean showProgress) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.MY_COURSES + page, new Object(), MyCourseResponse.class,
+                Constants.MY_COURSES, showProgress);
     }
 }
