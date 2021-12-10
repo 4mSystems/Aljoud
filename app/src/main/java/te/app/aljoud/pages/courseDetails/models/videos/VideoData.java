@@ -2,6 +2,10 @@ package te.app.aljoud.pages.courseDetails.models.videos;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.IOException;
+import java.net.URL;
+import java.net.URLConnection;
+
 public class VideoData {
 
     @SerializedName("id")
@@ -36,5 +40,17 @@ public class VideoData {
 
     public String getName() {
         return name;
+    }
+
+    public boolean isImage() {
+        try {
+            URLConnection connection = new URL(getFile()).openConnection();
+            String contentType = connection.getHeaderField("Content-Type");
+            return contentType.startsWith("image/");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 }

@@ -18,7 +18,7 @@ public class ItemLevelsBindingImpl extends ItemLevelsBinding implements te.app.a
     // views
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback5;
+    private final android.view.View.OnClickListener mCallback6;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -33,7 +33,7 @@ public class ItemLevelsBindingImpl extends ItemLevelsBinding implements te.app.a
         this.btLevel.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback5 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback6 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -131,7 +131,7 @@ public class ItemLevelsBindingImpl extends ItemLevelsBinding implements te.app.a
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.btLevel.setOnClickListener(mCallback5);
+            this.btLevel.setOnClickListener(mCallback6);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

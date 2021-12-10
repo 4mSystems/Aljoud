@@ -6,7 +6,7 @@
 
         <variable
             name="itemViewModel"
-            type="te.app.aljoud.pages.home.viewModels.ItemUniversityViewModel" />
+            type="te.app.aljoud.pages.courseDetails.viewModels.ItemLessonVideoViewModel" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
@@ -23,7 +23,7 @@
             android:layout_height="@dimen/dp70h"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_pdf"
-            app:imageUrl="@{itemViewModel.university.image}"
+            app:imageUrl="@{itemViewModel.videoData.file}"
             app:layout_constraintTop_toTopOf="parent" />
 
     </com.google.android.material.card.MaterialCardView>

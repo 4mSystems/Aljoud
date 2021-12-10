@@ -32,6 +32,7 @@ import te.app.aljoud.databinding.FragmentContactsBindingImpl;
 import te.app.aljoud.databinding.FragmentConversationsBindingImpl;
 import te.app.aljoud.databinding.FragmentCourseDetailsBindingImpl;
 import te.app.aljoud.databinding.FragmentCourseLessonsBindingImpl;
+import te.app.aljoud.databinding.FragmentExamsBindingImpl;
 import te.app.aljoud.databinding.FragmentForgetPasswordBindingImpl;
 import te.app.aljoud.databinding.FragmentHomeBindingImpl;
 import te.app.aljoud.databinding.FragmentLessonArticlesBindingImpl;
@@ -47,6 +48,7 @@ import te.app.aljoud.databinding.FragmentSplashBindingImpl;
 import te.app.aljoud.databinding.FragmentUniversitiesBindingImpl;
 import te.app.aljoud.databinding.FragmentUniversityDetailsBindingImpl;
 import te.app.aljoud.databinding.InstractorSheetBindingImpl;
+import te.app.aljoud.databinding.ItemAnswerBindingImpl;
 import te.app.aljoud.databinding.ItemChatBindingImpl;
 import te.app.aljoud.databinding.ItemConversationBindingImpl;
 import te.app.aljoud.databinding.ItemCourseBindingImpl;
@@ -64,6 +66,7 @@ import te.app.aljoud.databinding.LayoutActionBarBackBindingImpl;
 import te.app.aljoud.databinding.LayoutActionBarHomeBindingImpl;
 import te.app.aljoud.databinding.LayoutNavigationDrawerBindingImpl;
 import te.app.aljoud.databinding.LayoutTesBindingImpl;
+import te.app.aljoud.databinding.ReplySheetBindingImpl;
 
 public class DataBinderMapperImpl extends DataBinderMapper {
   private static final int LAYOUT_ACTIVITYBASE = 1;
@@ -100,71 +103,77 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_FRAGMENTCOURSELESSONS = 17;
 
-  private static final int LAYOUT_FRAGMENTFORGETPASSWORD = 18;
+  private static final int LAYOUT_FRAGMENTEXAMS = 18;
 
-  private static final int LAYOUT_FRAGMENTHOME = 19;
+  private static final int LAYOUT_FRAGMENTFORGETPASSWORD = 19;
 
-  private static final int LAYOUT_FRAGMENTLESSONARTICLES = 20;
+  private static final int LAYOUT_FRAGMENTHOME = 20;
 
-  private static final int LAYOUT_FRAGMENTLESSONDETAILS = 21;
+  private static final int LAYOUT_FRAGMENTLESSONARTICLES = 21;
 
-  private static final int LAYOUT_FRAGMENTLESSONQUIZZES = 22;
+  private static final int LAYOUT_FRAGMENTLESSONDETAILS = 22;
 
-  private static final int LAYOUT_FRAGMENTLESSONVIDEOS = 23;
+  private static final int LAYOUT_FRAGMENTLESSONQUIZZES = 23;
 
-  private static final int LAYOUT_FRAGMENTLOGIN = 24;
+  private static final int LAYOUT_FRAGMENTLESSONVIDEOS = 24;
 
-  private static final int LAYOUT_FRAGMENTMYCOURSES = 25;
+  private static final int LAYOUT_FRAGMENTLOGIN = 25;
 
-  private static final int LAYOUT_FRAGMENTOFFERS = 26;
+  private static final int LAYOUT_FRAGMENTMYCOURSES = 26;
 
-  private static final int LAYOUT_FRAGMENTREGISTER = 27;
+  private static final int LAYOUT_FRAGMENTOFFERS = 27;
 
-  private static final int LAYOUT_FRAGMENTSERVICEREQUEST = 28;
+  private static final int LAYOUT_FRAGMENTREGISTER = 28;
 
-  private static final int LAYOUT_FRAGMENTSPLASH = 29;
+  private static final int LAYOUT_FRAGMENTSERVICEREQUEST = 29;
 
-  private static final int LAYOUT_FRAGMENTUNIVERSITIES = 30;
+  private static final int LAYOUT_FRAGMENTSPLASH = 30;
 
-  private static final int LAYOUT_FRAGMENTUNIVERSITYDETAILS = 31;
+  private static final int LAYOUT_FRAGMENTUNIVERSITIES = 31;
 
-  private static final int LAYOUT_INSTRACTORSHEET = 32;
+  private static final int LAYOUT_FRAGMENTUNIVERSITYDETAILS = 32;
 
-  private static final int LAYOUT_ITEMCHAT = 33;
+  private static final int LAYOUT_INSTRACTORSHEET = 33;
 
-  private static final int LAYOUT_ITEMCONVERSATION = 34;
+  private static final int LAYOUT_ITEMANSWER = 34;
 
-  private static final int LAYOUT_ITEMCOURSE = 35;
+  private static final int LAYOUT_ITEMCHAT = 35;
 
-  private static final int LAYOUT_ITEMCOURSELESSON = 36;
+  private static final int LAYOUT_ITEMCONVERSATION = 36;
 
-  private static final int LAYOUT_ITEMFILES = 37;
+  private static final int LAYOUT_ITEMCOURSE = 37;
 
-  private static final int LAYOUT_ITEMHOME = 38;
+  private static final int LAYOUT_ITEMCOURSELESSON = 38;
 
-  private static final int LAYOUT_ITEMLESSONARTICLE = 39;
+  private static final int LAYOUT_ITEMFILES = 39;
 
-  private static final int LAYOUT_ITEMLESSONQUIZ = 40;
+  private static final int LAYOUT_ITEMHOME = 40;
 
-  private static final int LAYOUT_ITEMLESSONVIDEO = 41;
+  private static final int LAYOUT_ITEMLESSONARTICLE = 41;
 
-  private static final int LAYOUT_ITEMLEVELS = 42;
+  private static final int LAYOUT_ITEMLESSONQUIZ = 42;
 
-  private static final int LAYOUT_ITEMOFFER = 43;
+  private static final int LAYOUT_ITEMLESSONVIDEO = 43;
 
-  private static final int LAYOUT_ITEMPICKFILE = 44;
+  private static final int LAYOUT_ITEMLEVELS = 44;
 
-  private static final int LAYOUT_ITEMUNIVERSITYSECTION = 45;
+  private static final int LAYOUT_ITEMOFFER = 45;
 
-  private static final int LAYOUT_LAYOUTACTIONBARBACK = 46;
+  private static final int LAYOUT_ITEMPICKFILE = 46;
 
-  private static final int LAYOUT_LAYOUTACTIONBARHOME = 47;
+  private static final int LAYOUT_ITEMUNIVERSITYSECTION = 47;
 
-  private static final int LAYOUT_LAYOUTNAVIGATIONDRAWER = 48;
+  private static final int LAYOUT_LAYOUTACTIONBARBACK = 48;
 
-  private static final int LAYOUT_LAYOUTTES = 49;
+  private static final int LAYOUT_LAYOUTACTIONBARHOME = 49;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(49);
+  private static final int LAYOUT_LAYOUTNAVIGATIONDRAWER = 50;
+
+  private static final int LAYOUT_LAYOUTTES = 51;
+
+  private static final int LAYOUT_REPLYSHEET = 52;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(52);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.activity_base, LAYOUT_ACTIVITYBASE);
@@ -184,6 +193,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.fragment_conversations, LAYOUT_FRAGMENTCONVERSATIONS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.fragment_course_details, LAYOUT_FRAGMENTCOURSEDETAILS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.fragment_course_lessons, LAYOUT_FRAGMENTCOURSELESSONS);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.fragment_exams, LAYOUT_FRAGMENTEXAMS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.fragment_forget_password, LAYOUT_FRAGMENTFORGETPASSWORD);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.fragment_home, LAYOUT_FRAGMENTHOME);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.fragment_lesson_articles, LAYOUT_FRAGMENTLESSONARTICLES);
@@ -199,6 +209,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.fragment_universities, LAYOUT_FRAGMENTUNIVERSITIES);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.fragment_university_details, LAYOUT_FRAGMENTUNIVERSITYDETAILS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.instractor_sheet, LAYOUT_INSTRACTORSHEET);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.item_answer, LAYOUT_ITEMANSWER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.item_chat, LAYOUT_ITEMCHAT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.item_conversation, LAYOUT_ITEMCONVERSATION);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.item_course, LAYOUT_ITEMCOURSE);
@@ -216,6 +227,333 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.layout_action_bar_home, LAYOUT_LAYOUTACTIONBARHOME);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.layout_navigation_drawer, LAYOUT_LAYOUTNAVIGATIONDRAWER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.layout_tes, LAYOUT_LAYOUTTES);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.reply_sheet, LAYOUT_REPLYSHEET);
+  }
+
+  private final ViewDataBinding internalGetViewDataBinding0(DataBindingComponent component,
+      View view, int internalId, Object tag) {
+    switch(internalId) {
+      case  LAYOUT_ACTIVITYBASE: {
+        if ("layout/activity_base_0".equals(tag)) {
+          return new ActivityBaseBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_base is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYEXOPLAYER: {
+        if ("layout/activity_exo_player_0".equals(tag)) {
+          return new ActivityExoPlayerBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_exo_player is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYMAIN: {
+        if ("layout/activity_main_0".equals(tag)) {
+          return new ActivityMainBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_main is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYMAPADDRESS: {
+        if ("layout/activity_map_address_0".equals(tag)) {
+          return new ActivityMapAddressBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_map_address is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYREMOTEPDF: {
+        if ("layout/activity_remote_pdf_0".equals(tag)) {
+          return new ActivityRemotePdfBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_remote_pdf is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ASKLESSONSHEET: {
+        if ("layout/ask_lesson_sheet_0".equals(tag)) {
+          return new AskLessonSheetBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for ask_lesson_sheet is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ASKSHEET: {
+        if ("layout/ask_sheet_0".equals(tag)) {
+          return new AskSheetBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for ask_sheet is invalid. Received: " + tag);
+      }
+      case  LAYOUT_EXITLAYOUT: {
+        if ("layout/exit_layout_0".equals(tag)) {
+          return new ExitLayoutBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for exit_layout is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTABOUT: {
+        if ("layout/fragment_about_0".equals(tag)) {
+          return new FragmentAboutBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_about is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTCATEGORYSECTIONS: {
+        if ("layout/fragment_category_sections_0".equals(tag)) {
+          return new FragmentCategorySectionsBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_category_sections is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTCHANGEPASSWORD: {
+        if ("layout/fragment_change_password_0".equals(tag)) {
+          return new FragmentChangePasswordBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_change_password is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTCHAT: {
+        if ("layout/fragment_chat_0".equals(tag)) {
+          return new FragmentChatBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_chat is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTCONFIRMCODE: {
+        if ("layout/fragment_confirm_code_0".equals(tag)) {
+          return new FragmentConfirmCodeBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_confirm_code is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTCONTACTS: {
+        if ("layout/fragment_contacts_0".equals(tag)) {
+          return new FragmentContactsBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_contacts is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTCONVERSATIONS: {
+        if ("layout/fragment_conversations_0".equals(tag)) {
+          return new FragmentConversationsBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_conversations is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTCOURSEDETAILS: {
+        if ("layout/fragment_course_details_0".equals(tag)) {
+          return new FragmentCourseDetailsBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_course_details is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTCOURSELESSONS: {
+        if ("layout/fragment_course_lessons_0".equals(tag)) {
+          return new FragmentCourseLessonsBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_course_lessons is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTEXAMS: {
+        if ("layout/fragment_exams_0".equals(tag)) {
+          return new FragmentExamsBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_exams is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTFORGETPASSWORD: {
+        if ("layout/fragment_forget_password_0".equals(tag)) {
+          return new FragmentForgetPasswordBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_forget_password is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTHOME: {
+        if ("layout/fragment_home_0".equals(tag)) {
+          return new FragmentHomeBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_home is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTLESSONARTICLES: {
+        if ("layout/fragment_lesson_articles_0".equals(tag)) {
+          return new FragmentLessonArticlesBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_lesson_articles is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTLESSONDETAILS: {
+        if ("layout/fragment_lesson_details_0".equals(tag)) {
+          return new FragmentLessonDetailsBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_lesson_details is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTLESSONQUIZZES: {
+        if ("layout/fragment_lesson_quizzes_0".equals(tag)) {
+          return new FragmentLessonQuizzesBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_lesson_quizzes is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTLESSONVIDEOS: {
+        if ("layout/fragment_lesson_videos_0".equals(tag)) {
+          return new FragmentLessonVideosBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_lesson_videos is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTLOGIN: {
+        if ("layout/fragment_login_0".equals(tag)) {
+          return new FragmentLoginBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_login is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTMYCOURSES: {
+        if ("layout/fragment_my_courses_0".equals(tag)) {
+          return new FragmentMyCoursesBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_my_courses is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTOFFERS: {
+        if ("layout/fragment_offers_0".equals(tag)) {
+          return new FragmentOffersBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_offers is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTREGISTER: {
+        if ("layout/fragment_register_0".equals(tag)) {
+          return new FragmentRegisterBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_register is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTSERVICEREQUEST: {
+        if ("layout/fragment_service_request_0".equals(tag)) {
+          return new FragmentServiceRequestBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_service_request is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTSPLASH: {
+        if ("layout/fragment_splash_0".equals(tag)) {
+          return new FragmentSplashBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_splash is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTUNIVERSITIES: {
+        if ("layout/fragment_universities_0".equals(tag)) {
+          return new FragmentUniversitiesBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_universities is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTUNIVERSITYDETAILS: {
+        if ("layout/fragment_university_details_0".equals(tag)) {
+          return new FragmentUniversityDetailsBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_university_details is invalid. Received: " + tag);
+      }
+      case  LAYOUT_INSTRACTORSHEET: {
+        if ("layout/instractor_sheet_0".equals(tag)) {
+          return new InstractorSheetBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for instractor_sheet is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMANSWER: {
+        if ("layout/item_answer_0".equals(tag)) {
+          return new ItemAnswerBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_answer is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMCHAT: {
+        if ("layout/item_chat_0".equals(tag)) {
+          return new ItemChatBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_chat is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMCONVERSATION: {
+        if ("layout/item_conversation_0".equals(tag)) {
+          return new ItemConversationBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_conversation is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMCOURSE: {
+        if ("layout/item_course_0".equals(tag)) {
+          return new ItemCourseBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_course is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMCOURSELESSON: {
+        if ("layout/item_course_lesson_0".equals(tag)) {
+          return new ItemCourseLessonBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_course_lesson is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMFILES: {
+        if ("layout/item_files_0".equals(tag)) {
+          return new ItemFilesBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_files is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMHOME: {
+        if ("layout/item_home_0".equals(tag)) {
+          return new ItemHomeBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_home is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMLESSONARTICLE: {
+        if ("layout/item_lesson_article_0".equals(tag)) {
+          return new ItemLessonArticleBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_lesson_article is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMLESSONQUIZ: {
+        if ("layout/item_lesson_quiz_0".equals(tag)) {
+          return new ItemLessonQuizBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_lesson_quiz is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMLESSONVIDEO: {
+        if ("layout/item_lesson_video_0".equals(tag)) {
+          return new ItemLessonVideoBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_lesson_video is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMLEVELS: {
+        if ("layout/item_levels_0".equals(tag)) {
+          return new ItemLevelsBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_levels is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMOFFER: {
+        if ("layout/item_offer_0".equals(tag)) {
+          return new ItemOfferBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_offer is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMPICKFILE: {
+        if ("layout/item_pick_file_0".equals(tag)) {
+          return new ItemPickFileBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_pick_file is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMUNIVERSITYSECTION: {
+        if ("layout/item_university_section_0".equals(tag)) {
+          return new ItemUniversitySectionBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_university_section is invalid. Received: " + tag);
+      }
+      case  LAYOUT_LAYOUTACTIONBARBACK: {
+        if ("layout/layout_action_bar_back_0".equals(tag)) {
+          return new LayoutActionBarBackBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for layout_action_bar_back is invalid. Received: " + tag);
+      }
+      case  LAYOUT_LAYOUTACTIONBARHOME: {
+        if ("layout/layout_action_bar_home_0".equals(tag)) {
+          return new LayoutActionBarHomeBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for layout_action_bar_home is invalid. Received: " + tag);
+      }
+      case  LAYOUT_LAYOUTNAVIGATIONDRAWER: {
+        if ("layout/layout_navigation_drawer_0".equals(tag)) {
+          return new LayoutNavigationDrawerBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for layout_navigation_drawer is invalid. Received: " + tag);
+      }
+    }
+    return null;
+  }
+
+  private final ViewDataBinding internalGetViewDataBinding1(DataBindingComponent component,
+      View view, int internalId, Object tag) {
+    switch(internalId) {
+      case  LAYOUT_LAYOUTTES: {
+        if ("layout/layout_tes_0".equals(tag)) {
+          return new LayoutTesBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for layout_tes is invalid. Received: " + tag);
+      }
+      case  LAYOUT_REPLYSHEET: {
+        if ("layout/reply_sheet_0".equals(tag)) {
+          return new ReplySheetBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for reply_sheet is invalid. Received: " + tag);
+      }
+    }
+    return null;
   }
 
   @Override
@@ -226,300 +564,14 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       if(tag == null) {
         throw new RuntimeException("view must have a tag");
       }
-      switch(localizedLayoutId) {
-        case  LAYOUT_ACTIVITYBASE: {
-          if ("layout/activity_base_0".equals(tag)) {
-            return new ActivityBaseBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_base is invalid. Received: " + tag);
+      // find which method will have it. -1 is necessary becausefirst id starts with 1;
+      int methodIndex = (localizedLayoutId - 1) / 50;
+      switch(methodIndex) {
+        case 0: {
+          return internalGetViewDataBinding0(component, view, localizedLayoutId, tag);
         }
-        case  LAYOUT_ACTIVITYEXOPLAYER: {
-          if ("layout/activity_exo_player_0".equals(tag)) {
-            return new ActivityExoPlayerBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_exo_player is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYMAIN: {
-          if ("layout/activity_main_0".equals(tag)) {
-            return new ActivityMainBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_main is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYMAPADDRESS: {
-          if ("layout/activity_map_address_0".equals(tag)) {
-            return new ActivityMapAddressBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_map_address is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYREMOTEPDF: {
-          if ("layout/activity_remote_pdf_0".equals(tag)) {
-            return new ActivityRemotePdfBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_remote_pdf is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ASKLESSONSHEET: {
-          if ("layout/ask_lesson_sheet_0".equals(tag)) {
-            return new AskLessonSheetBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for ask_lesson_sheet is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ASKSHEET: {
-          if ("layout/ask_sheet_0".equals(tag)) {
-            return new AskSheetBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for ask_sheet is invalid. Received: " + tag);
-        }
-        case  LAYOUT_EXITLAYOUT: {
-          if ("layout/exit_layout_0".equals(tag)) {
-            return new ExitLayoutBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for exit_layout is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTABOUT: {
-          if ("layout/fragment_about_0".equals(tag)) {
-            return new FragmentAboutBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_about is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTCATEGORYSECTIONS: {
-          if ("layout/fragment_category_sections_0".equals(tag)) {
-            return new FragmentCategorySectionsBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_category_sections is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTCHANGEPASSWORD: {
-          if ("layout/fragment_change_password_0".equals(tag)) {
-            return new FragmentChangePasswordBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_change_password is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTCHAT: {
-          if ("layout/fragment_chat_0".equals(tag)) {
-            return new FragmentChatBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_chat is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTCONFIRMCODE: {
-          if ("layout/fragment_confirm_code_0".equals(tag)) {
-            return new FragmentConfirmCodeBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_confirm_code is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTCONTACTS: {
-          if ("layout/fragment_contacts_0".equals(tag)) {
-            return new FragmentContactsBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_contacts is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTCONVERSATIONS: {
-          if ("layout/fragment_conversations_0".equals(tag)) {
-            return new FragmentConversationsBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_conversations is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTCOURSEDETAILS: {
-          if ("layout/fragment_course_details_0".equals(tag)) {
-            return new FragmentCourseDetailsBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_course_details is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTCOURSELESSONS: {
-          if ("layout/fragment_course_lessons_0".equals(tag)) {
-            return new FragmentCourseLessonsBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_course_lessons is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTFORGETPASSWORD: {
-          if ("layout/fragment_forget_password_0".equals(tag)) {
-            return new FragmentForgetPasswordBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_forget_password is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTHOME: {
-          if ("layout/fragment_home_0".equals(tag)) {
-            return new FragmentHomeBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_home is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTLESSONARTICLES: {
-          if ("layout/fragment_lesson_articles_0".equals(tag)) {
-            return new FragmentLessonArticlesBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_lesson_articles is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTLESSONDETAILS: {
-          if ("layout/fragment_lesson_details_0".equals(tag)) {
-            return new FragmentLessonDetailsBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_lesson_details is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTLESSONQUIZZES: {
-          if ("layout/fragment_lesson_quizzes_0".equals(tag)) {
-            return new FragmentLessonQuizzesBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_lesson_quizzes is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTLESSONVIDEOS: {
-          if ("layout/fragment_lesson_videos_0".equals(tag)) {
-            return new FragmentLessonVideosBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_lesson_videos is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTLOGIN: {
-          if ("layout/fragment_login_0".equals(tag)) {
-            return new FragmentLoginBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_login is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTMYCOURSES: {
-          if ("layout/fragment_my_courses_0".equals(tag)) {
-            return new FragmentMyCoursesBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_my_courses is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTOFFERS: {
-          if ("layout/fragment_offers_0".equals(tag)) {
-            return new FragmentOffersBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_offers is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTREGISTER: {
-          if ("layout/fragment_register_0".equals(tag)) {
-            return new FragmentRegisterBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_register is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTSERVICEREQUEST: {
-          if ("layout/fragment_service_request_0".equals(tag)) {
-            return new FragmentServiceRequestBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_service_request is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTSPLASH: {
-          if ("layout/fragment_splash_0".equals(tag)) {
-            return new FragmentSplashBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_splash is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTUNIVERSITIES: {
-          if ("layout/fragment_universities_0".equals(tag)) {
-            return new FragmentUniversitiesBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_universities is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTUNIVERSITYDETAILS: {
-          if ("layout/fragment_university_details_0".equals(tag)) {
-            return new FragmentUniversityDetailsBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_university_details is invalid. Received: " + tag);
-        }
-        case  LAYOUT_INSTRACTORSHEET: {
-          if ("layout/instractor_sheet_0".equals(tag)) {
-            return new InstractorSheetBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for instractor_sheet is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ITEMCHAT: {
-          if ("layout/item_chat_0".equals(tag)) {
-            return new ItemChatBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_chat is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ITEMCONVERSATION: {
-          if ("layout/item_conversation_0".equals(tag)) {
-            return new ItemConversationBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_conversation is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ITEMCOURSE: {
-          if ("layout/item_course_0".equals(tag)) {
-            return new ItemCourseBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_course is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ITEMCOURSELESSON: {
-          if ("layout/item_course_lesson_0".equals(tag)) {
-            return new ItemCourseLessonBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_course_lesson is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ITEMFILES: {
-          if ("layout/item_files_0".equals(tag)) {
-            return new ItemFilesBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_files is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ITEMHOME: {
-          if ("layout/item_home_0".equals(tag)) {
-            return new ItemHomeBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_home is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ITEMLESSONARTICLE: {
-          if ("layout/item_lesson_article_0".equals(tag)) {
-            return new ItemLessonArticleBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_lesson_article is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ITEMLESSONQUIZ: {
-          if ("layout/item_lesson_quiz_0".equals(tag)) {
-            return new ItemLessonQuizBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_lesson_quiz is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ITEMLESSONVIDEO: {
-          if ("layout/item_lesson_video_0".equals(tag)) {
-            return new ItemLessonVideoBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_lesson_video is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ITEMLEVELS: {
-          if ("layout/item_levels_0".equals(tag)) {
-            return new ItemLevelsBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_levels is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ITEMOFFER: {
-          if ("layout/item_offer_0".equals(tag)) {
-            return new ItemOfferBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_offer is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ITEMPICKFILE: {
-          if ("layout/item_pick_file_0".equals(tag)) {
-            return new ItemPickFileBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_pick_file is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ITEMUNIVERSITYSECTION: {
-          if ("layout/item_university_section_0".equals(tag)) {
-            return new ItemUniversitySectionBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_university_section is invalid. Received: " + tag);
-        }
-        case  LAYOUT_LAYOUTACTIONBARBACK: {
-          if ("layout/layout_action_bar_back_0".equals(tag)) {
-            return new LayoutActionBarBackBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for layout_action_bar_back is invalid. Received: " + tag);
-        }
-        case  LAYOUT_LAYOUTACTIONBARHOME: {
-          if ("layout/layout_action_bar_home_0".equals(tag)) {
-            return new LayoutActionBarHomeBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for layout_action_bar_home is invalid. Received: " + tag);
-        }
-        case  LAYOUT_LAYOUTNAVIGATIONDRAWER: {
-          if ("layout/layout_navigation_drawer_0".equals(tag)) {
-            return new LayoutNavigationDrawerBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for layout_navigation_drawer is invalid. Received: " + tag);
-        }
-        case  LAYOUT_LAYOUTTES: {
-          if ("layout/layout_tes_0".equals(tag)) {
-            return new LayoutTesBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for layout_tes is invalid. Received: " + tag);
+        case 1: {
+          return internalGetViewDataBinding1(component, view, localizedLayoutId, tag);
         }
       }
     }
@@ -566,60 +618,65 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(46);
+    static final SparseArray<String> sKeys = new SparseArray<String>(51);
 
     static {
       sKeys.put(0, "_all");
       sKeys.put(1, "aboutMain");
       sKeys.put(2, "adapter");
-      sKeys.put(3, "article");
-      sKeys.put(4, "articleMainData");
-      sKeys.put(5, "articlesAdapter");
-      sKeys.put(6, "askRequest");
-      sKeys.put(7, "baseViewModel");
-      sKeys.put(8, "chat");
-      sKeys.put(9, "collegesAdapter");
-      sKeys.put(10, "conversationsAdapter");
-      sKeys.put(11, "conversationsData");
-      sKeys.put(12, "conversationsMain");
-      sKeys.put(13, "course");
-      sKeys.put(14, "courseAdapter");
-      sKeys.put(15, "courseMainData");
-      sKeys.put(16, "filesAdapter");
-      sKeys.put(17, "homeMainData");
-      sKeys.put(18, "itemChatViewModel");
-      sKeys.put(19, "itemViewModel");
-      sKeys.put(20, "lessonMainData");
-      sKeys.put(21, "lessonQuizzesAdapter");
-      sKeys.put(22, "lessonVideosAdapter");
-      sKeys.put(23, "lessonsAdapter");
-      sKeys.put(24, "lessonsItem");
-      sKeys.put(25, "levelsAdapter");
-      sKeys.put(26, "levelsData");
-      sKeys.put(27, "mapAddressViewModel");
-      sKeys.put(28, "menuViewModel");
-      sKeys.put(29, "message");
-      sKeys.put(30, "offerItem");
-      sKeys.put(31, "offersAdapter");
-      sKeys.put(32, "offersMainData");
-      sKeys.put(33, "passingObject");
-      sKeys.put(34, "quizData");
-      sKeys.put(35, "quizMainData");
-      sKeys.put(36, "request");
-      sKeys.put(37, "searchProgressVisible");
-      sKeys.put(38, "specialistsItem");
-      sKeys.put(39, "university");
-      sKeys.put(40, "universityAdapter");
-      sKeys.put(41, "universityData");
-      sKeys.put(42, "videoData");
-      sKeys.put(43, "videosMainData");
-      sKeys.put(44, "viewModel");
-      sKeys.put(45, "viewmodel");
+      sKeys.put(3, "answersAdapter");
+      sKeys.put(4, "answersItem");
+      sKeys.put(5, "article");
+      sKeys.put(6, "articleMainData");
+      sKeys.put(7, "articlesAdapter");
+      sKeys.put(8, "askRequest");
+      sKeys.put(9, "baseViewModel");
+      sKeys.put(10, "chat");
+      sKeys.put(11, "chatMain");
+      sKeys.put(12, "chatMediaAdapter");
+      sKeys.put(13, "collegesAdapter");
+      sKeys.put(14, "conversationsAdapter");
+      sKeys.put(15, "conversationsData");
+      sKeys.put(16, "conversationsMain");
+      sKeys.put(17, "course");
+      sKeys.put(18, "courseAdapter");
+      sKeys.put(19, "courseMainData");
+      sKeys.put(20, "examData");
+      sKeys.put(21, "filesAdapter");
+      sKeys.put(22, "homeMainData");
+      sKeys.put(23, "itemChatViewModel");
+      sKeys.put(24, "itemViewModel");
+      sKeys.put(25, "lessonMainData");
+      sKeys.put(26, "lessonQuizzesAdapter");
+      sKeys.put(27, "lessonVideosAdapter");
+      sKeys.put(28, "lessonsAdapter");
+      sKeys.put(29, "lessonsItem");
+      sKeys.put(30, "levelsAdapter");
+      sKeys.put(31, "levelsData");
+      sKeys.put(32, "mapAddressViewModel");
+      sKeys.put(33, "menuViewModel");
+      sKeys.put(34, "message");
+      sKeys.put(35, "offerItem");
+      sKeys.put(36, "offersAdapter");
+      sKeys.put(37, "offersMainData");
+      sKeys.put(38, "passingObject");
+      sKeys.put(39, "quizData");
+      sKeys.put(40, "quizMainData");
+      sKeys.put(41, "request");
+      sKeys.put(42, "searchProgressVisible");
+      sKeys.put(43, "specialistsItem");
+      sKeys.put(44, "university");
+      sKeys.put(45, "universityAdapter");
+      sKeys.put(46, "universityData");
+      sKeys.put(47, "videoData");
+      sKeys.put(48, "videosMainData");
+      sKeys.put(49, "viewModel");
+      sKeys.put(50, "viewmodel");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(49);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(52);
 
     static {
       sKeys.put("layout/activity_base_0", te.app.aljoud.R.layout.activity_base);
@@ -639,6 +696,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/fragment_conversations_0", te.app.aljoud.R.layout.fragment_conversations);
       sKeys.put("layout/fragment_course_details_0", te.app.aljoud.R.layout.fragment_course_details);
       sKeys.put("layout/fragment_course_lessons_0", te.app.aljoud.R.layout.fragment_course_lessons);
+      sKeys.put("layout/fragment_exams_0", te.app.aljoud.R.layout.fragment_exams);
       sKeys.put("layout/fragment_forget_password_0", te.app.aljoud.R.layout.fragment_forget_password);
       sKeys.put("layout/fragment_home_0", te.app.aljoud.R.layout.fragment_home);
       sKeys.put("layout/fragment_lesson_articles_0", te.app.aljoud.R.layout.fragment_lesson_articles);
@@ -654,6 +712,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/fragment_universities_0", te.app.aljoud.R.layout.fragment_universities);
       sKeys.put("layout/fragment_university_details_0", te.app.aljoud.R.layout.fragment_university_details);
       sKeys.put("layout/instractor_sheet_0", te.app.aljoud.R.layout.instractor_sheet);
+      sKeys.put("layout/item_answer_0", te.app.aljoud.R.layout.item_answer);
       sKeys.put("layout/item_chat_0", te.app.aljoud.R.layout.item_chat);
       sKeys.put("layout/item_conversation_0", te.app.aljoud.R.layout.item_conversation);
       sKeys.put("layout/item_course_0", te.app.aljoud.R.layout.item_course);
@@ -671,6 +730,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/layout_action_bar_home_0", te.app.aljoud.R.layout.layout_action_bar_home);
       sKeys.put("layout/layout_navigation_drawer_0", te.app.aljoud.R.layout.layout_navigation_drawer);
       sKeys.put("layout/layout_tes_0", te.app.aljoud.R.layout.layout_tes);
+      sKeys.put("layout/reply_sheet_0", te.app.aljoud.R.layout.reply_sheet);
     }
   }
 }

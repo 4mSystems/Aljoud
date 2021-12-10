@@ -30,10 +30,10 @@ public class Constants {
     public final static String HOME = "HOME";
     public final static String LOGOUT = "logout";
     public final static String GET_SERVICES = "GET_SERVICES";
-    public final static String EMPTY_WARNING = "EMPTY_WARNING";
+    public final static String CHAT = "CHAT";
 
-    public final static String SELECT_MODELS = "SELECT_MODELS";
-    public final static String SELECT_PRODUCT = "SELECT_PRODUCT";
+    public final static String SEND_MESSAGE = "SEND_MESSAGE";
+    public final static String EXAMS = "EXAMS";
     public final static String MODEL_WARNING = "MODEL_WARNING";
     public final static String ERROR_TOAST = "error_toast";
 

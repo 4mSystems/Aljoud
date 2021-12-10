@@ -16,6 +16,7 @@ import te.app.aljoud.pages.courseDetails.adapters.LessonsAdapter;
 import te.app.aljoud.pages.courseDetails.models.RateRequest;
 import te.app.aljoud.pages.courseDetails.models.lessons.LessonMainData;
 import te.app.aljoud.repository.HomeRepository;
+import te.app.aljoud.utils.Constants;
 
 public class CourseLessonsViewModel extends BaseViewModel {
 
@@ -42,6 +43,10 @@ public class CourseLessonsViewModel extends BaseViewModel {
         getRateRequest().setCourseId(getPassingObject().getId());
         if (!TextUtils.isEmpty(getRateRequest().getRate()))
             compositeDisposable.add(homeRepository.rateCourse(getRateRequest()));
+    }
+
+    public void toExam() {
+        liveData.setValue(new Mutable(Constants.EXAMS));
     }
 
     public void onRateChange(RatingBar ratingBar, float rating, boolean fromUser) {

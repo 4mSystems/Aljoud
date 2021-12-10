@@ -39,6 +39,7 @@ public class ApplicationBinding {
         }
     }
 
+
     @BindingAdapter("color")
     public static void color(ImageView imageView, String color) {
         if (color != null && !color.equals("") && color.charAt(0) == '#') {

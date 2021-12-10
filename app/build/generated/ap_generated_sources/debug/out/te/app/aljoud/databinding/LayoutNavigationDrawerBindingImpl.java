@@ -37,11 +37,9 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
     @Nullable
     private final android.view.View.OnClickListener mCallback47;
     @Nullable
-    private final android.view.View.OnClickListener mCallback45;
+    private final android.view.View.OnClickListener mCallback55;
     @Nullable
-    private final android.view.View.OnClickListener mCallback43;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback42;
+    private final android.view.View.OnClickListener mCallback52;
     @Nullable
     private final android.view.View.OnClickListener mCallback50;
     @Nullable
@@ -49,9 +47,11 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
     @Nullable
     private final android.view.View.OnClickListener mCallback46;
     @Nullable
-    private final android.view.View.OnClickListener mCallback44;
+    private final android.view.View.OnClickListener mCallback54;
     @Nullable
-    private final android.view.View.OnClickListener mCallback41;
+    private final android.view.View.OnClickListener mCallback53;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback51;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -105,16 +105,16 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
         this.viewTerms.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback49 = new te.app.aljoud.generated.callback.OnClickListener(this, 9);
-        mCallback47 = new te.app.aljoud.generated.callback.OnClickListener(this, 7);
-        mCallback45 = new te.app.aljoud.generated.callback.OnClickListener(this, 5);
-        mCallback43 = new te.app.aljoud.generated.callback.OnClickListener(this, 3);
-        mCallback42 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
-        mCallback50 = new te.app.aljoud.generated.callback.OnClickListener(this, 10);
-        mCallback48 = new te.app.aljoud.generated.callback.OnClickListener(this, 8);
-        mCallback46 = new te.app.aljoud.generated.callback.OnClickListener(this, 6);
-        mCallback44 = new te.app.aljoud.generated.callback.OnClickListener(this, 4);
-        mCallback41 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback49 = new te.app.aljoud.generated.callback.OnClickListener(this, 4);
+        mCallback47 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
+        mCallback55 = new te.app.aljoud.generated.callback.OnClickListener(this, 10);
+        mCallback52 = new te.app.aljoud.generated.callback.OnClickListener(this, 7);
+        mCallback50 = new te.app.aljoud.generated.callback.OnClickListener(this, 5);
+        mCallback48 = new te.app.aljoud.generated.callback.OnClickListener(this, 3);
+        mCallback46 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback54 = new te.app.aljoud.generated.callback.OnClickListener(this, 9);
+        mCallback53 = new te.app.aljoud.generated.callback.OnClickListener(this, 8);
+        mCallback51 = new te.app.aljoud.generated.callback.OnClickListener(this, 6);
         invalidateAll();
     }
 
@@ -213,21 +213,21 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.mboundView1.setOnClickListener(mCallback41);
+            this.mboundView1.setOnClickListener(mCallback46);
             this.mboundView1.setVisibility(userHelperGetInstanceContextUserDataJavaLangObjectNullViewVISIBLEViewGONE);
-            this.mboundView15.setOnClickListener(mCallback50);
+            this.mboundView15.setOnClickListener(mCallback55);
             this.mboundView15.setVisibility(userHelperGetInstanceContextUserDataJavaLangObjectNullViewVISIBLEViewGONE);
-            this.tvAgents.setOnClickListener(mCallback42);
+            this.tvAgents.setOnClickListener(mCallback47);
             this.tvAgents.setVisibility(userHelperGetInstanceContextUserDataJavaLangObjectNullViewVISIBLEViewGONE);
-            this.tvContact.setOnClickListener(mCallback45);
+            this.tvContact.setOnClickListener(mCallback50);
             this.tvContact.setVisibility(userHelperGetInstanceContextUserDataJavaLangObjectNullViewVISIBLEViewGONE);
-            this.tvCustomerService.setOnClickListener(mCallback43);
+            this.tvCustomerService.setOnClickListener(mCallback48);
             this.tvCustomerService.setVisibility(userHelperGetInstanceContextUserDataJavaLangObjectNullViewVISIBLEViewGONE);
-            this.tvLanguage.setOnClickListener(mCallback49);
-            this.tvRate.setOnClickListener(mCallback48);
-            this.tvShare.setOnClickListener(mCallback47);
-            this.tvSupport.setOnClickListener(mCallback46);
-            this.tvTerms.setOnClickListener(mCallback44);
+            this.tvLanguage.setOnClickListener(mCallback54);
+            this.tvRate.setOnClickListener(mCallback53);
+            this.tvShare.setOnClickListener(mCallback52);
+            this.tvSupport.setOnClickListener(mCallback51);
+            this.tvTerms.setOnClickListener(mCallback49);
             this.tvTerms.setVisibility(userHelperGetInstanceContextUserDataJavaLangObjectNullViewVISIBLEViewGONE);
             this.viewAgent.setVisibility(userHelperGetInstanceContextUserDataJavaLangObjectNullViewVISIBLEViewGONE);
             this.viewContact.setVisibility(userHelperGetInstanceContextUserDataJavaLangObjectNullViewVISIBLEViewGONE);
@@ -240,7 +240,7 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 9: {
+            case 4: {
                 // localize variables for thread safety
                 // menuViewModel
                 te.app.aljoud.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
@@ -255,7 +255,45 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
 
 
 
-                    menuViewModel.buttonAction(te.app.aljoud.utils.Constants.LANGUAGE);
+                    menuViewModel.buttonAction(te.app.aljoud.utils.Constants.SERVICES);
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // menuViewModel
+                te.app.aljoud.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
+                // menuViewModel != null
+                boolean menuViewModelJavaLangObjectNull = false;
+
+
+
+                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
+                if (menuViewModelJavaLangObjectNull) {
+
+
+
+
+                    menuViewModel.buttonAction(te.app.aljoud.utils.Constants.MY_COURSES);
+                }
+                break;
+            }
+            case 10: {
+                // localize variables for thread safety
+                // menuViewModel
+                te.app.aljoud.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
+                // menuViewModel != null
+                boolean menuViewModelJavaLangObjectNull = false;
+
+
+
+                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
+                if (menuViewModelJavaLangObjectNull) {
+
+
+
+
+                    menuViewModel.buttonAction(te.app.aljoud.utils.Constants.DIALOG);
                 }
                 break;
             }
@@ -316,7 +354,7 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
                 }
                 break;
             }
-            case 2: {
+            case 1: {
                 // localize variables for thread safety
                 // menuViewModel
                 te.app.aljoud.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
@@ -331,11 +369,11 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
 
 
 
-                    menuViewModel.buttonAction(te.app.aljoud.utils.Constants.MY_COURSES);
+                    menuViewModel.buttonAction(te.app.aljoud.utils.Constants.INBOX);
                 }
                 break;
             }
-            case 10: {
+            case 9: {
                 // localize variables for thread safety
                 // menuViewModel
                 te.app.aljoud.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
@@ -350,7 +388,7 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
 
 
 
-                    menuViewModel.buttonAction(te.app.aljoud.utils.Constants.DIALOG);
+                    menuViewModel.buttonAction(te.app.aljoud.utils.Constants.LANGUAGE);
                 }
                 break;
             }
@@ -389,44 +427,6 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
 
 
                     menuViewModel.buttonAction(te.app.aljoud.utils.Constants.ABOUT);
-                }
-                break;
-            }
-            case 4: {
-                // localize variables for thread safety
-                // menuViewModel
-                te.app.aljoud.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
-                // menuViewModel != null
-                boolean menuViewModelJavaLangObjectNull = false;
-
-
-
-                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
-                if (menuViewModelJavaLangObjectNull) {
-
-
-
-
-                    menuViewModel.buttonAction(te.app.aljoud.utils.Constants.SERVICES);
-                }
-                break;
-            }
-            case 1: {
-                // localize variables for thread safety
-                // menuViewModel
-                te.app.aljoud.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
-                // menuViewModel != null
-                boolean menuViewModelJavaLangObjectNull = false;
-
-
-
-                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
-                if (menuViewModelJavaLangObjectNull) {
-
-
-
-
-                    menuViewModel.buttonAction(te.app.aljoud.utils.Constants.INBOX);
                 }
                 break;
             }

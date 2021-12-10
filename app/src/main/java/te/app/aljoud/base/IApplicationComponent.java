@@ -20,6 +20,7 @@ import te.app.aljoud.pages.courseDetails.FragmentLessonArticles;
 import te.app.aljoud.pages.courseDetails.FragmentLessonDetails;
 import te.app.aljoud.pages.courseDetails.FragmentLessonQuizzes;
 import te.app.aljoud.pages.courseDetails.FragmentLessonVideos;
+import te.app.aljoud.pages.exams.ExamsFragment;
 import te.app.aljoud.pages.home.viewModels.UniversitiesFragment;
 import te.app.aljoud.pages.myCourses.MyCoursesFragment;
 import te.app.aljoud.pages.offers.OffersFragment;
@@ -86,6 +87,8 @@ public interface IApplicationComponent {
     void inject(MyCoursesFragment myCoursesFragment);
 
     void inject(ServiceRequestFragment serviceRequestFragment);
+
+    void inject(ExamsFragment examsFragment);
 
     @Component.Builder
     interface Builder {

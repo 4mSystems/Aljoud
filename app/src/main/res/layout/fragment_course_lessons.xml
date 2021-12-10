@@ -195,6 +195,7 @@
                 android:layout_marginTop="@dimen/dp8h"
                 android:layout_marginEnd="@dimen/dp30h"
                 android:text="@string/exam"
+                android:onClick="@{()->viewmodel.toExam()}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colorPrimaryDark"
                 app:backgroundTint="@color/white"

@@ -30,6 +30,12 @@ public class ConversationsData {
     private int is_lock;
     @SerializedName("files")
     private List<VideoData> videoData;
+    @SerializedName("sender")
+    private UserData sender;
+
+    public UserData getSender() {
+        return sender;
+    }
 
     public UserData getReceiver() {
         return receiver;

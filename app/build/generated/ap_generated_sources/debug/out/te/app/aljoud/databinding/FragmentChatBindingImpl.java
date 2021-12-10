@@ -14,20 +14,18 @@ public class FragmentChatBindingImpl extends FragmentChatBinding implements te.a
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.card_info, 5);
-        sViewsWithIds.put(R.id.tv_created_at, 6);
-        sViewsWithIds.put(R.id.tv_from, 7);
-        sViewsWithIds.put(R.id.tv_to, 8);
-        sViewsWithIds.put(R.id.tv_desc, 9);
-        sViewsWithIds.put(R.id.rc_files, 10);
-        sViewsWithIds.put(R.id.tv_replies, 11);
-        sViewsWithIds.put(R.id.chat_actions, 12);
-        sViewsWithIds.put(R.id.progress, 13);
+        sViewsWithIds.put(R.id.tv_from, 11);
+        sViewsWithIds.put(R.id.tv_to, 12);
+        sViewsWithIds.put(R.id.rc_files, 13);
+        sViewsWithIds.put(R.id.tv_replies, 14);
+        sViewsWithIds.put(R.id.progress, 15);
     }
     // views
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback5;
     @Nullable
     private final android.view.View.OnClickListener mCallback4;
     @Nullable
@@ -45,7 +43,7 @@ public class FragmentChatBindingImpl extends FragmentChatBinding implements te.a
             // viewmodel != null
             boolean viewmodelJavaLangObjectNull = false;
             // viewmodel.request
-            te.app.aljoud.pages.chat.model.ChatRequest viewmodelRequest = null;
+            te.app.aljoud.pages.courseDetails.models.AskRequest viewmodelRequest = null;
             // viewmodel.request.message
             java.lang.String viewmodelRequestMessage = null;
             // viewmodel
@@ -74,32 +72,41 @@ public class FragmentChatBindingImpl extends FragmentChatBinding implements te.a
     };
 
     public FragmentChatBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 14, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 16, sIncludes, sViewsWithIds));
     }
     private FragmentChatBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[2]
-            , (androidx.cardview.widget.CardView) bindings[5]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[12]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[4]
-            , (android.widget.ProgressBar) bindings[13]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[1]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[10]
-            , (com.google.android.material.textfield.TextInputEditText) bindings[3]
-            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[6]
-            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[9]
-            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[7]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[7]
+            , (androidx.cardview.widget.CardView) bindings[1]
+            , (androidx.appcompat.widget.AppCompatButton) bindings[10]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[9]
+            , (android.widget.ProgressBar) bindings[15]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[6]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[13]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[8]
+            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[2]
+            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[5]
             , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[11]
-            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[8]
+            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[3]
+            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[14]
+            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[12]
+            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[4]
             );
         this.attach.setTag(null);
+        this.cardInfo.setTag(null);
+        this.chatActions.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
         this.more.setTag(null);
         this.rcChat.setTag(null);
         this.sendChat.setTag(null);
+        this.tvCreatedAt.setTag(null);
+        this.tvDesc.setTag(null);
+        this.tvFromValue.setTag(null);
+        this.tvToValue.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback5 = new te.app.aljoud.generated.callback.OnClickListener(this, 3);
         mCallback4 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
         mCallback3 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
@@ -108,7 +115,7 @@ public class FragmentChatBindingImpl extends FragmentChatBinding implements te.a
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x8L;
+                mDirtyFlags = 0x10L;
         }
         requestRebind();
     }
@@ -160,15 +167,21 @@ public class FragmentChatBindingImpl extends FragmentChatBinding implements te.a
             }
             return true;
         }
-        else if (fieldId == BR.adapter) {
+        else if (fieldId == BR.chatMain) {
             synchronized(this) {
                     mDirtyFlags |= 0x2L;
             }
             return true;
         }
-        else if (fieldId == BR.message) {
+        else if (fieldId == BR.adapter) {
             synchronized(this) {
                     mDirtyFlags |= 0x4L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.message) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x8L;
             }
             return true;
         }
@@ -182,21 +195,34 @@ public class FragmentChatBindingImpl extends FragmentChatBinding implements te.a
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        int textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewINVISIBLEViewVISIBLE = 0;
-        te.app.aljoud.pages.chat.model.ChatRequest viewmodelRequest = null;
+        java.lang.String viewmodelChatMainReceiverName = null;
+        te.app.aljoud.pages.courseDetails.models.AskRequest viewmodelRequest = null;
+        java.lang.String viewmodelChatMainReceiverJavaLangObjectNullViewmodelChatMainReceiverNameJavaLangString = null;
         boolean textUtilsIsEmptyViewmodelMessage = false;
         boolean TextUtilsIsEmptyViewmodelMessage1 = false;
-        boolean viewmodelMessageEqualsConstantsSHOWPROGRESS = false;
-        te.app.aljoud.pages.chat.adapter.ChatAdapter viewmodelAdapter = null;
+        boolean viewmodelChatMainReceiverJavaLangObjectNull = false;
+        te.app.aljoud.pages.auth.models.UserData viewmodelChatMainSender = null;
         java.lang.String viewmodelMessage = null;
         java.lang.String viewmodelRequestMessage = null;
+        java.lang.String viewmodelChatMainSenderJavaLangObjectNullViewmodelChatMainSenderNameJavaLangString = null;
+        int textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewINVISIBLEViewVISIBLE = 0;
+        boolean viewmodelChatMainMessageJavaLangObjectNull = false;
+        java.lang.String viewmodelChatMainCreatedAt = null;
+        te.app.aljoud.pages.chat.model.ChatMain viewmodelChatMain = null;
+        java.lang.String viewmodelChatMainMessage = null;
+        boolean viewmodelChatMainSenderJavaLangObjectNull = false;
+        boolean viewmodelMessageEqualsConstantsSHOWPROGRESS = false;
+        te.app.aljoud.pages.chat.adapter.ChatAdapter viewmodelAdapter = null;
+        te.app.aljoud.pages.auth.models.UserData viewmodelChatMainReceiver = null;
+        int viewmodelChatMainMessageJavaLangObjectNullViewVISIBLEViewGONE = 0;
+        java.lang.String viewmodelChatMainSenderName = null;
         te.app.aljoud.pages.chat.viewmodel.ChatViewModel viewmodel = mViewmodel;
         boolean textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = false;
 
-        if ((dirtyFlags & 0xfL) != 0) {
+        if ((dirtyFlags & 0x1fL) != 0) {
 
 
-            if ((dirtyFlags & 0x9L) != 0) {
+            if ((dirtyFlags & 0x11L) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.request
@@ -209,14 +235,7 @@ public class FragmentChatBindingImpl extends FragmentChatBinding implements te.a
                         viewmodelRequestMessage = viewmodelRequest.getMessage();
                     }
             }
-            if ((dirtyFlags & 0xbL) != 0) {
-
-                    if (viewmodel != null) {
-                        // read viewmodel.adapter
-                        viewmodelAdapter = viewmodel.getAdapter();
-                    }
-            }
-            if ((dirtyFlags & 0xdL) != 0) {
+            if ((dirtyFlags & 0x19L) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.message
@@ -230,36 +249,119 @@ public class FragmentChatBindingImpl extends FragmentChatBinding implements te.a
 
                     // read !TextUtils.isEmpty(viewmodel.message)
                     TextUtilsIsEmptyViewmodelMessage1 = !textUtilsIsEmptyViewmodelMessage;
-                if((dirtyFlags & 0xdL) != 0) {
+                if((dirtyFlags & 0x19L) != 0) {
                     if(TextUtilsIsEmptyViewmodelMessage1) {
-                            dirtyFlags |= 0x80L;
+                            dirtyFlags |= 0x4000L;
                     }
                     else {
-                            dirtyFlags |= 0x40L;
+                            dirtyFlags |= 0x2000L;
                     }
                 }
+            }
+            if ((dirtyFlags & 0x13L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.chatMain
+                        viewmodelChatMain = viewmodel.getChatMain();
+                    }
+
+
+                    if (viewmodelChatMain != null) {
+                        // read viewmodel.chatMain.sender
+                        viewmodelChatMainSender = viewmodelChatMain.getSender();
+                        // read viewmodel.chatMain.createdAt
+                        viewmodelChatMainCreatedAt = viewmodelChatMain.getCreatedAt();
+                        // read viewmodel.chatMain.message
+                        viewmodelChatMainMessage = viewmodelChatMain.getMessage();
+                        // read viewmodel.chatMain.receiver
+                        viewmodelChatMainReceiver = viewmodelChatMain.getReceiver();
+                    }
+
+
+                    // read viewmodel.chatMain.sender != null
+                    viewmodelChatMainSenderJavaLangObjectNull = (viewmodelChatMainSender) != (null);
+                    // read viewmodel.chatMain.message != null
+                    viewmodelChatMainMessageJavaLangObjectNull = (viewmodelChatMainMessage) != (null);
+                    // read viewmodel.chatMain.receiver != null
+                    viewmodelChatMainReceiverJavaLangObjectNull = (viewmodelChatMainReceiver) != (null);
+                if((dirtyFlags & 0x13L) != 0) {
+                    if(viewmodelChatMainSenderJavaLangObjectNull) {
+                            dirtyFlags |= 0x100L;
+                    }
+                    else {
+                            dirtyFlags |= 0x80L;
+                    }
+                }
+                if((dirtyFlags & 0x13L) != 0) {
+                    if(viewmodelChatMainMessageJavaLangObjectNull) {
+                            dirtyFlags |= 0x1000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x800L;
+                    }
+                }
+                if((dirtyFlags & 0x13L) != 0) {
+                    if(viewmodelChatMainReceiverJavaLangObjectNull) {
+                            dirtyFlags |= 0x40L;
+                    }
+                    else {
+                            dirtyFlags |= 0x20L;
+                    }
+                }
+
+
+                    // read viewmodel.chatMain.message != null ? View.VISIBLE : View.GONE
+                    viewmodelChatMainMessageJavaLangObjectNullViewVISIBLEViewGONE = ((viewmodelChatMainMessageJavaLangObjectNull) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+            }
+            if ((dirtyFlags & 0x15L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.adapter
+                        viewmodelAdapter = viewmodel.getAdapter();
+                    }
             }
         }
         // batch finished
 
-        if ((dirtyFlags & 0x80L) != 0) {
+        if ((dirtyFlags & 0x40L) != 0) {
+
+                if (viewmodelChatMainReceiver != null) {
+                    // read viewmodel.chatMain.receiver.name
+                    viewmodelChatMainReceiverName = viewmodelChatMainReceiver.getName();
+                }
+        }
+        if ((dirtyFlags & 0x4000L) != 0) {
 
                 if (viewmodelMessage != null) {
                     // read viewmodel.message.equals(Constants.SHOW_PROGRESS)
                     viewmodelMessageEqualsConstantsSHOWPROGRESS = viewmodelMessage.equals(te.app.aljoud.utils.Constants.SHOW_PROGRESS);
                 }
         }
+        if ((dirtyFlags & 0x100L) != 0) {
 
-        if ((dirtyFlags & 0xdL) != 0) {
+                if (viewmodelChatMainSender != null) {
+                    // read viewmodel.chatMain.sender.name
+                    viewmodelChatMainSenderName = viewmodelChatMainSender.getName();
+                }
+        }
+
+        if ((dirtyFlags & 0x13L) != 0) {
+
+                // read viewmodel.chatMain.receiver != null ? viewmodel.chatMain.receiver.name : ""
+                viewmodelChatMainReceiverJavaLangObjectNullViewmodelChatMainReceiverNameJavaLangString = ((viewmodelChatMainReceiverJavaLangObjectNull) ? (viewmodelChatMainReceiverName) : (""));
+                // read viewmodel.chatMain.sender != null ? viewmodel.chatMain.sender.name : ""
+                viewmodelChatMainSenderJavaLangObjectNullViewmodelChatMainSenderNameJavaLangString = ((viewmodelChatMainSenderJavaLangObjectNull) ? (viewmodelChatMainSenderName) : (""));
+        }
+        if ((dirtyFlags & 0x19L) != 0) {
 
                 // read !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
                 textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = ((TextUtilsIsEmptyViewmodelMessage1) ? (viewmodelMessageEqualsConstantsSHOWPROGRESS) : (false));
-            if((dirtyFlags & 0xdL) != 0) {
+            if((dirtyFlags & 0x19L) != 0) {
                 if(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) {
-                        dirtyFlags |= 0x20L;
+                        dirtyFlags |= 0x400L;
                 }
                 else {
-                        dirtyFlags |= 0x10L;
+                        dirtyFlags |= 0x200L;
                 }
             }
 
@@ -268,24 +370,34 @@ public class FragmentChatBindingImpl extends FragmentChatBinding implements te.a
                 textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewINVISIBLEViewVISIBLE = ((textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) ? (android.view.View.INVISIBLE) : (android.view.View.VISIBLE));
         }
         // batch finished
-        if ((dirtyFlags & 0x8L) != 0) {
+        if ((dirtyFlags & 0x10L) != 0) {
             // api target 1
 
             this.attach.setOnClickListener(mCallback3);
+            this.chatActions.setOnClickListener(mCallback5);
             this.more.setOnClickListener(mCallback4);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.sendChat, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, sendChatandroidTextAttrChanged);
         }
-        if ((dirtyFlags & 0xdL) != 0) {
+        if ((dirtyFlags & 0x19L) != 0) {
             // api target 1
 
             this.attach.setVisibility(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewINVISIBLEViewVISIBLE);
         }
-        if ((dirtyFlags & 0xbL) != 0) {
+        if ((dirtyFlags & 0x13L) != 0) {
+            // api target 1
+
+            this.cardInfo.setVisibility(viewmodelChatMainMessageJavaLangObjectNullViewVISIBLEViewGONE);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvCreatedAt, viewmodelChatMainCreatedAt);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvDesc, viewmodelChatMainMessage);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvFromValue, viewmodelChatMainSenderJavaLangObjectNullViewmodelChatMainSenderNameJavaLangString);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvToValue, viewmodelChatMainReceiverJavaLangObjectNullViewmodelChatMainReceiverNameJavaLangString);
+        }
+        if ((dirtyFlags & 0x15L) != 0) {
             // api target 1
 
             te.app.aljoud.base.ApplicationBinding.getItemsV2Binding(this.rcChat, viewmodelAdapter, "1", "1");
         }
-        if ((dirtyFlags & 0x9L) != 0) {
+        if ((dirtyFlags & 0x11L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.sendChat, viewmodelRequestMessage);
@@ -295,6 +407,25 @@ public class FragmentChatBindingImpl extends FragmentChatBinding implements te.a
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 3: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.aljoud.pages.chat.viewmodel.ChatViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.action(te.app.aljoud.utils.Constants.DIALOG);
+                }
+                break;
+            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -335,13 +466,20 @@ public class FragmentChatBindingImpl extends FragmentChatBinding implements te.a
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewmodel
-        flag 1 (0x2L): viewmodel.adapter
-        flag 2 (0x3L): viewmodel.message
-        flag 3 (0x4L): null
-        flag 4 (0x5L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.INVISIBLE : View.VISIBLE
-        flag 5 (0x6L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.INVISIBLE : View.VISIBLE
-        flag 6 (0x7L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
-        flag 7 (0x8L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
+        flag 1 (0x2L): viewmodel.chatMain
+        flag 2 (0x3L): viewmodel.adapter
+        flag 3 (0x4L): viewmodel.message
+        flag 4 (0x5L): null
+        flag 5 (0x6L): viewmodel.chatMain.receiver != null ? viewmodel.chatMain.receiver.name : ""
+        flag 6 (0x7L): viewmodel.chatMain.receiver != null ? viewmodel.chatMain.receiver.name : ""
+        flag 7 (0x8L): viewmodel.chatMain.sender != null ? viewmodel.chatMain.sender.name : ""
+        flag 8 (0x9L): viewmodel.chatMain.sender != null ? viewmodel.chatMain.sender.name : ""
+        flag 9 (0xaL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.INVISIBLE : View.VISIBLE
+        flag 10 (0xbL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.INVISIBLE : View.VISIBLE
+        flag 11 (0xcL): viewmodel.chatMain.message != null ? View.VISIBLE : View.GONE
+        flag 12 (0xdL): viewmodel.chatMain.message != null ? View.VISIBLE : View.GONE
+        flag 13 (0xeL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
+        flag 14 (0xfL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
     flag mapping end*/
     //end
 }

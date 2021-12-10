@@ -30,4 +30,8 @@ public class URLS {
     public static final String MY_COURSES = "home/my_courses?page=";
     public static final String SERVICES = "helpers/get_services";
     public static final String SEND_SERVICE_REQUEST = "Request-service";
+    public static final String CHAT = "replies/";
+    public static final String SEND_MESSAGE = "store-reply";
+    public static final String QUIZ_LESSON = "quiz/questions/";
+    public static final String QUIZ_COURSE = "exam/questions/";
 }

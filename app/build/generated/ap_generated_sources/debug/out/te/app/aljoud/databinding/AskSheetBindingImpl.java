@@ -24,9 +24,9 @@ public class AskSheetBindingImpl extends AskSheetBinding implements te.app.aljou
     private final androidx.appcompat.widget.AppCompatEditText mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback27;
+    private final android.view.View.OnClickListener mCallback29;
     @Nullable
-    private final android.view.View.OnClickListener mCallback28;
+    private final android.view.View.OnClickListener mCallback30;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -88,8 +88,8 @@ public class AskSheetBindingImpl extends AskSheetBinding implements te.app.aljou
         this.rcFiles.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback27 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
-        mCallback28 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
+        mCallback29 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback30 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -203,8 +203,8 @@ public class AskSheetBindingImpl extends AskSheetBinding implements te.app.aljou
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.btAsk.setOnClickListener(mCallback28);
-            this.icFile.setOnClickListener(mCallback27);
+            this.btAsk.setOnClickListener(mCallback30);
+            this.icFile.setOnClickListener(mCallback29);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView1, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView1androidTextAttrChanged);
         }
         if ((dirtyFlags & 0xbL) != 0) {

@@ -20,6 +20,7 @@ import te.app.aljoud.pages.courseDetails.models.CourseDetailsResponse;
 import te.app.aljoud.pages.courseDetails.models.RateRequest;
 import te.app.aljoud.pages.courseDetails.models.lessons.CourseLessonsResponse;
 import te.app.aljoud.pages.courseDetails.models.videos.VideosResponse;
+import te.app.aljoud.pages.exams.models.ExamsResponse;
 import te.app.aljoud.pages.home.models.home.HomeResponse;
 import te.app.aljoud.pages.myCourses.models.MyCourseResponse;
 import te.app.aljoud.pages.offers.models.OffersResponse;
@@ -110,6 +111,7 @@ public class HomeRepository extends BaseRepository {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.BUY_OFFER + offerId, new Object(), StatusMessage.class,
                 Constants.BUY_OFFER, true);
     }
+
     public Disposable buyCourse(int courseId) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.BUY_COURSE + courseId, new Object(), StatusMessage.class,
                 Constants.BUY_COURSE, true);
@@ -119,4 +121,10 @@ public class HomeRepository extends BaseRepository {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.MY_COURSES + page, new Object(), MyCourseResponse.class,
                 Constants.MY_COURSES, showProgress);
     }
+
+    public Disposable exam(int id, String url) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, url + id, new Object(), ExamsResponse.class,
+                Constants.EXAMS, true);
+    }
+
 }

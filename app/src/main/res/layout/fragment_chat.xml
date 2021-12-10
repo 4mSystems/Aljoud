@@ -23,7 +23,9 @@
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/chat_actions"
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -34,6 +36,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/dp12h"
+                    android:visibility="@{viewmodel.chatMain.message!=null?View.VISIBLE:View.GONE}"
                     app:cardCornerRadius="@dimen/dp8h"
                     app:cardElevation="2dp"
                     app:layout_constraintTop_toTopOf="parent">
@@ -42,49 +45,74 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <te.app.aljoud.customViews.views.CustomTextViewMedium
+                        <te.app.aljoud.customViews.views.CustomTextViewRegular
                             android:id="@+id/tv_created_at"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@color/colorPrimary"
                             android:padding="@dimen/dp8h"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:text="@{viewmodel.chatMain.createdAt}"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
                             android:textColor="@color/white"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <te.app.aljoud.customViews.views.CustomTextViewMedium
                             android:id="@+id/tv_from"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/dp8h"
-                            android:text="from :"
+                            android:text="@string/from"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@color/black"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_created_at" />
 
                         <te.app.aljoud.customViews.views.CustomTextViewMedium
-                            android:id="@+id/tv_to"
-                            android:layout_width="match_parent"
+                            android:id="@+id/tv_from_value"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/dp8h"
-                            android:text="To :"
+                            android:text="@{viewmodel.chatMain.sender!=null?viewmodel.chatMain.sender.name:``}"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colordark"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/tv_from"
+                            app:layout_constraintTop_toBottomOf="@id/tv_created_at" />
+
+                        <te.app.aljoud.customViews.views.CustomTextViewMedium
+                            android:id="@+id/tv_to"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp8h"
+                            android:text="@string/to"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@color/black"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/tv_from" />
+                            app:layout_constraintTop_toBottomOf="@id/tv_from_value" />
+
+                        <te.app.aljoud.customViews.views.CustomTextViewMedium
+                            android:id="@+id/tv_to_value"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp8h"
+                            android:text="@{viewmodel.chatMain.receiver!=null?viewmodel.chatMain.receiver.name:``}"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colordark"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/tv_from"
+                            app:layout_constraintTop_toBottomOf="@id/tv_from_value" />
 
                         <te.app.aljoud.customViews.views.CustomTextViewRegular
                             android:id="@+id/tv_desc"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/dp8h"
-                            android:text="To :"
+                            android:text="@{viewmodel.chatMain.message}"
                             android:textAppearance="@style/TextAppearance.AppCompat.Small"
                             android:textColor="@color/colordark"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/tv_to" />
+                            app:layout_constraintTop_toBottomOf="@id/tv_to_value" />
 
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/rc_files"
@@ -129,7 +157,6 @@
                     tools:listitem="@layout/item_chat" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/chat_actions"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_dialog"
@@ -196,15 +223,15 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.core.widget.NestedScrollView>
 
-        <com.google.android.material.button.MaterialButton
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/chat_actions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dp15h"
-            android:padding="@dimen/dp8h"
+            android:background="@color/colorPrimary"
             android:text="@string/reply"
+            android:onClick="@{()->viewmodel.action(Constants.DIALOG)}"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/white"
-            app:backgroundTint="@color/colorPrimary"
             app:layout_constraintBottom_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

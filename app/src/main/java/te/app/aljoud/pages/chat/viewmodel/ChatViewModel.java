@@ -15,11 +15,10 @@ import te.app.aljoud.BR;
 import te.app.aljoud.base.BaseViewModel;
 import te.app.aljoud.connection.FileObject;
 import te.app.aljoud.model.base.Mutable;
-import te.app.aljoud.pages.auth.models.UserData;
 import te.app.aljoud.pages.chat.adapter.ChatAdapter;
-import te.app.aljoud.pages.chat.model.ChatRequest;
-import te.app.aljoud.pages.conversations.models.ConversationsData;
-import te.app.aljoud.pages.conversations.models.ConversationsMain;
+import te.app.aljoud.pages.chat.model.ChatMain;
+import te.app.aljoud.pages.courseDetails.adapters.pickFilesAdapter;
+import te.app.aljoud.pages.courseDetails.models.AskRequest;
 import te.app.aljoud.repository.ChatRepository;
 import te.app.aljoud.utils.Constants;
 import io.reactivex.disposables.CompositeDisposable;
@@ -30,11 +29,11 @@ public class ChatViewModel extends BaseViewModel {
     @Inject
     public ChatRepository repository;
     ChatAdapter adapter;
-    public ChatRequest request = new ChatRequest();
+    public AskRequest request = new AskRequest();
     public List<FileObject> fileObjectList = new ArrayList<>();
     CompositeDisposable compositeDisposable = new CompositeDisposable();
-    ConversationsData conversationsData;
-    ConversationsMain conversationsMain;
+    ChatMain chatMain;
+    pickFilesAdapter filesAdapter;
 
     @Inject
     public ChatViewModel(ChatRepository repository) {
@@ -44,31 +43,26 @@ public class ChatViewModel extends BaseViewModel {
     }
 
     public void chat() {
-//        compositeDisposable.add(repository.getChat(getConversationsData().getId()));
+        compositeDisposable.add(repository.getChat(getPassingObject().getId()));
+    }
+
+    public void action(String action) {
+        liveData.setValue(new Mutable(action));
     }
 
     @Bindable
-    public ConversationsMain getConversationsMain() {
-        return this.conversationsMain == null ? this.conversationsMain = new ConversationsMain() : this.conversationsMain;
+    public ChatMain getChatMain() {
+        return this.chatMain == null ? this.chatMain = new ChatMain() : this.chatMain;
     }
 
     @Bindable
-    public void setConversationsMain(ConversationsMain conversationsMain) {
-        if (getAdapter().getChatList().size() > 0) {
-            getAdapter().loadMore(conversationsMain.getData());
-        } else {
-            getAdapter().update(conversationsMain.getData());
-            notifyChange(BR.adapter);
-        }
-//        searchProgressVisible.set(false);
-        notifyChange(BR.conversationsMain);
-        this.conversationsMain = conversationsMain;
+    public void setChatMain(ChatMain chatMain) {
+        getAdapter().update(chatMain.getConversationsDataList());
+        notifyChange(BR.adapter);
+        notifyChange(BR.chatMain);
+        this.chatMain = chatMain;
     }
 
-    @Bindable
-    public ConversationsData getConversationsData() {
-        return this.conversationsData == null ? this.conversationsData = new ConversationsData() : this.conversationsData;
-    }
 
     @Bindable
     public ChatAdapter getAdapter() {
@@ -76,10 +70,8 @@ public class ChatViewModel extends BaseViewModel {
     }
 
     @Bindable
-    public void setConversationsData(ConversationsData conversationsData) {
-        notifyChange(BR.conversationsData);
-        this.conversationsData = conversationsData;
-        chat();
+    public pickFilesAdapter getFilesAdapter() {
+        return this.filesAdapter == null ? this.filesAdapter = new pickFilesAdapter() : this.filesAdapter;
     }
 
     private void unSubscribeFromObservable() {
@@ -99,11 +91,7 @@ public class ChatViewModel extends BaseViewModel {
     }
 
     public void sendMessage() {
-        request.setListing_id(String.valueOf(getPassingObject().getId()));
-        request.setUserId(String.valueOf(getConversationsData().getId()));
-        if (fileObjectList.size() > 0 || !TextUtils.isEmpty(request.getMessage())) {
-            setMessage(Constants.SHOW_PROGRESS);
-//            repository.sendChat(request, fileObjectList);
-        }
+        request.setParentId(String.valueOf(getPassingObject().getId()));
+        repository.sendChat(request, fileObjectList);
     }
 }

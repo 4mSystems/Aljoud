@@ -15,6 +15,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.aljoud.R;
+import te.app.aljoud.customViews.views.CustomTextViewMedium;
 import te.app.aljoud.customViews.views.CustomTextViewRegular;
 import te.app.aljoud.pages.chat.viewmodel.ItemChatViewModel;
 
@@ -29,23 +30,32 @@ public abstract class ItemChatBinding extends ViewDataBinding {
   public final CustomTextViewRegular itemMessageTime;
 
   @NonNull
+  public final CustomTextViewMedium message;
+
+  @NonNull
   public final RecyclerView rcFiles;
 
   @NonNull
   public final ConstraintLayout rlItemChat;
+
+  @NonNull
+  public final CustomTextViewRegular time;
 
   @Bindable
   protected ItemChatViewModel mItemChatViewModel;
 
   protected ItemChatBinding(Object _bindingComponent, View _root, int _localFieldCount,
       CircleImageView driverImage, ConstraintLayout itemMessage,
-      CustomTextViewRegular itemMessageTime, RecyclerView rcFiles, ConstraintLayout rlItemChat) {
+      CustomTextViewRegular itemMessageTime, CustomTextViewMedium message, RecyclerView rcFiles,
+      ConstraintLayout rlItemChat, CustomTextViewRegular time) {
     super(_bindingComponent, _root, _localFieldCount);
     this.driverImage = driverImage;
     this.itemMessage = itemMessage;
     this.itemMessageTime = itemMessageTime;
+    this.message = message;
     this.rcFiles = rcFiles;
     this.rlItemChat = rlItemChat;
+    this.time = time;
   }
 
   public abstract void setItemChatViewModel(@Nullable ItemChatViewModel itemChatViewModel);

@@ -131,16 +131,16 @@ public class FragmentCourseDetails extends BaseFragment {
         });
     }
 
-    @Override
-    public void launchActivityResult(int request, int resultCode, Intent data) {
-        super.launchActivityResult(request, resultCode, data);
-        if (request == Constants.FILE_TYPE_IMAGE) {
-            String mimeType = requireActivity().getContentResolver().getType(Objects.requireNonNull(data.getData()));
-            FileObject fileObject = FileOperations.getFileObject(requireActivity(), data, "file[" + viewModel.getFileObjectList().size() + "]", Constants.FILE_TYPE_IMAGE);
-            viewModel.getFilesAdapter().getFiles().add(new File(fileObject.getFilePath(), mimeType));
-            viewModel.getFilesAdapter().notifyDataSetChanged();
-            viewModel.notifyChange(BR.filesAdapter);
-            viewModel.getFileObjectList().add(fileObject);
+        @Override
+        public void launchActivityResult(int request, int resultCode, Intent data) {
+            super.launchActivityResult(request, resultCode, data);
+            if (request == Constants.FILE_TYPE_IMAGE) {
+                String mimeType = requireActivity().getContentResolver().getType(Objects.requireNonNull(data.getData()));
+                FileObject fileObject = FileOperations.getFileObject(requireActivity(), data, "file[" + viewModel.getFileObjectList().size() + "]", Constants.FILE_TYPE_IMAGE);
+                viewModel.getFilesAdapter().getFiles().add(new File(fileObject.getFilePath(), mimeType));
+                viewModel.getFilesAdapter().notifyDataSetChanged();
+                viewModel.notifyChange(BR.filesAdapter);
+                viewModel.getFileObjectList().add(fileObject);
+            }
         }
-    }
 }

@@ -13,14 +13,14 @@ import androidx.databinding.ViewDataBinding;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.aljoud.R;
-import te.app.aljoud.pages.home.viewModels.ItemUniversityViewModel;
+import te.app.aljoud.pages.courseDetails.viewModels.ItemLessonVideoViewModel;
 
 public abstract class ItemFilesBinding extends ViewDataBinding {
   @NonNull
   public final AppCompatImageView catImage;
 
   @Bindable
-  protected ItemUniversityViewModel mItemViewModel;
+  protected ItemLessonVideoViewModel mItemViewModel;
 
   protected ItemFilesBinding(Object _bindingComponent, View _root, int _localFieldCount,
       AppCompatImageView catImage) {
@@ -28,10 +28,10 @@ public abstract class ItemFilesBinding extends ViewDataBinding {
     this.catImage = catImage;
   }
 
-  public abstract void setItemViewModel(@Nullable ItemUniversityViewModel itemViewModel);
+  public abstract void setItemViewModel(@Nullable ItemLessonVideoViewModel itemViewModel);
 
   @Nullable
-  public ItemUniversityViewModel getItemViewModel() {
+  public ItemLessonVideoViewModel getItemViewModel() {
     return mItemViewModel;
   }
 

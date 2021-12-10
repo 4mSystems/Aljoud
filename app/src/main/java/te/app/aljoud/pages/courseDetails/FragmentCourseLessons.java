@@ -23,7 +23,10 @@ import te.app.aljoud.model.base.Mutable;
 import te.app.aljoud.model.base.StatusMessage;
 import te.app.aljoud.pages.courseDetails.models.lessons.CourseLessonsResponse;
 import te.app.aljoud.pages.courseDetails.viewModels.CourseLessonsViewModel;
+import te.app.aljoud.pages.exams.ExamsFragment;
 import te.app.aljoud.utils.Constants;
+import te.app.aljoud.utils.URLS;
+import te.app.aljoud.utils.helper.MovementHelper;
 
 
 public class FragmentCourseLessons extends BaseFragment {
@@ -55,6 +58,8 @@ public class FragmentCourseLessons extends BaseFragment {
                 viewModel.setLessonMainData(((CourseLessonsResponse) mutable.object).getLessonMainData());
             } else if (Constants.RATE_APP.equals(((Mutable) o).message)) {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
+            } else if (Constants.EXAMS.equals(((Mutable) o).message)) {
+                MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getPassingObject().getId(), URLS.QUIZ_COURSE), null, ExamsFragment.class.getName(), null);
             }
         });
     }

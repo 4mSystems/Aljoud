@@ -186,5 +186,8 @@
     <string name="replies">Replies</string>
     <string name="contact_comment">type anything...</string>
     <string name="services">Choose your service</string>
+    <string name="from">from :</string>
+    <string name="to">To :</string>
+    <string name="score">Score :</string>
 
 </resources>

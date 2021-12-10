@@ -67,6 +67,11 @@ import te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel_MembersInjec
 import te.app.aljoud.pages.courseDetails.viewModels.LessonDetailsViewModel;
 import te.app.aljoud.pages.courseDetails.viewModels.LessonDetailsViewModel_Factory;
 import te.app.aljoud.pages.courseDetails.viewModels.LessonDetailsViewModel_MembersInjector;
+import te.app.aljoud.pages.exams.ExamsFragment;
+import te.app.aljoud.pages.exams.ExamsFragment_MembersInjector;
+import te.app.aljoud.pages.exams.viewModels.ExamsViewModel;
+import te.app.aljoud.pages.exams.viewModels.ExamsViewModel_Factory;
+import te.app.aljoud.pages.exams.viewModels.ExamsViewModel_MembersInjector;
 import te.app.aljoud.pages.home.HomeFragment;
 import te.app.aljoud.pages.home.HomeFragment_MembersInjector;
 import te.app.aljoud.pages.home.viewModels.HomeViewModel;
@@ -215,6 +220,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectMyCoursesViewModel(MyCoursesViewModel_Factory.newInstance(homeRepositoryProvider.get()));
   }
 
+  private ExamsViewModel examsViewModel() {
+    return injectExamsViewModel(ExamsViewModel_Factory.newInstance(homeRepositoryProvider.get()));
+  }
+
   @SuppressWarnings("unchecked")
   private void initialize(final ConnectionModule connectionModuleParam) {
     this.webServiceProvider = DoubleCheck.provider(ConnectionModule_WebServiceFactory.create(connectionModuleParam));
@@ -352,6 +361,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(ServiceRequestFragment serviceRequestFragment) {
     injectServiceRequestFragment(serviceRequestFragment);
+  }
+
+  @Override
+  public void inject(ExamsFragment examsFragment) {
+    injectExamsFragment(examsFragment);
   }
 
   private HomeViewModel injectHomeViewModel(HomeViewModel instance) {
@@ -559,6 +573,16 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private ServiceRequestFragment injectServiceRequestFragment(ServiceRequestFragment instance) {
     ServiceRequestFragment_MembersInjector.injectViewModel(instance, settingsViewModel());
+    return instance;
+  }
+
+  private ExamsViewModel injectExamsViewModel(ExamsViewModel instance) {
+    ExamsViewModel_MembersInjector.injectHomeRepository(instance, homeRepositoryProvider.get());
+    return instance;
+  }
+
+  private ExamsFragment injectExamsFragment(ExamsFragment instance) {
+    ExamsFragment_MembersInjector.injectViewModel(instance, examsViewModel());
     return instance;
   }
 

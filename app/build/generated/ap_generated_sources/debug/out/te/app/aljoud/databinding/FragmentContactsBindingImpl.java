@@ -24,9 +24,9 @@ public class FragmentContactsBindingImpl extends FragmentContactsBinding impleme
     private final androidx.appcompat.widget.AppCompatEditText mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback32;
+    private final android.view.View.OnClickListener mCallback34;
     @Nullable
-    private final android.view.View.OnClickListener mCallback31;
+    private final android.view.View.OnClickListener mCallback35;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -88,8 +88,8 @@ public class FragmentContactsBindingImpl extends FragmentContactsBinding impleme
         this.rcFiles.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback32 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
-        mCallback31 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback34 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback35 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -203,8 +203,8 @@ public class FragmentContactsBindingImpl extends FragmentContactsBinding impleme
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.btAsk.setOnClickListener(mCallback32);
-            this.icFile.setOnClickListener(mCallback31);
+            this.btAsk.setOnClickListener(mCallback35);
+            this.icFile.setOnClickListener(mCallback34);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView1, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView1androidTextAttrChanged);
         }
         if ((dirtyFlags & 0xbL) != 0) {
@@ -222,23 +222,6 @@ public class FragmentContactsBindingImpl extends FragmentContactsBinding impleme
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.aljoud.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.sendContact();
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -255,6 +238,23 @@ public class FragmentContactsBindingImpl extends FragmentContactsBinding impleme
 
 
                     viewmodel.action(te.app.aljoud.utils.Constants.PICKED_SUCCESSFULLY);
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.aljoud.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.sendContact();
                 }
                 break;
             }

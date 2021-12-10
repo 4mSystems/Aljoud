@@ -11,6 +11,8 @@ public class AskRequest {
     private String lessonId;
     @SerializedName("service_id")
     private String serviceId;
+    @SerializedName("parent_id")
+    private String parentId;
 
     public String getMessage() {
         return message;
@@ -42,5 +44,13 @@ public class AskRequest {
 
     public String getServiceId() {
         return serviceId;
+    }
+
+    public String getParentId() {
+        return parentId;
+    }
+
+    public void setParentId(String parentId) {
+        this.parentId = parentId;
     }
 }
