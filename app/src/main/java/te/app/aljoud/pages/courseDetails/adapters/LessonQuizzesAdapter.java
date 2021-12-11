@@ -17,11 +17,16 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+import te.app.aljoud.PassingObject;
 import te.app.aljoud.R;
 import te.app.aljoud.activity.RemotePDFActivity;
 import te.app.aljoud.databinding.ItemLessonQuizBinding;
+import te.app.aljoud.model.base.Mutable;
 import te.app.aljoud.pages.courseDetails.models.videos.VideoData;
 import te.app.aljoud.pages.courseDetails.viewModels.ItemLessonQuizViewModel;
+import te.app.aljoud.pages.exams.ExamsFragment;
+import te.app.aljoud.utils.Constants;
+import te.app.aljoud.utils.URLS;
 import te.app.aljoud.utils.helper.MovementHelper;
 
 
@@ -52,19 +57,9 @@ public class LessonQuizzesAdapter extends RecyclerView.Adapter<LessonQuizzesAdap
         VideoData categoriesData = lessonsItemList.get(position);
         ItemLessonQuizViewModel itemMenuViewModel = new ItemLessonQuizViewModel(categoriesData);
         itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {
-//            context.startActivity(
-//
-//                    // Opening pdf from assets folder
-//
-//                    PdfViewerActivity.Companion.launchPdfFromUrl(
-//                            context,
-//                            "http://www.africau.edu/images/default/sample.pdf",
-//                            "Pdf title/name",
-//                            "assets",
-//                            false
-//                    )
-//            );
-            context.startActivity(new Intent(context,RemotePDFActivity.class));
+            if (Constants.EXAMS.equals(((Mutable) o).message)) {
+                MovementHelper.startActivityWithBundle(context, new PassingObject(categoriesData.getId(), URLS.QUIZ_LESSON), null, ExamsFragment.class.getName(), null);
+            }
         });
         holder.itemMenuBinding.tvCount.setText(String.valueOf(position + 1));
         holder.setViewModel(itemMenuViewModel);

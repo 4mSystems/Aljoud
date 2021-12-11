@@ -31,7 +31,9 @@ import te.app.aljoud.model.File;
 import te.app.aljoud.model.base.Mutable;
 import te.app.aljoud.model.base.StatusMessage;
 import te.app.aljoud.pages.courseDetails.viewModels.LessonDetailsViewModel;
+import te.app.aljoud.pages.exams.ExamsFragment;
 import te.app.aljoud.utils.Constants;
+import te.app.aljoud.utils.URLS;
 import te.app.aljoud.utils.helper.LauncherHelper;
 import te.app.aljoud.utils.helper.MovementHelper;
 import te.app.aljoud.utils.upload.FileOperations;
@@ -74,7 +76,7 @@ public class FragmentLessonDetails extends BaseFragment {
                 }
             } else if (Constants.DIALOG.equals(((Mutable) o).message)) {
 //                if (askDialog != null) {
-                    toastMessage(((StatusMessage) mutable.object).mMessage);
+                toastMessage(((StatusMessage) mutable.object).mMessage);
 //                    askDialog.dismiss();
 //                }
             }

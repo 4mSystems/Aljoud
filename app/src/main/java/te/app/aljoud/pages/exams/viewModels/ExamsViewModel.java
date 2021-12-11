@@ -20,6 +20,7 @@ import te.app.aljoud.pages.exams.adapters.AnswersAdapter;
 import te.app.aljoud.pages.exams.models.AnswersItem;
 import te.app.aljoud.pages.exams.models.ExamData;
 import te.app.aljoud.repository.HomeRepository;
+import te.app.aljoud.utils.Constants;
 
 public class ExamsViewModel extends BaseViewModel {
 
@@ -92,11 +93,11 @@ public class ExamsViewModel extends BaseViewModel {
 
     public void updateNextQuestion(AnswersItem answersItem) {
         currentQuestions++;
-        Log.e("setEvent", "setEvent: " + currentQuestions + " LIST :" + (getExamDataList().size() - 1));
         if (answersItem.getCorrect().equals("1"))
             score.set(score.get() + 1);
         if (currentQuestions <= getExamDataList().size() - 1) {
             setExamData(getExamDataList().get(currentQuestions));
-        }
+        }else
+            liveData.setValue(new Mutable(Constants.EXAM_RESULTS));
     }
 }

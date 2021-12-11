@@ -20,6 +20,8 @@ public class RegisterRequest {
     @SerializedName("old_password")
     @Expose
     private String oldPassword;
+    @SerializedName("password_confirmation")
+    @Expose
     private String confirmPassword;
     @SerializedName("fcm_token")
     private String token;

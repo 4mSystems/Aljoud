@@ -190,5 +190,6 @@
     <string name="from">from :</string>
     <string name="to">To :</string>
     <string name="score">Score :</string>
+    <string name="result_dialog">Exam Result</string>
 
 </resources>

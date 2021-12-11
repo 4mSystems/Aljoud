@@ -34,7 +34,7 @@ public class Constants {
 
     public final static String SEND_MESSAGE = "SEND_MESSAGE";
     public final static String EXAMS = "EXAMS";
-    public final static String MODEL_WARNING = "MODEL_WARNING";
+    public final static String EXAM_RESULTS = "EXAM_RESULTS";
     public final static String ERROR_TOAST = "error_toast";
 
     public final static String ERROR = "error";

@@ -15,7 +15,6 @@ import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.aljoud.R;
 import te.app.aljoud.customViews.views.CustomTextViewMedium;
-import te.app.aljoud.customViews.views.CustomTextViewRegular;
 import te.app.aljoud.pages.exams.viewModels.ExamsViewModel;
 
 public abstract class FragmentExamsBinding extends ViewDataBinding {
@@ -23,29 +22,25 @@ public abstract class FragmentExamsBinding extends ViewDataBinding {
   public final Barrier br;
 
   @NonNull
+  public final CustomTextViewMedium grade;
+
+  @NonNull
   public final AppCompatImageView icQuiz;
 
   @NonNull
   public final CustomTextViewMedium tvQuizText;
 
-  @NonNull
-  public final CustomTextViewMedium tvScore;
-
-  @NonNull
-  public final CustomTextViewRegular tvScoreValue;
-
   @Bindable
   protected ExamsViewModel mViewmodel;
 
   protected FragmentExamsBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      Barrier br, AppCompatImageView icQuiz, CustomTextViewMedium tvQuizText,
-      CustomTextViewMedium tvScore, CustomTextViewRegular tvScoreValue) {
+      Barrier br, CustomTextViewMedium grade, AppCompatImageView icQuiz,
+      CustomTextViewMedium tvQuizText) {
     super(_bindingComponent, _root, _localFieldCount);
     this.br = br;
+    this.grade = grade;
     this.icQuiz = icQuiz;
     this.tvQuizText = tvQuizText;
-    this.tvScore = tvScore;
-    this.tvScoreValue = tvScoreValue;
   }
 
   public abstract void setViewmodel(@Nullable ExamsViewModel viewmodel);

@@ -1,7 +1,7 @@
 package te.app.aljoud.pages.exams;
 
+import android.app.Dialog;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.gson.Gson;
 
 import javax.inject.Inject;
@@ -19,9 +20,9 @@ import te.app.aljoud.R;
 import te.app.aljoud.base.BaseFragment;
 import te.app.aljoud.base.IApplicationComponent;
 import te.app.aljoud.base.MyApplication;
+import te.app.aljoud.databinding.ExamResultDialogBinding;
 import te.app.aljoud.databinding.FragmentExamsBinding;
 import te.app.aljoud.model.base.Mutable;
-import te.app.aljoud.pages.exams.models.AnswersItem;
 import te.app.aljoud.pages.exams.models.ExamsResponse;
 import te.app.aljoud.pages.exams.viewModels.ExamsViewModel;
 import te.app.aljoud.utils.Constants;
@@ -54,11 +55,27 @@ public class ExamsFragment extends BaseFragment {
             handleActions(mutable);
             if (Constants.EXAMS.equals(((Mutable) o).message)) {
                 viewModel.setExamDataList(((ExamsResponse) mutable.object).getExamDataList());
+            } else if (Constants.EXAM_RESULTS.equals(((Mutable) o).message)) {
+                showExamResults();
             }
         });
         viewModel.getAnswersAdapter().liveData.observeForever(answersItem -> {
             viewModel.updateNextQuestion(answersItem);
         });
+    }
+
+    private void showExamResults() {
+        ExamResultDialogBinding sortBinding = DataBindingUtil.inflate(LayoutInflater.from(requireActivity()), R.layout.exam_result_dialog, null, false);
+        Dialog askDialog = new BottomSheetDialog(requireActivity(), R.style.AppBottomSheetDialogTheme);
+        askDialog.setContentView(sortBinding.getRoot());
+        sortBinding.setViewModel(viewModel);
+        askDialog.setCancelable(false);
+        sortBinding.sendFeedBack.setOnClickListener(view -> {
+            askDialog.setCancelable(true);
+            askDialog.dismiss();
+            viewModel.goBack(requireActivity());
+        });
+        askDialog.show();
     }
 
 

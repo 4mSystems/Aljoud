@@ -7,7 +7,12 @@ import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
+
+import com.google.gson.Gson;
+
 import javax.inject.Inject;
+
+import te.app.aljoud.PassingObject;
 import te.app.aljoud.R;
 import te.app.aljoud.base.BaseFragment;
 import te.app.aljoud.base.IApplicationComponent;
@@ -27,6 +32,11 @@ public class ChangePasswordFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) requireActivity().getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
+        Bundle bundle = this.getArguments();
+        if (bundle != null) {
+            String passingObject = bundle.getString(Constants.BUNDLE);
+            viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
+        }
         setEvent();
         return binding.getRoot();
     }

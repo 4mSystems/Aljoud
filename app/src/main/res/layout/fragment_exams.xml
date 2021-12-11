@@ -23,28 +23,17 @@
             android:layout_height="match_parent">
 
             <te.app.aljoud.customViews.views.CustomTextViewMedium
-                android:id="@+id/tv_score"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp10h"
-                android:text="@string/score"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="@id/tv_score_value"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/tv_score_value" />
-
-            <te.app.aljoud.customViews.views.CustomTextViewRegular
-                android:id="@+id/tv_score_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dp10h"
-                android:background="@drawable/corner_view_border"
-                android:padding="@dimen/dp6h"
+                android:id="@+id/grade"
+                android:layout_width="@dimen/dp90w"
+                android:layout_height="@dimen/dp90h"
+                android:layout_marginTop="@dimen/dp30h"
+                android:background="@drawable/result_circle"
+                android:gravity="center"
                 android:text="@{String.valueOf(viewmodel.score)}"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/black"
-                app:layout_constraintStart_toEndOf="@id/tv_score"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/sp33"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <te.app.aljoud.customViews.views.CustomTextViewMedium
@@ -56,7 +45,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white"
                 android:visibility="@{viewmodel.examData.type.equals(`text`)?View.VISIBLE:View.INVISIBLE}"
-                app:layout_constraintTop_toBottomOf="@id/tv_score_value" />
+                app:layout_constraintTop_toBottomOf="@id/grade" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ic_quiz"

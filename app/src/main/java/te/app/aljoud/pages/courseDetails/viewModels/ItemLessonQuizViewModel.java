@@ -19,7 +19,7 @@ public class ItemLessonQuizViewModel extends BaseViewModel {
     }
 
     public void itemAction() {
-        getLiveData().setValue(Constants.SUB_CATEGORIES);
+        getLiveData().setValue(Constants.EXAMS);
     }
 
 }

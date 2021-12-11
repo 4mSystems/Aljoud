@@ -14,8 +14,7 @@ public class FragmentExamsBindingImpl extends FragmentExamsBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.tv_score, 5);
-        sViewsWithIds.put(R.id.br, 6);
+        sViewsWithIds.put(R.id.br, 5);
     }
     // views
     @NonNull
@@ -28,23 +27,22 @@ public class FragmentExamsBindingImpl extends FragmentExamsBinding  {
     // Inverse Binding Event Handlers
 
     public FragmentExamsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 7, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
     }
     private FragmentExamsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 2
-            , (androidx.constraintlayout.widget.Barrier) bindings[6]
+            , (androidx.constraintlayout.widget.Barrier) bindings[5]
+            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[1]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[3]
             , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[2]
-            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[5]
-            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[1]
             );
+        this.grade.setTag(null);
         this.icQuiz.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
         this.mboundView4 = (androidx.recyclerview.widget.RecyclerView) bindings[4];
         this.mboundView4.setTag(null);
         this.tvQuizText.setTag(null);
-        this.tvScoreValue.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();
@@ -231,6 +229,11 @@ public class FragmentExamsBindingImpl extends FragmentExamsBinding  {
             }
         }
         // batch finished
+        if ((dirtyFlags & 0x13L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.grade, stringValueOfViewmodelScore);
+        }
         if ((dirtyFlags & 0x16L) != 0) {
             // api target 1
 
@@ -243,11 +246,6 @@ public class FragmentExamsBindingImpl extends FragmentExamsBinding  {
             // api target 1
 
             te.app.aljoud.base.ApplicationBinding.getItemsV2Binding(this.mboundView4, viewmodelAnswersAdapter, "1", "1");
-        }
-        if ((dirtyFlags & 0x13L) != 0) {
-            // api target 1
-
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvScoreValue, stringValueOfViewmodelScore);
         }
     }
     // Listener Stub Implementations

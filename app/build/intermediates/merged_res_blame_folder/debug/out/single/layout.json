@@ -192,6 +192,10 @@
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_lesson_articles.xml"
     },
     {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/exam_result_dialog.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/exam_result_dialog.xml"
+    },
+    {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_tes.xml",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/layout_tes.xml"
     },

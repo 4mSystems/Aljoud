@@ -3412,6 +3412,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable result_circle
 drawable right_chat
 drawable rotate
 drawable rounded_dialog
@@ -3731,6 +3732,7 @@ id ghost_view
 id ghost_view_holder
 id glide_custom_view_target_tag
 id gone
+id grade
 id grand_logo
 id graph
 id graph_wrap
@@ -3988,6 +3990,7 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id sendFeedBack
 id send_chat
 id sharedValueSet
 id sharedValueUnset
@@ -4075,6 +4078,7 @@ id thinWorm
 id time
 id title
 id titleDividerNoCustom
+id title_result
 id title_template
 id toast_icon
 id toast_root
@@ -4138,8 +4142,6 @@ id tv_rate
 id tv_rate_course
 id tv_replies
 id tv_reserved
-id tv_score
-id tv_score_value
 id tv_share
 id tv_sign
 id tv_special
@@ -4287,6 +4289,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout exam_result_dialog
 layout exit_layout
 layout exo_list_divider
 layout exo_player_control_view
@@ -4798,6 +4801,7 @@ string register_name
 string replies
 string reply
 string request_course
+string result_dialog
 string right_reserved
 string score
 string search
