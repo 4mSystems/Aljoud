@@ -34,4 +34,6 @@ public class URLS {
     public static final String SEND_MESSAGE = "store-reply";
     public static final String QUIZ_LESSON = "quiz/questions/";
     public static final String QUIZ_COURSE = "exam/questions/";
+    public static final String PAYMENT_METHODS = "student/buy/course/payment_step_one";
+    public static final String CHECK_PAYMENT = "student/buy/course/payment_step_two/";
 }

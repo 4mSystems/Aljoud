@@ -3304,6 +3304,8 @@ drawable ic_call_white
 drawable ic_camera
 drawable ic_chat
 drawable ic_chat_send
+drawable ic_check
+drawable ic_check_white
 drawable ic_check_white_24dp
 drawable ic_circle
 drawable ic_clear_white_24dp
@@ -3821,6 +3823,7 @@ id logout_txt1
 id lottie_layer_name
 id map_progress
 id map_view
+id marketContainer
 id masked
 id match_constraint
 id match_parent
@@ -3890,6 +3893,7 @@ id navigation_header_container
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
+id next
 id noScroll
 id noState
 id none
@@ -3900,10 +3904,12 @@ id notification_main_column
 id notification_main_column_container
 id off
 id offer_item_desc
+id offer_item_name
 id on
 id onAttachStateChangeListener
 id onDateChanged
 id one
+id order_item_img
 id outline
 id outward
 id overshoot
@@ -3944,6 +3950,7 @@ id rc_files
 id rc_levels
 id rc_quizzes
 id rc_video
+id rec_market
 id rectangle
 id rectangles
 id recyclerview
@@ -4326,6 +4333,7 @@ layout fragment_media_folder_picker
 layout fragment_media_picker
 layout fragment_my_courses
 layout fragment_offers
+layout fragment_payment_methods
 layout fragment_photo_picker
 layout fragment_register
 layout fragment_service_request
@@ -4347,6 +4355,7 @@ layout item_lesson_quiz
 layout item_lesson_video
 layout item_levels
 layout item_offer
+layout item_payment_method
 layout item_photo_layout
 layout item_pick_file
 layout item_university_section

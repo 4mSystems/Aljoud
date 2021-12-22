@@ -367,7 +367,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/dp8h"
                         android:layout_marginEnd="@dimen/dp8h"
-                        android:onClick="@{()->viewmodel.byCourse()}"
+                        android:onClick="@{()->viewmodel.action(Constants.PAYMENT_METHOD)}"
                         android:text="@string/buy_now"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="@color/white"

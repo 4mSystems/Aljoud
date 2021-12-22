@@ -29,7 +29,7 @@ public class FragmentServiceRequestBindingImpl extends FragmentServiceRequestBin
     @Nullable
     private final android.view.View.OnClickListener mCallback28;
     @Nullable
-    private final android.view.View.OnClickListener mCallback26;
+    private final android.view.View.OnClickListener mCallback29;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -94,9 +94,9 @@ public class FragmentServiceRequestBindingImpl extends FragmentServiceRequestBin
         this.rcFiles.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback27 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
-        mCallback28 = new te.app.aljoud.generated.callback.OnClickListener(this, 3);
-        mCallback26 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback27 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback28 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
+        mCallback29 = new te.app.aljoud.generated.callback.OnClickListener(this, 3);
         invalidateAll();
     }
 
@@ -210,9 +210,9 @@ public class FragmentServiceRequestBindingImpl extends FragmentServiceRequestBin
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.btAsk.setOnClickListener(mCallback28);
-            this.edService.setOnClickListener(mCallback26);
-            this.icFile.setOnClickListener(mCallback27);
+            this.btAsk.setOnClickListener(mCallback29);
+            this.edService.setOnClickListener(mCallback27);
+            this.icFile.setOnClickListener(mCallback28);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
         }
         if ((dirtyFlags & 0xbL) != 0) {
@@ -230,6 +230,25 @@ public class FragmentServiceRequestBindingImpl extends FragmentServiceRequestBin
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.aljoud.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.action(te.app.aljoud.utils.Constants.SERVICES);
+                }
+                break;
+            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -263,25 +282,6 @@ public class FragmentServiceRequestBindingImpl extends FragmentServiceRequestBin
 
 
                     viewmodel.sendContact();
-                }
-                break;
-            }
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.aljoud.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.action(te.app.aljoud.utils.Constants.SERVICES);
                 }
                 break;
             }

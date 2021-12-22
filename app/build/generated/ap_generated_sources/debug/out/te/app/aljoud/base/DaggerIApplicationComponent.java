@@ -72,6 +72,11 @@ import te.app.aljoud.pages.exams.ExamsFragment_MembersInjector;
 import te.app.aljoud.pages.exams.viewModels.ExamsViewModel;
 import te.app.aljoud.pages.exams.viewModels.ExamsViewModel_Factory;
 import te.app.aljoud.pages.exams.viewModels.ExamsViewModel_MembersInjector;
+import te.app.aljoud.pages.fawaterkPayment.FawterkMethodFragment;
+import te.app.aljoud.pages.fawaterkPayment.FawterkMethodFragment_MembersInjector;
+import te.app.aljoud.pages.fawaterkPayment.viewModels.PaymentsViewModel;
+import te.app.aljoud.pages.fawaterkPayment.viewModels.PaymentsViewModel_Factory;
+import te.app.aljoud.pages.fawaterkPayment.viewModels.PaymentsViewModel_MembersInjector;
 import te.app.aljoud.pages.home.HomeFragment;
 import te.app.aljoud.pages.home.HomeFragment_MembersInjector;
 import te.app.aljoud.pages.home.viewModels.HomeViewModel;
@@ -224,6 +229,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectExamsViewModel(ExamsViewModel_Factory.newInstance(homeRepositoryProvider.get()));
   }
 
+  private PaymentsViewModel paymentsViewModel() {
+    return injectPaymentsViewModel(PaymentsViewModel_Factory.newInstance(authRepositoryProvider.get()));
+  }
+
   @SuppressWarnings("unchecked")
   private void initialize(final ConnectionModule connectionModuleParam) {
     this.webServiceProvider = DoubleCheck.provider(ConnectionModule_WebServiceFactory.create(connectionModuleParam));
@@ -366,6 +375,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(ExamsFragment examsFragment) {
     injectExamsFragment(examsFragment);
+  }
+
+  @Override
+  public void inject(FawterkMethodFragment fawterkMethodFragment) {
+    injectFawterkMethodFragment(fawterkMethodFragment);
   }
 
   private HomeViewModel injectHomeViewModel(HomeViewModel instance) {
@@ -583,6 +597,16 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private ExamsFragment injectExamsFragment(ExamsFragment instance) {
     ExamsFragment_MembersInjector.injectViewModel(instance, examsViewModel());
+    return instance;
+  }
+
+  private PaymentsViewModel injectPaymentsViewModel(PaymentsViewModel instance) {
+    PaymentsViewModel_MembersInjector.injectRepository(instance, authRepositoryProvider.get());
+    return instance;
+  }
+
+  private FawterkMethodFragment injectFawterkMethodFragment(FawterkMethodFragment instance) {
+    FawterkMethodFragment_MembersInjector.injectViewModel(instance, paymentsViewModel());
     return instance;
   }
 

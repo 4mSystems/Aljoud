@@ -4,24 +4,7 @@
             "outputFile": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-uz/values-uz.xml",
             "map": [
                 {
-                    "source": "/home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/66227306b59f5982508f1a0bde14ec86/transformed/jetified-play-services-basement-17.5.0/res/values-uz/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "208",
-                        "endOffsets": "455"
-                    },
-                    "to": {
-                        "startLines": "53",
-                        "startColumns": "4",
-                        "startOffsets": "4862",
-                        "endColumns": "208",
-                        "endOffsets": "5066"
-                    }
-                },
-                {
-                    "source": "/home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c339eef85374ad6d8c7c96ae00132dae/transformed/jetified-exoplayer-ui-2.15.1/res/values-uz/values-uz.xml",
+                    "source": "/home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/40ea227669902ea6444aab85d6f4de02/transformed/jetified-exoplayer-ui-2.15.1/res/values-uz/values-uz.xml",
                     "from": {
                         "startLines": "2,6,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -37,6 +20,23 @@
                         "endLines": "5,9,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112",
                         "endColumns": "12,12,85,94,82,97,98,74,67,100,100,64,62,62,69,71,84,78,84,76,73,72,74,90,87,68,65,64,65,69,63,78,79,52,59,47,60,60,70,59,67,62,64,65,63,65,51,60,74,74,52",
                         "endOffsets": "283,459,6582,6677,6760,6858,6957,7032,7100,7201,7302,7367,7430,7493,7563,7635,7720,7799,7884,7961,8035,8108,8183,8274,8362,8431,8497,8562,8628,8698,8762,8841,8921,8974,9034,9082,9143,9204,9275,9335,9403,9466,9531,9597,9661,9727,9779,9840,9915,9990,10043"
+                    }
+                },
+                {
+                    "source": "/home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/66227306b59f5982508f1a0bde14ec86/transformed/jetified-play-services-basement-17.5.0/res/values-uz/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "208",
+                        "endOffsets": "455"
+                    },
+                    "to": {
+                        "startLines": "53",
+                        "startColumns": "4",
+                        "startOffsets": "4862",
+                        "endColumns": "208",
+                        "endOffsets": "5066"
                     }
                 },
                 {

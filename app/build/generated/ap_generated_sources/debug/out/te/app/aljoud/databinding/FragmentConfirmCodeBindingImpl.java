@@ -24,11 +24,11 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
+    private final android.view.View.OnClickListener mCallback47;
+    @Nullable
     private final android.view.View.OnClickListener mCallback45;
     @Nullable
-    private final android.view.View.OnClickListener mCallback43;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback44;
+    private final android.view.View.OnClickListener mCallback46;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -94,9 +94,9 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
         this.tvLoginForget.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback45 = new te.app.aljoud.generated.callback.OnClickListener(this, 3);
-        mCallback43 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
-        mCallback44 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
+        mCallback47 = new te.app.aljoud.generated.callback.OnClickListener(this, 3);
+        mCallback45 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback46 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -292,10 +292,10 @@ public class FragmentConfirmCodeBindingImpl extends FragmentConfirmCodeBinding i
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback45);
-            this.back.setOnClickListener(mCallback43);
+            this.appCompatButtonNext.setOnClickListener(mCallback47);
+            this.back.setOnClickListener(mCallback45);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.pinValidate, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, pinValidateandroidTextAttrChanged);
-            this.tvLoginForget.setOnClickListener(mCallback44);
+            this.tvLoginForget.setOnClickListener(mCallback46);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1

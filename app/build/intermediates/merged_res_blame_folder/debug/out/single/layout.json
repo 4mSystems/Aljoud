@@ -12,16 +12,20 @@
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/layout_action_bar_home.xml"
     },
     {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_payment_method.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/item_payment_method.xml"
+    },
+    {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/reply_sheet.xml",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/reply_sheet.xml"
     },
     {
-        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_map_address.xml",
-        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/activity_map_address.xml"
-    },
-    {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_answer.xml",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/item_answer.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_map_address.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/activity_map_address.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_about.xml",
@@ -42,6 +46,10 @@
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_register.xml",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_register.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_payment_methods.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_payment_methods.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_base.xml",
@@ -92,24 +100,24 @@
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/item_offer.xml"
     },
     {
-        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_lesson_article.xml",
-        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/item_lesson_article.xml"
-    },
-    {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_conversation.xml",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/item_conversation.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_lesson_article.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/item_lesson_article.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_remote_pdf.xml",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/activity_remote_pdf.xml"
     },
     {
-        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_levels.xml",
-        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/item_levels.xml"
-    },
-    {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ask_lesson_sheet.xml",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/ask_lesson_sheet.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_levels.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/item_levels.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_confirm_code.xml",
@@ -144,16 +152,16 @@
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_my_courses.xml"
     },
     {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_universities.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_universities.xml"
+    },
+    {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_course.xml",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/item_course.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_chat.xml",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/item_chat.xml"
-    },
-    {
-        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_universities.xml",
-        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_universities.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_course_details.xml",
@@ -188,24 +196,24 @@
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_lesson_videos.xml"
     },
     {
-        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_lesson_articles.xml",
-        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_lesson_articles.xml"
-    },
-    {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/exam_result_dialog.xml",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/exam_result_dialog.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_lesson_articles.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_lesson_articles.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_tes.xml",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/layout_tes.xml"
     },
     {
-        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_pick_file.xml",
-        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/item_pick_file.xml"
-    },
-    {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_service_request.xml",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_service_request.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_pick_file.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/item_pick_file.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_navigation_drawer.xml",

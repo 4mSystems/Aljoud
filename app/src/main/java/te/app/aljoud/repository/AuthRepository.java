@@ -15,6 +15,8 @@ import te.app.aljoud.pages.auth.models.ForgetPasswordRequest;
 import te.app.aljoud.pages.auth.models.LoginRequest;
 import te.app.aljoud.pages.auth.models.RegisterRequest;
 import te.app.aljoud.pages.auth.models.UsersResponse;
+import te.app.aljoud.pages.fawaterkPayment.models.PaymentMethodResponse;
+import te.app.aljoud.pages.fawaterkPayment.models.paymentResult.PaymentResultResponse;
 import te.app.aljoud.utils.Constants;
 import te.app.aljoud.utils.URLS;
 
@@ -84,4 +86,13 @@ public class AuthRepository extends BaseRepository {
     }
 
 
+    public Disposable getPaymentMethods() {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.PAYMENT_METHODS, new Object(), PaymentMethodResponse.class,
+                Constants.PAYMENT_METHOD, true);
+    }
+
+    public Disposable checkPayment(int courseId, int paymentId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CHECK_PAYMENT + paymentId + "/" + courseId, new Object(), PaymentResultResponse.class,
+                Constants.CHECK_PAYMENT, true);
+    }
 }

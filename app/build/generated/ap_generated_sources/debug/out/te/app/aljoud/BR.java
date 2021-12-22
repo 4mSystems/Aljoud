@@ -71,35 +71,41 @@ public class BR {
 
   public static final int message = 34;
 
-  public static final int offerItem = 35;
+  public static final int methodsAdapter = 35;
 
-  public static final int offersAdapter = 36;
+  public static final int offerItem = 36;
 
-  public static final int offersMainData = 37;
+  public static final int offersAdapter = 37;
 
-  public static final int passingObject = 38;
+  public static final int offersMainData = 38;
 
-  public static final int quizData = 39;
+  public static final int passingObject = 39;
 
-  public static final int quizMainData = 40;
+  public static final int paymentMethod = 40;
 
-  public static final int request = 41;
+  public static final int paymentMethodMain = 41;
 
-  public static final int searchProgressVisible = 42;
+  public static final int quizData = 42;
 
-  public static final int specialistsItem = 43;
+  public static final int quizMainData = 43;
 
-  public static final int university = 44;
+  public static final int request = 44;
 
-  public static final int universityAdapter = 45;
+  public static final int searchProgressVisible = 45;
 
-  public static final int universityData = 46;
+  public static final int specialistsItem = 46;
 
-  public static final int videoData = 47;
+  public static final int university = 47;
 
-  public static final int videosMainData = 48;
+  public static final int universityAdapter = 48;
 
-  public static final int viewModel = 49;
+  public static final int universityData = 49;
 
-  public static final int viewmodel = 50;
+  public static final int videoData = 50;
+
+  public static final int videosMainData = 51;
+
+  public static final int viewModel = 52;
+
+  public static final int viewmodel = 53;
 }

@@ -41,7 +41,7 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
     @Nullable
     private final android.view.View.OnClickListener mCallback25;
     @Nullable
-    private final android.view.View.OnClickListener mCallback22;
+    private final android.view.View.OnClickListener mCallback26;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -99,10 +99,10 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
         this.tvSubjects.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback23 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
-        mCallback24 = new te.app.aljoud.generated.callback.OnClickListener(this, 3);
-        mCallback25 = new te.app.aljoud.generated.callback.OnClickListener(this, 4);
-        mCallback22 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback23 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback24 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
+        mCallback25 = new te.app.aljoud.generated.callback.OnClickListener(this, 3);
+        mCallback26 = new te.app.aljoud.generated.callback.OnClickListener(this, 4);
         invalidateAll();
     }
 
@@ -357,16 +357,35 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.icArrowRight.setOnClickListener(mCallback22);
-            this.mboundView15.setOnClickListener(mCallback23);
-            this.mboundView16.setOnClickListener(mCallback24);
-            this.mboundView17.setOnClickListener(mCallback25);
+            this.icArrowRight.setOnClickListener(mCallback23);
+            this.mboundView15.setOnClickListener(mCallback24);
+            this.mboundView16.setOnClickListener(mCallback25);
+            this.mboundView17.setOnClickListener(mCallback26);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.action(te.app.aljoud.utils.Constants.INSTRUCTOR);
+                }
+                break;
+            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -399,7 +418,9 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.byCourse();
+
+
+                    viewmodel.action(te.app.aljoud.utils.Constants.PAYMENT_METHOD);
                 }
                 break;
             }
@@ -419,25 +440,6 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
 
 
                     viewmodel.action(te.app.aljoud.utils.Constants.ASK);
-                }
-                break;
-            }
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.action(te.app.aljoud.utils.Constants.INSTRUCTOR);
                 }
                 break;
             }

@@ -5,6 +5,7 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6e9decb8bf0055ddb84de18da1e3e621/jetified-gifdecoder-4.12.0/annotations.zip!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6e9decb8bf0055ddb84de18da1e3e621/jetified-gifdecoder-4.12.0/annotations.zip!/" />
       <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/e0c50d2cfad9f967514ba308fd5d4064/transformed/jetified-gifdecoder-4.12.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/e0c50d2cfad9f967514ba308fd5d4064/transformed/jetified-gifdecoder-4.12.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3f6b16e4ac5dd06aba0d023b31d90334/jetified-gifdecoder-4.11.0/res" />
@@ -24,6 +25,8 @@
       <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/e0c50d2cfad9f967514ba308fd5d4064/transformed/jetified-gifdecoder-4.12.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/e0c50d2cfad9f967514ba308fd5d4064/transformed/jetified-gifdecoder-4.12.0/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/e0c50d2cfad9f967514ba308fd5d4064/transformed/jetified-gifdecoder-4.12.0/res" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/e0c50d2cfad9f967514ba308fd5d4064/transformed/jetified-gifdecoder-4.12.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/e0c50d2cfad9f967514ba308fd5d4064/transformed/jetified-gifdecoder-4.12.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/modules-2/files-2.1/com.github.bumptech.glide/gifdecoder/4.12.0/746b9323bb108e97840d4dacd37bd8d4cec34419/gifdecoder-4.12.0-javadoc.jar!/" />

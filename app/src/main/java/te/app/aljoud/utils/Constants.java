@@ -42,13 +42,13 @@ public class Constants {
     public final static String HIDE_PROGRESS = "hideProgress";
     public final static String SERVER_ERROR = "serverError";
     public final static String ERROR_NOT_FOUND = "not_found";
-    public final static String SELECT_COLORS = "SELECT_COLORS";
+    public final static String PAYMENT_METHOD = "PAYMENT_METHOD";
     public final static String FAILURE_CONNECTION = "failure_connection";
-    public final static String SELECT_PART_WARNING = "SELECT_PART_WARNING";
+    public final static String PAYMENT_REDIRECT = "PAYMENT_REDIRECT";
 
     public final static String LANGUAGE = "language";
     public static final String DEFAULT_LANGUAGE = "ar";
-    public static final String COLOR_WARNING = "COLOR_WARNING";
+    public static final String CHECK_PAYMENT = "CHECK_PAYMENT";
     public static final String PAGE = "page";
     public final static String NAME_BAR = "name_bar";
     public static final String BUNDLE = "bundle";
@@ -62,28 +62,20 @@ public class Constants {
 
     //RESPONSES
     public static final int RESPONSE_SUCCESS = 200;
-    public static final String INTERNAL_ACCESSORIES = "9"; //اكسسوار داخلى
-    public static final String EXTERNAL_ACCESSORIES = "10"; //اكسسوار خارجى
-    public static final int WEB_VIEW_REQUEST = 10000;
-    public static final String TELECOM_NETWORKS = "TELECOM_NETWORKS";
-    public static  boolean DATA_CHANGED = false;
-    public static int PART_REQUEST = 4000;
-    public static int BRAND_REQUEST = 5000;
-    public static int MODEL_REQUEST = 7000;
-    public static int IC_REQUEST = 9000;
-    public static int PRODUCT_REQUEST = 8000;
+    public static final int FAWRY_ID = 3;
+    public static final int MOBILE_WALLET_ID = 4; //اكسسوار خارجى
+    public static final int BANK_CARD_ID = 10;
+    public static final String FAWRY = "FAWRY";
+    public static final String MOBILE_WALLET = "MOBILE_WALLET";
+    public static final String BANK_CARD = "BANK_CARD";
+
+    public static boolean DATA_CHANGED = false;
     public static final int RESPONSE_JWT_EXPIRE = 403;
     public static final int RESPONSE_405 = 405;
     public static final int RESPONSE_402 = 402;
     public static final int RESPONSE_409 = 409;
-    public static final int RESULT_CODE = 6000;
     public final static int FILE_TYPE_IMAGE = 378;
     public static final String ABOUT = "about";
-    public static final String TERMS = "terms";
-    public static final int TERMS_ID = 6;
-    public static final int TELECOM_NETWORK = 7;
-    public static final int REFACTOR_CENTER_ID = 8;
-    public static final String FACEBOOK = "FACEBOOK";
     public static final String YOUTUBE = "YOUTUBE";
     public static final String WHATS = "WHATS";
     public static final String CONTACT = "CONTACT";

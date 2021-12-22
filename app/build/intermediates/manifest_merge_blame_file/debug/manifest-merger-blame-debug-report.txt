@@ -333,13 +333,13 @@
 178-->[androidx.room:room-runtime:2.3.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/ceff7ef425325e325919d66b909237d7/transformed/room-runtime-2.3.0/AndroidManifest.xml:28:13-37
 179
 180        <provider
-180-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/e6c84315df4e81fbe52fb896bed03cf8/transformed/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
+180-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/e06b62a5d3e0da1cc5277ff633747248/transformed/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
 181            android:name="com.squareup.picasso.PicassoProvider"
-181-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/e6c84315df4e81fbe52fb896bed03cf8/transformed/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
+181-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/e06b62a5d3e0da1cc5277ff633747248/transformed/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
 182            android:authorities="te.app.aljoud.com.squareup.picasso"
-182-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/e6c84315df4e81fbe52fb896bed03cf8/transformed/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
+182-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/e06b62a5d3e0da1cc5277ff633747248/transformed/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
 183            android:exported="false" /> <!-- The activities will be merged into the manifest of the hosting app. -->
-183-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/e6c84315df4e81fbe52fb896bed03cf8/transformed/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+183-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/e06b62a5d3e0da1cc5277ff633747248/transformed/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
 184        <activity
 184-->[com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c2afcb919f601c58ef6d044a87187b67/transformed/jetified-core-1.10.2/AndroidManifest.xml:18:9-24:45
 185            android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity"

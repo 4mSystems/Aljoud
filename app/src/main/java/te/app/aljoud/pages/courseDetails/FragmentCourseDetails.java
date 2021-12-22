@@ -32,9 +32,11 @@ import te.app.aljoud.model.base.Mutable;
 import te.app.aljoud.model.base.StatusMessage;
 import te.app.aljoud.pages.courseDetails.models.CourseDetailsResponse;
 import te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel;
+import te.app.aljoud.pages.fawaterkPayment.FawterkMethodFragment;
 import te.app.aljoud.utils.Constants;
 import te.app.aljoud.utils.helper.LauncherHelper;
 import te.app.aljoud.utils.helper.MovementHelper;
+import te.app.aljoud.utils.session.UserHelper;
 import te.app.aljoud.utils.upload.FileOperations;
 
 
@@ -85,6 +87,8 @@ public class FragmentCourseDetails extends BaseFragment {
                     sheetDialog.dismiss();
             } else if (Constants.COURSE_LESSONS.equals(((Mutable) o).message)) {
                 MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getCourse().getId()), viewModel.getCourse().getName(), FragmentCourseLessons.class.getName(), null);
+            } else if (Constants.PAYMENT_METHOD.equals(((Mutable) o).message)) {
+                    MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getCourse().getId()), viewModel.getCourse().getName(), FawterkMethodFragment.class.getName(), null);
             } else if (Constants.PICKED_SUCCESSFULLY.equals(((Mutable) o).message)) {
                 if (viewModel.getFilesAdapter().getFiles().size() <= 4) {
                     LauncherHelper.launcherRequest = Constants.FILE_TYPE_IMAGE;
@@ -131,16 +135,16 @@ public class FragmentCourseDetails extends BaseFragment {
         });
     }
 
-        @Override
-        public void launchActivityResult(int request, int resultCode, Intent data) {
-            super.launchActivityResult(request, resultCode, data);
-            if (request == Constants.FILE_TYPE_IMAGE) {
-                String mimeType = requireActivity().getContentResolver().getType(Objects.requireNonNull(data.getData()));
-                FileObject fileObject = FileOperations.getFileObject(requireActivity(), data, "file[" + viewModel.getFileObjectList().size() + "]", Constants.FILE_TYPE_IMAGE);
-                viewModel.getFilesAdapter().getFiles().add(new File(fileObject.getFilePath(), mimeType));
-                viewModel.getFilesAdapter().notifyDataSetChanged();
-                viewModel.notifyChange(BR.filesAdapter);
-                viewModel.getFileObjectList().add(fileObject);
-            }
+    @Override
+    public void launchActivityResult(int request, int resultCode, Intent data) {
+        super.launchActivityResult(request, resultCode, data);
+        if (request == Constants.FILE_TYPE_IMAGE) {
+            String mimeType = requireActivity().getContentResolver().getType(Objects.requireNonNull(data.getData()));
+            FileObject fileObject = FileOperations.getFileObject(requireActivity(), data, "file[" + viewModel.getFileObjectList().size() + "]", Constants.FILE_TYPE_IMAGE);
+            viewModel.getFilesAdapter().getFiles().add(new File(fileObject.getFilePath(), mimeType));
+            viewModel.getFilesAdapter().notifyDataSetChanged();
+            viewModel.notifyChange(BR.filesAdapter);
+            viewModel.getFileObjectList().add(fileObject);
         }
+    }
 }

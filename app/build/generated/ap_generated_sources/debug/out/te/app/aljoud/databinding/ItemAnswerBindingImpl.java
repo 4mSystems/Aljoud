@@ -24,7 +24,7 @@ public class ItemAnswerBindingImpl extends ItemAnswerBinding implements te.app.a
     private final com.google.android.material.imageview.ShapeableImageView mboundView3;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback36;
+    private final android.view.View.OnClickListener mCallback38;
     @Nullable
     private final android.view.View.OnClickListener mCallback37;
     // values
@@ -47,8 +47,8 @@ public class ItemAnswerBindingImpl extends ItemAnswerBinding implements te.app.a
         this.radio.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback36 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
-        mCallback37 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
+        mCallback38 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
+        mCallback37 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -183,8 +183,8 @@ public class ItemAnswerBindingImpl extends ItemAnswerBinding implements te.app.a
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView0.setOnClickListener(mCallback36);
-            this.radio.setOnClickListener(mCallback37);
+            this.mboundView0.setOnClickListener(mCallback37);
+            this.radio.setOnClickListener(mCallback38);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -199,7 +199,7 @@ public class ItemAnswerBindingImpl extends ItemAnswerBinding implements te.app.a
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
+            case 2: {
                 // localize variables for thread safety
                 // itemViewModel
                 te.app.aljoud.pages.exams.viewModels.ItemAnswerViewModel itemViewModel = mItemViewModel;
@@ -216,7 +216,7 @@ public class ItemAnswerBindingImpl extends ItemAnswerBinding implements te.app.a
                 }
                 break;
             }
-            case 2: {
+            case 1: {
                 // localize variables for thread safety
                 // itemViewModel
                 te.app.aljoud.pages.exams.viewModels.ItemAnswerViewModel itemViewModel = mItemViewModel;
