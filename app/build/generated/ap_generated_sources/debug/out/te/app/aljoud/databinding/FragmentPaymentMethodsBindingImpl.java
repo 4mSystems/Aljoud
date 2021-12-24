@@ -20,7 +20,7 @@ public class FragmentPaymentMethodsBindingImpl extends FragmentPaymentMethodsBin
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback39;
+    private final android.view.View.OnClickListener mCallback41;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -39,7 +39,7 @@ public class FragmentPaymentMethodsBindingImpl extends FragmentPaymentMethodsBin
         this.recMarket.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback39 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback41 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -130,7 +130,7 @@ public class FragmentPaymentMethodsBindingImpl extends FragmentPaymentMethodsBin
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.next.setOnClickListener(mCallback39);
+            this.next.setOnClickListener(mCallback41);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

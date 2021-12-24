@@ -29,7 +29,7 @@ public class FragmentLessonDetailsBindingImpl extends FragmentLessonDetailsBindi
     private final com.google.android.material.button.MaterialButton mboundView4;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback40;
+    private final android.view.View.OnClickListener mCallback42;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -59,7 +59,7 @@ public class FragmentLessonDetailsBindingImpl extends FragmentLessonDetailsBindi
         this.tvCardTitle.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback40 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback42 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -175,7 +175,7 @@ public class FragmentLessonDetailsBindingImpl extends FragmentLessonDetailsBindi
             // api target 1
 
             te.app.aljoud.base.ApplicationBinding.loadImage(this.icQr, userHelperGetInstanceContextUserDataQrImage);
-            this.mboundView4.setOnClickListener(mCallback40);
+            this.mboundView4.setOnClickListener(mCallback42);
             this.rateContainer.setVisibility(userHelperGetInstanceContextUserDataJavaLangObjectNullViewVISIBLEViewGONE);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvCardTitle, tvCardTitleAndroidStringAccountNumberConcatJavaLangStringConcatStringValueOfUserHelperGetInstanceContextUserDataId);
         }

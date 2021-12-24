@@ -23,9 +23,9 @@ public class PaymentsViewModel extends BaseViewModel {
     PaymentMethodsAdapter methodsAdapter;
     @Inject
     AuthRepository repository;
-    //    SendPaymentRequest sendPaymentRequest;
     PaymentMethodMain paymentMethodMain;
     PaymentResultData paymentResultData;
+    private int paymentId;
 
     @Inject
     public PaymentsViewModel(AuthRepository repository) {
@@ -39,24 +39,26 @@ public class PaymentsViewModel extends BaseViewModel {
     }
 
     public void checkPayment() {
-        if (getMethodsAdapter().lastSelected != -1)
-            compositeDisposable.add(repository.checkPayment(getPassingObject().getId(), getMethodsAdapter().paymentMethodList.get(getMethodsAdapter().lastSelected).getPaymentId()));
+        if (getMethodsAdapter().lastSelected != -1) {
+            paymentId = getMethodsAdapter().paymentMethodList.get(getMethodsAdapter().lastSelected).getPaymentId();
+            compositeDisposable.add(repository.checkPayment(getPassingObject().getId(), paymentId));
+        }
     }
 
     public void redirectPayment() {
-        if (getMethodsAdapter().paymentMethodList.get(getMethodsAdapter().lastSelected).getPaymentId() == Constants.FAWRY_ID)
+
+        if (paymentId == Constants.FAWRY_ID)
             liveData.setValue(new Mutable(Constants.FAWRY));
-        else if (getMethodsAdapter().paymentMethodList.get(getMethodsAdapter().lastSelected).getPaymentId() == Constants.MOBILE_WALLET_ID)
+        else if (paymentId == Constants.MOBILE_WALLET_ID)
             liveData.setValue(new Mutable(Constants.MOBILE_WALLET));
-        else if (getMethodsAdapter().paymentMethodList.get(getMethodsAdapter().lastSelected).getPaymentId() == Constants.BANK_CARD_ID)
+        else if (paymentId == Constants.BANK_CARD_ID)
             liveData.setValue(new Mutable(Constants.BANK_CARD));
 
     }
 
-//    @Bindable
-//    public SendPaymentRequest getSendPaymentRequest() {
-//        return this.sendPaymentRequest == null ? this.sendPaymentRequest = new SendPaymentRequest() : this.sendPaymentRequest;
-//    }
+    public void makeCopy() {
+        liveData.setValue(new Mutable(Constants.COPY));
+    }
 
     @Bindable
     public PaymentMethodMain getPaymentMethodMain() {
@@ -71,13 +73,15 @@ public class PaymentsViewModel extends BaseViewModel {
         this.paymentMethodMain = paymentMethodMain;
     }
 
+    @Bindable
     public PaymentResultData getPaymentResultData() {
         return this.paymentResultData == null ? this.paymentResultData = new PaymentResultData() : this.paymentResultData;
     }
 
-
+    @Bindable
     public void setPaymentResultData(PaymentResultData paymentResultData) {
         redirectPayment();
+        notifyChange(BR.paymentResultData);
         this.paymentResultData = paymentResultData;
     }
 

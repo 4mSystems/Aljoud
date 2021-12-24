@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="amrk.app.moon.views.fragments.SplashFragment">
+
+    <data>
+
+        <import type="te.app.aljoud.utils.Constants" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="te.app.aljoud.pages.fawaterkPayment.viewModels.PaymentsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp10h"
+            android:onClick="@{()-> viewmodel.goBack(context)}"
+            android:src="@drawable/ic_close"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <te.app.aljoud.customViews.views.CustomTextViewMedium
+            android:id="@+id/tv_success"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp10h"
+            android:text="@string/success"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/ic_close" />
+
+        <te.app.aljoud.customViews.views.CustomTextViewMedium
+            android:id="@+id/payment_done_sub_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10h"
+            android:layout_marginTop="@dimen/dp6h"
+            android:layout_marginEnd="@dimen/dp10h"
+            android:text="@string/payment_done_sub_title"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/medium_color"
+            app:layout_constraintTop_toBottomOf="@id/tv_success" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp25h"
+            android:src="@drawable/ic_success"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/payment_done_sub_title" />
+
+        <te.app.aljoud.customViews.views.CustomTextViewMedium
+            android:id="@+id/payment_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10h"
+            android:layout_marginTop="@dimen/dp14h"
+            android:layout_marginEnd="@dimen/dp10h"
+            android:text="@string/payment_fawary_code"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/medium_color"
+            app:layout_constraintTop_toBottomOf="@id/ic_success" />
+
+        <te.app.aljoud.customViews.views.CustomTextViewMedium
+            android:id="@+id/payment_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10h"
+            android:layout_marginTop="@dimen/dp14h"
+            android:layout_marginEnd="@dimen/dp10h"
+            android:text="@{viewmodel.paymentResultData.paymentResultData.paymentData.fawryCode!=null?viewmodel.paymentResultData.paymentResultData.paymentData.fawryCode:viewmodel.paymentResultData.paymentResultData.paymentData.meezaReference}"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/payment_body" />
+
+        <te.app.aljoud.customViews.views.CustomTextViewMedium
+            android:id="@+id/payment_body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10h"
+            android:layout_marginTop="@dimen/dp14h"
+            android:layout_marginEnd="@dimen/dp10h"
+            android:text="@string/payment_fawary_validation"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/medium_color"
+            android:visibility="@{viewmodel.paymentResultData.paymentResultData.paymentData.expireDate!=null?View.VISIBLE:View.GONE}"
+            app:layout_constraintTop_toBottomOf="@id/payment_code" />
+
+        <te.app.aljoud.customViews.views.CustomTextViewMedium
+            android:id="@+id/payment_validation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10h"
+            android:layout_marginTop="@dimen/dp14h"
+            android:layout_marginEnd="@dimen/dp10h"
+            android:text="@{viewmodel.paymentResultData.paymentResultData.paymentData.expireDate}"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:visibility="@{viewmodel.paymentResultData.paymentResultData.paymentData.expireDate!=null?View.VISIBLE:View.GONE}"
+            app:layout_constraintTop_toBottomOf="@id/payment_body2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp10h"
+            android:onClick="@{()-> viewmodel.makeCopy()}"
+            android:padding="@dimen/dp8h"
+            android:text="@string/copy"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:backgroundTint="@color/colorPrimaryDark"
+            app:cornerRadius="@dimen/dp8h"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

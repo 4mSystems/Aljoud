@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-75:12
-INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-75:12
-INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-75:12
-INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-75:12
+ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-79:12
+INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-79:12
+INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-79:12
+INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-79:12
 MERGED from [androidx.databinding:databinding-adapters:7.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/7ebe63ad81ce42c37472b628c3c4b1b0/transformed/databinding-adapters-7.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.databinding:databinding-ktx:7.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/e9b56abfa3a0f5143c47ffeced56ba2a/transformed/jetified-databinding-ktx-7.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.databinding:databinding-runtime:7.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/2d1dc6e15efbaaeb5a8367ebc88027cd/transformed/databinding-runtime-7.0.0/AndroidManifest.xml:17:1-22:12
@@ -111,22 +111,22 @@ MERGED from [com.google.android.datatransport:transport-runtime:2.2.5] /home/eln
 MERGED from [com.google.android.datatransport:transport-api:2.2.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/6c33742388505c343f7a651f4f87c9af/transformed/jetified-transport-api-2.2.1/AndroidManifest.xml:15:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c707d4219d50f56317a7cceb09d587d2/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.dagger:dagger-lint-aar:2.30.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/1cfbda22f842e6af06ebd8e732aa3d97/transformed/jetified-dagger-lint-aar-2.30.1/AndroidManifest.xml:16:1-19:12
-INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-75:12
-INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-75:12
-INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-75:12
+INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-79:12
+INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-79:12
+INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-79:12
 	package
 		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:4:5-28
 		INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml
 		INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-75:12
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-79:12
 		INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-75:12
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:1-79:12
 		INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:2:11-69
@@ -207,7 +207,7 @@ MERGED from [com.github.jaiselrahman:FilePicker:1.3.2] /home/elnagar/android-stu
 	android:name
 		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:17:9-65
 application
-ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:20:5-73:19
+ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:20:5-77:19
 MERGED from [com.github.jaiselrahman:FilePicker:1.3.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/84f6f470901a390f646107d8f41ab727/transformed/jetified-FilePicker-1.3.2/AndroidManifest.xml:13:5-27:19
 MERGED from [com.github.jaiselrahman:FilePicker:1.3.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/84f6f470901a390f646107d8f41ab727/transformed/jetified-FilePicker-1.3.2/AndroidManifest.xml:13:5-27:19
 MERGED from [com.google.android.material:material:1.4.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/38f6d77c20c3e501ffd6499f265cd5e5/transformed/material-1.4.0/AndroidManifest.xml:22:5-20
@@ -353,42 +353,48 @@ ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xm
 		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:53:13-51
 	android:name
 		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:52:13-55
+activity#te.app.aljoud.activity.PaymentVisaActivity
+ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:54:9-56:54
+	android:screenOrientation
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:56:13-51
+	android:name
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:55:13-57
 activity#te.app.aljoud.activity.MainActivity
-ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:54:9-58:70
+ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:58:9-62:70
 	android:screenOrientation
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:57:13-49
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:61:13-49
 	android:windowSoftInputMode
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:58:13-67
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:62:13-67
 	android:configChanges
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:56:13-74
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:60:13-74
 	android:name
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:55:13-63
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:59:13-63
 activity#te.app.aljoud.activity.BaseActivity
-ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:60:9-72:20
+ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:64:9-76:20
 	android:screenOrientation
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:64:13-49
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:68:13-49
 	android:windowSoftInputMode
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:65:13-67
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:69:13-67
 	android:exported
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:63:13-36
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:67:13-36
 	android:configChanges
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:62:13-74
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:66:13-74
 	android:name
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:61:13-63
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:65:13-63
 intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.VIEW+category:name:android.intent.category.LAUNCHER
-ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:66:13-71:29
+ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:70:13-75:29
 action#android.intent.action.MAIN
-ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:67:17-69
+ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:71:17-69
 	android:name
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:67:25-66
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:71:25-66
 action#android.intent.action.VIEW
-ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:68:17-69
+ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:72:17-69
 	android:name
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:68:25-66
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:72:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:70:17-77
+ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:74:17-77
 	android:name
-		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:70:27-74
+		ADDED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:74:27-74
 uses-sdk
 INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml

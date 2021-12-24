@@ -6,6 +6,7 @@ import javax.inject.Provider;
 import te.app.aljoud.activity.BaseActivity;
 import te.app.aljoud.activity.MainActivity;
 import te.app.aljoud.activity.MainActivity_MembersInjector;
+import te.app.aljoud.activity.PaymentVisaActivity;
 import te.app.aljoud.connection.Api;
 import te.app.aljoud.connection.ConnectionHelper;
 import te.app.aljoud.connection.ConnectionHelper_Factory;
@@ -74,6 +75,8 @@ import te.app.aljoud.pages.exams.viewModels.ExamsViewModel_Factory;
 import te.app.aljoud.pages.exams.viewModels.ExamsViewModel_MembersInjector;
 import te.app.aljoud.pages.fawaterkPayment.FawterkMethodFragment;
 import te.app.aljoud.pages.fawaterkPayment.FawterkMethodFragment_MembersInjector;
+import te.app.aljoud.pages.fawaterkPayment.PaymentSuccessFragment;
+import te.app.aljoud.pages.fawaterkPayment.PaymentSuccessFragment_MembersInjector;
 import te.app.aljoud.pages.fawaterkPayment.viewModels.PaymentsViewModel;
 import te.app.aljoud.pages.fawaterkPayment.viewModels.PaymentsViewModel_Factory;
 import te.app.aljoud.pages.fawaterkPayment.viewModels.PaymentsViewModel_MembersInjector;
@@ -253,6 +256,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   @Override
+  public void inject(PaymentVisaActivity paymentVisaActivity) {
+  }
+
+  @Override
   public void inject(MapAddressActivity mapAddressActivity) {
     injectMapAddressActivity(mapAddressActivity);
   }
@@ -380,6 +387,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(FawterkMethodFragment fawterkMethodFragment) {
     injectFawterkMethodFragment(fawterkMethodFragment);
+  }
+
+  @Override
+  public void inject(PaymentSuccessFragment paymentSuccessFragment) {
+    injectPaymentSuccessFragment(paymentSuccessFragment);
   }
 
   private HomeViewModel injectHomeViewModel(HomeViewModel instance) {
@@ -607,6 +619,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private FawterkMethodFragment injectFawterkMethodFragment(FawterkMethodFragment instance) {
     FawterkMethodFragment_MembersInjector.injectViewModel(instance, paymentsViewModel());
+    return instance;
+  }
+
+  private PaymentSuccessFragment injectPaymentSuccessFragment(PaymentSuccessFragment instance) {
+    PaymentSuccessFragment_MembersInjector.injectViewModel(instance, paymentsViewModel());
     return instance;
   }
 

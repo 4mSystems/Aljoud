@@ -52,6 +52,10 @@
             android:name=".activity.ExoPlayerActivity"
             android:screenOrientation="fullSensor" />
         <activity
+            android:name=".activity.PaymentVisaActivity"
+            android:screenOrientation="fullSensor" />
+
+        <activity
             android:name="te.app.aljoud.activity.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"

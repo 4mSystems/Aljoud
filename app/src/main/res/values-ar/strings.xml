@@ -190,5 +190,12 @@
     <string name="to">To :</string>
     <string name="score">Score :</string>
     <string name="result_dialog">Exam Result</string>
+    <string name="success">Success</string>
+    <string name="payment_done_sub_title">Your payment has been created</string>
+    <string name="payment_fawary_code">"يرجى التوجه الى اقرب مكينة دفع فورى "</string>
+    <string name="payment_fawary_validation">This code is valid until</string>
+    <string name="copy">Copy code</string>
+    <string name="copied">Copied</string>
+    <string name="payment">Payment</string>
 
 </resources>

@@ -29,6 +29,7 @@ import com.google.gson.Gson;
 import te.app.aljoud.PassingObject;
 import te.app.aljoud.activity.BaseActivity;
 import te.app.aljoud.activity.MainActivity;
+import te.app.aljoud.activity.PaymentVisaActivity;
 import te.app.aljoud.base.MyApplication;
 import te.app.aljoud.base.ParentActivity;
 import te.app.aljoud.utils.Constants;
@@ -165,6 +166,11 @@ public class MovementHelper {
         ((Activity) context).finishAffinity();
     }
 
+    public static void startPaymentActivityForResultWithBundle(Context from, String url) {
+        Intent intent = new Intent(from, PaymentVisaActivity.class);
+        intent.putExtra(Constants.BUNDLE, url);
+        ((ParentActivity) from).startActivityForResult(intent, Constants.BANK_CARD_ID);
+    }
 
     public static void startWebPage(Context context, String page) {
         try {

@@ -76,7 +76,7 @@ public class Constants {
     public static final int RESPONSE_409 = 409;
     public final static int FILE_TYPE_IMAGE = 378;
     public static final String ABOUT = "about";
-    public static final String YOUTUBE = "YOUTUBE";
+    public static final String COPY = "COPY";
     public static final String WHATS = "WHATS";
     public static final String CONTACT = "CONTACT";
     public static final String CUSTOMER_SERVICES = "CUSTOMER_SERVICES";

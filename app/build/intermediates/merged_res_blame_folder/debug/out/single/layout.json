@@ -4,6 +4,10 @@
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_splash.xml"
     },
     {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_payment_success.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_payment_success.xml"
+    },
+    {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_offers.xml",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_offers.xml"
     },
@@ -178,6 +182,10 @@
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/exit_layout.xml",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/exit_layout.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_payment_visa.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/activity_payment_visa.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_category_sections.xml",

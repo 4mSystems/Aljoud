@@ -33,9 +33,9 @@ public class FragmentCourseLessonsBindingImpl extends FragmentCourseLessonsBindi
     private final com.google.android.material.button.MaterialButton mboundView8;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback21;
+    private final android.view.View.OnClickListener mCallback23;
     @Nullable
-    private final android.view.View.OnClickListener mCallback22;
+    private final android.view.View.OnClickListener mCallback24;
     // values
     // listeners
     private OnRatingBarChangeListenerImpl mViewmodelOnRateChangeAndroidWidgetRatingBarOnRatingBarChangeListener;
@@ -78,8 +78,8 @@ public class FragmentCourseLessonsBindingImpl extends FragmentCourseLessonsBindi
         this.tvSubjects.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback21 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
-        mCallback22 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
+        mCallback23 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback24 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -271,8 +271,8 @@ public class FragmentCourseLessonsBindingImpl extends FragmentCourseLessonsBindi
             // api target 1
 
             te.app.aljoud.base.ApplicationBinding.loadImage(this.icQr, userHelperGetInstanceContextUserDataQrImage);
-            this.mboundView10.setOnClickListener(mCallback22);
-            this.mboundView8.setOnClickListener(mCallback21);
+            this.mboundView10.setOnClickListener(mCallback24);
+            this.mboundView8.setOnClickListener(mCallback23);
             this.rateContainer.setVisibility(userHelperGetInstanceContextUserDataJavaLangObjectNullViewVISIBLEViewGONE);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvCardTitle, tvCardTitleAndroidStringAccountNumberConcatJavaLangStringConcatStringValueOfUserHelperGetInstanceContextUserDataId);
         }

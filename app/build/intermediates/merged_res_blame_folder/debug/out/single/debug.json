@@ -144,6 +144,10 @@
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/drawable/ic_contact.xml"
     },
     {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/merged_res/debug/drawable_ic_success.xml.flat",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/drawable/ic_success.xml"
+    },
+    {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_foreground.png.flat",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png"
     },
@@ -380,6 +384,10 @@
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/activity_main.xml"
     },
     {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/merged_res/debug/drawable_ic_close.xml.flat",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/drawable/ic_close.xml"
+    },
+    {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/merged_res/debug/drawable_ic_facebook.xml.flat",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/drawable/ic_facebook.xml"
     },
@@ -486,6 +494,10 @@
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/merged_res/debug/anim_left_to_right.xml.flat",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/anim/left_to_right.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/merged_res/debug/layout_fragment_payment_success.xml.flat",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_payment_success.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/merged_res/debug/drawable_ic_language.xml.flat",
@@ -694,6 +706,10 @@
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/merged_res/debug/layout_activity_exo_player.xml.flat",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/activity_exo_player.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/merged_res/debug/layout_activity_payment_visa.xml.flat",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/activity_payment_visa.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/merged_res/debug/mipmap-hdpi_grand_g.png.flat",

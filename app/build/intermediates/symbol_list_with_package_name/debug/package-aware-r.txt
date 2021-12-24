@@ -3310,6 +3310,7 @@ drawable ic_check_white_24dp
 drawable ic_circle
 drawable ic_clear_white_24dp
 drawable ic_clock_black_24dp
+drawable ic_close
 drawable ic_contact
 drawable ic_delete
 drawable ic_deselect_all
@@ -3365,6 +3366,7 @@ drawable ic_selected
 drawable ic_send
 drawable ic_shop
 drawable ic_shopping_cart
+drawable ic_success
 drawable ic_support_agent
 drawable ic_verify
 drawable ic_video
@@ -3529,6 +3531,7 @@ id autoCompleteToStart
 id automatic
 id back
 id back_and_forth
+id back_container
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3755,6 +3758,7 @@ id hybrid
 id ib_close
 id ic_arrow_right
 id ic_back
+id ic_close
 id ic_exit_dialog
 id ic_file
 id ic_instructor
@@ -3763,6 +3767,7 @@ id ic_qr
 id ic_quiz
 id ic_remove
 id ic_status
+id ic_success
 id ic_university
 id ic_verify
 id icon
@@ -3922,6 +3927,11 @@ id parent_matrix
 id password_toggle
 id path
 id pathRelative
+id payment_body
+id payment_body2
+id payment_code
+id payment_done_sub_title
+id payment_validation
 id pb_base_loading_bar
 id pdf_page_container
 id peekHeight
@@ -4154,6 +4164,7 @@ id tv_sign
 id tv_special
 id tv_students
 id tv_subjects
+id tv_success
 id tv_support
 id tv_terms
 id tv_title
@@ -4186,6 +4197,8 @@ id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
 id vv_navigation_drawer_image
+id webProgress
+id webview
 id west
 id when_playing
 id wide
@@ -4277,6 +4290,7 @@ layout activity_file_picker
 layout activity_main
 layout activity_map_address
 layout activity_media_details
+layout activity_payment_visa
 layout activity_remote_pdf
 layout ask_lesson_sheet
 layout ask_sheet
@@ -4334,6 +4348,7 @@ layout fragment_media_picker
 layout fragment_my_courses
 layout fragment_offers
 layout fragment_payment_methods
+layout fragment_payment_success
 layout fragment_photo_picker
 layout fragment_register
 layout fragment_service_request
@@ -4567,6 +4582,8 @@ string contact_comment
 string contact_title
 string contact_us
 string continue_buy
+string copied
+string copy
 string country_hint
 string course_access
 string course_article
@@ -4783,6 +4800,10 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string payment
+string payment_done_sub_title
+string payment_fawary_code
+string payment_fawary_validation
 string pdf_title
 string pdfvp_ready_to_download
 string permission_filepicker_rationale
@@ -4837,6 +4858,7 @@ string status_bar_notification_info_overflow
 string storage_permission_denied
 string students
 string subjects
+string success
 string suggest_title
 string suggestions
 string suggestions_warning

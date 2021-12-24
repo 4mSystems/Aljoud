@@ -6,6 +6,7 @@ import javax.inject.Singleton;
 import dagger.Component;
 import te.app.aljoud.activity.BaseActivity;
 import te.app.aljoud.activity.MainActivity;
+import te.app.aljoud.activity.PaymentVisaActivity;
 import te.app.aljoud.connection.ConnectionModule;
 import te.app.aljoud.pages.auth.changePassword.ChangePasswordFragment;
 import te.app.aljoud.pages.auth.confirmCode.ConfirmCodeFragment;
@@ -22,6 +23,7 @@ import te.app.aljoud.pages.courseDetails.FragmentLessonQuizzes;
 import te.app.aljoud.pages.courseDetails.FragmentLessonVideos;
 import te.app.aljoud.pages.exams.ExamsFragment;
 import te.app.aljoud.pages.fawaterkPayment.FawterkMethodFragment;
+import te.app.aljoud.pages.fawaterkPayment.PaymentSuccessFragment;
 import te.app.aljoud.pages.home.viewModels.UniversitiesFragment;
 import te.app.aljoud.pages.myCourses.MyCoursesFragment;
 import te.app.aljoud.pages.offers.OffersFragment;
@@ -40,6 +42,8 @@ public interface IApplicationComponent {
     void inject(MainActivity mainActivity);
 
     void inject(BaseActivity tmpActivity);
+
+    void inject(PaymentVisaActivity paymentVisaActivity);
 
     void inject(MapAddressActivity mapAddressActivity);
 
@@ -90,7 +94,10 @@ public interface IApplicationComponent {
     void inject(ServiceRequestFragment serviceRequestFragment);
 
     void inject(ExamsFragment examsFragment);
+
     void inject(FawterkMethodFragment fawterkMethodFragment);
+
+    void inject(PaymentSuccessFragment paymentSuccessFragment);
 
     @Component.Builder
     interface Builder {
