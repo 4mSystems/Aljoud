@@ -86,13 +86,19 @@ public class AuthRepository extends BaseRepository {
     }
 
 
-    public Disposable getPaymentMethods() {
+    public Disposable getPaymentMethods(String type) {
+//        type.equals(Constants.COURSE_DETAILS) ? URLS.PAYMENT_METHODS : URLS.PAYMENT_METHODS_OFFERS
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.PAYMENT_METHODS, new Object(), PaymentMethodResponse.class,
                 Constants.PAYMENT_METHOD, true);
     }
 
-    public Disposable checkPayment(int courseId, int paymentId) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CHECK_PAYMENT + paymentId + "/" + courseId, new Object(), PaymentResultResponse.class,
+    public Disposable checkPayment(int courseId, int paymentId, String type) {
+        String url;
+        if (type.equals(Constants.COURSE_DETAILS))
+            url = URLS.CHECK_PAYMENT;
+        else
+            url = URLS.CHECK_PAYMENT_OFFERS;
+        return connectionHelper.requestApi(Constants.GET_REQUEST, url + paymentId + "/" + courseId, new Object(), PaymentResultResponse.class,
                 Constants.CHECK_PAYMENT, true);
     }
 }

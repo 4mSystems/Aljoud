@@ -35,18 +35,17 @@ public class PaymentsViewModel extends BaseViewModel {
     }
 
     public void getPaymentMethod() {
-        compositeDisposable.add(repository.getPaymentMethods());
+        compositeDisposable.add(repository.getPaymentMethods(getPassingObject().getObject()));
     }
 
     public void checkPayment() {
         if (getMethodsAdapter().lastSelected != -1) {
             paymentId = getMethodsAdapter().paymentMethodList.get(getMethodsAdapter().lastSelected).getPaymentId();
-            compositeDisposable.add(repository.checkPayment(getPassingObject().getId(), paymentId));
+            compositeDisposable.add(repository.checkPayment(getPassingObject().getId(), paymentId, getPassingObject().getObject()));
         }
     }
 
     public void redirectPayment() {
-
         if (paymentId == Constants.FAWRY_ID)
             liveData.setValue(new Mutable(Constants.FAWRY));
         else if (paymentId == Constants.MOBILE_WALLET_ID)

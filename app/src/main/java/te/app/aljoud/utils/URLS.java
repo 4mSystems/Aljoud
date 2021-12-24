@@ -36,4 +36,7 @@ public class URLS {
     public static final String QUIZ_COURSE = "exam/questions/";
     public static final String PAYMENT_METHODS = "student/buy/course/payment_step_one";
     public static final String CHECK_PAYMENT = "student/buy/course/payment_step_two/";
+    public static final String PAYMENT_METHODS_OFFERS = "student/buy/offer/payment_step_one";
+    public static final String CHECK_PAYMENT_OFFERS = "student/buy/offer/payment_step_two/";
+
 }

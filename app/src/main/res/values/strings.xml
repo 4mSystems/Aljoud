@@ -89,7 +89,7 @@
     <string name="update_version">Please update the current version</string>
     <string name="update">Update</string>
     <string name="password_not_match">Password does not match</string>
-    <string name="login">Start Tour</string>
+    <string name="login">Login</string>
     <string name="login_body">Please login to your account</string>
     <string name="phone_hint">Phone</string>
     <string name="password">Password</string>

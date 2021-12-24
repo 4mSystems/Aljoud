@@ -20,11 +20,13 @@ import te.app.aljoud.PassingObject;
 import te.app.aljoud.R;
 import te.app.aljoud.databinding.ItemHomeBinding;
 import te.app.aljoud.databinding.ItemOfferBinding;
+import te.app.aljoud.pages.fawaterkPayment.FawterkMethodFragment;
 import te.app.aljoud.pages.home.models.home.University;
 import te.app.aljoud.pages.home.viewModels.ItemUniversityViewModel;
 import te.app.aljoud.pages.offers.models.OfferItem;
 import te.app.aljoud.pages.offers.viewModel.ItemOfferViewModel;
 import te.app.aljoud.pages.university.FragmentUniversityDetails;
+import te.app.aljoud.utils.Constants;
 import te.app.aljoud.utils.helper.MovementHelper;
 
 
@@ -52,7 +54,8 @@ public class OffersAdapter extends RecyclerView.Adapter<OffersAdapter.ViewHolder
         OfferItem categoriesData = offerItemList.get(position);
         ItemOfferViewModel itemMenuViewModel = new ItemOfferViewModel(categoriesData);
         itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {
-            liveData.setValue(categoriesData.getId());
+//            liveData.setValue(categoriesData.getId());
+            MovementHelper.startActivityWithBundle(context, new PassingObject(categoriesData.getId(), Constants.OFFERS), categoriesData.getName(), FawterkMethodFragment.class.getName(), null);
         });
         holder.setViewModel(itemMenuViewModel);
     }

@@ -88,7 +88,7 @@ public class FragmentCourseDetails extends BaseFragment {
             } else if (Constants.COURSE_LESSONS.equals(((Mutable) o).message)) {
                 MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getCourse().getId()), viewModel.getCourse().getName(), FragmentCourseLessons.class.getName(), null);
             } else if (Constants.PAYMENT_METHOD.equals(((Mutable) o).message)) {
-                    MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getCourse().getId()), viewModel.getCourse().getName(), FawterkMethodFragment.class.getName(), null);
+                MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getCourse().getId(), Constants.COURSE_DETAILS), viewModel.getCourse().getName(), FawterkMethodFragment.class.getName(), null);
             } else if (Constants.PICKED_SUCCESSFULLY.equals(((Mutable) o).message)) {
                 if (viewModel.getFilesAdapter().getFiles().size() <= 4) {
                     LauncherHelper.launcherRequest = Constants.FILE_TYPE_IMAGE;
