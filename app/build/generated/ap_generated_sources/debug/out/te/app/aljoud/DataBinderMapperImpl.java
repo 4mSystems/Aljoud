@@ -72,6 +72,7 @@ import te.app.aljoud.databinding.LayoutActionBarHomeBindingImpl;
 import te.app.aljoud.databinding.LayoutNavigationDrawerBindingImpl;
 import te.app.aljoud.databinding.LayoutTesBindingImpl;
 import te.app.aljoud.databinding.ReplySheetBindingImpl;
+import te.app.aljoud.databinding.SuccessDialogBindingImpl;
 
 public class DataBinderMapperImpl extends DataBinderMapper {
   private static final int LAYOUT_ACTIVITYBASE = 1;
@@ -188,7 +189,9 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_REPLYSHEET = 57;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(57);
+  private static final int LAYOUT_SUCCESSDIALOG = 58;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(58);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.activity_base, LAYOUT_ACTIVITYBASE);
@@ -248,6 +251,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.layout_navigation_drawer, LAYOUT_LAYOUTNAVIGATIONDRAWER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.layout_tes, LAYOUT_LAYOUTTES);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.reply_sheet, LAYOUT_REPLYSHEET);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.success_dialog, LAYOUT_SUCCESSDIALOG);
   }
 
   private final ViewDataBinding internalGetViewDataBinding0(DataBindingComponent component,
@@ -602,6 +606,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for reply_sheet is invalid. Received: " + tag);
       }
+      case  LAYOUT_SUCCESSDIALOG: {
+        if ("layout/success_dialog_0".equals(tag)) {
+          return new SuccessDialogBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for success_dialog is invalid. Received: " + tag);
+      }
     }
     return null;
   }
@@ -730,7 +740,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(57);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(58);
 
     static {
       sKeys.put("layout/activity_base_0", te.app.aljoud.R.layout.activity_base);
@@ -790,6 +800,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/layout_navigation_drawer_0", te.app.aljoud.R.layout.layout_navigation_drawer);
       sKeys.put("layout/layout_tes_0", te.app.aljoud.R.layout.layout_tes);
       sKeys.put("layout/reply_sheet_0", te.app.aljoud.R.layout.reply_sheet);
+      sKeys.put("layout/success_dialog_0", te.app.aljoud.R.layout.success_dialog);
     }
   }
 }

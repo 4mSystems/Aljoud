@@ -39,6 +39,7 @@
         <entry key="app/src/main/res/drawable/ic_send.xml" value="0.3255208333333333" />
         <entry key="app/src/main/res/drawable/ic_shop.xml" value="0.33125" />
         <entry key="app/src/main/res/drawable/ic_success.xml" value="0.3578125" />
+        <entry key="app/src/main/res/drawable/ic_success_dialog.xml" value="0.3578125" />
         <entry key="app/src/main/res/drawable/ic_verify.xml" value="0.33125" />
         <entry key="app/src/main/res/drawable/ic_video.xml" value="0.3255208333333333" />
         <entry key="app/src/main/res/drawable/ic_wave.xml" value="0.321875" />
@@ -133,6 +134,7 @@
         <entry key="app/src/main/res/layout/partners.xml" value="0.3463541666666667" />
         <entry key="app/src/main/res/layout/reply_sheet.xml" value="0.3015625" />
         <entry key="app/src/main/res/layout/selected_suggestions.xml" value="0.3109375" />
+        <entry key="app/src/main/res/layout/success_dialog.xml" value="0.3255208333333333" />
         <entry key="app/src/main/res/layout/update_requied.xml" value="0.3109375" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.17447916666666666" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.17447916666666666" />
