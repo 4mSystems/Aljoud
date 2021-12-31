@@ -77,15 +77,13 @@ public class Constants {
     public final static int FILE_TYPE_IMAGE = 378;
     public static final String ABOUT = "about";
     public static final String COPY = "COPY";
-    public static final String WHATS = "WHATS";
+    public static final String TYPE = "type";
+    public static final String TARGET_ID = "id";
+    public static final String inbox = "inbox";
+    public static final String course = "course";
+    public static final String offer = "offer";
     public static final String CONTACT = "CONTACT";
-    public static final String CUSTOMER_SERVICES = "CUSTOMER_SERVICES";
     public static final String MENu = "menu";
-    public static final String PRODUCT_DETAILS = "PRODUCT_DETAILS";
-    public static final String GET_BRANDS = "GET_BRANDS";
-    public static final String SELECT_IC = "SELECT_IC";
-    public static final String TYPE_SEARCH = "TYPE_SEARCH";
-    public static final String SUGGEST_MATCH = "SUGGEST_MATCH";
     public static final String VERSION_CODE_CONFLICT = "VERSION_CODE_CONFLICT";
     public static final String LOGIN = "LOGIN";
     public static final String REGISTER = "REGISTER";
@@ -96,20 +94,13 @@ public class Constants {
     public static final String FIELD = "FIELD";
     public static final String NOT_MATCH_PASSWORD = "NOT_MATCH_PASSWORD";
     public static final String DIALOG = "DIALOG";
-    public static final String LOCATION = "LOCATION";
-    public static final String SUGGESTIONS = "SUGGESTIONS";
     public static final String PICKED_SUCCESSFULLY = "PICKED_SUCCESSFULLY";
     public static final String LAT = "LAT";
     public static final String LNG = "LNG";
     public static final String ADDRESS = "ADDRESS";
     public static final String CITY = "CITY";
-    public static final String NETWORK_CODE = "NETWORK_CODE";
-    public static final String REFACTOR_CENTER = "REFACTOR_CENTER";
-    public static final String SHOW_COUNTRIES = "SHOW_COUNTRIES";
-    public static final String SHOW_CITIES = "SHOW_CITIES";
     public final static int CHECK_CONFIRM_NAV_REGISTER = 0;
     public final static int CHECK_CONFIRM_NAV_FORGET = 1;
-    public final static int LOCATION_REQUEST = 6001;
 
 }
 

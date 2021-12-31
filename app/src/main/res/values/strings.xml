@@ -146,7 +146,7 @@
     <string name="subjects">Subjects :</string>
     <string name="lessons">Lessons :</string>
     <string name="students">Students :</string>
-    <string name="instructor_card_title">Instractor</string>
+    <string name="instructor_card_title">Instructor</string>
     <string name="course_card_title">This course includes</string>
     <string name="course_content">Course content</string>
     <string name="buy_now">Buy Now</string>
@@ -198,5 +198,6 @@
     <string name="copy">Copy code</string>
     <string name="copied">Copied</string>
     <string name="payment">Payment</string>
+    <string name="course_details">Course details</string>
 
 </resources>

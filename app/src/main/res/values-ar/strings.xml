@@ -197,5 +197,6 @@
     <string name="copy">Copy code</string>
     <string name="copied">Copied</string>
     <string name="payment">Payment</string>
+    <string name="course_details">Course details</string>
 
 </resources>
