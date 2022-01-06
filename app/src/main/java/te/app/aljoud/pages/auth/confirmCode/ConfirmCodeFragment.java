@@ -55,7 +55,7 @@ public class ConfirmCodeFragment extends BaseFragment {
     }
 
     private void startTimer() {
-        countDownTimer = new CountDownTimer(30000, 1000) {
+        countDownTimer = new CountDownTimer(180000, 1000) {
             public void onTick(long millisUntilFinished) {
                 long mil = TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished));
                 long min = TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished);

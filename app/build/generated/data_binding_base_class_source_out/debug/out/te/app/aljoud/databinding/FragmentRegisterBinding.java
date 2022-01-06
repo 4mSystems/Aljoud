@@ -8,7 +8,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatImageView;
-import androidx.cardview.widget.CardView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -22,19 +21,13 @@ import te.app.aljoud.pages.auth.register.RegisterViewModel;
 
 public abstract class FragmentRegisterBinding extends ViewDataBinding {
   @NonNull
-  public final AppCompatButton appCompatButtonNext;
-
-  @NonNull
   public final TextInputEditText auto;
 
   @NonNull
-  public final CardView cardLogin;
+  public final AppCompatButton btnRegister;
 
   @NonNull
-  public final AppCompatImageView icBack;
-
-  @NonNull
-  public final AppCompatImageView icLogo;
+  public final AppCompatImageView imgLoginLogo;
 
   @NonNull
   public final TextInputLayout inputEmail;
@@ -55,16 +48,13 @@ public abstract class FragmentRegisterBinding extends ViewDataBinding {
   protected RegisterViewModel mViewmodel;
 
   protected FragmentRegisterBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatButton appCompatButtonNext, TextInputEditText auto, CardView cardLogin,
-      AppCompatImageView icBack, AppCompatImageView icLogo, TextInputLayout inputEmail,
-      TextInputLayout inputName, TextInputLayout inputPassword, TextInputLayout inputPhone,
-      CircularProgressIndicator progress) {
+      TextInputEditText auto, AppCompatButton btnRegister, AppCompatImageView imgLoginLogo,
+      TextInputLayout inputEmail, TextInputLayout inputName, TextInputLayout inputPassword,
+      TextInputLayout inputPhone, CircularProgressIndicator progress) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.appCompatButtonNext = appCompatButtonNext;
     this.auto = auto;
-    this.cardLogin = cardLogin;
-    this.icBack = icBack;
-    this.icLogo = icLogo;
+    this.btnRegister = btnRegister;
+    this.imgLoginLogo = imgLoginLogo;
     this.inputEmail = inputEmail;
     this.inputName = inputName;
     this.inputPassword = inputPassword;

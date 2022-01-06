@@ -8,7 +8,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatImageView;
-import androidx.cardview.widget.CardView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -17,6 +16,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.aljoud.R;
+import te.app.aljoud.customViews.views.CustomTextViewMedium;
 import te.app.aljoud.pages.auth.forgetPassword.ForgetPasswordViewModel;
 
 public abstract class FragmentForgetPasswordBinding extends ViewDataBinding {
@@ -24,13 +24,7 @@ public abstract class FragmentForgetPasswordBinding extends ViewDataBinding {
   public final AppCompatButton appCompatButtonNext;
 
   @NonNull
-  public final CardView cardLogin;
-
-  @NonNull
-  public final AppCompatImageView icBack;
-
-  @NonNull
-  public final AppCompatImageView icLogo;
+  public final AppCompatImageView imgLoginLogo;
 
   @NonNull
   public final TextInputLayout inputPhone;
@@ -38,20 +32,26 @@ public abstract class FragmentForgetPasswordBinding extends ViewDataBinding {
   @NonNull
   public final CircularProgressIndicator progress;
 
+  @NonNull
+  public final CustomTextViewMedium tvLoginTitle;
+
+  @NonNull
+  public final CustomTextViewMedium tvLoginTitle1;
+
   @Bindable
   protected ForgetPasswordViewModel mViewmodel;
 
   protected FragmentForgetPasswordBinding(Object _bindingComponent, View _root,
-      int _localFieldCount, AppCompatButton appCompatButtonNext, CardView cardLogin,
-      AppCompatImageView icBack, AppCompatImageView icLogo, TextInputLayout inputPhone,
-      CircularProgressIndicator progress) {
+      int _localFieldCount, AppCompatButton appCompatButtonNext, AppCompatImageView imgLoginLogo,
+      TextInputLayout inputPhone, CircularProgressIndicator progress,
+      CustomTextViewMedium tvLoginTitle, CustomTextViewMedium tvLoginTitle1) {
     super(_bindingComponent, _root, _localFieldCount);
     this.appCompatButtonNext = appCompatButtonNext;
-    this.cardLogin = cardLogin;
-    this.icBack = icBack;
-    this.icLogo = icLogo;
+    this.imgLoginLogo = imgLoginLogo;
     this.inputPhone = inputPhone;
     this.progress = progress;
+    this.tvLoginTitle = tvLoginTitle;
+    this.tvLoginTitle1 = tvLoginTitle1;
   }
 
   public abstract void setViewmodel(@Nullable ForgetPasswordViewModel viewmodel);

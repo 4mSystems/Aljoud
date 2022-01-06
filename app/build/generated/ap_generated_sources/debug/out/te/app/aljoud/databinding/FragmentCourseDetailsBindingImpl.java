@@ -35,13 +35,13 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
     private final com.google.android.material.button.MaterialButton mboundView17;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback27;
+    private final android.view.View.OnClickListener mCallback30;
     @Nullable
     private final android.view.View.OnClickListener mCallback28;
     @Nullable
-    private final android.view.View.OnClickListener mCallback25;
+    private final android.view.View.OnClickListener mCallback31;
     @Nullable
-    private final android.view.View.OnClickListener mCallback26;
+    private final android.view.View.OnClickListener mCallback29;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -99,10 +99,10 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
         this.tvSubjects.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback27 = new te.app.aljoud.generated.callback.OnClickListener(this, 3);
-        mCallback28 = new te.app.aljoud.generated.callback.OnClickListener(this, 4);
-        mCallback25 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
-        mCallback26 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
+        mCallback30 = new te.app.aljoud.generated.callback.OnClickListener(this, 3);
+        mCallback28 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback31 = new te.app.aljoud.generated.callback.OnClickListener(this, 4);
+        mCallback29 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -357,10 +357,10 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.icArrowRight.setOnClickListener(mCallback25);
-            this.mboundView15.setOnClickListener(mCallback26);
-            this.mboundView16.setOnClickListener(mCallback27);
-            this.mboundView17.setOnClickListener(mCallback28);
+            this.icArrowRight.setOnClickListener(mCallback28);
+            this.mboundView15.setOnClickListener(mCallback29);
+            this.mboundView16.setOnClickListener(mCallback30);
+            this.mboundView17.setOnClickListener(mCallback31);
         }
     }
     // Listener Stub Implementations
@@ -386,25 +386,6 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
                 }
                 break;
             }
-            case 4: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.action(te.app.aljoud.utils.Constants.ASK);
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -421,6 +402,25 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
 
 
                     viewmodel.action(te.app.aljoud.utils.Constants.INSTRUCTOR);
+                }
+                break;
+            }
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.action(te.app.aljoud.utils.Constants.ASK);
                 }
                 break;
             }

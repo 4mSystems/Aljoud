@@ -22,7 +22,7 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.aljou
     private final te.app.aljoud.customViews.views.CustomTextViewMedium mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback43;
+    private final android.view.View.OnClickListener mCallback46;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,7 +41,7 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.aljou
         this.mboundView2.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback43 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback46 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -148,7 +148,7 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements te.app.aljou
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView0.setOnClickListener(mCallback43);
+            this.mboundView0.setOnClickListener(mCallback46);
         }
     }
     // Listener Stub Implementations

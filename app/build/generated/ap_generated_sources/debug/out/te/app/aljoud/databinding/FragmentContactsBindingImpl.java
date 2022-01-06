@@ -24,9 +24,9 @@ public class FragmentContactsBindingImpl extends FragmentContactsBinding impleme
     private final androidx.appcompat.widget.AppCompatEditText mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback38;
+    private final android.view.View.OnClickListener mCallback41;
     @Nullable
-    private final android.view.View.OnClickListener mCallback37;
+    private final android.view.View.OnClickListener mCallback40;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -88,8 +88,8 @@ public class FragmentContactsBindingImpl extends FragmentContactsBinding impleme
         this.rcFiles.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback38 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
-        mCallback37 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback41 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
+        mCallback40 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -203,8 +203,8 @@ public class FragmentContactsBindingImpl extends FragmentContactsBinding impleme
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.btAsk.setOnClickListener(mCallback38);
-            this.icFile.setOnClickListener(mCallback37);
+            this.btAsk.setOnClickListener(mCallback41);
+            this.icFile.setOnClickListener(mCallback40);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView1, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView1androidTextAttrChanged);
         }
         if ((dirtyFlags & 0xbL) != 0) {

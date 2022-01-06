@@ -678,7 +678,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(55);
+    static final SparseArray<String> sKeys = new SparseArray<String>(56);
 
     static {
       sKeys.put(0, "_all");
@@ -724,18 +724,19 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put(40, "paymentMethod");
       sKeys.put(41, "paymentMethodMain");
       sKeys.put(42, "paymentResultData");
-      sKeys.put(43, "quizData");
-      sKeys.put(44, "quizMainData");
-      sKeys.put(45, "request");
-      sKeys.put(46, "searchProgressVisible");
-      sKeys.put(47, "specialistsItem");
-      sKeys.put(48, "university");
-      sKeys.put(49, "universityAdapter");
-      sKeys.put(50, "universityData");
-      sKeys.put(51, "videoData");
-      sKeys.put(52, "videosMainData");
-      sKeys.put(53, "viewModel");
-      sKeys.put(54, "viewmodel");
+      sKeys.put(43, "progress");
+      sKeys.put(44, "quizData");
+      sKeys.put(45, "quizMainData");
+      sKeys.put(46, "request");
+      sKeys.put(47, "searchProgressVisible");
+      sKeys.put(48, "specialistsItem");
+      sKeys.put(49, "university");
+      sKeys.put(50, "universityAdapter");
+      sKeys.put(51, "universityData");
+      sKeys.put(52, "videoData");
+      sKeys.put(53, "videosMainData");
+      sKeys.put(54, "viewModel");
+      sKeys.put(55, "viewmodel");
     }
   }
 

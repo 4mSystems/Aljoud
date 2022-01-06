@@ -25,11 +25,11 @@ public class FragmentServiceRequestBindingImpl extends FragmentServiceRequestBin
     private final androidx.appcompat.widget.AppCompatEditText mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback29;
+    private final android.view.View.OnClickListener mCallback34;
     @Nullable
-    private final android.view.View.OnClickListener mCallback30;
+    private final android.view.View.OnClickListener mCallback32;
     @Nullable
-    private final android.view.View.OnClickListener mCallback31;
+    private final android.view.View.OnClickListener mCallback33;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -94,9 +94,9 @@ public class FragmentServiceRequestBindingImpl extends FragmentServiceRequestBin
         this.rcFiles.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback29 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
-        mCallback30 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
-        mCallback31 = new te.app.aljoud.generated.callback.OnClickListener(this, 3);
+        mCallback34 = new te.app.aljoud.generated.callback.OnClickListener(this, 3);
+        mCallback32 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback33 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -210,9 +210,9 @@ public class FragmentServiceRequestBindingImpl extends FragmentServiceRequestBin
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.btAsk.setOnClickListener(mCallback31);
-            this.edService.setOnClickListener(mCallback29);
-            this.icFile.setOnClickListener(mCallback30);
+            this.btAsk.setOnClickListener(mCallback34);
+            this.edService.setOnClickListener(mCallback32);
+            this.icFile.setOnClickListener(mCallback33);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
         }
         if ((dirtyFlags & 0xbL) != 0) {
@@ -230,6 +230,23 @@ public class FragmentServiceRequestBindingImpl extends FragmentServiceRequestBin
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 3: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.aljoud.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.sendContact();
+                }
+                break;
+            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -265,23 +282,6 @@ public class FragmentServiceRequestBindingImpl extends FragmentServiceRequestBin
 
 
                     viewmodel.action(te.app.aljoud.utils.Constants.PICKED_SUCCESSFULLY);
-                }
-                break;
-            }
-            case 3: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.aljoud.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.sendContact();
                 }
                 break;
             }

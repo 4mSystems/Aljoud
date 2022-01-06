@@ -14,8 +14,8 @@ public class LayoutTesBindingImpl extends LayoutTesBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.tv_grand_url, 1);
-        sViewsWithIds.put(R.id.tv_grand_phone, 2);
+        sViewsWithIds.put(R.id.tv_tes_url, 1);
+        sViewsWithIds.put(R.id.tv_tes_phone, 2);
         sViewsWithIds.put(R.id.rl_grand_whats, 3);
         sViewsWithIds.put(R.id.rl_grand_call, 4);
         sViewsWithIds.put(R.id.img_grand_close, 5);

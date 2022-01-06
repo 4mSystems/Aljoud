@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatImageView;
-import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.helper.widget.Flow;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -30,10 +30,13 @@ public abstract class FragmentLoginBinding extends ViewDataBinding {
   public final AppCompatButton btnPhone;
 
   @NonNull
-  public final CardView cardLogin;
+  public final CustomTextViewMedium btnSkip;
 
   @NonNull
-  public final AppCompatImageView icLogo;
+  public final Flow flow1;
+
+  @NonNull
+  public final AppCompatImageView imgLoginLogo;
 
   @NonNull
   public final TextInputLayout inputPhone;
@@ -42,13 +45,16 @@ public abstract class FragmentLoginBinding extends ViewDataBinding {
   public final TextInputLayout inputRegisterPassword;
 
   @NonNull
-  public final CustomTextViewMedium login;
+  public final CustomTextViewMedium loginNoAccount;
+
+  @NonNull
+  public final CustomTextViewMedium loginNoAccountBold;
 
   @NonNull
   public final CircularProgressIndicator progress;
 
   @NonNull
-  public final CustomTextViewMedium tvLoginForget;
+  public final CustomTextViewRegular tvLoginForget;
 
   @NonNull
   public final CustomTextViewMedium tvPartner;
@@ -56,31 +62,30 @@ public abstract class FragmentLoginBinding extends ViewDataBinding {
   @NonNull
   public final CustomTextViewRegular tvReserved;
 
-  @NonNull
-  public final CustomTextViewMedium tvSign;
-
   @Bindable
   protected LoginViewModel mViewmodel;
 
   protected FragmentLoginBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      MaterialButton btnLang, AppCompatButton btnPhone, CardView cardLogin,
-      AppCompatImageView icLogo, TextInputLayout inputPhone, TextInputLayout inputRegisterPassword,
-      CustomTextViewMedium login, CircularProgressIndicator progress,
-      CustomTextViewMedium tvLoginForget, CustomTextViewMedium tvPartner,
-      CustomTextViewRegular tvReserved, CustomTextViewMedium tvSign) {
+      MaterialButton btnLang, AppCompatButton btnPhone, CustomTextViewMedium btnSkip, Flow flow1,
+      AppCompatImageView imgLoginLogo, TextInputLayout inputPhone,
+      TextInputLayout inputRegisterPassword, CustomTextViewMedium loginNoAccount,
+      CustomTextViewMedium loginNoAccountBold, CircularProgressIndicator progress,
+      CustomTextViewRegular tvLoginForget, CustomTextViewMedium tvPartner,
+      CustomTextViewRegular tvReserved) {
     super(_bindingComponent, _root, _localFieldCount);
     this.btnLang = btnLang;
     this.btnPhone = btnPhone;
-    this.cardLogin = cardLogin;
-    this.icLogo = icLogo;
+    this.btnSkip = btnSkip;
+    this.flow1 = flow1;
+    this.imgLoginLogo = imgLoginLogo;
     this.inputPhone = inputPhone;
     this.inputRegisterPassword = inputRegisterPassword;
-    this.login = login;
+    this.loginNoAccount = loginNoAccount;
+    this.loginNoAccountBold = loginNoAccountBold;
     this.progress = progress;
     this.tvLoginForget = tvLoginForget;
     this.tvPartner = tvPartner;
     this.tvReserved = tvReserved;
-    this.tvSign = tvSign;
   }
 
   public abstract void setViewmodel(@Nullable LoginViewModel viewmodel);

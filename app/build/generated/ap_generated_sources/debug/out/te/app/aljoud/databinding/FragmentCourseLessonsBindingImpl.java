@@ -33,9 +33,9 @@ public class FragmentCourseLessonsBindingImpl extends FragmentCourseLessonsBindi
     private final com.google.android.material.button.MaterialButton mboundView8;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback23;
+    private final android.view.View.OnClickListener mCallback27;
     @Nullable
-    private final android.view.View.OnClickListener mCallback24;
+    private final android.view.View.OnClickListener mCallback26;
     // values
     // listeners
     private OnRatingBarChangeListenerImpl mViewmodelOnRateChangeAndroidWidgetRatingBarOnRatingBarChangeListener;
@@ -78,8 +78,8 @@ public class FragmentCourseLessonsBindingImpl extends FragmentCourseLessonsBindi
         this.tvSubjects.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback23 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
-        mCallback24 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
+        mCallback27 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
+        mCallback26 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -271,8 +271,8 @@ public class FragmentCourseLessonsBindingImpl extends FragmentCourseLessonsBindi
             // api target 1
 
             te.app.aljoud.base.ApplicationBinding.loadImage(this.icQr, userHelperGetInstanceContextUserDataQrImage);
-            this.mboundView10.setOnClickListener(mCallback24);
-            this.mboundView8.setOnClickListener(mCallback23);
+            this.mboundView10.setOnClickListener(mCallback27);
+            this.mboundView8.setOnClickListener(mCallback26);
             this.rateContainer.setVisibility(userHelperGetInstanceContextUserDataJavaLangObjectNullViewVISIBLEViewGONE);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvCardTitle, tvCardTitleAndroidStringAccountNumberConcatJavaLangStringConcatStringValueOfUserHelperGetInstanceContextUserDataId);
         }
@@ -310,23 +310,6 @@ public class FragmentCourseLessonsBindingImpl extends FragmentCourseLessonsBindi
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.aljoud.pages.courseDetails.viewModels.CourseLessonsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.toExam();
-                }
-                break;
-            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -341,6 +324,23 @@ public class FragmentCourseLessonsBindingImpl extends FragmentCourseLessonsBindi
 
 
                     viewmodel.rateCourse();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.aljoud.pages.courseDetails.viewModels.CourseLessonsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.toExam();
                 }
                 break;
             }

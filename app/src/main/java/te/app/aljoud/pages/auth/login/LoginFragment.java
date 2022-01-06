@@ -22,8 +22,10 @@ import te.app.aljoud.pages.auth.confirmCode.ConfirmCodeFragment;
 import te.app.aljoud.pages.auth.forgetPassword.ForgetPasswordFragment;
 import te.app.aljoud.pages.auth.models.UsersResponse;
 import te.app.aljoud.pages.auth.register.RegisterFragment;
+import te.app.aljoud.pages.splash.SplashFragment;
 import te.app.aljoud.utils.Constants;
 import te.app.aljoud.utils.helper.MovementHelper;
+import te.app.aljoud.utils.session.LanguagesHelper;
 import te.app.aljoud.utils.session.UserHelper;
 
 public class LoginFragment extends BaseFragment {
@@ -64,6 +66,14 @@ public class LoginFragment extends BaseFragment {
                 case Constants.NOT_VERIFIED:
                     MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.loginRequest.getPhone()), null, ConfirmCodeFragment.class.getName(), null);
                     break;
+                case Constants.HOME:
+                    MovementHelper.startActivityMain(requireActivity());
+                    break;
+                case Constants.LANGUAGE:
+                    LanguagesHelper.setLanguage(LanguagesHelper.getCurrentLanguage().equals("ar") ? "en" : "ar");
+                    MovementHelper.startActivityBase(requireActivity(), SplashFragment.class.getName(), null, null);
+                    break;
+
             }
         });
     }

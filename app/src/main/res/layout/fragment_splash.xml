@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="te.app.moon.views.fragments.SplashFragment">
 
@@ -10,22 +11,42 @@
             type="te.app.aljoud.pages.splash.SplashViewModel" />
     </data>
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_splash_screen">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="@dimen/dp120w"
-            android:layout_height="@dimen/dp120h"
-            android:layout_centerInParent="true"
-            android:src="@drawable/logo" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_app_name"
+            android:layout_marginTop="@dimen/dp25h"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp20h"
+            android:id="@+id/progress"
+            app:indicatorColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/tes"
+            app:showAnimationBehavior="outward"
+            app:trackColor="@color/overlayBackground"
+            app:trackCornerRadius="@dimen/dp4h"
+            app:trackThickness="@dimen/dp8h" />
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tes"
             android:layout_width="@dimen/dp120w"
             android:layout_height="@dimen/dp20h"
-            android:layout_marginBottom="@dimen/dp8h"
-            android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
-            android:src="@drawable/tes" />
-    </RelativeLayout>
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp8h"
+            android:src="@drawable/tes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

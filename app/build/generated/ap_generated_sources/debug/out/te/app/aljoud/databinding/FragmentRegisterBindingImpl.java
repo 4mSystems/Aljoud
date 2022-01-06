@@ -14,22 +14,24 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.ic_back, 11);
-        sViewsWithIds.put(R.id.card_login, 12);
-        sViewsWithIds.put(R.id.ic_logo, 13);
+        sViewsWithIds.put(R.id.img_login_logo, 12);
     }
     // views
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
     @NonNull
-    private final androidx.appcompat.widget.AppCompatEditText mboundView4;
+    private final androidx.appcompat.widget.AppCompatImageView mboundView1;
     @NonNull
-    private final androidx.appcompat.widget.AppCompatEditText mboundView6;
+    private final androidx.appcompat.widget.AppCompatEditText mboundView5;
     @NonNull
-    private final androidx.appcompat.widget.AppCompatEditText mboundView8;
+    private final androidx.appcompat.widget.AppCompatEditText mboundView7;
+    @NonNull
+    private final androidx.appcompat.widget.AppCompatEditText mboundView9;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback46;
+    private final android.view.View.OnClickListener mCallback50;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback51;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -70,12 +72,12 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
             }
         }
     };
-    private androidx.databinding.InverseBindingListener mboundView4androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+    private androidx.databinding.InverseBindingListener mboundView5androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
             // Inverse of viewmodel.request.email
             //         is viewmodel.request.setEmail((java.lang.String) callbackArg_0)
-            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView4);
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView5);
             // localize variables for thread safety
             // viewmodel != null
             boolean viewmodelJavaLangObjectNull = false;
@@ -107,12 +109,12 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
             }
         }
     };
-    private androidx.databinding.InverseBindingListener mboundView6androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+    private androidx.databinding.InverseBindingListener mboundView7androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
             // Inverse of viewmodel.request.phone
             //         is viewmodel.request.setPhone((java.lang.String) callbackArg_0)
-            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView6);
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView7);
             // localize variables for thread safety
             // viewmodel != null
             boolean viewmodelJavaLangObjectNull = false;
@@ -144,12 +146,12 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
             }
         }
     };
-    private androidx.databinding.InverseBindingListener mboundView8androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+    private androidx.databinding.InverseBindingListener mboundView9androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
             // Inverse of viewmodel.request.password
             //         is viewmodel.request.setPassword((java.lang.String) callbackArg_0)
-            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView8);
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView9);
             // localize variables for thread safety
             // viewmodel != null
             boolean viewmodelJavaLangObjectNull = false;
@@ -183,39 +185,40 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
     };
 
     public FragmentRegisterBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 14, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 13, sIncludes, sViewsWithIds));
     }
     private FragmentRegisterBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 5
-            , (androidx.appcompat.widget.AppCompatButton) bindings[9]
-            , (com.google.android.material.textfield.TextInputEditText) bindings[2]
-            , (androidx.cardview.widget.CardView) bindings[12]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[11]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[13]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[3]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[1]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[7]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[5]
-            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[10]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[3]
+            , (androidx.appcompat.widget.AppCompatButton) bindings[10]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[12]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[4]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[2]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[8]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[6]
+            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[11]
             );
-        this.appCompatButtonNext.setTag(null);
         this.auto.setTag(null);
+        this.btnRegister.setTag(null);
         this.inputEmail.setTag(null);
         this.inputName.setTag(null);
         this.inputPassword.setTag(null);
         this.inputPhone.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView4 = (androidx.appcompat.widget.AppCompatEditText) bindings[4];
-        this.mboundView4.setTag(null);
-        this.mboundView6 = (androidx.appcompat.widget.AppCompatEditText) bindings[6];
-        this.mboundView6.setTag(null);
-        this.mboundView8 = (androidx.appcompat.widget.AppCompatEditText) bindings[8];
-        this.mboundView8.setTag(null);
+        this.mboundView1 = (androidx.appcompat.widget.AppCompatImageView) bindings[1];
+        this.mboundView1.setTag(null);
+        this.mboundView5 = (androidx.appcompat.widget.AppCompatEditText) bindings[5];
+        this.mboundView5.setTag(null);
+        this.mboundView7 = (androidx.appcompat.widget.AppCompatEditText) bindings[7];
+        this.mboundView7.setTag(null);
+        this.mboundView9 = (androidx.appcompat.widget.AppCompatEditText) bindings[9];
+        this.mboundView9.setTag(null);
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback46 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback50 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback51 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -347,7 +350,6 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
         java.lang.String viewmodelRequestEmail = null;
         boolean viewmodelRequestPhoneErrorJavaLangObjectNullBooleanFalseBooleanTrue = false;
         boolean viewmodelRequestNameErrorJavaLangObjectNullBooleanFalseBooleanTrue = false;
-        android.graphics.drawable.Drawable textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSAppCompatButtonNextAndroidDrawableCornerViewPrimaryDarkAppCompatButtonNextAndroidDrawableCornerViewPrimaryMedium = null;
         java.lang.String viewmodelRequestPhoneErrorGet = null;
         java.lang.String viewmodelMessage = null;
         boolean viewmodelMessageEqualsConstantsHIDEPROGRESS = false;
@@ -355,6 +357,7 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
         java.lang.String viewmodelRequestNameErrorGet = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelRequestEmailError = null;
         boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS = false;
+        android.graphics.drawable.Drawable textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBtnRegisterAndroidDrawableCornerViewPrimaryDarkBtnRegisterAndroidDrawableCornerViewPrimaryMedium = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelRequestPasswordError = null;
         boolean viewmodelRequestPasswordErrorJavaLangObjectNullBooleanFalseBooleanTrue = false;
         java.lang.String viewmodelRequestPassword = null;
@@ -529,10 +532,10 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
                     textUtilsIsEmptyViewmodelMessage = android.text.TextUtils.isEmpty(viewmodelMessage);
                 if((dirtyFlags & 0xd0L) != 0) {
                     if(textUtilsIsEmptyViewmodelMessage) {
-                            dirtyFlags |= 0x8000L;
+                            dirtyFlags |= 0x2000L;
                     }
                     else {
-                            dirtyFlags |= 0x4000L;
+                            dirtyFlags |= 0x1000L;
                     }
                 }
 
@@ -551,7 +554,7 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
         }
         // batch finished
 
-        if ((dirtyFlags & 0x4000L) != 0) {
+        if ((dirtyFlags & 0x1000L) != 0) {
 
                 if (viewmodelMessage != null) {
                     // read viewmodel.message.equals(Constants.HIDE_PROGRESS)
@@ -574,11 +577,11 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
                 textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = ((TextUtilsIsEmptyViewmodelMessage1) ? (viewmodelMessageEqualsConstantsSHOWPROGRESS) : (false));
             if((dirtyFlags & 0xd0L) != 0) {
                 if(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) {
-                        dirtyFlags |= 0x2000L;
+                        dirtyFlags |= 0x8000L;
                         dirtyFlags |= 0x80000L;
                 }
                 else {
-                        dirtyFlags |= 0x1000L;
+                        dirtyFlags |= 0x4000L;
                         dirtyFlags |= 0x40000L;
                 }
             }
@@ -593,36 +596,37 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
 
 
                 // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_primary_medium
-                textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSAppCompatButtonNextAndroidDrawableCornerViewPrimaryDarkAppCompatButtonNextAndroidDrawableCornerViewPrimaryMedium = ((textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) ? (androidx.appcompat.content.res.AppCompatResources.getDrawable(appCompatButtonNext.getContext(), R.drawable.corner_view_primary_dark)) : (androidx.appcompat.content.res.AppCompatResources.getDrawable(appCompatButtonNext.getContext(), R.drawable.corner_view_primary_medium)));
+                textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBtnRegisterAndroidDrawableCornerViewPrimaryDarkBtnRegisterAndroidDrawableCornerViewPrimaryMedium = ((textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) ? (androidx.appcompat.content.res.AppCompatResources.getDrawable(btnRegister.getContext(), R.drawable.corner_view_primary_dark)) : (androidx.appcompat.content.res.AppCompatResources.getDrawable(btnRegister.getContext(), R.drawable.corner_view_primary_medium)));
                 // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
                 textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = ((textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) ? (true) : (false));
                 // read !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
                 textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = ((textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
         }
         // batch finished
-        if ((dirtyFlags & 0xd0L) != 0) {
-            // api target 1
-
-            androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.appCompatButtonNext, textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSAppCompatButtonNextAndroidDrawableCornerViewPrimaryDarkAppCompatButtonNextAndroidDrawableCornerViewPrimaryMedium);
-            this.appCompatButtonNext.setEnabled(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse);
-            this.progress.setVisibility(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE);
-        }
-        if ((dirtyFlags & 0x80L) != 0) {
-            // api target 1
-
-            this.appCompatButtonNext.setOnClickListener(mCallback46);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.auto, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, autoandroidTextAttrChanged);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView6, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView6androidTextAttrChanged);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView8, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView8androidTextAttrChanged);
-        }
         if ((dirtyFlags & 0xb0L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.auto, viewmodelRequestName);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView4, viewmodelRequestEmail);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView6, viewmodelRequestPhone);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView8, viewmodelRequestPassword);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView5, viewmodelRequestEmail);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView7, viewmodelRequestPhone);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView9, viewmodelRequestPassword);
+        }
+        if ((dirtyFlags & 0x80L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.auto, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, autoandroidTextAttrChanged);
+            this.btnRegister.setOnClickListener(mCallback51);
+            this.mboundView1.setOnClickListener(mCallback50);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView5, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView5androidTextAttrChanged);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView7, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView7androidTextAttrChanged);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView9, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView9androidTextAttrChanged);
+        }
+        if ((dirtyFlags & 0xd0L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.btnRegister, textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBtnRegisterAndroidDrawableCornerViewPrimaryDarkBtnRegisterAndroidDrawableCornerViewPrimaryMedium);
+            this.btnRegister.setEnabled(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse);
+            this.progress.setVisibility(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE);
         }
         if ((dirtyFlags & 0xb1L) != 0) {
             // api target 1
@@ -652,19 +656,42 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
-        // localize variables for thread safety
-        // viewmodel != null
-        boolean viewmodelJavaLangObjectNull = false;
-        // viewmodel
-        te.app.aljoud.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
+        switch(sourceId) {
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.aljoud.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
 
 
 
-        viewmodelJavaLangObjectNull = (viewmodel) != (null);
-        if (viewmodelJavaLangObjectNull) {
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
 
 
-            viewmodel.register();
+
+                    viewmodel.goBack(getRoot().getContext());
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.aljoud.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.register();
+                }
+                break;
+            }
         }
     }
     // dirty flag
@@ -682,10 +709,10 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
         flag 9 (0xaL): viewmodel.request.phoneError.get() == null ? false : true
         flag 10 (0xbL): viewmodel.request.nameError.get() == null ? false : true
         flag 11 (0xcL): viewmodel.request.nameError.get() == null ? false : true
-        flag 12 (0xdL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_primary_medium
-        flag 13 (0xeL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_primary_medium
-        flag 14 (0xfL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
-        flag 15 (0x10L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 12 (0xdL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 13 (0xeL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 14 (0xfL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_primary_medium
+        flag 15 (0x10L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_primary_medium
         flag 16 (0x11L): viewmodel.request.passwordError.get() == null ? false : true
         flag 17 (0x12L): viewmodel.request.passwordError.get() == null ? false : true
         flag 18 (0x13L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false

@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/drawable/badge.xml" value="0.3255208333333333" />
         <entry key="app/src/main/res/drawable/badge_red.xml" value="0.321875" />
+        <entry key="app/src/main/res/drawable/board_header.xml" value="0.3578125" />
         <entry key="app/src/main/res/drawable/border_grand_call.xml" value="0.3625" />
         <entry key="app/src/main/res/drawable/border_grand_whats.xml" value="0.3625" />
         <entry key="app/src/main/res/drawable/corner_view_border.xml" value="0.3625" />
@@ -45,10 +46,12 @@
         <entry key="app/src/main/res/drawable/ic_wave.xml" value="0.321875" />
         <entry key="app/src/main/res/drawable/left_chat.xml" value="0.3234375" />
         <entry key="app/src/main/res/drawable/map.xml" value="0.3625" />
+        <entry key="app/src/main/res/drawable/progress.xml" value="0.3523076923076923" />
         <entry key="app/src/main/res/drawable/result_circle.xml" value="0.321875" />
         <entry key="app/src/main/res/drawable/right_chat.xml" value="0.3255208333333333" />
         <entry key="app/src/main/res/drawable/rotate.xml" value="0.3234375" />
         <entry key="app/src/main/res/drawable/rounded_dialog.xml" value="0.31851851851851853" />
+        <entry key="app/src/main/res/drawable/splash.xml" value="0.3523076923076923" />
         <entry key="app/src/main/res/drawable/tab_color_selector.xml" value="0.3625" />
         <entry key="app/src/main/res/layout/account_type_sheet.xml" value="0.3109375" />
         <entry key="app/src/main/res/layout/activity_base.xml" value="0.3463541666666667" />
@@ -91,7 +94,7 @@
         <entry key="app/src/main/res/layout/fragment_products.xml" value="0.3109375" />
         <entry key="app/src/main/res/layout/fragment_refactory_center.xml" value="0.3463541666666667" />
         <entry key="app/src/main/res/layout/fragment_refactory_center_details.xml" value="0.33229166666666665" />
-        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_service_request.xml" value="0.3015625" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.33229166666666665" />
         <entry key="app/src/main/res/layout/fragment_sub_categories.xml" value="0.35572916666666665" />

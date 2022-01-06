@@ -24,9 +24,9 @@ public class FragmentPaymentSuccessBindingImpl extends FragmentPaymentSuccessBin
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback17;
+    private final android.view.View.OnClickListener mCallback21;
     @Nullable
-    private final android.view.View.OnClickListener mCallback18;
+    private final android.view.View.OnClickListener mCallback20;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -55,8 +55,8 @@ public class FragmentPaymentSuccessBindingImpl extends FragmentPaymentSuccessBin
         this.paymentValidation.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback17 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
-        mCallback18 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
+        mCallback21 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
+        mCallback20 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -217,8 +217,8 @@ public class FragmentPaymentSuccessBindingImpl extends FragmentPaymentSuccessBin
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.icClose.setOnClickListener(mCallback17);
-            this.next.setOnClickListener(mCallback18);
+            this.icClose.setOnClickListener(mCallback20);
+            this.next.setOnClickListener(mCallback21);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -233,6 +233,23 @@ public class FragmentPaymentSuccessBindingImpl extends FragmentPaymentSuccessBin
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.aljoud.pages.fawaterkPayment.viewModels.PaymentsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.makeCopy();
+                }
+                break;
+            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -248,23 +265,6 @@ public class FragmentPaymentSuccessBindingImpl extends FragmentPaymentSuccessBin
 
 
                     viewmodel.goBack(getRoot().getContext());
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.aljoud.pages.fawaterkPayment.viewModels.PaymentsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.makeCopy();
                 }
                 break;
             }

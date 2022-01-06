@@ -6,20 +6,31 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.progressindicator.LinearProgressIndicator;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.aljoud.R;
 import te.app.aljoud.pages.splash.SplashViewModel;
 
 public abstract class FragmentSplashBinding extends ViewDataBinding {
+  @NonNull
+  public final LinearProgressIndicator progress;
+
+  @NonNull
+  public final AppCompatImageView tes;
+
   @Bindable
   protected SplashViewModel mViewmodel;
 
-  protected FragmentSplashBinding(Object _bindingComponent, View _root, int _localFieldCount) {
+  protected FragmentSplashBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      LinearProgressIndicator progress, AppCompatImageView tes) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.progress = progress;
+    this.tes = tes;
   }
 
   public abstract void setViewmodel(@Nullable SplashViewModel viewmodel);

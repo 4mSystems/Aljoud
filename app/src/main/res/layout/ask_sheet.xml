@@ -89,7 +89,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp8h"
-                android:text="@string/send_contact"
+                android:text="@string/send"
                 android:id="@+id/bt_ask"
                 android:onClick="@{()-> viewModel.ask()}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"

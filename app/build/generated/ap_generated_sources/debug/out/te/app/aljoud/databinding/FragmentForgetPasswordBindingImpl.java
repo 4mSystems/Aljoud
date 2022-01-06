@@ -14,28 +14,32 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.ic_back, 4);
-        sViewsWithIds.put(R.id.card_login, 5);
-        sViewsWithIds.put(R.id.ic_logo, 6);
-        sViewsWithIds.put(R.id.input_phone, 7);
+        sViewsWithIds.put(R.id.tv_login_title, 5);
+        sViewsWithIds.put(R.id.tv_login_title1, 6);
+        sViewsWithIds.put(R.id.img_login_logo, 7);
+        sViewsWithIds.put(R.id.input_phone, 8);
     }
     // views
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
     @NonNull
-    private final androidx.appcompat.widget.AppCompatEditText mboundView1;
+    private final androidx.appcompat.widget.AppCompatImageView mboundView1;
+    @NonNull
+    private final androidx.appcompat.widget.AppCompatEditText mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback44;
+    private final android.view.View.OnClickListener mCallback47;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback48;
     // values
     // listeners
     // Inverse Binding Event Handlers
-    private androidx.databinding.InverseBindingListener mboundView1androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+    private androidx.databinding.InverseBindingListener mboundView2androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
             // Inverse of viewmodel.request.email
             //         is viewmodel.request.setEmail((java.lang.String) callbackArg_0)
-            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView1);
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView2);
             // localize variables for thread safety
             // viewmodel != null
             boolean viewmodelJavaLangObjectNull = false;
@@ -69,26 +73,29 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
     };
 
     public FragmentForgetPasswordBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 8, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 9, sIncludes, sViewsWithIds));
     }
     private FragmentForgetPasswordBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.appcompat.widget.AppCompatButton) bindings[2]
-            , (androidx.cardview.widget.CardView) bindings[5]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[4]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[6]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[7]
-            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[3]
+            , (androidx.appcompat.widget.AppCompatButton) bindings[3]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[7]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[8]
+            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[4]
+            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[5]
+            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[6]
             );
         this.appCompatButtonNext.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView1 = (androidx.appcompat.widget.AppCompatEditText) bindings[1];
+        this.mboundView1 = (androidx.appcompat.widget.AppCompatImageView) bindings[1];
         this.mboundView1.setTag(null);
+        this.mboundView2 = (androidx.appcompat.widget.AppCompatEditText) bindings[2];
+        this.mboundView2.setTag(null);
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback44 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback47 = new te.app.aljoud.generated.callback.OnClickListener(this, 1);
+        mCallback48 = new te.app.aljoud.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -284,31 +291,55 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback44);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView1, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView1androidTextAttrChanged);
+            this.appCompatButtonNext.setOnClickListener(mCallback48);
+            this.mboundView1.setOnClickListener(mCallback47);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView1, viewmodelRequestEmail);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, viewmodelRequestEmail);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
-        // localize variables for thread safety
-        // viewmodel != null
-        boolean viewmodelJavaLangObjectNull = false;
-        // viewmodel
-        te.app.aljoud.pages.auth.forgetPassword.ForgetPasswordViewModel viewmodel = mViewmodel;
+        switch(sourceId) {
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.aljoud.pages.auth.forgetPassword.ForgetPasswordViewModel viewmodel = mViewmodel;
 
 
 
-        viewmodelJavaLangObjectNull = (viewmodel) != (null);
-        if (viewmodelJavaLangObjectNull) {
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
 
 
-            viewmodel.sendCode();
+
+                    viewmodel.goBack(getRoot().getContext());
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.aljoud.pages.auth.forgetPassword.ForgetPasswordViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.sendCode();
+                }
+                break;
+            }
         }
     }
     // dirty flag

@@ -23,6 +23,7 @@ import te.app.aljoud.customViews.actionbar.HomeActionBarView;
 import te.app.aljoud.databinding.ExitLayoutBinding;
 import te.app.aljoud.databinding.LayoutNavigationDrawerBinding;
 import te.app.aljoud.model.base.Mutable;
+import te.app.aljoud.pages.auth.login.LoginFragment;
 import te.app.aljoud.pages.conversations.ConversationsFragment;
 import te.app.aljoud.pages.myCourses.MyCoursesFragment;
 import te.app.aljoud.pages.offers.OffersFragment;
@@ -92,6 +93,8 @@ public class NavigationDrawerView extends RelativeLayout {
                 MovementHelper.startActivity(context, MyCoursesFragment.class.getName(), getResources().getString(R.string.my_courses), null);
             } else if (Constants.INBOX.equals(o)) {
                 MovementHelper.startActivity(context, ConversationsFragment.class.getName(), getResources().getString(R.string.inbox), null);
+            } else if (Constants.LOGIN.equals(o)) {
+                MovementHelper.startActivity(context, LoginFragment.class.getName(), null, null);
             } else if (Constants.SHARE_BAR.equals(o)) {
                 AppHelper.shareApp(context);
             } else if (Constants.RATE_APP.equals(o)) {
@@ -101,7 +104,6 @@ public class NavigationDrawerView extends RelativeLayout {
             } else if (Constants.LANGUAGE.equals(o)) {
                 LanguagesHelper.setLanguage(LanguagesHelper.getCurrentLanguage().equals("ar") ? "en" : "ar");
                 MovementHelper.startActivityBase(context, SplashFragment.class.getName(), null, null);
-
             }
             layoutNavigationDrawerBinding.dlMainNavigationMenu.closeDrawer(GravityCompat.START);
         });

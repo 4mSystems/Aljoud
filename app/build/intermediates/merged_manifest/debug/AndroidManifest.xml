@@ -97,6 +97,14 @@
             </intent-filter>
         </activity>
 
+        <service
+            android:name="te.app.aljoud.base.MyFirebaseMessagingService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
         <provider
             android:name="com.jaiselrahman.filepicker.utils.FilePickerProvider"
             android:authorities="te.app.aljoud.filepicker.provider"

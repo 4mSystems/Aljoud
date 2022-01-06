@@ -50,6 +50,13 @@ public class LoginViewModel extends BaseViewModel {
     public void forgetPassword() {
         liveData.setValue(new Mutable(Constants.FORGET_PASSWORD));
     }
+    public void skip() {
+        liveData.setValue(new Mutable(Constants.HOME));
+    }
+
+    public void changeLang() {
+        liveData.setValue(new Mutable(Constants.LANGUAGE));
+    }
 
     private void unSubscribeFromObservable() {
         if (compositeDisposable != null && !compositeDisposable.isDisposed()) {

@@ -26,20 +26,20 @@ public abstract class LayoutTesBinding extends ViewDataBinding {
   public final RelativeLayout rlGrandWhats;
 
   @NonNull
-  public final TextView tvGrandPhone;
+  public final TextView tvTesPhone;
 
   @NonNull
-  public final TextView tvGrandUrl;
+  public final TextView tvTesUrl;
 
   protected LayoutTesBinding(Object _bindingComponent, View _root, int _localFieldCount,
       AppCompatImageView imgGrandClose, RelativeLayout rlGrandCall, RelativeLayout rlGrandWhats,
-      TextView tvGrandPhone, TextView tvGrandUrl) {
+      TextView tvTesPhone, TextView tvTesUrl) {
     super(_bindingComponent, _root, _localFieldCount);
     this.imgGrandClose = imgGrandClose;
     this.rlGrandCall = rlGrandCall;
     this.rlGrandWhats = rlGrandWhats;
-    this.tvGrandPhone = tvGrandPhone;
-    this.tvGrandUrl = tvGrandUrl;
+    this.tvTesPhone = tvTesPhone;
+    this.tvTesUrl = tvTesUrl;
   }
 
   @NonNull

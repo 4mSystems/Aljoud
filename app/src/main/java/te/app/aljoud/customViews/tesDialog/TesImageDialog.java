@@ -62,12 +62,12 @@ class TesDialog extends RelativeLayout {
         AlertDialog dialog = builder.create();
         dialog.setView(grand);
         dialog.show();
-        layoutGrandBinding.tvGrandUrl.setOnClickListener(v -> {
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://" + layoutGrandBinding.tvGrandUrl.getText().toString()));
+        layoutGrandBinding.tvTesUrl.setOnClickListener(v -> {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://" + layoutGrandBinding.tvTesUrl.getText().toString()));
             context.startActivity(browserIntent);
         });
         layoutGrandBinding.rlGrandCall.setOnClickListener(v -> {
-            Uri call = Uri.parse("tel:" + layoutGrandBinding.tvGrandPhone.getText().toString());
+            Uri call = Uri.parse("tel:" + layoutGrandBinding.tvTesPhone.getText().toString());
             Intent surf = new Intent(Intent.ACTION_DIAL, call);
             context.startActivity(surf);
         });

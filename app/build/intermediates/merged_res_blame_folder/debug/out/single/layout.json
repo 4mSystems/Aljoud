@@ -52,12 +52,12 @@
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_register.xml"
     },
     {
-        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_base.xml",
-        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/activity_base.xml"
-    },
-    {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_payment_methods.xml",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_payment_methods.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_base.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/activity_base.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/success_dialog.xml",
@@ -220,12 +220,12 @@
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/layout_tes.xml"
     },
     {
-        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_service_request.xml",
-        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_service_request.xml"
-    },
-    {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_pick_file.xml",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/item_pick_file.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_service_request.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_service_request.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_navigation_drawer.xml",
