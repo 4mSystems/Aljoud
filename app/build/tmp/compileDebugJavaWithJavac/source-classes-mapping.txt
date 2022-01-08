@@ -24,9 +24,8 @@ te/app/aljoud/pages/home/HomeFragment.java
  te.app.aljoud.pages.home.HomeFragment$1
 te/app/aljoud/pages/offers/viewModel/ItemOfferViewModel.java
  te.app.aljoud.pages.offers.viewModel.ItemOfferViewModel
-te/app/aljoud/customViews/views/CustomEditText.java
- te.app.aljoud.customViews.views.CustomEditText
- te.app.aljoud.customViews.views.CustomEditText$Validator
+te/app/aljoud/pages/auth/login/LoginFragment.java
+ te.app.aljoud.pages.auth.login.LoginFragment
 te/app/aljoud/connection/ConnectionListenerInterFace.java
  te.app.aljoud.connection.ConnectionListenerInterFace
 te/app/aljoud/pages/university/FragmentCategorySections.java
@@ -127,8 +126,8 @@ te/app/aljoud/utils/locations/MapConfig.java
  te.app.aljoud.utils.locations.MapConfig$1
  te.app.aljoud.utils.locations.MapConfig$2
  te.app.aljoud.utils.locations.MapConfig$3
-te/app/aljoud/customViews/actionbar/BackActionBarView.java
- te.app.aljoud.customViews.actionbar.BackActionBarView
+te/app/aljoud/pages/fawaterkPayment/models/paymentResult/PaymentData.java
+ te.app.aljoud.pages.fawaterkPayment.models.paymentResult.PaymentData
 te/app/aljoud/utils/PopUp/PopUp.java
  te.app.aljoud.utils.PopUp.PopUp
 te/app/aljoud/pages/courseDetails/FragmentCourseLessons.java
@@ -202,8 +201,8 @@ te/app/aljoud/databinding/InstractorSheetBinding.java
  te.app.aljoud.databinding.InstractorSheetBinding
 te/app/aljoud/utils/URLS.java
  te.app.aljoud.utils.URLS
-te/app/aljoud/base/MyFirebaseMessagingService.java
- te.app.aljoud.base.MyFirebaseMessagingService
+te/app/aljoud/activity/BaseActivity.java
+ te.app.aljoud.activity.BaseActivity
 te/app/aljoud/pages/courseDetails/FragmentLessonArticles.java
  te.app.aljoud.pages.courseDetails.FragmentLessonArticles
  te.app.aljoud.pages.courseDetails.FragmentLessonArticles$1
@@ -282,8 +281,9 @@ te/app/aljoud/repository/SettingsRepository.java
  te.app.aljoud.repository.SettingsRepository
 te/app/aljoud/databinding/LayoutActionBarHomeBinding.java
  te.app.aljoud.databinding.LayoutActionBarHomeBinding
-te/app/aljoud/pages/fawaterkPayment/models/paymentResult/PaymentData.java
- te.app.aljoud.pages.fawaterkPayment.models.paymentResult.PaymentData
+te/app/aljoud/pages/splash/SplashFragment.java
+ te.app.aljoud.pages.splash.SplashFragment
+ te.app.aljoud.pages.splash.SplashFragment$1
 te/app/aljoud/pages/home/viewModels/HomeViewModel.java
  te.app.aljoud.pages.home.viewModels.HomeViewModel
 te/app/aljoud/base/BaseViewModel.java
@@ -297,8 +297,8 @@ te/app/aljoud/pages/auth/models/RegisterRequest.java
  te.app.aljoud.pages.auth.models.RegisterRequest
 te/app/aljoud/pages/offers/viewModel/OffersViewModel.java
  te.app.aljoud.pages.offers.viewModel.OffersViewModel
-te/app/aljoud/pages/settings/AboutAppFragment.java
- te.app.aljoud.pages.settings.AboutAppFragment
+te/app/aljoud/base/MyFirebaseMessagingService.java
+ te.app.aljoud.base.MyFirebaseMessagingService
 te/app/aljoud/databinding/AskSheetBinding.java
  te.app.aljoud.databinding.AskSheetBinding
 te/app/aljoud/databinding/ItemHomeBinding.java
@@ -332,8 +332,8 @@ te/app/aljoud/databinding/ActivityPaymentVisaBinding.java
  te.app.aljoud.databinding.ActivityPaymentVisaBinding
 te/app/aljoud/pages/settings/viewModels/SettingsViewModel.java
  te.app.aljoud.pages.settings.viewModels.SettingsViewModel
-te/app/aljoud/pages/exams/models/AnswersItem.java
- te.app.aljoud.pages.exams.models.AnswersItem
+te/app/aljoud/pages/conversations/viewModels/ConversationsViewModel.java
+ te.app.aljoud.pages.conversations.viewModels.ConversationsViewModel
 te/app/aljoud/pages/conversations/ConversationsFragment.java
  te.app.aljoud.pages.conversations.ConversationsFragment
  te.app.aljoud.pages.conversations.ConversationsFragment$1
@@ -352,8 +352,8 @@ te/app/aljoud/utils/helper/LauncherInterface.java
  te.app.aljoud.utils.helper.LauncherInterface$permissionInterface
 te/app/aljoud/pages/splash/models/SettingData.java
  te.app.aljoud.pages.splash.models.SettingData
-te/app/aljoud/pages/conversations/viewModels/ConversationsViewModel.java
- te.app.aljoud.pages.conversations.viewModels.ConversationsViewModel
+te/app/aljoud/pages/home/viewModels/ItemUniversityViewModel.java
+ te.app.aljoud.pages.home.viewModels.ItemUniversityViewModel
 te/app/aljoud/repository/HomeRepository.java
  te.app.aljoud.repository.HomeRepository
 te/app/aljoud/connection/ConnectionHelper.java
@@ -513,8 +513,9 @@ te/app/aljoud/pages/university/models/levels/LevelsResponse.java
  te.app.aljoud.pages.university.models.levels.LevelsResponse
 te/app/aljoud/model/File.java
  te.app.aljoud.model.File
-te/app/aljoud/pages/home/viewModels/ItemUniversityViewModel.java
- te.app.aljoud.pages.home.viewModels.ItemUniversityViewModel
+te/app/aljoud/customViews/views/CustomEditText.java
+ te.app.aljoud.customViews.views.CustomEditText
+ te.app.aljoud.customViews.views.CustomEditText$Validator
 te/app/aljoud/utils/Constants.java
  te.app.aljoud.utils.Constants
 te/app/aljoud/pages/courseDetails/adapters/LessonQuizzesAdapter.java
@@ -571,19 +572,18 @@ te/app/aljoud/utils/PopUp/PopUpInterface.java
  te.app.aljoud.utils.PopUp.PopUpInterface
 te/app/aljoud/utils/locations/models/Distance.java
  te.app.aljoud.utils.locations.models.Distance
+te/app/aljoud/pages/exams/models/AnswersItem.java
+ te.app.aljoud.pages.exams.models.AnswersItem
 te/app/aljoud/customViews/menu/NavigationDrawerView.java
  te.app.aljoud.customViews.menu.NavigationDrawerView
-te/app/aljoud/pages/splash/SplashFragment.java
- te.app.aljoud.pages.splash.SplashFragment
- te.app.aljoud.pages.splash.SplashFragment$1
-te/app/aljoud/pages/auth/login/LoginFragment.java
- te.app.aljoud.pages.auth.login.LoginFragment
+te/app/aljoud/customViews/actionbar/BackActionBarView.java
+ te.app.aljoud.customViews.actionbar.BackActionBarView
 te/app/aljoud/base/ApplicationComponent.java
  te.app.aljoud.base.ApplicationComponent
 te/app/aljoud/base/MyApplication.java
  te.app.aljoud.base.MyApplication
-te/app/aljoud/activity/BaseActivity.java
- te.app.aljoud.activity.BaseActivity
 te/app/aljoud/base/IApplicationComponent.java
  te.app.aljoud.base.IApplicationComponent
  te.app.aljoud.base.IApplicationComponent$Builder
+te/app/aljoud/pages/settings/AboutAppFragment.java
+ te.app.aljoud.pages.settings.AboutAppFragment

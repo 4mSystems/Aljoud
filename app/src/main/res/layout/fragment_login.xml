@@ -43,7 +43,7 @@
                 android:layout_margin="@dimen/dp12h"
                 android:onClick="@{()-> viewmodel.changeLang()}"
                 android:text="@{LanguagesHelper.getCurrentLanguage().equals(`ar`) ?@string/english  : @string/arabic}"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colorPrimaryDark"
                 app:backgroundTint="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -54,12 +54,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp12h"
+                android:drawableStart="@drawable/ic_skip"
+                android:gravity="center"
                 android:onClick="@{()-> viewmodel.skip()}"
                 android:text="@string/skip"
-                android:gravity="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white"
-                android:drawableStart="@drawable/ic_skip"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 

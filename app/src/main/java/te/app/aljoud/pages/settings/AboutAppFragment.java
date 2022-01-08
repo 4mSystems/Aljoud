@@ -37,7 +37,7 @@ public class AboutAppFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
-        viewModel.about();
+//        viewModel.about();
         setEvent();
         return binding.getRoot();
     }

@@ -30,6 +30,7 @@ import te.app.aljoud.databinding.InstractorSheetBinding;
 import te.app.aljoud.model.File;
 import te.app.aljoud.model.base.Mutable;
 import te.app.aljoud.model.base.StatusMessage;
+import te.app.aljoud.pages.auth.login.LoginFragment;
 import te.app.aljoud.pages.courseDetails.models.CourseDetailsResponse;
 import te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel;
 import te.app.aljoud.pages.fawaterkPayment.FawterkMethodFragment;
@@ -75,9 +76,7 @@ public class FragmentCourseDetails extends BaseFragment {
             } else if (Constants.BUY_COURSE.equals(((Mutable) o).message)) {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
             } else if (Constants.LOGIN.equals(((Mutable) o).message)) {
-                toastMessage(((StatusMessage) mutable.object).mMessage);
-                viewModel.getCourse().setMyCourse(true);
-                viewModel.notifyChange(BR.course);
+                MovementHelper.startActivity(requireActivity(), LoginFragment.class.getName(), null, null);
             } else if (Constants.DIALOG.equals(((Mutable) o).message)) {
                 if (askDialog != null) {
                     toastMessage(((StatusMessage) mutable.object).mMessage);

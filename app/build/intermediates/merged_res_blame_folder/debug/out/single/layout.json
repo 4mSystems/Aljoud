@@ -52,12 +52,12 @@
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_register.xml"
     },
     {
-        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_payment_methods.xml",
-        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_payment_methods.xml"
-    },
-    {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_base.xml",
         "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/activity_base.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_payment_methods.xml",
+        "source": "/home/elnagar/Android projects/Aljoud/app/src/main/res/layout/fragment_payment_methods.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/success_dialog.xml",

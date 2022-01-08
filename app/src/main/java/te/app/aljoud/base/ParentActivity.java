@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,11 +22,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.MutableLiveData;
 
-import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.play.core.install.model.AppUpdateType;
 import com.google.android.play.core.install.model.UpdateAvailability;
@@ -36,7 +35,6 @@ import te.app.aljoud.R;
 import te.app.aljoud.model.base.Mutable;
 import te.app.aljoud.pages.auth.login.LoginFragment;
 import te.app.aljoud.utils.Constants;
-import te.app.aljoud.utils.helper.AppHelper;
 import te.app.aljoud.utils.helper.LauncherHelper;
 import te.app.aljoud.utils.helper.MovementHelper;
 import te.app.aljoud.utils.resources.ResourceManager;
@@ -53,6 +51,7 @@ public class ParentActivity extends AppCompatActivity implements
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         super.onCreate(savedInstanceState);
         immediateUpdateActivity = new ImmediateUpdateActivity(this);
         ConnectionLiveData = new MutableLiveData<>();
