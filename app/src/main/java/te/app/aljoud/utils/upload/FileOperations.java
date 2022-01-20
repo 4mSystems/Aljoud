@@ -236,7 +236,7 @@ public class FileOperations {
     }
 
 
-    private static Uri specialCameraSelector(Context inContext, Bitmap bitmap) {
+    public static Uri specialCameraSelector(Context inContext, Bitmap bitmap) {
 //        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
 //        bitmap.compress(Bitmap.CompressFormat.JPEG, 70, bytes);
 

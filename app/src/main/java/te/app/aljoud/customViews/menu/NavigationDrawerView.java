@@ -27,6 +27,7 @@ import te.app.aljoud.pages.auth.login.LoginFragment;
 import te.app.aljoud.pages.conversations.ConversationsFragment;
 import te.app.aljoud.pages.myCourses.MyCoursesFragment;
 import te.app.aljoud.pages.offers.OffersFragment;
+import te.app.aljoud.pages.profile.ProfileFragment;
 import te.app.aljoud.pages.settings.AboutAppFragment;
 import te.app.aljoud.pages.settings.ContactFragment;
 import te.app.aljoud.pages.settings.ServiceRequestFragment;
@@ -83,7 +84,9 @@ public class NavigationDrawerView extends RelativeLayout {
         menuViewModel.getLiveData().observe(context, o -> {
             if (Constants.ABOUT.equals(o)) {
                 MovementHelper.startActivity(context, AboutAppFragment.class.getName(), getResources().getString(R.string.about), null);
-            } else if (Constants.CONTACT.equals(o)) {
+            } else if (Constants.UPDATE_PROFILE.equals(o)) {
+                MovementHelper.startActivity(context, ProfileFragment.class.getName(), getResources().getString(R.string.profile), null);
+            }else if (Constants.CONTACT.equals(o)) {
                 MovementHelper.startActivity(context, ContactFragment.class.getName(), getResources().getString(R.string.contact_us), null);
             } else if (Constants.SERVICES.equals(o)) {
                 MovementHelper.startActivity(context, ServiceRequestFragment.class.getName(), getResources().getString(R.string.request_course), null);

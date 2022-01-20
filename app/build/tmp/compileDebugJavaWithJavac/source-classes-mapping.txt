@@ -126,8 +126,8 @@ te/app/aljoud/utils/locations/MapConfig.java
  te.app.aljoud.utils.locations.MapConfig$1
  te.app.aljoud.utils.locations.MapConfig$2
  te.app.aljoud.utils.locations.MapConfig$3
-te/app/aljoud/pages/fawaterkPayment/models/paymentResult/PaymentData.java
- te.app.aljoud.pages.fawaterkPayment.models.paymentResult.PaymentData
+te/app/aljoud/customViews/actionbar/BackActionBarView.java
+ te.app.aljoud.customViews.actionbar.BackActionBarView
 te/app/aljoud/utils/PopUp/PopUp.java
  te.app.aljoud.utils.PopUp.PopUp
 te/app/aljoud/pages/courseDetails/FragmentCourseLessons.java
@@ -154,6 +154,8 @@ te/app/aljoud/pages/courseDetails/models/AskRequest.java
  te.app.aljoud.pages.courseDetails.models.AskRequest
 te/app/aljoud/pages/chat/model/ChatResponse.java
  te.app.aljoud.pages.chat.model.ChatResponse
+te/app/aljoud/databinding/FragmentProfileBinding.java
+ te.app.aljoud.databinding.FragmentProfileBinding
 te/app/aljoud/databinding/ItemLessonArticleBinding.java
  te.app.aljoud.databinding.ItemLessonArticleBinding
 te/app/aljoud/utils/PopUp/PopUpMenuHelper.java
@@ -297,8 +299,8 @@ te/app/aljoud/pages/auth/models/RegisterRequest.java
  te.app.aljoud.pages.auth.models.RegisterRequest
 te/app/aljoud/pages/offers/viewModel/OffersViewModel.java
  te.app.aljoud.pages.offers.viewModel.OffersViewModel
-te/app/aljoud/base/MyFirebaseMessagingService.java
- te.app.aljoud.base.MyFirebaseMessagingService
+te/app/aljoud/pages/settings/AboutAppFragment.java
+ te.app.aljoud.pages.settings.AboutAppFragment
 te/app/aljoud/databinding/AskSheetBinding.java
  te.app.aljoud.databinding.AskSheetBinding
 te/app/aljoud/databinding/ItemHomeBinding.java
@@ -330,10 +332,13 @@ te/app/aljoud/databinding/FragmentForgetPasswordBinding.java
  te.app.aljoud.databinding.FragmentForgetPasswordBinding
 te/app/aljoud/databinding/ActivityPaymentVisaBinding.java
  te.app.aljoud.databinding.ActivityPaymentVisaBinding
+te/app/aljoud/pages/profile/ProfileViewModel.java
+ te.app.aljoud.pages.profile.ProfileViewModel
 te/app/aljoud/pages/settings/viewModels/SettingsViewModel.java
  te.app.aljoud.pages.settings.viewModels.SettingsViewModel
-te/app/aljoud/pages/conversations/viewModels/ConversationsViewModel.java
- te.app.aljoud.pages.conversations.viewModels.ConversationsViewModel
+te/app/aljoud/base/IApplicationComponent.java
+ te.app.aljoud.base.IApplicationComponent
+ te.app.aljoud.base.IApplicationComponent$Builder
 te/app/aljoud/pages/conversations/ConversationsFragment.java
  te.app.aljoud.pages.conversations.ConversationsFragment
  te.app.aljoud.pages.conversations.ConversationsFragment$1
@@ -341,6 +346,7 @@ te/app/aljoud/pages/university/models/SpecialistsItem.java
  te.app.aljoud.pages.university.models.SpecialistsItem
 te/app/aljoud/activity/RemotePDFActivity.java
  te.app.aljoud.activity.RemotePDFActivity
+ te.app.aljoud.activity.RemotePDFActivity$convertToInputStream
 te/app/aljoud/pages/offers/adapters/OffersAdapter.java
  te.app.aljoud.pages.offers.adapters.OffersAdapter
  te.app.aljoud.pages.offers.adapters.OffersAdapter$ViewHolder
@@ -352,8 +358,8 @@ te/app/aljoud/utils/helper/LauncherInterface.java
  te.app.aljoud.utils.helper.LauncherInterface$permissionInterface
 te/app/aljoud/pages/splash/models/SettingData.java
  te.app.aljoud.pages.splash.models.SettingData
-te/app/aljoud/pages/home/viewModels/ItemUniversityViewModel.java
- te.app.aljoud.pages.home.viewModels.ItemUniversityViewModel
+te/app/aljoud/base/MyApplication.java
+ te.app.aljoud.base.MyApplication
 te/app/aljoud/repository/HomeRepository.java
  te.app.aljoud.repository.HomeRepository
 te/app/aljoud/connection/ConnectionHelper.java
@@ -430,8 +436,8 @@ te/app/aljoud/databinding/LayoutNavigationDrawerBinding.java
  te.app.aljoud.databinding.LayoutNavigationDrawerBinding
 te/app/aljoud/pages/settings/models/AboutMain.java
  te.app.aljoud.pages.settings.models.AboutMain
-te/app/aljoud/databinding/LayoutActionBarBackBinding.java
- te.app.aljoud.databinding.LayoutActionBarBackBinding
+te/app/aljoud/customViews/menu/NavigationDrawerView.java
+ te.app.aljoud.customViews.menu.NavigationDrawerView
 te/app/aljoud/pages/courseDetails/models/videos/VideoData.java
  te.app.aljoud.pages.courseDetails.models.videos.VideoData
 te/app/aljoud/pages/courseDetails/adapters/LessonArticlesAdapter.java
@@ -441,6 +447,8 @@ te/app/aljoud/customViews/menu/MenuViewModel.java
  te.app.aljoud.customViews.menu.MenuViewModel
 te/app/aljoud/databinding/LayoutTesBinding.java
  te.app.aljoud.databinding.LayoutTesBinding
+te/app/aljoud/pages/profile/ProfileFragment.java
+ te.app.aljoud.pages.profile.ProfileFragment
 te/app/aljoud/pages/courseDetails/models/lessons/CourseLessonsResponse.java
  te.app.aljoud.pages.courseDetails.models.lessons.CourseLessonsResponse
 te/app/aljoud/pages/chat/model/ChatRequest.java
@@ -513,9 +521,8 @@ te/app/aljoud/pages/university/models/levels/LevelsResponse.java
  te.app.aljoud.pages.university.models.levels.LevelsResponse
 te/app/aljoud/model/File.java
  te.app.aljoud.model.File
-te/app/aljoud/customViews/views/CustomEditText.java
- te.app.aljoud.customViews.views.CustomEditText
- te.app.aljoud.customViews.views.CustomEditText$Validator
+te/app/aljoud/base/ApplicationComponent.java
+ te.app.aljoud.base.ApplicationComponent
 te/app/aljoud/utils/Constants.java
  te.app.aljoud.utils.Constants
 te/app/aljoud/pages/courseDetails/adapters/LessonQuizzesAdapter.java
@@ -574,16 +581,16 @@ te/app/aljoud/utils/locations/models/Distance.java
  te.app.aljoud.utils.locations.models.Distance
 te/app/aljoud/pages/exams/models/AnswersItem.java
  te.app.aljoud.pages.exams.models.AnswersItem
-te/app/aljoud/customViews/menu/NavigationDrawerView.java
- te.app.aljoud.customViews.menu.NavigationDrawerView
-te/app/aljoud/customViews/actionbar/BackActionBarView.java
- te.app.aljoud.customViews.actionbar.BackActionBarView
-te/app/aljoud/base/ApplicationComponent.java
- te.app.aljoud.base.ApplicationComponent
-te/app/aljoud/base/MyApplication.java
- te.app.aljoud.base.MyApplication
-te/app/aljoud/base/IApplicationComponent.java
- te.app.aljoud.base.IApplicationComponent
- te.app.aljoud.base.IApplicationComponent$Builder
-te/app/aljoud/pages/settings/AboutAppFragment.java
- te.app.aljoud.pages.settings.AboutAppFragment
+te/app/aljoud/base/MyFirebaseMessagingService.java
+ te.app.aljoud.base.MyFirebaseMessagingService
+te/app/aljoud/pages/conversations/viewModels/ConversationsViewModel.java
+ te.app.aljoud.pages.conversations.viewModels.ConversationsViewModel
+te/app/aljoud/pages/home/viewModels/ItemUniversityViewModel.java
+ te.app.aljoud.pages.home.viewModels.ItemUniversityViewModel
+te/app/aljoud/customViews/views/CustomEditText.java
+ te.app.aljoud.customViews.views.CustomEditText
+ te.app.aljoud.customViews.views.CustomEditText$Validator
+te/app/aljoud/pages/fawaterkPayment/models/paymentResult/PaymentData.java
+ te.app.aljoud.pages.fawaterkPayment.models.paymentResult.PaymentData
+te/app/aljoud/databinding/LayoutActionBarBackBinding.java
+ te.app.aljoud.databinding.LayoutActionBarBackBinding

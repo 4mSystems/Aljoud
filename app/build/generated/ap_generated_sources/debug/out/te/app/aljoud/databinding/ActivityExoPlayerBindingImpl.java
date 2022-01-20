@@ -29,7 +29,7 @@ public class ActivityExoPlayerBindingImpl extends ActivityExoPlayerBinding  {
     }
     private ActivityExoPlayerBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (androidx.appcompat.widget.AppCompatImageButton) bindings[1]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[1]
             , (com.google.android.exoplayer2.ui.StyledPlayerView) bindings[2]
             );
         this.icQr.setTag(null);

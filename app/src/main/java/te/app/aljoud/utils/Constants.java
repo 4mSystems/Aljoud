@@ -2,7 +2,7 @@ package te.app.aljoud.utils;
 
 public class Constants {
 
-    public static final String IMAGE = "IMAGE";
+    public static final String IMAGE = "image";
     public final static String DETAILS = "DETAILS";
     public final static String LEVELS = "LEVELS";
     public final static String LEVEL_COURSES = "LEVEL_COURSES";
@@ -99,6 +99,12 @@ public class Constants {
     public static final String LNG = "LNG";
     public static final String ADDRESS = "ADDRESS";
     public static final String CITY = "CITY";
+    public static final String TWITTER = "https://twitter.com/Aljoudacademy";
+    public static final String FACEBOOK = "https://www.facebook.com/Al-joud-Academy-101919188934966/?ref=pages_you_manage";
+    public static final String INSTA = "https://www.instagram.com/aljoudacademy/";
+    public static final String WHATS = "https://wa.me/message/EDRLUFUWPXO2J1";
+    public static final String SNAP = "https://www.snapchat.com/add/drrowayda2020";
+    public static final String YOUTUBE = "https://youtube.com/channel/UCX270gs8VtDR4IostZ4zq3A";
     public final static int CHECK_CONFIRM_NAV_REGISTER = 0;
     public final static int CHECK_CONFIRM_NAV_FORGET = 1;
 

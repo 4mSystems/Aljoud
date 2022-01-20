@@ -30,7 +30,7 @@ public class UserData {
     private int id;
 
     @SerializedName("email")
-    private Object email;
+    private String email;
 
     @SerializedName("qr_image")
     private String qr_image;
@@ -60,7 +60,7 @@ public class UserData {
         return id;
     }
 
-    public Object getEmail() {
+    public String getEmail() {
         return email;
     }
 

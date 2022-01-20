@@ -4,14 +4,15 @@ package te.app.aljoud.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.github.barteksc.pdfviewer.PDFView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.aljoud.R;
@@ -26,13 +27,25 @@ public abstract class ActivityRemotePdfBinding extends ViewDataBinding {
   public final AppCompatImageView icQr;
 
   @NonNull
+  public final AppCompatImageView icQrFile;
+
+  @NonNull
+  public final CustomTextViewMedium pageCounter;
+
+  @NonNull
+  public final PDFView pdfView;
+
+  @NonNull
   public final ProgressBar progress;
 
   @NonNull
-  public final LinearLayout remotePdfRoot;
+  public final ConstraintLayout remotePdfRoot;
 
   @NonNull
   public final CustomTextViewRegular tvAccountQr;
+
+  @NonNull
+  public final CustomTextViewRegular tvAccountQrFile;
 
   @NonNull
   public final CustomTextViewMedium tvCardTitle;
@@ -44,16 +57,21 @@ public abstract class ActivityRemotePdfBinding extends ViewDataBinding {
   public final CustomTextViewRegular tvPolicyWarning1;
 
   protected ActivityRemotePdfBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CardView cardInstructor, AppCompatImageView icQr, ProgressBar progress,
-      LinearLayout remotePdfRoot, CustomTextViewRegular tvAccountQr,
-      CustomTextViewMedium tvCardTitle, CustomTextViewRegular tvInstractorProfession,
-      CustomTextViewRegular tvPolicyWarning1) {
+      CardView cardInstructor, AppCompatImageView icQr, AppCompatImageView icQrFile,
+      CustomTextViewMedium pageCounter, PDFView pdfView, ProgressBar progress,
+      ConstraintLayout remotePdfRoot, CustomTextViewRegular tvAccountQr,
+      CustomTextViewRegular tvAccountQrFile, CustomTextViewMedium tvCardTitle,
+      CustomTextViewRegular tvInstractorProfession, CustomTextViewRegular tvPolicyWarning1) {
     super(_bindingComponent, _root, _localFieldCount);
     this.cardInstructor = cardInstructor;
     this.icQr = icQr;
+    this.icQrFile = icQrFile;
+    this.pageCounter = pageCounter;
+    this.pdfView = pdfView;
     this.progress = progress;
     this.remotePdfRoot = remotePdfRoot;
     this.tvAccountQr = tvAccountQr;
+    this.tvAccountQrFile = tvAccountQrFile;
     this.tvCardTitle = tvCardTitle;
     this.tvInstractorProfession = tvInstractorProfession;
     this.tvPolicyWarning1 = tvPolicyWarning1;

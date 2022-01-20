@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatImageButton;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.google.android.exoplayer2.ui.StyledPlayerView;
@@ -16,13 +16,13 @@ import te.app.aljoud.R;
 
 public abstract class ActivityExoPlayerBinding extends ViewDataBinding {
   @NonNull
-  public final AppCompatImageButton icQr;
+  public final AppCompatImageView icQr;
 
   @NonNull
   public final StyledPlayerView playerView;
 
   protected ActivityExoPlayerBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatImageButton icQr, StyledPlayerView playerView) {
+      AppCompatImageView icQr, StyledPlayerView playerView) {
     super(_bindingComponent, _root, _localFieldCount);
     this.icQr = icQr;
     this.playerView = playerView;

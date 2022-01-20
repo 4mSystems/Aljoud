@@ -21,12 +21,10 @@
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
-
         <androidx.drawerlayout.widget.DrawerLayout
             android:id="@+id/dl_main_navigation_menu"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
 
             <RelativeLayout
                 android:id="@+id/rl_navigation_drawer"
@@ -65,7 +63,6 @@
                 android:background="@color/colorPrimaryDark"
                 android:orientation="vertical">
 
-
                 <androidx.core.widget.NestedScrollView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -85,12 +82,47 @@
                                 android:id="@+id/vv_navigation_drawer_image"
                                 android:layout_width="@dimen/dp90h"
                                 android:layout_height="@dimen/dp90h"
-                                android:layout_centerInParent="true"
+                                android:layout_centerHorizontal="true"
                                 android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/dp15h"
                                 android:src="@drawable/logo" />
 
+                            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/vv_navigation_drawer_image"
+                                android:layout_centerHorizontal="true"
+                                android:text="@{UserHelper.getInstance(context).userData.name}"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/black" />
                         </RelativeLayout>
 
+
+                        <te.app.aljoud.customViews.views.CustomTextViewMedium
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp25h"
+                            android:layout_marginEnd="@dimen/dp12w"
+                            android:drawableStart="@drawable/ic_chat"
+                            android:drawablePadding="@dimen/dp8w"
+                            android:drawableTint="@color/white"
+                            android:gravity="center_vertical"
+                            android:onClick="@{()->menuViewModel.buttonAction(Constants.UPDATE_PROFILE)}"
+                            android:text="@string/profile"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white"
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:id="@+id/view_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp15h"
+                            android:background="@color/overlayBackground"
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}" />
 
                         <te.app.aljoud.customViews.views.CustomTextViewMedium
                             android:layout_width="match_parent"
@@ -111,11 +143,10 @@
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <View
-                            android:id="@+id/view_profile"
+                            android:id="@+id/view_inbox"
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="@dimen/dp15h"
-
                             android:background="@color/overlayBackground"
                             android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}" />
 
@@ -206,7 +237,6 @@
                             android:layout_height="1dp"
                             android:layout_marginTop="@dimen/dp15h"
                             android:background="@color/overlayBackground"
-
                             android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -225,7 +255,6 @@
                             android:onClick="@{()-> menuViewModel.buttonAction(Constants.CONTACT)}"
                             android:text="@string/contact_us"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-
                             android:textColor="@color/white"
                             android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}"
                             app:layout_constraintStart_toStartOf="parent"
@@ -374,6 +403,7 @@
                             android:background="@color/overlayBackground"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
+                            android:visibility="@{UserHelper.getInstance(context).userData==null?View.VISIBLE:View.GONE}"
                             app:layout_constraintTop_toBottomOf="@id/tv_language" />
 
                         <te.app.aljoud.customViews.views.CustomTextViewMedium

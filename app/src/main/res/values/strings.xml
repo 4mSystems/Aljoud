@@ -78,8 +78,8 @@
     <string name="course_discuss">Private discussion on every lesson</string>
     <string name="course_certificate">Certificate of completion</string>
     <string name="account_number">Account number :</string>
-    <string name="policy_warning">I don\'t analyze publishing and selling</string>
-    <string name="policy_warning1">The application does not allow the feature of screen capture or video shooting, and whoever does this in other ways outside the application exposes himself to the legal issue</string>
+    <string name="policy_warning">انا لا احلل النشر والبيع</string>
+    <string name="policy_warning1">التطبيق لا يسمح بخاصية التقاط الشاشة أو تصوير الفيديو ومن يقوم بذلك بطرق أخرى خارج التطبيق يعرض نفسه للمسألة القانونية</string>
     <string name="account_qr">Account QR</string>
     <string name="rate_course">Rate course</string>
     <string name="rate_now">Rate now</string>
@@ -123,5 +123,18 @@
     <string name="forget_header1">Please enter the email to send the confirmation code to set a new password</string>
     <string name="skip">Skip</string>
     <string name="tes_site"><u>tesolutionspro.com</u></string>
+    <string name="profile">Profile</string>
+    <string name="about_body">Aljoud Academy is an integrated electronic educational platform that provides a detailed and professional explanation of the curricula of major\'s university for more than one university and specializes in more than one country to help students achieve academic excellence by connecting them with professional doctors and specialists in all fields within virtual classrooms that are technically equipped to provide an enjoyable and innovative educational experience. Aljoud Academy uses the latest standards for teaching, as all our courses are distinguished by the quality of lectures in terms of production quality and diversity, in addition to periodically online quizzes and tests.
+Thanks to God, our experience in the field of university teaching has exceeded 9 years, which gave us the opportunity to deal and teach a large number of students, specializations and universities in different countries and work to develop our teaching mechanism to be in the best possible way.
 
+
+Advantages of joining Aljoud Academy:
+Saving time
+Participating in Aljoud Academy courses eliminates the time and effort required to reach the classroom, as you only need to use your computer, tablet or mobile phone and start studying.
+
+Study from anywhere and anytime
+Through Aljoud Academy, you can attend the lectures at the times that suit you and from the places that provide you with comfort according to your choice, and you can re-attend the lectures again whenever you wish.
+
+Output quality and interactive environment
+All our lectures are of high quality in terms of imaging accuracy and sound quality. We also feature multiple modes of interactive tests and exercises to increase your abilities and the degree of your understanding of the lectures.</string>
 </resources>

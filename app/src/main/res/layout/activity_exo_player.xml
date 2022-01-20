@@ -24,15 +24,16 @@
             app:show_shuffle_button="false"
             app:show_subtitle_button="false" />
 
-        <androidx.appcompat.widget.AppCompatImageButton
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ic_qr"
             android:layout_width="@dimen/dp50w"
             android:layout_height="@dimen/dp50h"
             android:layout_margin="@dimen/dp10h"
-            android:src="@color/colordark"
             app:imageUrl="@{UserHelper.getInstance(context).userData.qr_image}"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="@id/player_view"
+            app:layout_constraintEnd_toEndOf="@id/player_view"
+            app:layout_constraintBottom_toBottomOf="@id/player_view"
+            app:layout_constraintTop_toTopOf="@id/player_view" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

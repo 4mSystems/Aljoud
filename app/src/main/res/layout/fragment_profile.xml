@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="amrk.app.moon.views.fragments.SplashFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.text.TextUtils" />
+
+        <import type="te.app.aljoud.utils.Constants" />
+
+        <variable
+            name="viewmodel"
+            type="te.app.aljoud.pages.profile.ProfileViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/dp6h"
+            app:layout_constraintBottom_toTopOf="@id/appCompatButtonNext"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgRegister"
+                    imageUrl="@{viewmodel.request.user_image}"
+                    android:layout_width="@dimen/dp90w"
+                    android:layout_height="@dimen/dp90h"
+                    android:layout_marginTop="@dimen/dp18h"
+                    android:onClick="@{()->viewmodel.imageSubmit()}"
+                    android:src="@drawable/logo"
+                    app:civ_border_color="@color/background_gray"
+                    app:civ_border_overlay="true"
+                    app:civ_border_width="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp4w"
+                    android:layout_marginBottom="@dimen/dp4h"
+                    android:onClick="@{()->viewmodel.imageSubmit()}"
+                    android:src="@drawable/ic_baseline_camera"
+                    app:layout_constraintBottom_toBottomOf="@id/imgRegister"
+                    app:layout_constraintStart_toStartOf="@id/imgRegister"
+                    app:tint="@color/medium_color" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp15w"
+                    android:layout_marginTop="@dimen/dp20h"
+                    android:layout_marginEnd="@dimen/dp15w"
+                    android:hint="@string/register_name"
+                    android:textAlignment="viewStart"
+                    android:textColorHint="@color/overlayBackground"
+                    app:error="@{viewmodel.request.nameError}"
+                    app:helperTextTextColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgRegister"
+                    app:startIconDrawable="@drawable/ic_account">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:text="@={viewmodel.request.name}"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/overlayBackground" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_phone"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp15w"
+                    android:layout_marginTop="@dimen/dp8h"
+                    android:layout_marginEnd="@dimen/dp15w"
+                    android:hint="@string/phone_hint"
+                    android:textColorHint="@color/overlayBackground"
+                    app:error="@{viewmodel.request.phoneError}"
+                    app:helperTextTextColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/input_name"
+                    app:startIconDrawable="@drawable/ic_call_white">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:text="@={viewmodel.request.phone}"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/overlayBackground"
+                        android:textDirection="ltr" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_register_email"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp12w"
+                    android:layout_marginTop="@dimen/dp8h"
+                    android:layout_marginEnd="@dimen/dp12w"
+                    android:hint="@string/email_hint"
+                    android:textColorHint="@color/overlayBackground"
+                    app:error="@{viewmodel.request.emailError}"
+                    app:helperTextTextColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/input_phone"
+                    app:startIconDrawable="@drawable/ic_email">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:text="@={viewmodel.request.email}"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/overlayBackground" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_register_password"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp12w"
+                    android:layout_marginTop="@dimen/dp8h"
+                    android:layout_marginEnd="@dimen/dp12w"
+                    android:hint="@string/password_hint"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/overlayBackground"
+                    app:helperTextTextColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/input_register_email"
+                    app:startIconDrawable="@drawable/ic_password">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:text="@={viewmodel.request.password}"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/overlayBackground" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_register_password_confirm"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp12w"
+                    android:layout_marginTop="@dimen/dp8h"
+                    android:layout_marginEnd="@dimen/dp12w"
+                    android:hint="@string/password_hint_confirm"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/overlayBackground"
+                    app:helperTextTextColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/input_register_password"
+                    app:startIconDrawable="@drawable/ic_password">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:text="@={viewmodel.request.confirmPassword}"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/overlayBackground" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/appCompatButtonNext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20h"
+            android:background="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?@color/colorPrimaryDark:@color/medium_color,default=@color/colorPrimaryDark}"
+            android:enabled="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?true:false}"
+            android:onClick="@{()->viewmodel.submit()}"
+            android:text="@string/send"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress"
+            style="Widget.MaterialComponents.LinearProgressIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="@{!TextUtils.isEmpty(viewmodel.message)&amp;&amp;viewmodel.message.equals(Constants.SHOW_PROGRESS)?View.VISIBLE:View.GONE}"
+            app:layout_constraintBottom_toBottomOf="@id/appCompatButtonNext"
+            app:layout_constraintStart_toStartOf="@id/appCompatButtonNext"
+            app:layout_constraintTop_toTopOf="@id/appCompatButtonNext"
+            app:trackColor="@color/white"
+            app:trackThickness="@dimen/dp4h" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

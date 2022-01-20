@@ -27,6 +27,7 @@ import te.app.aljoud.pages.fawaterkPayment.PaymentSuccessFragment;
 import te.app.aljoud.pages.home.viewModels.UniversitiesFragment;
 import te.app.aljoud.pages.myCourses.MyCoursesFragment;
 import te.app.aljoud.pages.offers.OffersFragment;
+import te.app.aljoud.pages.profile.ProfileFragment;
 import te.app.aljoud.pages.settings.ServiceRequestFragment;
 import te.app.aljoud.pages.university.FragmentCategorySections;
 import te.app.aljoud.pages.home.HomeFragment;
@@ -50,6 +51,8 @@ public interface IApplicationComponent {
     void inject(SplashFragment splashFragment);
 
     void inject(HomeFragment homeFragment);
+
+    void inject(ProfileFragment profileFragment);
 
     void inject(UniversitiesFragment universitiesFragment);
 

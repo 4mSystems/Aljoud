@@ -7,7 +7,7 @@
 
     </data>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/remote_pdf_root"
         android:layout_width="match_parent"
@@ -99,10 +99,57 @@
         </androidx.cardview.widget.CardView>
 
         <ProgressBar
+            android:id="@+id/progress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/progress"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/dp15h"/>
-    </LinearLayout>
+            android:layout_marginTop="@dimen/dp15h"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_instructor" />
+
+        <te.app.aljoud.customViews.views.CustomTextViewMedium
+            android:id="@+id/pageCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp15h"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_instructor" />
+
+        <com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/pdfView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dp10h"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pageCounter" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_qr_file"
+            android:layout_width="@dimen/dp50w"
+            android:layout_height="@dimen/dp50h"
+            android:layout_marginTop="@dimen/dp10h"
+            android:layout_marginEnd="@dimen/dp12w"
+            android:src="@color/colordark"
+            app:imageUrl="@{UserHelper.getInstance(context).userData.qr_image}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/pdfView"
+            app:layout_constraintStart_toStartOf="@+id/pdfView"
+            app:layout_constraintTop_toTopOf="@+id/pdfView" />
+
+        <te.app.aljoud.customViews.views.CustomTextViewRegular
+            android:id="@+id/tv_account_qr_file"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/account_qr"
+            android:textAlignment="center"
+            android:textColor="@color/colordark"
+            android:textSize="@dimen/sp6"
+            app:layout_constraintEnd_toEndOf="@+id/ic_qr_file"
+            app:layout_constraintStart_toStartOf="@+id/ic_qr_file"
+            app:layout_constraintTop_toBottomOf="@+id/ic_qr_file" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

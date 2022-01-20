@@ -21,9 +21,8 @@ import te.app.aljoud.base.IApplicationComponent;
 import te.app.aljoud.base.MyApplication;
 import te.app.aljoud.databinding.FragmentAboutBinding;
 import te.app.aljoud.model.base.Mutable;
-import te.app.aljoud.pages.settings.models.AboutResponse;
 import te.app.aljoud.pages.settings.viewModels.SettingsViewModel;
-import te.app.aljoud.utils.Constants;
+import te.app.aljoud.utils.helper.AppHelper;
 
 
 public class AboutAppFragment extends BaseFragment {
@@ -46,9 +45,10 @@ public class AboutAppFragment extends BaseFragment {
         viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-            if (((Mutable) o).message.equals(Constants.ABOUT)) {
-                viewModel.setAboutMain(((AboutResponse) ((Mutable) o).object).getData());
-            }
+//            if (((Mutable) o).message.equals(Constants.ABOUT)) {
+//                viewModel.setAboutMain(((AboutResponse) ((Mutable) o).object).getData());
+//            }
+            AppHelper.openBrowser(requireActivity(),((Mutable) o).message);
         });
 
     }

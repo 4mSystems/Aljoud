@@ -97,6 +97,11 @@ import te.app.aljoud.pages.offers.OffersFragment_MembersInjector;
 import te.app.aljoud.pages.offers.viewModel.OffersViewModel;
 import te.app.aljoud.pages.offers.viewModel.OffersViewModel_Factory;
 import te.app.aljoud.pages.offers.viewModel.OffersViewModel_MembersInjector;
+import te.app.aljoud.pages.profile.ProfileFragment;
+import te.app.aljoud.pages.profile.ProfileFragment_MembersInjector;
+import te.app.aljoud.pages.profile.ProfileViewModel;
+import te.app.aljoud.pages.profile.ProfileViewModel_Factory;
+import te.app.aljoud.pages.profile.ProfileViewModel_MembersInjector;
 import te.app.aljoud.pages.settings.AboutAppFragment;
 import te.app.aljoud.pages.settings.AboutAppFragment_MembersInjector;
 import te.app.aljoud.pages.settings.ContactFragment;
@@ -174,6 +179,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private RegisterViewModel registerViewModel() {
     return injectRegisterViewModel(RegisterViewModel_Factory.newInstance(authRepositoryProvider.get()));
+  }
+
+  private ProfileViewModel profileViewModel() {
+    return injectProfileViewModel(ProfileViewModel_Factory.newInstance(authRepositoryProvider.get()));
   }
 
   private SettingsViewModel settingsViewModel() {
@@ -272,6 +281,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(HomeFragment homeFragment) {
     injectHomeFragment(homeFragment);
+  }
+
+  @Override
+  public void inject(ProfileFragment profileFragment) {
+    injectProfileFragment(profileFragment);
   }
 
   @Override
@@ -427,6 +441,16 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private HomeFragment injectHomeFragment(HomeFragment instance) {
     HomeFragment_MembersInjector.injectViewModel(instance, homeViewModel());
+    return instance;
+  }
+
+  private ProfileViewModel injectProfileViewModel(ProfileViewModel instance) {
+    ProfileViewModel_MembersInjector.injectRepository(instance, authRepositoryProvider.get());
+    return instance;
+  }
+
+  private ProfileFragment injectProfileFragment(ProfileFragment instance) {
+    ProfileFragment_MembersInjector.injectViewModel(instance, profileViewModel());
     return instance;
   }
 

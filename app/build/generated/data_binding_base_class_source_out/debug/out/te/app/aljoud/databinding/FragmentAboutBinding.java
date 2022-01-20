@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.constraintlayout.helper.widget.Flow;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -15,11 +17,50 @@ import te.app.aljoud.R;
 import te.app.aljoud.pages.settings.viewModels.SettingsViewModel;
 
 public abstract class FragmentAboutBinding extends ViewDataBinding {
+  @NonNull
+  public final Flow flow1;
+
+  @NonNull
+  public final Flow flow2;
+
+  @NonNull
+  public final AppCompatImageView icFacebook;
+
+  @NonNull
+  public final AppCompatImageView icInstgram;
+
+  @NonNull
+  public final AppCompatImageView icSnap;
+
+  @NonNull
+  public final AppCompatImageView icTwitter;
+
+  @NonNull
+  public final AppCompatImageView icWhats;
+
+  @NonNull
+  public final AppCompatImageView icYoutube;
+
+  @NonNull
+  public final View v;
+
   @Bindable
   protected SettingsViewModel mViewmodel;
 
-  protected FragmentAboutBinding(Object _bindingComponent, View _root, int _localFieldCount) {
+  protected FragmentAboutBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      Flow flow1, Flow flow2, AppCompatImageView icFacebook, AppCompatImageView icInstgram,
+      AppCompatImageView icSnap, AppCompatImageView icTwitter, AppCompatImageView icWhats,
+      AppCompatImageView icYoutube, View v) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.flow1 = flow1;
+    this.flow2 = flow2;
+    this.icFacebook = icFacebook;
+    this.icInstgram = icInstgram;
+    this.icSnap = icSnap;
+    this.icTwitter = icTwitter;
+    this.icWhats = icWhats;
+    this.icYoutube = icYoutube;
+    this.v = v;
   }
 
   public abstract void setViewmodel(@Nullable SettingsViewModel viewmodel);

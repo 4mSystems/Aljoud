@@ -45,19 +45,19 @@
 21-->/home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:17:9-65
 22
 23    <uses-feature
-23-->[com.google.android.gms:play-services-maps:18.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/097aac2536f36d0313e2b83b37267ec8/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:26:5-28:35
+23-->[com.google.android.gms:play-services-maps:18.0.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/4c16fe06d703f2642be666a0f28e796e/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:26:5-28:35
 24        android:glEsVersion="0x00020000"
-24-->[com.google.android.gms:play-services-maps:18.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/097aac2536f36d0313e2b83b37267ec8/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:27:9-41
+24-->[com.google.android.gms:play-services-maps:18.0.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/4c16fe06d703f2642be666a0f28e796e/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:27:9-41
 25        android:required="true" />
-25-->[com.google.android.gms:play-services-maps:18.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/097aac2536f36d0313e2b83b37267ec8/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:28:9-32
+25-->[com.google.android.gms:play-services-maps:18.0.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/4c16fe06d703f2642be666a0f28e796e/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:28:9-32
 26
 27    <queries>
-27-->[com.google.android.gms:play-services-maps:18.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/097aac2536f36d0313e2b83b37267ec8/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:30:5-34:15
+27-->[com.google.android.gms:play-services-maps:18.0.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/4c16fe06d703f2642be666a0f28e796e/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:30:5-34:15
 28
 29        <!-- Needs to be explicitly declared on Android R+ -->
 30        <package android:name="com.google.android.apps.maps" />
-30-->[com.google.android.gms:play-services-maps:18.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/097aac2536f36d0313e2b83b37267ec8/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:33:9-64
-30-->[com.google.android.gms:play-services-maps:18.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/097aac2536f36d0313e2b83b37267ec8/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:33:18-61
+30-->[com.google.android.gms:play-services-maps:18.0.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/4c16fe06d703f2642be666a0f28e796e/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:33:9-64
+30-->[com.google.android.gms:play-services-maps:18.0.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/4c16fe06d703f2642be666a0f28e796e/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:33:18-61
 31
 32        <intent>
 32-->[androidx.media:media:1.3.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/37f07cf79aa1b14e5ae7ede5075c2de5/transformed/media-1.3.1/AndroidManifest.xml:25:9-27:18
@@ -75,8 +75,8 @@
 38-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/6cba60d5943ca692881a163e3911a8d3/transformed/jetified-firebase-iid-21.0.1/AndroidManifest.xml:26:22-79
 39    <!-- Is required to launch foreground extraction service for targetSdkVersion 28+. -->
 40    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-40-->[com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c2afcb919f601c58ef6d044a87187b67/transformed/jetified-core-1.10.2/AndroidManifest.xml:13:5-77
-40-->[com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c2afcb919f601c58ef6d044a87187b67/transformed/jetified-core-1.10.2/AndroidManifest.xml:13:22-74
+40-->[com.google.android.play:core:1.10.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/80cf2bfacd478958cd0ca7c8225c4075/transformed/jetified-core-1.10.3/AndroidManifest.xml:13:5-77
+40-->[com.google.android.play:core:1.10.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/80cf2bfacd478958cd0ca7c8225c4075/transformed/jetified-core-1.10.3/AndroidManifest.xml:13:22-74
 41
 42    <application
 42-->/home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:20:5-85:19
@@ -85,7 +85,7 @@
 44        android:allowBackup="false"
 44-->/home/elnagar/Android projects/Aljoud/app/src/main/AndroidManifest.xml:22:9-36
 45        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-45-->[androidx.core:core:1.5.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/bda174f2489cf77809533b477645dcf6/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
+45-->[androidx.core:core:1.7.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3bacc9affcce184e51bc1c727dc10dde/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
 46        android:debuggable="true"
 47        android:extractNativeLibs="false"
 48        android:hardwareAccelerated="true"
@@ -229,11 +229,11 @@
 120            android:theme="@style/AppTheme.NoActionBar" /> <!-- Needs to be explicitly declared on P+ -->
 120-->[com.github.jaiselrahman:FilePicker:1.3.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/84f6f470901a390f646107d8f41ab727/transformed/jetified-FilePicker-1.3.2/AndroidManifest.xml:26:13-56
 121        <uses-library
-121-->[com.google.android.gms:play-services-maps:18.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/097aac2536f36d0313e2b83b37267ec8/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:39:9-41:40
+121-->[com.google.android.gms:play-services-maps:18.0.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/4c16fe06d703f2642be666a0f28e796e/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:39:9-41:40
 122            android:name="org.apache.http.legacy"
-122-->[com.google.android.gms:play-services-maps:18.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/097aac2536f36d0313e2b83b37267ec8/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:40:13-50
+122-->[com.google.android.gms:play-services-maps:18.0.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/4c16fe06d703f2642be666a0f28e796e/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:40:13-50
 123            android:required="false" />
-123-->[com.google.android.gms:play-services-maps:18.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/097aac2536f36d0313e2b83b37267ec8/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:41:13-37
+123-->[com.google.android.gms:play-services-maps:18.0.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/4c16fe06d703f2642be666a0f28e796e/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:41:13-37
 124
 125        <meta-data
 125-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/88ae305588042fddc8ba95687802c98d/transformed/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:11:9-13:43
@@ -281,17 +281,17 @@
 149                android:value="com.google.firebase.components.ComponentRegistrar" />
 149-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/6cba60d5943ca692881a163e3911a8d3/transformed/jetified-firebase-iid-21.0.1/AndroidManifest.xml:34:17-82
 150            <meta-data
-150-->[com.google.firebase:firebase-datatransport:17.0.10] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/6563ef8673d21876fbab9817569be123/transformed/jetified-firebase-datatransport-17.0.10/AndroidManifest.xml:28:13-30:85
-151                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-151-->[com.google.firebase:firebase-datatransport:17.0.10] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/6563ef8673d21876fbab9817569be123/transformed/jetified-firebase-datatransport-17.0.10/AndroidManifest.xml:29:17-115
+150-->[com.google.firebase:firebase-installations:16.3.5] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/dd5a96a466a0bceb327231fc96e44730/transformed/jetified-firebase-installations-16.3.5/AndroidManifest.xml:18:13-20:85
+151                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+151-->[com.google.firebase:firebase-installations:16.3.5] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/dd5a96a466a0bceb327231fc96e44730/transformed/jetified-firebase-installations-16.3.5/AndroidManifest.xml:19:17-127
 152                android:value="com.google.firebase.components.ComponentRegistrar" />
-152-->[com.google.firebase:firebase-datatransport:17.0.10] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/6563ef8673d21876fbab9817569be123/transformed/jetified-firebase-datatransport-17.0.10/AndroidManifest.xml:30:17-82
+152-->[com.google.firebase:firebase-installations:16.3.5] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/dd5a96a466a0bceb327231fc96e44730/transformed/jetified-firebase-installations-16.3.5/AndroidManifest.xml:20:17-82
 153            <meta-data
-153-->[com.google.firebase:firebase-installations:16.3.5] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/dd5a96a466a0bceb327231fc96e44730/transformed/jetified-firebase-installations-16.3.5/AndroidManifest.xml:18:13-20:85
-154                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-154-->[com.google.firebase:firebase-installations:16.3.5] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/dd5a96a466a0bceb327231fc96e44730/transformed/jetified-firebase-installations-16.3.5/AndroidManifest.xml:19:17-127
+153-->[com.google.firebase:firebase-datatransport:17.0.10] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/6563ef8673d21876fbab9817569be123/transformed/jetified-firebase-datatransport-17.0.10/AndroidManifest.xml:28:13-30:85
+154                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+154-->[com.google.firebase:firebase-datatransport:17.0.10] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/6563ef8673d21876fbab9817569be123/transformed/jetified-firebase-datatransport-17.0.10/AndroidManifest.xml:29:17-115
 155                android:value="com.google.firebase.components.ComponentRegistrar" />
-155-->[com.google.firebase:firebase-installations:16.3.5] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/dd5a96a466a0bceb327231fc96e44730/transformed/jetified-firebase-installations-16.3.5/AndroidManifest.xml:20:17-82
+155-->[com.google.firebase:firebase-datatransport:17.0.10] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/6563ef8673d21876fbab9817569be123/transformed/jetified-firebase-datatransport-17.0.10/AndroidManifest.xml:30:17-82
 156            <!--
 157                This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
 158                clients to use it as well, by defining this registrar in their own core/common library.
@@ -321,13 +321,13 @@
 172        </receiver>
 173
 174        <activity
-174-->[com.google.android.gms:play-services-base:17.5.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fe817d8371af4e14b1ee7131420dbbdb/transformed/jetified-play-services-base-17.5.0/AndroidManifest.xml:23:9-26:75
+174-->[com.google.android.gms:play-services-base:18.0.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/4f43735d54f83db67ef70c5488ab6515/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
 175            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-175-->[com.google.android.gms:play-services-base:17.5.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fe817d8371af4e14b1ee7131420dbbdb/transformed/jetified-play-services-base-17.5.0/AndroidManifest.xml:24:13-79
+175-->[com.google.android.gms:play-services-base:18.0.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/4f43735d54f83db67ef70c5488ab6515/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
 176            android:exported="false"
-176-->[com.google.android.gms:play-services-base:17.5.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fe817d8371af4e14b1ee7131420dbbdb/transformed/jetified-play-services-base-17.5.0/AndroidManifest.xml:25:13-37
+176-->[com.google.android.gms:play-services-base:18.0.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/4f43735d54f83db67ef70c5488ab6515/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
 177            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-177-->[com.google.android.gms:play-services-base:17.5.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fe817d8371af4e14b1ee7131420dbbdb/transformed/jetified-play-services-base-17.5.0/AndroidManifest.xml:26:13-72
+177-->[com.google.android.gms:play-services-base:18.0.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/4f43735d54f83db67ef70c5488ab6515/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
 178
 179        <provider
 179-->[com.google.firebase:firebase-common:19.5.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/97eb845c186ddc17da9a38d660f8da14/transformed/jetified-firebase-common-19.5.0/AndroidManifest.xml:26:9-31:39
@@ -343,69 +343,69 @@
 184-->[com.google.firebase:firebase-common:19.5.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/97eb845c186ddc17da9a38d660f8da14/transformed/jetified-firebase-common-19.5.0/AndroidManifest.xml:31:13-36
 185
 186        <service
-186-->[androidx.room:room-runtime:2.3.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/ceff7ef425325e325919d66b909237d7/transformed/room-runtime-2.3.0/AndroidManifest.xml:25:9-28:40
+186-->[androidx.room:room-runtime:2.4.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/f21df9bd888f2f14c6ff886f40c7cfe5/transformed/room-runtime-2.4.1/AndroidManifest.xml:25:9-28:40
 187            android:name="androidx.room.MultiInstanceInvalidationService"
-187-->[androidx.room:room-runtime:2.3.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/ceff7ef425325e325919d66b909237d7/transformed/room-runtime-2.3.0/AndroidManifest.xml:26:13-74
+187-->[androidx.room:room-runtime:2.4.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/f21df9bd888f2f14c6ff886f40c7cfe5/transformed/room-runtime-2.4.1/AndroidManifest.xml:26:13-74
 188            android:directBootAware="true"
-188-->[androidx.room:room-runtime:2.3.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/ceff7ef425325e325919d66b909237d7/transformed/room-runtime-2.3.0/AndroidManifest.xml:27:13-43
+188-->[androidx.room:room-runtime:2.4.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/f21df9bd888f2f14c6ff886f40c7cfe5/transformed/room-runtime-2.4.1/AndroidManifest.xml:27:13-43
 189            android:exported="false" />
-189-->[androidx.room:room-runtime:2.3.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/ceff7ef425325e325919d66b909237d7/transformed/room-runtime-2.3.0/AndroidManifest.xml:28:13-37
+189-->[androidx.room:room-runtime:2.4.1] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/f21df9bd888f2f14c6ff886f40c7cfe5/transformed/room-runtime-2.4.1/AndroidManifest.xml:28:13-37
 190
 191        <provider
-191-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/e06b62a5d3e0da1cc5277ff633747248/transformed/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
+191-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/56389eb83805bfe84ccaec7922d400ba/transformed/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
 192            android:name="com.squareup.picasso.PicassoProvider"
-192-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/e06b62a5d3e0da1cc5277ff633747248/transformed/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
+192-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/56389eb83805bfe84ccaec7922d400ba/transformed/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
 193            android:authorities="te.app.aljoud.com.squareup.picasso"
-193-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/e06b62a5d3e0da1cc5277ff633747248/transformed/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
+193-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/56389eb83805bfe84ccaec7922d400ba/transformed/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
 194            android:exported="false" /> <!-- The activities will be merged into the manifest of the hosting app. -->
-194-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/e06b62a5d3e0da1cc5277ff633747248/transformed/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+194-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/56389eb83805bfe84ccaec7922d400ba/transformed/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
 195        <activity
-195-->[com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c2afcb919f601c58ef6d044a87187b67/transformed/jetified-core-1.10.2/AndroidManifest.xml:18:9-24:45
+195-->[com.google.android.play:core:1.10.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/80cf2bfacd478958cd0ca7c8225c4075/transformed/jetified-core-1.10.3/AndroidManifest.xml:18:9-24:45
 196            android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity"
-196-->[com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c2afcb919f601c58ef6d044a87187b67/transformed/jetified-core-1.10.2/AndroidManifest.xml:19:13-100
+196-->[com.google.android.play:core:1.10.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/80cf2bfacd478958cd0ca7c8225c4075/transformed/jetified-core-1.10.3/AndroidManifest.xml:19:13-100
 197            android:enabled="false"
-197-->[com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c2afcb919f601c58ef6d044a87187b67/transformed/jetified-core-1.10.2/AndroidManifest.xml:20:13-36
+197-->[com.google.android.play:core:1.10.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/80cf2bfacd478958cd0ca7c8225c4075/transformed/jetified-core-1.10.3/AndroidManifest.xml:20:13-36
 198            android:exported="false"
-198-->[com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c2afcb919f601c58ef6d044a87187b67/transformed/jetified-core-1.10.2/AndroidManifest.xml:21:13-37
+198-->[com.google.android.play:core:1.10.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/80cf2bfacd478958cd0ca7c8225c4075/transformed/jetified-core-1.10.3/AndroidManifest.xml:21:13-37
 199            android:launchMode="singleInstance"
-199-->[com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c2afcb919f601c58ef6d044a87187b67/transformed/jetified-core-1.10.2/AndroidManifest.xml:22:13-48
+199-->[com.google.android.play:core:1.10.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/80cf2bfacd478958cd0ca7c8225c4075/transformed/jetified-core-1.10.3/AndroidManifest.xml:22:13-48
 200            android:process=":playcore_missing_splits_activity"
-200-->[com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c2afcb919f601c58ef6d044a87187b67/transformed/jetified-core-1.10.2/AndroidManifest.xml:23:13-64
+200-->[com.google.android.play:core:1.10.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/80cf2bfacd478958cd0ca7c8225c4075/transformed/jetified-core-1.10.3/AndroidManifest.xml:23:13-64
 201            android:stateNotNeeded="true" />
-201-->[com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c2afcb919f601c58ef6d044a87187b67/transformed/jetified-core-1.10.2/AndroidManifest.xml:24:13-42
+201-->[com.google.android.play:core:1.10.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/80cf2bfacd478958cd0ca7c8225c4075/transformed/jetified-core-1.10.3/AndroidManifest.xml:24:13-42
 202        <activity
-202-->[com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c2afcb919f601c58ef6d044a87187b67/transformed/jetified-core-1.10.2/AndroidManifest.xml:25:9-29:65
+202-->[com.google.android.play:core:1.10.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/80cf2bfacd478958cd0ca7c8225c4075/transformed/jetified-core-1.10.3/AndroidManifest.xml:25:9-29:65
 203            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
-203-->[com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c2afcb919f601c58ef6d044a87187b67/transformed/jetified-core-1.10.2/AndroidManifest.xml:26:13-93
+203-->[com.google.android.play:core:1.10.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/80cf2bfacd478958cd0ca7c8225c4075/transformed/jetified-core-1.10.3/AndroidManifest.xml:26:13-93
 204            android:exported="false"
-204-->[com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c2afcb919f601c58ef6d044a87187b67/transformed/jetified-core-1.10.2/AndroidManifest.xml:27:13-37
+204-->[com.google.android.play:core:1.10.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/80cf2bfacd478958cd0ca7c8225c4075/transformed/jetified-core-1.10.3/AndroidManifest.xml:27:13-37
 205            android:stateNotNeeded="true"
-205-->[com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c2afcb919f601c58ef6d044a87187b67/transformed/jetified-core-1.10.2/AndroidManifest.xml:28:13-42
+205-->[com.google.android.play:core:1.10.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/80cf2bfacd478958cd0ca7c8225c4075/transformed/jetified-core-1.10.3/AndroidManifest.xml:28:13-42
 206            android:theme="@style/Theme.PlayCore.Transparent" /> <!-- The services will be merged into the manifest of the hosting app. -->
-206-->[com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c2afcb919f601c58ef6d044a87187b67/transformed/jetified-core-1.10.2/AndroidManifest.xml:29:13-62
+206-->[com.google.android.play:core:1.10.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/80cf2bfacd478958cd0ca7c8225c4075/transformed/jetified-core-1.10.3/AndroidManifest.xml:29:13-62
 207        <service
-207-->[com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c2afcb919f601c58ef6d044a87187b67/transformed/jetified-core-1.10.2/AndroidManifest.xml:32:9-39:19
+207-->[com.google.android.play:core:1.10.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/80cf2bfacd478958cd0ca7c8225c4075/transformed/jetified-core-1.10.3/AndroidManifest.xml:32:9-39:19
 208            android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService"
-208-->[com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c2afcb919f601c58ef6d044a87187b67/transformed/jetified-core-1.10.2/AndroidManifest.xml:33:13-94
+208-->[com.google.android.play:core:1.10.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/80cf2bfacd478958cd0ca7c8225c4075/transformed/jetified-core-1.10.3/AndroidManifest.xml:33:13-94
 209            android:enabled="false"
-209-->[com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c2afcb919f601c58ef6d044a87187b67/transformed/jetified-core-1.10.2/AndroidManifest.xml:34:13-36
+209-->[com.google.android.play:core:1.10.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/80cf2bfacd478958cd0ca7c8225c4075/transformed/jetified-core-1.10.3/AndroidManifest.xml:34:13-36
 210            android:exported="true" >
-210-->[com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c2afcb919f601c58ef6d044a87187b67/transformed/jetified-core-1.10.2/AndroidManifest.xml:35:13-36
+210-->[com.google.android.play:core:1.10.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/80cf2bfacd478958cd0ca7c8225c4075/transformed/jetified-core-1.10.3/AndroidManifest.xml:35:13-36
 211            <meta-data
-211-->[com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c2afcb919f601c58ef6d044a87187b67/transformed/jetified-core-1.10.2/AndroidManifest.xml:36:13-38:41
+211-->[com.google.android.play:core:1.10.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/80cf2bfacd478958cd0ca7c8225c4075/transformed/jetified-core-1.10.3/AndroidManifest.xml:36:13-38:41
 212                android:name="com.google.android.play.core.assetpacks.versionCode"
-212-->[com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c2afcb919f601c58ef6d044a87187b67/transformed/jetified-core-1.10.2/AndroidManifest.xml:37:17-83
-213                android:value="11002" />
-213-->[com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c2afcb919f601c58ef6d044a87187b67/transformed/jetified-core-1.10.2/AndroidManifest.xml:38:17-38
+212-->[com.google.android.play:core:1.10.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/80cf2bfacd478958cd0ca7c8225c4075/transformed/jetified-core-1.10.3/AndroidManifest.xml:37:17-83
+213                android:value="11003" />
+213-->[com.google.android.play:core:1.10.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/80cf2bfacd478958cd0ca7c8225c4075/transformed/jetified-core-1.10.3/AndroidManifest.xml:38:17-38
 214        </service>
 215        <service
-215-->[com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c2afcb919f601c58ef6d044a87187b67/transformed/jetified-core-1.10.2/AndroidManifest.xml:40:9-43:40
+215-->[com.google.android.play:core:1.10.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/80cf2bfacd478958cd0ca7c8225c4075/transformed/jetified-core-1.10.3/AndroidManifest.xml:40:9-43:40
 216            android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService"
-216-->[com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c2afcb919f601c58ef6d044a87187b67/transformed/jetified-core-1.10.2/AndroidManifest.xml:41:13-95
+216-->[com.google.android.play:core:1.10.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/80cf2bfacd478958cd0ca7c8225c4075/transformed/jetified-core-1.10.3/AndroidManifest.xml:41:13-95
 217            android:enabled="false"
-217-->[com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c2afcb919f601c58ef6d044a87187b67/transformed/jetified-core-1.10.2/AndroidManifest.xml:42:13-36
+217-->[com.google.android.play:core:1.10.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/80cf2bfacd478958cd0ca7c8225c4075/transformed/jetified-core-1.10.3/AndroidManifest.xml:42:13-36
 218            android:exported="false" />
-218-->[com.google.android.play:core:1.10.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c2afcb919f601c58ef6d044a87187b67/transformed/jetified-core-1.10.2/AndroidManifest.xml:43:13-37
+218-->[com.google.android.play:core:1.10.3] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/80cf2bfacd478958cd0ca7c8225c4075/transformed/jetified-core-1.10.3/AndroidManifest.xml:43:13-37
 219        <service
 219-->[es.voghdev.pdfviewpager:library:1.1.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/a2649a9158b80bbe3752254722d94ff0/transformed/jetified-library-1.1.2/AndroidManifest.xml:12:9-15:19
 220            android:name="es.voghdev.pdfviewpager.library.service.CopyAssetService"
@@ -460,32 +460,43 @@
 247        </service>
 248
 249        <provider
-249-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/b6409eff7a91aa53c1eeef654178d886/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
-250            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-250-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/b6409eff7a91aa53c1eeef654178d886/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
-251            android:authorities="te.app.aljoud.lifecycle-process"
-251-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/b6409eff7a91aa53c1eeef654178d886/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
-252            android:exported="false"
-252-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/b6409eff7a91aa53c1eeef654178d886/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
-253            android:multiprocess="true" />
-253-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/b6409eff7a91aa53c1eeef654178d886/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
-254
-255        <service
-255-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3d507a00dbdb6b143444ba3543757051/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:26:9-30:19
-256            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-256-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3d507a00dbdb6b143444ba3543757051/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:27:13-117
-257            android:exported="false"
-257-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3d507a00dbdb6b143444ba3543757051/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:28:13-37
-258            android:permission="android.permission.BIND_JOB_SERVICE" >
-258-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3d507a00dbdb6b143444ba3543757051/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:29:13-69
-259        </service>
+249-->[androidx.emoji2:emoji2:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/aa6e600154cdb50631bf71ac59346bdd/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+250            android:name="androidx.startup.InitializationProvider"
+250-->[androidx.emoji2:emoji2:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/aa6e600154cdb50631bf71ac59346bdd/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
+251            android:authorities="te.app.aljoud.androidx-startup"
+251-->[androidx.emoji2:emoji2:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/aa6e600154cdb50631bf71ac59346bdd/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
+252            android:exported="false" >
+252-->[androidx.emoji2:emoji2:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/aa6e600154cdb50631bf71ac59346bdd/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
+253            <meta-data
+253-->[androidx.emoji2:emoji2:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/aa6e600154cdb50631bf71ac59346bdd/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+254                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+254-->[androidx.emoji2:emoji2:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/aa6e600154cdb50631bf71ac59346bdd/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+255                android:value="androidx.startup" />
+255-->[androidx.emoji2:emoji2:1.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/aa6e600154cdb50631bf71ac59346bdd/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+256            <meta-data
+256-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/be50e1b2603c06e6a8ef0a6381a4d273/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+257                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+257-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/be50e1b2603c06e6a8ef0a6381a4d273/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+258                android:value="androidx.startup" />
+258-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/be50e1b2603c06e6a8ef0a6381a4d273/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+259        </provider>
 260
-261        <receiver
-261-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3d507a00dbdb6b143444ba3543757051/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:32:9-34:40
-262            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-262-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3d507a00dbdb6b143444ba3543757051/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:33:13-132
-263            android:exported="false" />
-263-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3d507a00dbdb6b143444ba3543757051/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:34:13-37
-264    </application>
-265
-266</manifest>
+261        <service
+261-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3d507a00dbdb6b143444ba3543757051/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:26:9-30:19
+262            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+262-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3d507a00dbdb6b143444ba3543757051/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:27:13-117
+263            android:exported="false"
+263-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3d507a00dbdb6b143444ba3543757051/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:28:13-37
+264            android:permission="android.permission.BIND_JOB_SERVICE" >
+264-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3d507a00dbdb6b143444ba3543757051/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:29:13-69
+265        </service>
+266
+267        <receiver
+267-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3d507a00dbdb6b143444ba3543757051/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:32:9-34:40
+268            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+268-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3d507a00dbdb6b143444ba3543757051/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:33:13-132
+269            android:exported="false" />
+269-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3d507a00dbdb6b143444ba3543757051/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:34:13-37
+270    </application>
+271
+272</manifest>

@@ -46,6 +46,7 @@ import te.app.aljoud.databinding.FragmentMyCoursesBindingImpl;
 import te.app.aljoud.databinding.FragmentOffersBindingImpl;
 import te.app.aljoud.databinding.FragmentPaymentMethodsBindingImpl;
 import te.app.aljoud.databinding.FragmentPaymentSuccessBindingImpl;
+import te.app.aljoud.databinding.FragmentProfileBindingImpl;
 import te.app.aljoud.databinding.FragmentRegisterBindingImpl;
 import te.app.aljoud.databinding.FragmentServiceRequestBindingImpl;
 import te.app.aljoud.databinding.FragmentSplashBindingImpl;
@@ -137,61 +138,63 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_FRAGMENTPAYMENTSUCCESS = 31;
 
-  private static final int LAYOUT_FRAGMENTREGISTER = 32;
+  private static final int LAYOUT_FRAGMENTPROFILE = 32;
 
-  private static final int LAYOUT_FRAGMENTSERVICEREQUEST = 33;
+  private static final int LAYOUT_FRAGMENTREGISTER = 33;
 
-  private static final int LAYOUT_FRAGMENTSPLASH = 34;
+  private static final int LAYOUT_FRAGMENTSERVICEREQUEST = 34;
 
-  private static final int LAYOUT_FRAGMENTUNIVERSITIES = 35;
+  private static final int LAYOUT_FRAGMENTSPLASH = 35;
 
-  private static final int LAYOUT_FRAGMENTUNIVERSITYDETAILS = 36;
+  private static final int LAYOUT_FRAGMENTUNIVERSITIES = 36;
 
-  private static final int LAYOUT_INSTRACTORSHEET = 37;
+  private static final int LAYOUT_FRAGMENTUNIVERSITYDETAILS = 37;
 
-  private static final int LAYOUT_ITEMANSWER = 38;
+  private static final int LAYOUT_INSTRACTORSHEET = 38;
 
-  private static final int LAYOUT_ITEMCHAT = 39;
+  private static final int LAYOUT_ITEMANSWER = 39;
 
-  private static final int LAYOUT_ITEMCONVERSATION = 40;
+  private static final int LAYOUT_ITEMCHAT = 40;
 
-  private static final int LAYOUT_ITEMCOURSE = 41;
+  private static final int LAYOUT_ITEMCONVERSATION = 41;
 
-  private static final int LAYOUT_ITEMCOURSELESSON = 42;
+  private static final int LAYOUT_ITEMCOURSE = 42;
 
-  private static final int LAYOUT_ITEMFILES = 43;
+  private static final int LAYOUT_ITEMCOURSELESSON = 43;
 
-  private static final int LAYOUT_ITEMHOME = 44;
+  private static final int LAYOUT_ITEMFILES = 44;
 
-  private static final int LAYOUT_ITEMLESSONARTICLE = 45;
+  private static final int LAYOUT_ITEMHOME = 45;
 
-  private static final int LAYOUT_ITEMLESSONQUIZ = 46;
+  private static final int LAYOUT_ITEMLESSONARTICLE = 46;
 
-  private static final int LAYOUT_ITEMLESSONVIDEO = 47;
+  private static final int LAYOUT_ITEMLESSONQUIZ = 47;
 
-  private static final int LAYOUT_ITEMLEVELS = 48;
+  private static final int LAYOUT_ITEMLESSONVIDEO = 48;
 
-  private static final int LAYOUT_ITEMOFFER = 49;
+  private static final int LAYOUT_ITEMLEVELS = 49;
 
-  private static final int LAYOUT_ITEMPAYMENTMETHOD = 50;
+  private static final int LAYOUT_ITEMOFFER = 50;
 
-  private static final int LAYOUT_ITEMPICKFILE = 51;
+  private static final int LAYOUT_ITEMPAYMENTMETHOD = 51;
 
-  private static final int LAYOUT_ITEMUNIVERSITYSECTION = 52;
+  private static final int LAYOUT_ITEMPICKFILE = 52;
 
-  private static final int LAYOUT_LAYOUTACTIONBARBACK = 53;
+  private static final int LAYOUT_ITEMUNIVERSITYSECTION = 53;
 
-  private static final int LAYOUT_LAYOUTACTIONBARHOME = 54;
+  private static final int LAYOUT_LAYOUTACTIONBARBACK = 54;
 
-  private static final int LAYOUT_LAYOUTNAVIGATIONDRAWER = 55;
+  private static final int LAYOUT_LAYOUTACTIONBARHOME = 55;
 
-  private static final int LAYOUT_LAYOUTTES = 56;
+  private static final int LAYOUT_LAYOUTNAVIGATIONDRAWER = 56;
 
-  private static final int LAYOUT_REPLYSHEET = 57;
+  private static final int LAYOUT_LAYOUTTES = 57;
 
-  private static final int LAYOUT_SUCCESSDIALOG = 58;
+  private static final int LAYOUT_REPLYSHEET = 58;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(58);
+  private static final int LAYOUT_SUCCESSDIALOG = 59;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(59);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.activity_base, LAYOUT_ACTIVITYBASE);
@@ -225,6 +228,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.fragment_offers, LAYOUT_FRAGMENTOFFERS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.fragment_payment_methods, LAYOUT_FRAGMENTPAYMENTMETHODS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.fragment_payment_success, LAYOUT_FRAGMENTPAYMENTSUCCESS);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.fragment_profile, LAYOUT_FRAGMENTPROFILE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.fragment_register, LAYOUT_FRAGMENTREGISTER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.fragment_service_request, LAYOUT_FRAGMENTSERVICEREQUEST);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.aljoud.R.layout.fragment_splash, LAYOUT_FRAGMENTSPLASH);
@@ -443,6 +447,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for fragment_payment_success is invalid. Received: " + tag);
       }
+      case  LAYOUT_FRAGMENTPROFILE: {
+        if ("layout/fragment_profile_0".equals(tag)) {
+          return new FragmentProfileBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_profile is invalid. Received: " + tag);
+      }
       case  LAYOUT_FRAGMENTREGISTER: {
         if ("layout/fragment_register_0".equals(tag)) {
           return new FragmentRegisterBindingImpl(component, view);
@@ -551,12 +561,6 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for item_offer is invalid. Received: " + tag);
       }
-      case  LAYOUT_ITEMPAYMENTMETHOD: {
-        if ("layout/item_payment_method_0".equals(tag)) {
-          return new ItemPaymentMethodBindingImpl(component, view);
-        }
-        throw new IllegalArgumentException("The tag for item_payment_method is invalid. Received: " + tag);
-      }
     }
     return null;
   }
@@ -564,6 +568,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   private final ViewDataBinding internalGetViewDataBinding1(DataBindingComponent component,
       View view, int internalId, Object tag) {
     switch(internalId) {
+      case  LAYOUT_ITEMPAYMENTMETHOD: {
+        if ("layout/item_payment_method_0".equals(tag)) {
+          return new ItemPaymentMethodBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_payment_method is invalid. Received: " + tag);
+      }
       case  LAYOUT_ITEMPICKFILE: {
         if ("layout/item_pick_file_0".equals(tag)) {
           return new ItemPickFileBindingImpl(component, view);
@@ -741,7 +751,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(58);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(59);
 
     static {
       sKeys.put("layout/activity_base_0", te.app.aljoud.R.layout.activity_base);
@@ -775,6 +785,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/fragment_offers_0", te.app.aljoud.R.layout.fragment_offers);
       sKeys.put("layout/fragment_payment_methods_0", te.app.aljoud.R.layout.fragment_payment_methods);
       sKeys.put("layout/fragment_payment_success_0", te.app.aljoud.R.layout.fragment_payment_success);
+      sKeys.put("layout/fragment_profile_0", te.app.aljoud.R.layout.fragment_profile);
       sKeys.put("layout/fragment_register_0", te.app.aljoud.R.layout.fragment_register);
       sKeys.put("layout/fragment_service_request_0", te.app.aljoud.R.layout.fragment_service_request);
       sKeys.put("layout/fragment_splash_0", te.app.aljoud.R.layout.fragment_splash);

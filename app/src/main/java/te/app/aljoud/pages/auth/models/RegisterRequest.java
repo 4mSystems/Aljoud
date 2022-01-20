@@ -27,6 +27,7 @@ public class RegisterRequest {
     private String token;
     @SerializedName("device_id")
     private String macAddress;
+    private transient String user_image;
     public transient ObservableField<String> nameError = new ObservableField<>();
     public transient ObservableField<String> emailError = new ObservableField<>();
     public transient ObservableField<String> phoneError = new ObservableField<>();
@@ -64,10 +65,16 @@ public class RegisterRequest {
         if (!Validate.isValid(name, Constants.FIELD)) {
             nameError.set(Validate.error);
             valid = false;
-        } else if (!Validate.isValid(phone, Constants.EMAIL)) {
+        }
+        if (!Validate.isValid(phone, Constants.FIELD)) {
             phoneError.set(Validate.error);
             valid = false;
         }
+        if (!Validate.isValid(email, Constants.EMAIL)) {
+            emailError.set(Validate.error);
+            valid = false;
+        }
+
         return valid;
     }
 
@@ -155,6 +162,14 @@ public class RegisterRequest {
     public void setEmail(String email) {
         emailError.set(null);
         this.email = email;
+    }
+
+    public String getUser_image() {
+        return user_image;
+    }
+
+    public void setUser_image(String user_image) {
+        this.user_image = user_image;
     }
 
     public String getMacAddress() {

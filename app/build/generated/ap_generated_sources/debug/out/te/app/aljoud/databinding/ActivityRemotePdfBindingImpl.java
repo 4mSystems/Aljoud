@@ -14,11 +14,14 @@ public class ActivityRemotePdfBindingImpl extends ActivityRemotePdfBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.card_instructor, 3);
-        sViewsWithIds.put(R.id.tv_policy_warning1, 4);
-        sViewsWithIds.put(R.id.tv_instractor_profession, 5);
-        sViewsWithIds.put(R.id.tv_account_qr, 6);
-        sViewsWithIds.put(R.id.progress, 7);
+        sViewsWithIds.put(R.id.card_instructor, 4);
+        sViewsWithIds.put(R.id.tv_policy_warning1, 5);
+        sViewsWithIds.put(R.id.tv_instractor_profession, 6);
+        sViewsWithIds.put(R.id.tv_account_qr, 7);
+        sViewsWithIds.put(R.id.progress, 8);
+        sViewsWithIds.put(R.id.pageCounter, 9);
+        sViewsWithIds.put(R.id.pdfView, 10);
+        sViewsWithIds.put(R.id.tv_account_qr_file, 11);
     }
     // views
     // variables
@@ -27,20 +30,25 @@ public class ActivityRemotePdfBindingImpl extends ActivityRemotePdfBinding  {
     // Inverse Binding Event Handlers
 
     public ActivityRemotePdfBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 8, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 12, sIncludes, sViewsWithIds));
     }
     private ActivityRemotePdfBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (androidx.cardview.widget.CardView) bindings[3]
+            , (androidx.cardview.widget.CardView) bindings[4]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[2]
-            , (android.widget.ProgressBar) bindings[7]
-            , (android.widget.LinearLayout) bindings[0]
-            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[6]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[3]
+            , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[9]
+            , (com.github.barteksc.pdfviewer.PDFView) bindings[10]
+            , (android.widget.ProgressBar) bindings[8]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[0]
+            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[7]
+            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[11]
             , (te.app.aljoud.customViews.views.CustomTextViewMedium) bindings[1]
+            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[6]
             , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[5]
-            , (te.app.aljoud.customViews.views.CustomTextViewRegular) bindings[4]
             );
         this.icQr.setTag(null);
+        this.icQrFile.setTag(null);
         this.remotePdfRoot.setTag(null);
         this.tvCardTitle.setTag(null);
         setRootTag(root);
@@ -118,6 +126,7 @@ public class ActivityRemotePdfBindingImpl extends ActivityRemotePdfBinding  {
             // api target 1
 
             te.app.aljoud.base.ApplicationBinding.loadImage(this.icQr, userHelperGetInstanceContextUserDataQrImage);
+            te.app.aljoud.base.ApplicationBinding.loadImage(this.icQrFile, userHelperGetInstanceContextUserDataQrImage);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvCardTitle, tvCardTitleAndroidStringAccountNumberConcatJavaLangStringConcatStringValueOfUserHelperGetInstanceContextUserDataId);
         }
     }

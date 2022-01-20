@@ -74,6 +74,9 @@ public abstract class LayoutNavigationDrawerBinding extends ViewDataBinding {
   public final View viewCustomerService;
 
   @NonNull
+  public final View viewInbox;
+
+  @NonNull
   public final View viewProfile;
 
   @NonNull
@@ -99,7 +102,7 @@ public abstract class LayoutNavigationDrawerBinding extends ViewDataBinding {
       CustomTextViewMedium tvCustomerService, CustomTextViewMedium tvLanguage,
       CustomTextViewMedium tvRate, CustomTextViewMedium tvShare, CustomTextViewMedium tvSupport,
       CustomTextViewMedium tvTerms, View viewAgent, View viewContact, View viewCustomerService,
-      View viewProfile, View viewShare, View viewSupport, View viewTerms,
+      View viewInbox, View viewProfile, View viewShare, View viewSupport, View viewTerms,
       AppCompatImageView vvNavigationDrawerImage) {
     super(_bindingComponent, _root, _localFieldCount);
     this.dlMainNavigationMenu = dlMainNavigationMenu;
@@ -119,6 +122,7 @@ public abstract class LayoutNavigationDrawerBinding extends ViewDataBinding {
     this.viewAgent = viewAgent;
     this.viewContact = viewContact;
     this.viewCustomerService = viewCustomerService;
+    this.viewInbox = viewInbox;
     this.viewProfile = viewProfile;
     this.viewShare = viewShare;
     this.viewSupport = viewSupport;

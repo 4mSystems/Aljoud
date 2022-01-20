@@ -148,10 +148,10 @@
                 android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
             <meta-data
-                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
             <meta-data
-                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
             <!--
                 This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
@@ -210,7 +210,7 @@
             android:exported="true" >
             <meta-data
                 android:name="com.google.android.play.core.assetpacks.versionCode"
-                android:value="11002" />
+                android:value="11003" />
         </service>
         <service
             android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService"
@@ -247,10 +247,16 @@
         </service>
 
         <provider
-            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-            android:authorities="te.app.aljoud.lifecycle-process"
-            android:exported="false"
-            android:multiprocess="true" />
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="te.app.aljoud.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+        </provider>
 
         <service
             android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"

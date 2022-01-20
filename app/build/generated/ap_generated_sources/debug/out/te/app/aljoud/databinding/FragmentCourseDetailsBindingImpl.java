@@ -177,39 +177,51 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        boolean textUtilsIsEmptyViewmodelCoursePriceViewmodelCourseDiscountEqualsJavaLangString0BooleanFalse = false;
+        boolean textUtilsIsEmptyViewmodelCourseDiscount = false;
         boolean viewmodelCourseNameJavaLangObjectNull = false;
         java.lang.String viewmodelCourseImage = null;
         java.lang.String viewmodelCourseCountVideosTimeConcatJavaLangStringConcatTvCourseTimeAndroidStringCourseTime = null;
         boolean viewmodelCourseMyCourse = false;
+        boolean TextUtilsIsEmptyViewmodelCourseDiscount1 = false;
         java.lang.String viewmodelCourseName = null;
         java.lang.String viewmodelCourseCountQuizzesConcatJavaLangString = null;
         java.lang.String viewmodelCourseDiscountConcatJavaLangStringConcatViewmodelCourseCurrencyCode = null;
+        boolean textUtilsIsEmptyViewmodelCoursePrice = false;
         te.app.aljoud.pages.university.models.course.Course viewmodelCourse = null;
         java.lang.String viewmodelCourseDesc = null;
         int viewmodelCourseNameJavaLangObjectNullViewVISIBLEViewGONE = 0;
         java.lang.String viewmodelCourseCurrencyCode = null;
         java.lang.String stringValueOfViewmodelCourseRate = null;
+        boolean TextUtilsIsEmptyViewmodelCoursePrice1 = false;
         java.lang.String viewmodelCourseCountVideosTime = null;
         java.lang.String viewmodelCourseInstructorJobTitle = null;
         java.lang.String viewmodelCourseCountVideosTimeConcatJavaLangString = null;
         java.lang.String viewmodelCourseCountArticlesConcatJavaLangString = null;
         java.lang.String viewmodelCourseCountQuizzesConcatJavaLangStringConcatTvCourseQuizAndroidStringCourseQuiz = null;
         int viewmodelCourseRate = 0;
+        int textUtilsIsEmptyViewmodelCoursePriceViewmodelCourseDiscountEqualsJavaLangString0BooleanFalseViewVISIBLEViewGONE = 0;
         java.lang.String viewmodelCourseInstructorImage = null;
         boolean viewmodelCourseInstructorJavaLangObjectNull = false;
+        boolean viewmodelCourseDiscountEqualsJavaLangString0 = false;
         java.lang.String viewmodelCourseCountQuizzes = null;
         java.lang.String viewmodelCoursePrice = null;
+        boolean textUtilsIsEmptyViewmodelCourseDiscountViewmodelCourseDiscountEqualsJavaLangString0BooleanFalse = false;
         java.lang.String viewmodelCourseDiscountConcatJavaLangString = null;
         te.app.aljoud.pages.university.models.course.Currency viewmodelCourseCurrency = null;
         java.lang.String viewmodelCourseDiscount = null;
         boolean ViewmodelCourseMyCourse1 = false;
+        java.lang.String viewmodelCoursePriceConcatJavaLangString = null;
         java.lang.String viewmodelCourseCountArticlesConcatJavaLangStringConcatTvCourseArticleAndroidStringCourseArticle = null;
         java.lang.String viewmodelCourseInstructorName = null;
+        int textUtilsIsEmptyViewmodelCourseDiscountViewmodelCourseDiscountEqualsJavaLangString0BooleanFalseViewVISIBLEViewGONE = 0;
+        java.lang.String viewmodelCoursePriceConcatJavaLangStringConcatViewmodelCourseCurrencyCode = null;
         int viewmodelCourseInstructorJavaLangObjectNullViewVISIBLEViewGONE = 0;
         java.lang.String viewmodelCourseCountArticles = null;
         int viewmodelCourseMyCourseViewVISIBLEViewGONE = 0;
         te.app.aljoud.pages.auth.models.UserData viewmodelCourseInstructor = null;
         te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel viewmodel = mViewmodel;
+        boolean ViewmodelCourseDiscountEqualsJavaLangString01 = false;
 
         if ((dirtyFlags & 0x7L) != 0) {
 
@@ -255,30 +267,34 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
                 viewmodelCourseNameJavaLangObjectNull = (viewmodelCourseName) != (null);
                 // read String.valueOf(viewmodel.course.rate)
                 stringValueOfViewmodelCourseRate = java.lang.String.valueOf(viewmodelCourseRate);
+                // read TextUtils.isEmpty(viewmodel.course.price)
+                textUtilsIsEmptyViewmodelCoursePrice = android.text.TextUtils.isEmpty(viewmodelCoursePrice);
+                // read TextUtils.isEmpty(viewmodel.course.discount)
+                TextUtilsIsEmptyViewmodelCourseDiscount1 = android.text.TextUtils.isEmpty(viewmodelCourseDiscount);
                 // read viewmodel.course.instructor != null
                 viewmodelCourseInstructorJavaLangObjectNull = (viewmodelCourseInstructor) != (null);
             if((dirtyFlags & 0x7L) != 0) {
                 if(ViewmodelCourseMyCourse1) {
-                        dirtyFlags |= 0x100L;
+                        dirtyFlags |= 0x10000L;
                 }
                 else {
-                        dirtyFlags |= 0x80L;
+                        dirtyFlags |= 0x8000L;
                 }
             }
             if((dirtyFlags & 0x7L) != 0) {
                 if(viewmodelCourseNameJavaLangObjectNull) {
-                        dirtyFlags |= 0x10L;
-                }
-                else {
-                        dirtyFlags |= 0x8L;
-                }
-            }
-            if((dirtyFlags & 0x7L) != 0) {
-                if(viewmodelCourseInstructorJavaLangObjectNull) {
                         dirtyFlags |= 0x40L;
                 }
                 else {
                         dirtyFlags |= 0x20L;
+                }
+            }
+            if((dirtyFlags & 0x7L) != 0) {
+                if(viewmodelCourseInstructorJavaLangObjectNull) {
+                        dirtyFlags |= 0x4000L;
+                }
+                else {
+                        dirtyFlags |= 0x2000L;
                 }
             }
                 if (viewmodelCourseCountVideosTime != null) {
@@ -288,6 +304,10 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
                 if (viewmodelCourseCountQuizzes != null) {
                     // read viewmodel.course.countQuizzes.concat(" ")
                     viewmodelCourseCountQuizzesConcatJavaLangString = viewmodelCourseCountQuizzes.concat(" ");
+                }
+                if (viewmodelCoursePrice != null) {
+                    // read viewmodel.course.price.concat(" ")
+                    viewmodelCoursePriceConcatJavaLangString = viewmodelCoursePrice.concat(" ");
                 }
                 if (viewmodelCourseCurrency != null) {
                     // read viewmodel.course.currency.code
@@ -315,8 +335,28 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
                 viewmodelCourseMyCourseViewVISIBLEViewGONE = ((ViewmodelCourseMyCourse1) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
                 // read viewmodel.course.name != null ? View.VISIBLE : View.GONE
                 viewmodelCourseNameJavaLangObjectNullViewVISIBLEViewGONE = ((viewmodelCourseNameJavaLangObjectNull) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+                // read !TextUtils.isEmpty(viewmodel.course.price)
+                TextUtilsIsEmptyViewmodelCoursePrice1 = !textUtilsIsEmptyViewmodelCoursePrice;
+                // read !TextUtils.isEmpty(viewmodel.course.discount)
+                textUtilsIsEmptyViewmodelCourseDiscount = !TextUtilsIsEmptyViewmodelCourseDiscount1;
                 // read viewmodel.course.instructor != null ? View.VISIBLE : View.GONE
                 viewmodelCourseInstructorJavaLangObjectNullViewVISIBLEViewGONE = ((viewmodelCourseInstructorJavaLangObjectNull) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+            if((dirtyFlags & 0x7L) != 0) {
+                if(TextUtilsIsEmptyViewmodelCoursePrice1) {
+                        dirtyFlags |= 0x10L;
+                }
+                else {
+                        dirtyFlags |= 0x8L;
+                }
+            }
+            if((dirtyFlags & 0x7L) != 0) {
+                if(textUtilsIsEmptyViewmodelCourseDiscount) {
+                        dirtyFlags |= 0x400L;
+                }
+                else {
+                        dirtyFlags |= 0x200L;
+                }
+            }
                 if (viewmodelCourseCountVideosTimeConcatJavaLangString != null) {
                     // read viewmodel.course.countVideosTime.concat(" ").concat(@android:string/course_time)
                     viewmodelCourseCountVideosTimeConcatJavaLangStringConcatTvCourseTimeAndroidStringCourseTime = viewmodelCourseCountVideosTimeConcatJavaLangString.concat(tvCourseTime.getResources().getString(R.string.course_time));
@@ -324,6 +364,10 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
                 if (viewmodelCourseCountQuizzesConcatJavaLangString != null) {
                     // read viewmodel.course.countQuizzes.concat(" ").concat(@android:string/course_quiz)
                     viewmodelCourseCountQuizzesConcatJavaLangStringConcatTvCourseQuizAndroidStringCourseQuiz = viewmodelCourseCountQuizzesConcatJavaLangString.concat(tvCourseQuiz.getResources().getString(R.string.course_quiz));
+                }
+                if (viewmodelCoursePriceConcatJavaLangString != null) {
+                    // read viewmodel.course.price.concat(" ").concat(viewmodel.course.currency.code)
+                    viewmodelCoursePriceConcatJavaLangStringConcatViewmodelCourseCurrencyCode = viewmodelCoursePriceConcatJavaLangString.concat(viewmodelCourseCurrencyCode);
                 }
                 if (viewmodelCourseDiscountConcatJavaLangString != null) {
                     // read viewmodel.course.discount.concat(" ").concat(viewmodel.course.currency.code)
@@ -333,6 +377,49 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
                     // read viewmodel.course.countArticles.concat(" ").concat(@android:string/course_article)
                     viewmodelCourseCountArticlesConcatJavaLangStringConcatTvCourseArticleAndroidStringCourseArticle = viewmodelCourseCountArticlesConcatJavaLangString.concat(tvCourseArticle.getResources().getString(R.string.course_article));
                 }
+        }
+        // batch finished
+
+        if ((dirtyFlags & 0x410L) != 0) {
+
+                if (viewmodelCourseDiscount != null) {
+                    // read viewmodel.course.discount.equals("0")
+                    ViewmodelCourseDiscountEqualsJavaLangString01 = viewmodelCourseDiscount.equals("0");
+                }
+
+
+                // read !viewmodel.course.discount.equals("0")
+                viewmodelCourseDiscountEqualsJavaLangString0 = !ViewmodelCourseDiscountEqualsJavaLangString01;
+        }
+
+        if ((dirtyFlags & 0x7L) != 0) {
+
+                // read !TextUtils.isEmpty(viewmodel.course.price) ? !viewmodel.course.discount.equals("0") : false
+                textUtilsIsEmptyViewmodelCoursePriceViewmodelCourseDiscountEqualsJavaLangString0BooleanFalse = ((TextUtilsIsEmptyViewmodelCoursePrice1) ? (viewmodelCourseDiscountEqualsJavaLangString0) : (false));
+                // read !TextUtils.isEmpty(viewmodel.course.discount) ? !viewmodel.course.discount.equals("0") : false
+                textUtilsIsEmptyViewmodelCourseDiscountViewmodelCourseDiscountEqualsJavaLangString0BooleanFalse = ((textUtilsIsEmptyViewmodelCourseDiscount) ? (viewmodelCourseDiscountEqualsJavaLangString0) : (false));
+            if((dirtyFlags & 0x7L) != 0) {
+                if(textUtilsIsEmptyViewmodelCoursePriceViewmodelCourseDiscountEqualsJavaLangString0BooleanFalse) {
+                        dirtyFlags |= 0x100L;
+                }
+                else {
+                        dirtyFlags |= 0x80L;
+                }
+            }
+            if((dirtyFlags & 0x7L) != 0) {
+                if(textUtilsIsEmptyViewmodelCourseDiscountViewmodelCourseDiscountEqualsJavaLangString0BooleanFalse) {
+                        dirtyFlags |= 0x1000L;
+                }
+                else {
+                        dirtyFlags |= 0x800L;
+                }
+            }
+
+
+                // read !TextUtils.isEmpty(viewmodel.course.price) ? !viewmodel.course.discount.equals("0") : false ? View.VISIBLE : View.GONE
+                textUtilsIsEmptyViewmodelCoursePriceViewmodelCourseDiscountEqualsJavaLangString0BooleanFalseViewVISIBLEViewGONE = ((textUtilsIsEmptyViewmodelCoursePriceViewmodelCourseDiscountEqualsJavaLangString0BooleanFalse) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+                // read !TextUtils.isEmpty(viewmodel.course.discount) ? !viewmodel.course.discount.equals("0") : false ? View.VISIBLE : View.GONE
+                textUtilsIsEmptyViewmodelCourseDiscountViewmodelCourseDiscountEqualsJavaLangString0BooleanFalseViewVISIBLEViewGONE = ((textUtilsIsEmptyViewmodelCourseDiscountViewmodelCourseDiscountEqualsJavaLangString0BooleanFalse) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
         }
         // batch finished
         if ((dirtyFlags & 0x7L) != 0) {
@@ -350,7 +437,9 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvInstractorName, viewmodelCourseInstructorName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvInstractorProfession, viewmodelCourseInstructorJobTitle);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvNewPrice, viewmodelCourseDiscountConcatJavaLangStringConcatViewmodelCourseCurrencyCode);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvOldPrice, viewmodelCoursePrice);
+            this.tvNewPrice.setVisibility(textUtilsIsEmptyViewmodelCourseDiscountViewmodelCourseDiscountEqualsJavaLangString0BooleanFalseViewVISIBLEViewGONE);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvOldPrice, viewmodelCoursePriceConcatJavaLangStringConcatViewmodelCourseCurrencyCode);
+            this.tvOldPrice.setVisibility(textUtilsIsEmptyViewmodelCoursePriceViewmodelCourseDiscountEqualsJavaLangString0BooleanFalseViewVISIBLEViewGONE);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvSpecial, viewmodelCourseName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvSubjects, viewmodelCourseDesc);
         }
@@ -451,12 +540,20 @@ public class FragmentCourseDetailsBindingImpl extends FragmentCourseDetailsBindi
         flag 0 (0x1L): viewmodel
         flag 1 (0x2L): viewmodel.course
         flag 2 (0x3L): null
-        flag 3 (0x4L): viewmodel.course.name != null ? View.VISIBLE : View.GONE
-        flag 4 (0x5L): viewmodel.course.name != null ? View.VISIBLE : View.GONE
-        flag 5 (0x6L): viewmodel.course.instructor != null ? View.VISIBLE : View.GONE
-        flag 6 (0x7L): viewmodel.course.instructor != null ? View.VISIBLE : View.GONE
-        flag 7 (0x8L): !viewmodel.course.myCourse ? View.VISIBLE : View.GONE
-        flag 8 (0x9L): !viewmodel.course.myCourse ? View.VISIBLE : View.GONE
+        flag 3 (0x4L): !TextUtils.isEmpty(viewmodel.course.price) ? !viewmodel.course.discount.equals("0") : false
+        flag 4 (0x5L): !TextUtils.isEmpty(viewmodel.course.price) ? !viewmodel.course.discount.equals("0") : false
+        flag 5 (0x6L): viewmodel.course.name != null ? View.VISIBLE : View.GONE
+        flag 6 (0x7L): viewmodel.course.name != null ? View.VISIBLE : View.GONE
+        flag 7 (0x8L): !TextUtils.isEmpty(viewmodel.course.price) ? !viewmodel.course.discount.equals("0") : false ? View.VISIBLE : View.GONE
+        flag 8 (0x9L): !TextUtils.isEmpty(viewmodel.course.price) ? !viewmodel.course.discount.equals("0") : false ? View.VISIBLE : View.GONE
+        flag 9 (0xaL): !TextUtils.isEmpty(viewmodel.course.discount) ? !viewmodel.course.discount.equals("0") : false
+        flag 10 (0xbL): !TextUtils.isEmpty(viewmodel.course.discount) ? !viewmodel.course.discount.equals("0") : false
+        flag 11 (0xcL): !TextUtils.isEmpty(viewmodel.course.discount) ? !viewmodel.course.discount.equals("0") : false ? View.VISIBLE : View.GONE
+        flag 12 (0xdL): !TextUtils.isEmpty(viewmodel.course.discount) ? !viewmodel.course.discount.equals("0") : false ? View.VISIBLE : View.GONE
+        flag 13 (0xeL): viewmodel.course.instructor != null ? View.VISIBLE : View.GONE
+        flag 14 (0xfL): viewmodel.course.instructor != null ? View.VISIBLE : View.GONE
+        flag 15 (0x10L): !viewmodel.course.myCourse ? View.VISIBLE : View.GONE
+        flag 16 (0x11L): !viewmodel.course.myCourse ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

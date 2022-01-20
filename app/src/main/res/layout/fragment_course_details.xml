@@ -10,6 +10,8 @@
 
         <import type="te.app.aljoud.utils.Constants" />
 
+        <import type="android.text.TextUtils" />
+
         <variable
             name="viewmodel"
             type="te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel" />
@@ -88,10 +90,11 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/dp6h"
                         android:background="@drawable/rotate"
-                        android:text="@{viewmodel.course.price}"
+                        android:text="@{viewmodel.course.price.concat(` `).concat(viewmodel.course.currency.code)}"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/orange"
+                        android:visibility="@{!TextUtils.isEmpty(viewmodel.course.price) &amp;&amp; !viewmodel.course.discount.equals(`0`)?View.VISIBLE:View.GONE}"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/tv_new_price"
                         app:layout_constraintHorizontal_bias="0.5"
@@ -107,6 +110,7 @@
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/orange"
+                        android:visibility="@{!TextUtils.isEmpty(viewmodel.course.discount) &amp;&amp; !viewmodel.course.discount.equals(`0`)?View.VISIBLE:View.GONE}"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/offer_item_desc"
                         app:layout_constraintHorizontal_bias="0.5"
