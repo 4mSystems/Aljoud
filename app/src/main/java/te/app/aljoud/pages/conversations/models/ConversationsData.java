@@ -1,5 +1,8 @@
 package te.app.aljoud.pages.conversations.models;
 
+import android.os.Build;
+import android.text.Html;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
@@ -46,7 +49,13 @@ public class ConversationsData {
     }
 
     public String getMessage() {
-        return message;
+        if (message != null) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                return Html.fromHtml(message, Html.FROM_HTML_MODE_COMPACT).toString();
+            } else
+                return Html.fromHtml(message).toString();
+        }
+        return "";
     }
 
     public int getId() {

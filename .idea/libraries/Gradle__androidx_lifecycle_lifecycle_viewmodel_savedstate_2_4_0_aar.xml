@@ -1,16 +1,13 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.lifecycle:lifecycle-viewmodel-savedstate:2.4.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/367d1b70cc971f78941e8d3178707c51/transformed/jetified-lifecycle-viewmodel-savedstate-2.4.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/367d1b70cc971f78941e8d3178707c51/transformed/jetified-lifecycle-viewmodel-savedstate-2.4.0/res" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/367d1b70cc971f78941e8d3178707c51/transformed/jetified-lifecycle-viewmodel-savedstate-2.4.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/367d1b70cc971f78941e8d3178707c51/transformed/jetified-lifecycle-viewmodel-savedstate-2.4.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/367d1b70cc971f78941e8d3178707c51/transformed/jetified-lifecycle-viewmodel-savedstate-2.4.0/res" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/367d1b70cc971f78941e8d3178707c51/transformed/jetified-lifecycle-viewmodel-savedstate-2.4.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d6fa9d1ea066bb0a81815e01692734fc/transformed/jetified-lifecycle-viewmodel-savedstate-2.4.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/d6fa9d1ea066bb0a81815e01692734fc/transformed/jetified-lifecycle-viewmodel-savedstate-2.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d6fa9d1ea066bb0a81815e01692734fc/transformed/jetified-lifecycle-viewmodel-savedstate-2.4.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-viewmodel-savedstate/2.4.0/ec4f5df6c28e3c7a892dccdc6c1f682234bb021c/lifecycle-viewmodel-savedstate-2.4.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-viewmodel-savedstate/2.4.0/ec4f5df6c28e3c7a892dccdc6c1f682234bb021c/lifecycle-viewmodel-savedstate-2.4.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

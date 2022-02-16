@@ -15,17 +15,12 @@ import java.net.URL;
 
 import javax.net.ssl.HttpsURLConnection;
 
-import es.voghdev.pdfviewpager.library.RemotePDFViewPager;
-import es.voghdev.pdfviewpager.library.adapter.PDFPagerAdapter;
-import es.voghdev.pdfviewpager.library.remote.DownloadFile;
 import te.app.aljoud.R;
 import te.app.aljoud.base.ParentActivity;
 import te.app.aljoud.databinding.ActivityRemotePdfBinding;
 import te.app.aljoud.utils.Constants;
 
-public class RemotePDFActivity extends ParentActivity implements DownloadFile.Listener {
-    RemotePDFViewPager remotePDFViewPager;
-    PDFPagerAdapter adapter;
+public class RemotePDFActivity extends ParentActivity  {
     ActivityRemotePdfBinding remotePdfBinding;
 
     @Override
@@ -36,43 +31,11 @@ public class RemotePDFActivity extends ParentActivity implements DownloadFile.Li
         setDownloadButtonListener(url);
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-
-        if (adapter != null) {
-            adapter.close();
-        }
-    }
 
     protected void setDownloadButtonListener(String url) {
-//        final DownloadFile.Listener listener = this;
-//        remotePDFViewPager = new RemotePDFViewPager(this, url, listener);
         new convertToInputStream().execute(url);
     }
 
-    public void updateLayout() {
-        remotePdfBinding.progress.setVisibility(View.GONE);
-        remotePdfBinding.remotePdfRoot.addView(remotePDFViewPager,
-                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
-    }
-
-    @Override
-    public void onSuccess(String url, String destinationPath) {
-//        adapter = new PDFPagerAdapter(this, FileUtil.extractFileNameFromURL(url));
-//        remotePDFViewPager.setAdapter(adapter);
-//        updateLayout();
-    }
-
-    @Override
-    public void onFailure(Exception e) {
-        e.printStackTrace();
-    }
-
-    @Override
-    public void onProgressUpdate(int progress, int total) {
-
-    }
 
     class convertToInputStream extends AsyncTask<String, Void, InputStream> {
         @Override

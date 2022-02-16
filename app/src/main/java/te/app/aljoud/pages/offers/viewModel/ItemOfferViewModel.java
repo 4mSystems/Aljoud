@@ -2,17 +2,19 @@ package te.app.aljoud.pages.offers.viewModel;
 
 import androidx.databinding.Bindable;
 
+import te.app.aljoud.BR;
 import te.app.aljoud.base.BaseViewModel;
-import te.app.aljoud.pages.home.models.home.University;
 import te.app.aljoud.pages.offers.models.OfferItem;
-import te.app.aljoud.pages.university.adapters.LevelsAdapter;
+import te.app.aljoud.pages.university.adapters.CourseOffersAdapter;
 import te.app.aljoud.utils.Constants;
 
 public class ItemOfferViewModel extends BaseViewModel {
     public OfferItem offerItem;
-    LevelsAdapter levelsAdapter;
+    CourseOffersAdapter courseAdapter;
 
     public ItemOfferViewModel(OfferItem offerItem) {
+        getCourseAdapter().update(offerItem.getCourses());
+        notifyChange(BR.courseAdapter);
         this.offerItem = offerItem;
     }
 
@@ -22,8 +24,8 @@ public class ItemOfferViewModel extends BaseViewModel {
     }
 
     @Bindable
-    public LevelsAdapter getLevelsAdapter() {
-        return this.levelsAdapter == null ? this.levelsAdapter = new LevelsAdapter() : this.levelsAdapter;
+    public CourseOffersAdapter getCourseAdapter() {
+        return this.courseAdapter == null ? this.courseAdapter = new CourseOffersAdapter() : this.courseAdapter;
     }
 
     public void itemAction() {

@@ -1,4 +1,4 @@
-#Fri Jan 21 00:39:55 EET 2022
+#Tue Feb 15 22:08:57 EET 2022
 path.4=11/classes.dex
 path.3=10/classes.dex
 path.2=1/classes.dex
@@ -19,11 +19,9 @@ base.8=/home/elnagar/Android projects/Aljoud/app/build/intermediates/dex/debug/m
 base.7=/home/elnagar/Android projects/Aljoud/app/build/intermediates/dex/debug/mergeProjectDexDebug/14/classes.dex
 base.6=/home/elnagar/Android projects/Aljoud/app/build/intermediates/dex/debug/mergeProjectDexDebug/13/classes.dex
 base.5=/home/elnagar/Android projects/Aljoud/app/build/intermediates/dex/debug/mergeProjectDexDebug/12/classes.dex
-renamed.18=classes19.dex
 renamed.17=classes18.dex
 renamed.9=classes10.dex
 renamed.16=classes17.dex
-path.18=classes3.dex
 renamed.8=classes9.dex
 renamed.15=classes16.dex
 renamed.14=classes15.dex
@@ -35,7 +33,6 @@ base.17=/home/elnagar/Android projects/Aljoud/app/build/intermediates/dex/debug/
 base.16=/home/elnagar/Android projects/Aljoud/app/build/intermediates/dex/debug/mergeProjectDexDebug/9/classes.dex
 base.15=/home/elnagar/Android projects/Aljoud/app/build/intermediates/dex/debug/mergeProjectDexDebug/8/classes.dex
 base.14=/home/elnagar/Android projects/Aljoud/app/build/intermediates/dex/debug/mergeProjectDexDebug/7/classes.dex
-base.18=/home/elnagar/Android projects/Aljoud/app/build/intermediates/dex/debug/mergeExtDexDebug/classes3.dex
 renamed.3=classes4.dex
 path.12=5/classes.dex
 renamed.2=classes3.dex

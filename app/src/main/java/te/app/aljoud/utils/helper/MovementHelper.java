@@ -34,7 +34,6 @@ import te.app.aljoud.base.MyApplication;
 import te.app.aljoud.base.ParentActivity;
 import te.app.aljoud.utils.Constants;
 import te.app.aljoud.R;
-import te.app.aljoud.utils.locations.MapAddressActivity;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -153,12 +152,12 @@ public class MovementHelper {
         context.startActivity(intent);
     }
 
-    public static void startMapActivityForResultWithBundle(Context from, PassingObject passingObject, int request) {
-        Intent intent = new Intent(from, MapAddressActivity.class);
-        intent.putExtra(Constants.BUNDLE, new Gson().toJson(passingObject));
-//        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        ((ParentActivity) from).startActivityForResult(intent, request);
-    }
+//    public static void startMapActivityForResultWithBundle(Context from, PassingObject passingObject, int request) {
+//        Intent intent = new Intent(from, MapAddressActivity.class);
+//        intent.putExtra(Constants.BUNDLE, new Gson().toJson(passingObject));
+////        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//        ((ParentActivity) from).startActivityForResult(intent, request);
+//    }
 
     public static void startActivityMain(Context context) {
         Intent intent = new Intent(context, MainActivity.class);

@@ -1,0 +1,4 @@
+#Mon Jan 24 21:40:12 EET 2022
+base.0=/home/elnagar/Android projects/Aljoud/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

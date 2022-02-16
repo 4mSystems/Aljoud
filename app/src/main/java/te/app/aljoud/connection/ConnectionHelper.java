@@ -154,6 +154,7 @@ public class ConnectionHelper {
                     public void onNext(JsonObject response) {
                         hideProgress(showProgress);
                         String jsonString = gson.toJson(response);
+                        Log.e(TAG, "onNext: " + jsonString);
                         try {
                             StatusMessage statusMessage = gson.fromJson(jsonString, (Type) responseType);
                             if (statusMessage.code == Constants.RESPONSE_SUCCESS)

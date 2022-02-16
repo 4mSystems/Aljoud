@@ -1,20 +1,18 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.exoplayer:exoplayer-rtsp:2.15.1@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/c8da6f117443b1391bbd2d1a2fc796d0/transformed/jetified-exoplayer-rtsp-2.15.1/annotations.zip!/" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/c8da6f117443b1391bbd2d1a2fc796d0/transformed/jetified-exoplayer-rtsp-2.15.1/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/06b615f707618c6e84648f47551feb2e/transformed/jetified-exoplayer-rtsp-2.15.1/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/06b615f707618c6e84648f47551feb2e/transformed/jetified-exoplayer-rtsp-2.15.1/res" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/c8da6f117443b1391bbd2d1a2fc796d0/transformed/jetified-exoplayer-rtsp-2.15.1/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/c8da6f117443b1391bbd2d1a2fc796d0/transformed/jetified-exoplayer-rtsp-2.15.1/res" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/c8da6f117443b1391bbd2d1a2fc796d0/transformed/jetified-exoplayer-rtsp-2.15.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/c8da6f117443b1391bbd2d1a2fc796d0/transformed/jetified-exoplayer-rtsp-2.15.1/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/c8da6f117443b1391bbd2d1a2fc796d0/transformed/jetified-exoplayer-rtsp-2.15.1/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/06b615f707618c6e84648f47551feb2e/transformed/jetified-exoplayer-rtsp-2.15.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/06b615f707618c6e84648f47551feb2e/transformed/jetified-exoplayer-rtsp-2.15.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/06b615f707618c6e84648f47551feb2e/transformed/jetified-exoplayer-rtsp-2.15.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/modules-2/files-2.1/com.google.android.exoplayer/exoplayer-rtsp/2.15.1/a7808e71f274c1ddda3c5c8211ef43bd4abfc5f4/exoplayer-rtsp-2.15.1-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.exoplayer/exoplayer-rtsp/2.15.1/a7808e71f274c1ddda3c5c8211ef43bd4abfc5f4/exoplayer-rtsp-2.15.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

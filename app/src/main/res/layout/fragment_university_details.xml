@@ -11,7 +11,9 @@
             type="te.app.aljoud.pages.university.viewModel.UniversityViewModel" />
     </data>
 
-
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -110,5 +112,5 @@
             tools:listitem="@layout/item_university_section" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
+</androidx.core.widget.NestedScrollView>
 </layout>

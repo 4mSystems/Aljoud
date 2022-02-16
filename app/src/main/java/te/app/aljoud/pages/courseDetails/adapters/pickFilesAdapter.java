@@ -50,7 +50,7 @@ public class pickFilesAdapter extends RecyclerView.Adapter<pickFilesAdapter.View
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
         File categoriesData = files.get(position);
-        Picasso.get().load(new java.io.File(categoriesData.getFile())).placeholder(R.drawable.ic_file).into(holder.itemMenuBinding.catImage);
+        Picasso.get().load(new java.io.File(categoriesData.getFile())).placeholder(R.drawable.ic_pdf).into(holder.itemMenuBinding.catImage);
         holder.itemMenuBinding.icRemove.setOnClickListener(view -> {
             liveData.setValue(position);
             this.position = position;

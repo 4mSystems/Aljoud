@@ -11,11 +11,13 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import te.app.aljoud.R;
 import te.app.aljoud.customViews.menu.NavigationDrawerView;
 import te.app.aljoud.databinding.LayoutActionBarHomeBinding;
+import te.app.aljoud.pages.conversations.ConversationsFragment;
+import te.app.aljoud.utils.helper.MovementHelper;
 
 public class HomeActionBarView extends RelativeLayout {
     public LayoutActionBarHomeBinding layoutActionBarHomeBinding;
     DrawerLayout drawerLayout;
-     Context context;
+    Context context;
     NavigationDrawerView navigationDrawerView;
 
     public HomeActionBarView(Context context) {
@@ -33,6 +35,7 @@ public class HomeActionBarView extends RelativeLayout {
 
     private void setEvents() {
         layoutActionBarHomeBinding.imgHomeBarMenu.setOnClickListener(view -> connectDrawer(HomeActionBarView.this.drawerLayout, false));
+        layoutActionBarHomeBinding.imgActionBarFilter.setOnClickListener(view -> MovementHelper.startActivity(context, ConversationsFragment.class.getName(), getResources().getString(R.string.inbox), null));
     }
 
 

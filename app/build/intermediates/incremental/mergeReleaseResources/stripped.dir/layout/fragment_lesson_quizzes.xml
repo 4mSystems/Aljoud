@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                  
+                                                                  
+
+    
+
+                                           
+
+                 
+                            
+                                                                                         
+           
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:tag="layout/fragment_lesson_quizzes_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" tools:context="grand.app.moon.views.fragments.SplashFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_quizzes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp8h"
+            android:tag="binding_1"                        
+            app:layout_constraintBottom_toTopOf="@id/loading"
+            app:layout_constraintTop_toTopOf="parent"
+                                    
+                             
+            tools:listitem="@layout/item_lesson_quiz" />
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp8h"
+            android:visibility="gone"                                                                                
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"  android:tag="binding_2"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+         

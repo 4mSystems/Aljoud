@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                        
+
+    
+
+                 
+                                
+                                                                                           
+           
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp4h"
+        android:tag="layout/item_files_0"                   
+        app:cardCornerRadius="@dimen/dp8h"
+        app:cardElevation="4dp"  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cat_image"
+            android:layout_width="@dimen/dp70h"
+            android:layout_height="@dimen/dp70h"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_pdf"
+            android:tag="binding_1"                       
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.google.android.material.card.MaterialCardView>
+         

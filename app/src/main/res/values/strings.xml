@@ -15,7 +15,6 @@
     <string name="whats">Whatsapp</string>
     <string name="msg_server_error">Error ,try again</string>
     <string name="contact_us">Contact us</string>
-    <string name="generate_code">Generate code</string>
     <string name="menuHome">Home</string>
     <string name="menuMore">More</string>
     <string name="about">About Us</string>
@@ -40,11 +39,9 @@
     <string name="password_hint_confirm">Confirm password</string>
     <string name="password_hint">Enter password</string>
     <string name="register_name">Name</string>
-    <string name="have_account">Do you have an account?</string>
     <string name="confirm">Confirm</string>
     <string name="google_map">AIzaSyAs39jMJspG00NMdV9QaEDKhbhFmPooLdk</string>
     <string name="map_title">Move the cursor to select your address</string>
-    <string name="location_warning">Please wait, your address is being determined</string>
     <string name="invalidPassword">The password is weak, at least 8 letters and numbers</string>
     <string name="fieldRequired">Required field</string>
     <string name="logout">Logout</string>

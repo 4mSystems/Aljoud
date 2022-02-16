@@ -35,7 +35,6 @@ import te.app.aljoud.pages.settings.AboutAppFragment;
 import te.app.aljoud.pages.settings.ContactFragment;
 import te.app.aljoud.pages.splash.SplashFragment;
 import te.app.aljoud.pages.university.FragmentUniversityDetails;
-import te.app.aljoud.utils.locations.MapAddressActivity;
 
 @Singleton
 @Component(modules = {ConnectionModule.class, LiveData.class})
@@ -46,7 +45,7 @@ public interface IApplicationComponent {
 
     void inject(PaymentVisaActivity paymentVisaActivity);
 
-    void inject(MapAddressActivity mapAddressActivity);
+//    void inject(MapAddressActivity mapAddressActivity);
 
     void inject(SplashFragment splashFragment);
 

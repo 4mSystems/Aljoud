@@ -57,7 +57,7 @@ public class LessonQuizzesAdapter extends RecyclerView.Adapter<LessonQuizzesAdap
         VideoData categoriesData = lessonsItemList.get(position);
         ItemLessonQuizViewModel itemMenuViewModel = new ItemLessonQuizViewModel(categoriesData);
         itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {
-            if (Constants.EXAMS.equals(((Mutable) o).message)) {
+            if (Constants.EXAMS.equals(o)) {
                 MovementHelper.startActivityWithBundle(context, new PassingObject(categoriesData.getId(), URLS.QUIZ_LESSON), null, ExamsFragment.class.getName(), null);
             }
         });

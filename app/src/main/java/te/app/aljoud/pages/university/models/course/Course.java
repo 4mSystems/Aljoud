@@ -86,7 +86,7 @@ public class Course {
     }
 
     public String getDiscount() {
-        if (discount != null) {
+        if (discount != null && !discount.equals("0.00")) {
             double amount = Double.parseDouble(price) * (Double.parseDouble(discount) / 100);
             return discount = String.valueOf(Double.parseDouble(price) - amount);
         }

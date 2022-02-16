@@ -9,7 +9,6 @@ import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 import javax.inject.Inject;
-import te.app.aljoud.PassingObject;
 import te.app.aljoud.R;
 import te.app.aljoud.base.BaseFragment;
 import te.app.aljoud.base.IApplicationComponent;
@@ -17,9 +16,7 @@ import te.app.aljoud.base.MyApplication;
 import te.app.aljoud.databinding.FragmentRegisterBinding;
 import te.app.aljoud.model.base.Mutable;
 import te.app.aljoud.model.base.StatusMessage;
-import te.app.aljoud.pages.auth.confirmCode.ConfirmCodeFragment;
 import te.app.aljoud.utils.Constants;
-import te.app.aljoud.utils.helper.MovementHelper;
 
 public class RegisterFragment extends BaseFragment {
     @Inject
@@ -44,7 +41,7 @@ public class RegisterFragment extends BaseFragment {
             if (Constants.REGISTER.equals(((Mutable) o).message)) {
                 toastMessage(((StatusMessage) ((Mutable) o).object).mMessage);
                 finishActivity();
-                MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(Constants.CHECK_CONFIRM_NAV_REGISTER, viewModel.getRequest().getEmail()), null, ConfirmCodeFragment.class.getName(), null);
+//                MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(Constants.CHECK_CONFIRM_NAV_REGISTER, viewModel.getRequest().getEmail()), null, ConfirmCodeFragment.class.getName(), null);
             }
         });
     }

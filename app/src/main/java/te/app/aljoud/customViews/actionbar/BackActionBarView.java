@@ -11,6 +11,7 @@ import androidx.databinding.DataBindingUtil;
 
 import te.app.aljoud.R;
 import te.app.aljoud.databinding.LayoutActionBarBackBinding;
+import te.app.aljoud.pages.conversations.ConversationsFragment;
 import te.app.aljoud.pages.settings.AboutAppFragment;
 import te.app.aljoud.utils.helper.MovementHelper;
 import te.app.aljoud.utils.session.LanguagesHelper;
@@ -50,7 +51,7 @@ public class BackActionBarView extends RelativeLayout {
 
     private void setEvents() {
         layoutActionBarBackBinding.imgActionBarCancel.setOnClickListener(view -> ((Activity) getContext()).finish());
-        layoutActionBarBackBinding.imgActionBarFilter.setOnClickListener(view -> MovementHelper.startActivity(context, AboutAppFragment.class.getName(), getResources().getString(R.string.about), null));
+        layoutActionBarBackBinding.imgActionBarFilter.setOnClickListener(view -> MovementHelper.startActivity(context, ConversationsFragment.class.getName(), getResources().getString(R.string.inbox), null));
 
     }
 

@@ -1,20 +1,18 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.exoplayer:exoplayer-core:2.15.1@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/b3419d4d92c553d778599bbd329be5d6/transformed/jetified-exoplayer-core-2.15.1/annotations.zip!/" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/b3419d4d92c553d778599bbd329be5d6/transformed/jetified-exoplayer-core-2.15.1/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/8c2b62755951828fcf8bc217075a934a/transformed/jetified-exoplayer-core-2.15.1/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/8c2b62755951828fcf8bc217075a934a/transformed/jetified-exoplayer-core-2.15.1/res" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/b3419d4d92c553d778599bbd329be5d6/transformed/jetified-exoplayer-core-2.15.1/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/b3419d4d92c553d778599bbd329be5d6/transformed/jetified-exoplayer-core-2.15.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/b3419d4d92c553d778599bbd329be5d6/transformed/jetified-exoplayer-core-2.15.1/res" />
-      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/b3419d4d92c553d778599bbd329be5d6/transformed/jetified-exoplayer-core-2.15.1/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/b3419d4d92c553d778599bbd329be5d6/transformed/jetified-exoplayer-core-2.15.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8c2b62755951828fcf8bc217075a934a/transformed/jetified-exoplayer-core-2.15.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8c2b62755951828fcf8bc217075a934a/transformed/jetified-exoplayer-core-2.15.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/8c2b62755951828fcf8bc217075a934a/transformed/jetified-exoplayer-core-2.15.1/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/modules-2/files-2.1/com.google.android.exoplayer/exoplayer-core/2.15.1/82c9a8e4794bacd9023e565de48f129cb774bfe7/exoplayer-core-2.15.1-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.exoplayer/exoplayer-core/2.15.1/82c9a8e4794bacd9023e565de48f129cb774bfe7/exoplayer-core-2.15.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

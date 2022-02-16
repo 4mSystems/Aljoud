@@ -4,7 +4,7 @@
             "outputFile": "/home/elnagar/Android projects/Aljoud/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v28/values-v28.xml",
             "map": [
                 {
-                    "source": "/home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/77549bb28fe56b4394f52155084ca8b2/transformed/material-1.5.0/res/values-v28/values-v28.xml",
+                    "source": "/home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/01e2b2fa2123d779e95d6d0c430187f5/transformed/material-1.5.0/res/values-v28/values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/7462055d4981d011ef775163529cfbd6/transformed/appcompat-1.4.1/res/values-v28/values-v28.xml",
+                    "source": "/home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fbd0417e46b8f8d453a742b95d9c9364/transformed/appcompat-1.4.1/res/values-v28/values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,8",
                         "startColumns": "4,4,4,4",
