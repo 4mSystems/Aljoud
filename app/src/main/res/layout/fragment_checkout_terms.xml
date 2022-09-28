@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/dp12w"
+            app:layout_constraintBottom_toTopOf="@+id/checkbox"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <te.app.aljoud.customViews.views.CustomTextViewRegular
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/checkout_terms"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/medium_color" />
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/agreed_checkout_terms"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/next"
+            app:layout_constraintEnd_toEndOf="@id/next"
+            app:layout_constraintStart_toStartOf="@id/next" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp10h"
+            android:padding="@dimen/dp8h"
+            android:text="@string/confirm"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:backgroundTint="@color/colorPrimaryDark"
+            app:cornerRadius="@dimen/dp6h"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

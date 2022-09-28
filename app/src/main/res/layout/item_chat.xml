@@ -1,0 +1,113 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.text.TextUtils" />
+
+        <import type="te.app.aljoud.utils.session.UserHelper" />
+
+        <variable
+            name="itemChatViewModel"
+            type="te.app.aljoud.pages.chat.viewmodel.ItemChatViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rl_item_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp6h"
+        android:layoutDirection="@{itemChatViewModel.chat.sender.id}">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/driver_image"
+            android:layout_width="@dimen/dp50w"
+            android:layout_height="@dimen/dp50h"
+            android:layout_margin="@dimen/dp8h"
+            android:src="@drawable/logo"
+            app:civ_border_color="@color/colorPrimaryDark"
+            app:civ_border_width="2dp"
+            app:imageUrl="@{itemChatViewModel.chat.sender.id==UserHelper.getInstance(context).userData.id?UserHelper.getInstance(context).userData.image:itemChatViewModel.chat.receiver.image}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/item_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp6h"
+            android:background="@{itemChatViewModel.chat.sender.id==UserHelper.getInstance(context).userData.id?@drawable/right_chat:@drawable/left_chat,default=@drawable/left_chat}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/driver_image"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                android:id="@+id/message"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp6h"
+                android:text="@{itemChatViewModel.chat.message}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <te.app.aljoud.customViews.views.CustomTextViewRegular
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp4h"
+                android:text="@{itemChatViewModel.chat.createdAt}"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textSize="@dimen/sp6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/message" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_files"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp12h"
+            android:orientation="horizontal"
+            android:src="@color/medium_color"
+            android:visibility="@{itemChatViewModel.chat.videoData.size()>0?View.VISIBLE:View.GONE}"
+            app:adapter="@{itemChatViewModel.chatMediaAdapter}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/driver_image"
+            app:layout_constraintTop_toBottomOf="@+id/item_message"
+            app:orientation="@{`2`}"
+            app:span="@{`1`}"
+            tools:listitem="@layout/item_files" />
+
+        <te.app.aljoud.customViews.views.CustomTextViewRegular
+            android:id="@+id/item_message_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp4h"
+            android:layout_marginEnd="@dimen/dp6h"
+            android:text="@{itemChatViewModel.chat.sender.id==UserHelper.getInstance(context).userData.id?``:itemChatViewModel.chat.sender.name}"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/sp6_5"
+            app:drawableTint="@color/overlayBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rc_files" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp8h"
+            android:background="@color/line_color"
+            app:layout_constraintTop_toBottomOf="@id/item_message_time" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

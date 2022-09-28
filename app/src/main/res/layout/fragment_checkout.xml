@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="amrk.app.moon.views.fragments.SplashFragment">
+
+    <data>
+
+        <import type="te.app.aljoud.utils.Constants" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="te.app.aljoud.pages.fawaterkPayment.viewModels.PaymentsViewModel" />
+    </data>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                android:id="@+id/warning"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp13h"
+                android:text="@string/installment_warning"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/red"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_payment_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp13h"
+                android:text="@string/payment_type"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/warning" />
+
+            <RadioGroup
+                android:id="@+id/group_payment_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp13h"
+                android:layout_marginTop="@dimen/dp8h"
+                android:layout_marginEnd="@dimen/dp13h"
+                android:checkedButton="@id/radio_cash"
+                android:onCheckedChanged="@{viewmodel.onPaymentChanged}"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintTop_toBottomOf="@id/tv_payment_type">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radio_cash"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corner_view_border"
+                    android:buttonTint="@color/colorPrimary"
+                    android:text="@string/cash"
+                    android:textColor="@color/colorPrimary" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radio_installment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp4w"
+                    android:layout_weight="1"
+                    android:background="@drawable/corner_view_border"
+                    android:buttonTint="@color/colorPrimary"
+                    android:text="@string/radio_installment"
+                    android:textColor="@color/colorPrimary" />
+
+            </RadioGroup>
+
+            <View
+                android:id="@+id/v_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp8h"
+                android:background="@color/line_color"
+                app:layout_constraintTop_toBottomOf="@id/group_payment_type" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_market"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp13h"
+                android:layout_marginTop="@dimen/dp8h"
+                android:layout_marginEnd="@dimen/dp13h"
+                app:adapter="@{viewmodel.methodsAdapter}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@+id/v_line"
+                app:orientation="@{`1`}"
+                app:span="@{`1`}"
+                tools:itemCount="3"
+                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_payment_method" />
+
+            <View
+                android:id="@+id/v_line1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp8h"
+                android:background="@color/line_color"
+                app:layout_constraintTop_toBottomOf="@id/rec_market" />
+
+
+            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp13h"
+                android:layout_marginTop="@dimen/dp8h"
+                android:text="@string/promo_code"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_line1" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_code"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp13h"
+                android:layout_marginTop="@dimen/dp6h"
+                android:layout_marginEnd="@dimen/dp6h"
+                android:textColorHint="@color/medium_color"
+                app:helperTextTextColor="@color/black"
+                app:hintEnabled="false"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintEnd_toStartOf="@+id/btn_confirm_promo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_discount">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/discount_code"
+                    android:inputType="text"
+                    android:text="@={viewmodel.promoCodeRequest.couponCode}"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/overlayBackground" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_confirm_promo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp13h"
+                android:onClick="@{()-> viewmodel.applyDiscount()}"
+                android:text="@string/apply"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/colorPrimary"
+                app:cornerRadius="@dimen/dp6h"
+                app:layout_constraintBottom_toBottomOf="@+id/input_code"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/input_code" />
+
+            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_subscribe_cost"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp13h"
+                android:layout_marginTop="@dimen/dp10h"
+                android:layout_marginEnd="@dimen/dp8h"
+                android:text="@string/cart_total"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/tv_subscribe_cost_value"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_code" />
+
+            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_subscribe_cost_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp13h"
+                android:layout_marginTop="@dimen/dp10h"
+                android:layout_marginEnd="@dimen/dp13h"
+                android:text="@{viewmodel.passingObject.object.concat(` `).concat(viewmodel.passingObject.object2)}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_code"
+                tools:text="200 ح.م" />
+
+            <View
+                android:id="@+id/v_subscribe_cost"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="@dimen/dp10h"
+                android:background="@color/line_color"
+                app:layout_constraintTop_toBottomOf="@id/tv_subscribe_cost" />
+
+            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_discount_cost"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp13h"
+                android:layout_marginTop="@dimen/dp10h"
+                android:layout_marginEnd="@dimen/dp8h"
+                android:text="@string/discount"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/tv_subscribe_cost_value"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_subscribe_cost" />
+
+            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_discount_cost_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp13h"
+                android:layout_marginTop="@dimen/dp10h"
+                android:layout_marginEnd="@dimen/dp13h"
+                android:text="@{String.valueOf(viewmodel.discountData.discount).concat(` `).concat(viewmodel.passingObject.object2)}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_subscribe_cost"
+                tools:text="200 ح.م" />
+
+            <View
+                android:id="@+id/v_discount_cost"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="@dimen/dp10h"
+                android:background="@color/line_color"
+                app:layout_constraintTop_toBottomOf="@id/tv_discount_cost" />
+
+            <te.app.aljoud.customViews.views.CustomTextViewBold
+                android:id="@+id/tv_total_cost"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp13h"
+                android:layout_marginTop="@dimen/dp10h"
+                android:layout_marginEnd="@dimen/dp8h"
+                android:text="@string/new_price"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/tv_subscribe_cost_value"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_discount_cost" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_total_cost_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp13h"
+                android:layout_marginTop="@dimen/dp10h"
+                android:layout_marginEnd="@dimen/dp13h"
+                android:text="@{String.valueOf(viewmodel.discountData.newPrice).concat(` `).concat(viewmodel.passingObject.object2)}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_discount_cost"
+                tools:text="200 ح.م" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10h"
+                android:onClick="@{()-> viewmodel.confirmOrder()}"
+                android:padding="@dimen/dp8h"
+                android:text="@string/confirm"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:backgroundTint="@color/colorPrimaryDark"
+                app:cornerRadius="@dimen/dp6h"
+                app:layout_constraintTop_toBottomOf="@+id/tv_total_cost" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

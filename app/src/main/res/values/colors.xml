@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#204442</color>
+    <color name="colorPrimary">#199E91</color>
+    <color name="colorPrimaryHolo">#72A6CB</color>
+    <color name="colorAccent">#FF7C7C</color>
+    <color name="colorLight">#F2F2F2</color>
+    <color name="red">#FF3533</color>
+    <color name="colordark">#313131</color>
+    <color name="app_background">#FBFBFB</color>
+    <color name="overlayBackground">#7f989c9f</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="dark_grey">#848484</color>
+    <color name="zxing_transparent">#00000000</color>
+    <color name="orange">#FE951E</color>
+    <color name="bg_grand_what">#ffc85711</color>
+    <color name="baby_blue">#D1F3FB</color>
+    <color name="medium_color">#7E7E7E</color>
+    <color name="line_color">#F0F0F0</color>
+    <color name="circle_shadow">#8065B3B7</color>
+    <color name="driver_color">#F2F7F7F7</color>
+    <color name="colorYellow">#F79826</color>
+    <color name="background_gray">#F2F2F2</color>
+    <color name="account">#717171</color>
+    <color name="left_chat">#F6F5F5</color>
+    <color name="header_data_table">#797979</color>
+</resources>

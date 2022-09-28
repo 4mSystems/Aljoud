@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="te.app.moon.views.fragments.SplashFragment">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="te.app.aljoud.pages.splash.SplashViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_splash_screen">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dp150w"
+            android:layout_height="@dimen/dp150h"
+            android:layout_marginTop="@dimen/dp25h"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toTopOf="@+id/progress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp20h"
+            app:indicatorColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/tes"
+            app:showAnimationBehavior="outward"
+            app:trackColor="@color/overlayBackground"
+            app:trackCornerRadius="@dimen/dp4h"
+            app:trackThickness="@dimen/dp8h" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tes"
+            android:layout_width="@dimen/dp120w"
+            android:layout_height="@dimen/dp20h"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp8h"
+            android:src="@drawable/tes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

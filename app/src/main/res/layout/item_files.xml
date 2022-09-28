@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="itemViewModel"
+            type="te.app.aljoud.pages.courseDetails.viewModels.ItemLessonVideoViewModel" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp4h"
+        android:onClick="@{()-> itemViewModel.itemAction()}"
+        app:cardCornerRadius="@dimen/dp8h"
+        app:cardElevation="4dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cat_image"
+            android:layout_width="@dimen/dp70h"
+            android:layout_height="@dimen/dp70h"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_pdf"
+            app:imageUrl="@{itemViewModel.videoData.file}"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

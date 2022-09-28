@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp4h">
+
+            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_card_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp6h"
+                android:text="@string/instructor_card_title"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ic_instructor"
+                android:layout_width="@dimen/dp50w"
+                android:layout_height="@dimen/dp50h"
+                android:layout_margin="@dimen/dp6h"
+                android:src="@color/overlayBackground"
+                app:civ_border_color="@color/colorPrimaryDark"
+                app:civ_border_width="4dp"
+                app:imageFullUrl="@{viewmodel.course.instructor.image}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_card_title" />
+
+            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_instractor_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp6h"
+                android:text="@{viewmodel.course.instructor.name}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ic_instructor"
+                app:layout_constraintTop_toTopOf="@+id/ic_instructor" />
+
+            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_instractor_profession"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp6h"
+                android:layout_marginEnd="@dimen/dp6h"
+                android:text="@{viewmodel.course.instructor.jobTitle}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ic_instructor"
+                app:layout_constraintTop_toBottomOf="@+id/tv_instractor_name" />
+
+            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_instractor_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10h"
+                android:text="@{viewmodel.course.instructor.bio}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/medium_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ic_instructor" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

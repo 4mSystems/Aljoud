@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="amrk.app.moon.views.fragments.SplashFragment">
+
+    <data>
+
+        <import type="te.app.aljoud.utils.Constants" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="te.app.aljoud.pages.fawaterkPayment.viewModels.PaymentsViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_market"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/dp13h"
+            android:layout_marginTop="@dimen/dp8h"
+            android:layout_marginEnd="@dimen/dp13h"
+            app:adapter="@{viewmodel.methodsAdapter}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/next"
+            app:layout_constraintTop_toTopOf="parent"
+            app:orientation="@{`1`}"
+            app:span="@{`1`}"
+            tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_payment_method" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp10h"
+            android:onClick="@{()-> viewmodel.payInstallments()}"
+            android:padding="@dimen/dp8h"
+            android:text="@string/confirm"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:backgroundTint="@color/colorPrimaryDark"
+            app:cornerRadius="@dimen/dp6h"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

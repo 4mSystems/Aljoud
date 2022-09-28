@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="grand.app.moon.views.fragments.SplashFragment">
+
+    <data>
+
+        <import type="te.app.aljoud.utils.Constants" />
+
+        <variable
+            name="viewmodel"
+            type="te.app.aljoud.pages.settings.viewModels.SettingsViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{()-> viewmodel.action(Constants.FACEBOOK)}"
+                android:src="@drawable/ic_facebook" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_twitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{()-> viewmodel.action(Constants.TWITTER)}"
+                android:src="@drawable/ic_twitter" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_instgram"
+                android:layout_width="@dimen/dp50w"
+                android:layout_height="@dimen/dp50h"
+
+                android:onClick="@{()-> viewmodel.action(Constants.INSTA)}"
+                android:src="@drawable/ic_instagram" />
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/flow1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10h"
+                app:constraint_referenced_ids="ic_facebook,ic_twitter,ic_instgram"
+                app:flow_horizontalGap="@dimen/dp6w"
+                app:flow_horizontalStyle="spread"
+                app:flow_wrapMode="chain"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/v"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/dp15h"
+                android:background="@color/line_color"
+                app:layout_constraintTop_toBottomOf="@id/flow1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_whats"
+                android:layout_width="@dimen/dp50w"
+                android:layout_height="@dimen/dp50h"
+                android:onClick="@{()-> viewmodel.action(Constants.WHATS)}"
+                android:src="@drawable/ic_whatsapp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_snap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{()-> viewmodel.action(Constants.SNAP)}"
+                android:src="@drawable/ic_snapchat" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_youtube"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{()-> viewmodel.action(Constants.YOUTUBE)}"
+                android:src="@drawable/ic_youtube" />
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/flow2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10h"
+                app:constraint_referenced_ids="ic_whats,ic_snap,ic_youtube"
+                app:flow_horizontalGap="@dimen/dp6w"
+                app:flow_horizontalStyle="spread"
+                app:flow_wrapMode="chain"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/v" />
+
+            <te.app.aljoud.customViews.views.CustomTextViewRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp11h"
+                android:layout_marginStart="@dimen/dp13w"
+                android:text="@string/about_body"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/flow2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

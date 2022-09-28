@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="itemViewModel"
+            type="te.app.aljoud.pages.conversations.viewModels.ItemConversationsViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp8h"
+        android:layout_marginEnd="@dimen/dp8h"
+        app:cardCornerRadius="@dimen/dp8h"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp4h"
+            android:onClick="@{()-> itemViewModel.itemAction()}">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/con_user_image"
+                android:layout_width="@dimen/dp50w"
+                android:layout_height="@dimen/dp50h"
+                android:layout_margin="@dimen/dp4h"
+                android:src="@drawable/logo"
+                app:civ_border_width="1dp"
+                app:imageUrl="@{itemViewModel.conversationsData.receiver.image}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10h"
+                android:background="@{itemViewModel.conversationsData.is_read==0?@drawable/badge_red:@drawable/badge}"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp7"
+                android:visibility="@{itemViewModel.conversationsData.is_read==0?View.VISIBLE:View.GONE}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/con_time" />
+
+            <te.app.aljoud.customViews.views.CustomTextViewRegular
+                android:id="@+id/con_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp8w"
+                android:layout_marginTop="@dimen/dp8h"
+                android:layout_marginEnd="@dimen/dp8w"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@{itemViewModel.conversationsData.receiver.name}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colordark"
+                app:layout_constraintEnd_toStartOf="@+id/con_time"
+                app:layout_constraintStart_toEndOf="@+id/con_user_image"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <te.app.aljoud.customViews.views.CustomTextViewRegular
+                android:id="@+id/con_title_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp8w"
+                android:layout_marginEnd="@dimen/dp8w"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@{itemViewModel.conversationsData.message}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/medium_color"
+                app:layout_constraintBottom_toBottomOf="@id/con_user_image"
+                app:layout_constraintEnd_toStartOf="@+id/tv_counter"
+                app:layout_constraintStart_toEndOf="@+id/con_user_image"
+                app:layout_constraintTop_toBottomOf="@+id/con_title" />
+
+            <te.app.aljoud.customViews.views.CustomTextViewRegular
+                android:id="@+id/con_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dp8w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp8w"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@{itemViewModel.conversationsData.createdAt}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

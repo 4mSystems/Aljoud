@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="itemViewModel"
+            type="te.app.aljoud.pages.installment.viewModels.ItemInstallmentViewModel" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp4h"
+        app:cardCornerRadius="@dimen/dp8h"
+        app:cardElevation="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_subject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8w"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/subject"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/tv_subject_value"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_subject_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8w"
+                android:text="@{itemViewModel.installmentData.courseName}"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tv_subject"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/subject" />
+
+            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8w"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/paid_before"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/tv_end_date_value"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_subject_value" />
+
+            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_end_date_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8w"
+                android:text="@{itemViewModel.installmentData.collectedDate}"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tv_end_date"
+                app:layout_constraintTop_toBottomOf="@+id/tv_subject_value"
+                tools:text="@string/paid_before" />
+
+            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8w"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/amount"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/tv_amount_value"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_end_date_value" />
+
+            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_amount_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8w"
+                android:text="@{String.valueOf(itemViewModel.installmentData.amount)}"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tv_amount"
+                app:layout_constraintTop_toBottomOf="@+id/tv_end_date_value"
+                tools:text="@string/amount" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp6w"
+                android:layout_marginBottom="@dimen/dp6w"
+                android:text="@{itemViewModel.isSelected?@string/not_pay_now:@string/pay_now,default =@string/pay_now}"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:onClick="@{()-> itemViewModel.itemAction()}"
+                android:visibility="@{itemViewModel.isStatusVisible()}"
+                app:backgroundTint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_amount_value"
+                app:strokeColor="@color/colorPrimaryDark"
+                app:strokeWidth="1dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="itemViewModel"
+            type="te.app.aljoud.pages.university.viewModel.ItemSectionCategoryViewModel" />
+    </data>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bt_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp4h"
+        android:text="@{itemViewModel.course.name}"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="@dimen/dp8h"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="1dp" />
+</layout>

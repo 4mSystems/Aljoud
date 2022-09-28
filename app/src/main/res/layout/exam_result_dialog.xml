@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="te.app.aljoud.pages.exams.viewModels.ExamsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <te.app.aljoud.customViews.views.CustomTextViewMedium
+            android:id="@+id/title_result"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/line_color"
+            android:padding="@dimen/dp10h"
+            android:text="@string/result_dialog"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/colordark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <te.app.aljoud.customViews.views.CustomTextViewMedium
+            android:id="@+id/grade"
+            android:layout_width="@dimen/dp150w"
+            android:layout_height="@dimen/dp150h"
+            android:layout_marginTop="@dimen/dp30h"
+            android:background="@drawable/result_circle"
+            android:gravity="center"
+            android:text="@{String.valueOf(viewModel.score)}"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/sp33"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_result" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sendFeedBack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp15h"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/confirm"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/grade" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

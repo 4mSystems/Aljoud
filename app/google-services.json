@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "959248458961",
+    "project_id": "aljoud-5d826",
+    "storage_bucket": "aljoud-5d826.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:959248458961:android:aa901dad7377bea86ed1f0",
+        "android_client_info": {
+          "package_name": "te.app.aljoud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "959248458961-32eoh9rfb29l0rkr87na9vmd7p2h9qjp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8MRzyQqywUncGDiCHx79f612gxyYcfgs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "959248458961-32eoh9rfb29l0rkr87na9vmd7p2h9qjp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "959248458961-qc64uptj71sb7ua98p4l6936449hqn0q.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "Aljoud.com"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="te.app.aljoud.pages.fawaterkPayment.models.check_out.PassingCheckoutData" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_installment_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp10h"
+                android:text="@string/installment_info"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/installment_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10h"
+                android:background="@drawable/corner_view_border"
+                app:layout_constraintTop_toBottomOf="@+id/tv_installment_info"
+                tools:layout_editor_absoluteX="13dp">
+
+                <te.app.aljoud.customViews.views.CustomTextViewRegular
+                    android:id="@+id/tv_installment_number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp8h"
+                    android:text="@string/installment_number"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_installment_number_value"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <te.app.aljoud.customViews.views.CustomTextViewRegular
+                    android:id="@+id/tv_installment_number_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp8h"
+                    android:text="@{data.installmentData.count}"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tv_installment_number"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="2" />
+
+                <te.app.aljoud.customViews.views.CustomTextViewRegular
+                    android:id="@+id/tv_installment_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp8h"
+                    android:text="@string/installment_amount"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_installment_number_value"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_installment_number" />
+
+                <te.app.aljoud.customViews.views.CustomTextViewRegular
+                    android:id="@+id/tv_installment_amount_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp8h"
+                    android:text="@{data.installmentData.installmentPrice}"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tv_installment_amount"
+                    app:layout_constraintTop_toBottomOf="@id/tv_installment_number"
+                    tools:text="2" />
+
+                <te.app.aljoud.customViews.views.CustomTextViewRegular
+                    android:id="@+id/tv_installment_pay_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp8h"
+                    android:text="@string/installment_pay_date"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_installment_number_value"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_installment_amount" />
+
+                <te.app.aljoud.customViews.views.CustomTextViewRegular
+                    android:id="@+id/tv_installment_pay_date_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp8h"
+                    android:text="@{data.installmentData.nextPayDate}"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tv_installment_pay_date"
+                    app:layout_constraintTop_toBottomOf="@id/tv_installment_amount"
+                    tools:text="2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/invoice_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10h"
+                android:background="@drawable/corner_view_border"
+                app:layout_constraintTop_toBottomOf="@+id/installment_container"
+                tools:layout_editor_absoluteX="13dp">
+
+                <te.app.aljoud.customViews.views.CustomTextViewRegular
+                    android:id="@+id/tv_invoice_number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp8h"
+                    android:text="@string/invoice_number"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorAccent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <te.app.aljoud.customViews.views.CustomTextViewRegular
+                    android:id="@+id/tv_invoice_number_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp8h"
+                    android:text="@{String.valueOf(data.invoiceId)}"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/ic_copy"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_invoice_number"
+                    tools:text="2" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ic_copy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp8h"
+                    android:src="@drawable/ic_copy"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_invoice_number" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/pay_now"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10h"
+                android:padding="@dimen/dp8h"
+                android:text="@string/pay_now"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:backgroundTint="@color/colorPrimaryDark"
+                app:cornerRadius="@dimen/dp6h"
+                app:layout_constraintTop_toBottomOf="@id/invoice_container" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10h"
+                android:padding="@dimen/dp8h"
+                android:text="@string/menuHome"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:backgroundTint="@color/colorPrimary"
+                app:cornerRadius="@dimen/dp6h"
+                app:icon="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pay_now" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

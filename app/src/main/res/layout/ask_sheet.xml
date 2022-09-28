@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="te.app.aljoud.utils.Constants" />
+
+        <variable
+            name="viewModel"
+            type="te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel" />
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp4h">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_reply"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp14w"
+                android:layout_marginTop="@dimen/dp8h"
+                android:layout_marginEnd="@dimen/dp14w"
+                android:hint="@string/reply"
+                android:textColorHint="@color/medium_color"
+                app:helperTextTextColor="@color/black"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp100w"
+                    android:gravity="top"
+                    android:inputType="textImeMultiLine"
+                    android:text="@={viewModel.askRequest.message}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/overlayBackground" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp20w"
+                android:layout_marginTop="@dimen/dp8h"
+                android:onClick="@{()->viewModel.action(Constants.PICKED_SUCCESSFULLY)}"
+                android:src="@drawable/ic_note"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/input_reply"
+                app:tint="@color/medium_color" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_files"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp8w"
+                android:layout_marginTop="@dimen/dp8h"
+                android:orientation="horizontal"
+                app:adapter="@{viewModel.filesAdapter}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ic_file"
+                app:layout_constraintTop_toBottomOf="@id/input_reply"
+                app:orientation="@{`2`}"
+                app:span="@{`1`}"
+                tools:listitem="@layout/item_pick_file" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/br"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:barrierMargin="@dimen/dp8h"
+                app:constraint_referenced_ids="ic_file,rc_files" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8h"
+                android:text="@string/send"
+                android:id="@+id/bt_ask"
+                android:onClick="@{()-> viewModel.ask()}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/colorPrimary"
+                app:icon="@drawable/ic_send"
+                app:iconGravity="textStart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/br" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

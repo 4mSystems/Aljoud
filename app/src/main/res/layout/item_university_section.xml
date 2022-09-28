@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="itemViewModel"
+            type="te.app.aljoud.pages.university.viewModel.ItemCollegesViewModel" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp4h"
+        android:onClick="@{()-> itemViewModel.itemAction()}"
+        app:cardCornerRadius="@dimen/dp8h"
+        app:cardElevation="4dp"
+        app:strokeColor="@color/medium_color"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cat_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp150h"
+                android:scaleType="fitXY"
+                android:src="@color/overlayBackground"
+                app:imageUrl="@{itemViewModel.specialistsItem.image}"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp10h"
+                android:text="@{itemViewModel.specialistsItem.name}"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/cat_image"
+                app:layout_constraintStart_toStartOf="@+id/cat_image"
+                app:layout_constraintTop_toBottomOf="@id/cat_image" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

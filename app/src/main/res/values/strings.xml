@@ -1,0 +1,186 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" translatable="false">Aljoud</string>
+    <string name="connection_invaild_body">Check your Internet connection and try again</string>
+    <string name="connection_On">Please turn on</string>
+    <string name="connection_Wifi">Wifi</string>
+    <string name="connection_Data">Mobile data</string>
+    <string name="connection_AirPlane">You have turned on the airplane mode.</string>
+    <string name="connection_AirPlane_TurnOff">Please turn off</string>
+    <string name="connection_AirPlane_Mode">Airplane mode</string>
+    <string name="connection_invaild_msg">Poor Internet Connection</string>
+    <string name="please_select_another_file">Please select another file</string>
+    <!--layout_grand-->
+    <string name="design_program">Design and program</string>
+    <string name="call">Call</string>
+    <string name="whats">Whatsapp</string>
+    <string name="msg_server_error">Error ,try again</string>
+    <string name="contact_us">Contact us</string>
+    <string name="menuHome">Home</string>
+    <string name="menuMore">More</string>
+    <string name="about">About Us</string>
+    <string name="request_course">Request course</string>
+    <string name="share">Share the app</string>
+    <string name="rate">Rate app</string>
+    <string name="inbox">Inbox</string>
+    <string name="password_not_match">Password does not match</string>
+    <string name="login">Login</string>
+    <string name="phone_hint">Phone</string>
+    <string name="password">Password</string>
+    <string name="login_forget"><u>Forget password?</u></string>
+    <string name="have_not_account">Don\'t have an account?</string>
+    <string name="have_not_account_bold">Create a new account</string>
+    <string name="verify_phone">Account Verification</string>
+    <string name="confirm_header">Please enter the code we sent to your email</string>
+    <string name="verify">Confirm</string>
+    <string name="confirm_resend">Resend</string>
+    <string name="change_new_password">New password</string>
+    <string name="change_header_text">Please enter your new password and make sure that anyone knows it</string>
+    <string name="old_password">Old password</string>
+    <string name="password_hint_confirm">Confirm password</string>
+    <string name="password_hint">Enter password</string>
+    <string name="register_name">Name</string>
+    <string name="have_account">Have account ?</string>
+    <string name="confirm">Confirm</string>
+    <string name="google_map">AIzaSyAs39jMJspG00NMdV9QaEDKhbhFmPooLdk</string>
+    <string name="map_title">Move the cursor to select your address</string>
+    <string name="location_warning">Please wait, your address is being determined</string>
+    <string name="invalidPassword">The password is weak, at least 8 letters and numbers</string>
+    <string name="fieldRequired">Required field</string>
+    <string name="logout">Logout</string>
+    <string name="cancel">Cancel</string>
+    <string name="logout_warning">Do you want to log out</string>
+    <string name="offers">Offers</string>
+    <string name="language">Change language</string>
+    <string name="english">English</string>
+    <string name="arabic">العربية</string>
+    <string name="signup">SignUp</string>
+    <string name="partner"><u>Our Partner</u></string>
+    <string name="right_reserved">\@2021 ALJoud All right reserved</string>
+    <string name="email_hint">E-mail</string>
+    <string name="all_courses">All courses</string>
+    <string name="my_courses">My courses</string>
+    <string name="all">All</string>
+    <string name="special">Specialties :</string>
+    <string name="subjects">Subjects :</string>
+    <string name="lessons">Lessons :</string>
+    <string name="students">Students :</string>
+    <string name="instructor_card_title">Instructor</string>
+    <string name="course_card_title">This course includes</string>
+    <string name="course_content">Course content</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="course_ask">Ask In Course</string>
+    <string name="reply">Reply</string>
+    <string name="course_time">Hours on-demand video</string>
+    <string name="course_article">Articles</string>
+    <string name="course_quiz">Quiz</string>
+    <string name="course_access">Full lifetime access</string>
+    <string name="course_discuss">Private discussion on every lesson</string>
+    <string name="course_certificate">Certificate of completion</string>
+    <string name="account_number">Account number :</string>
+    <string name="policy_warning">انا لا احلل النشر والبيع</string>
+    <string name="policy_warning1">التطبيق لا يسمح بخاصية التقاط الشاشة أو تصوير الفيديو ومن يقوم بذلك بطرق أخرى خارج التطبيق يعرض نفسه للمسألة القانونية</string>
+    <string name="account_qr">Account QR</string>
+    <string name="rate_course">Rate course</string>
+    <string name="rate_now">Rate now</string>
+    <string name="exam">Exams</string>
+    <string name="ask_lesson">Ask in lesson</string>
+    <string name="videos">Videos</string>
+    <string name="quizzes">Quizzes</string>
+    <string name="articles">Articles</string>
+    <string name="no">No</string>
+    <string name="invalidEmail">Invalid email, Aljoud@gmail.com</string>
+    <string name="empty_courses">There is no courses right now.</string>
+    <string name="storage_permission_denied">Storage permission denied</string>
+    <string name="error_generic">Playback failed</string>
+    <string name="error_no_secure_decoder">This device does not provide a secure decoder for <xliff:g id="mime_type">%1$s</xliff:g></string>
+    <string name="error_no_decoder">This device does not provide a decoder for <xliff:g id="mime_type">%1$s</xliff:g></string>
+    <string name="error_querying_decoders">Unable to query device decoders</string>
+    <string name="error_instantiating_decoder">Unable to instantiate decoder <xliff:g id="decoder_name">%1$s</xliff:g></string>
+    <string name="error_drm_unsupported_scheme">This device does not support the required DRM scheme</string>
+    <string name="error_cleartext_not_permitted">Cleartext HTTP traffic not permitted. See https://exoplayer.dev/issues/cleartext-not-permitted</string>
+    <string name="get_offer">Get Now</string>
+    <string name="max_files">Max files is 4</string>
+    <string name="gallery">Gallery</string>
+    <string name="select_image_from">Select image</string>
+    <string name="replies">Replies</string>
+    <string name="contact_comment">Type anything…</string>
+    <string name="services">Choose your service</string>
+    <string name="from">from :</string>
+    <string name="to">To :</string>
+    <string name="score">Score :</string>
+    <string name="result_dialog">Exam Result</string>
+    <string name="success">Success</string>
+    <string name="payment_done_sub_title">Your payment has been created</string>
+    <string name="payment_fawary_code">Please go to the nearest fawary machine with this code</string>
+    <string name="payment_fawary_validation">This code is valid until</string>
+    <string name="copy">Copy code</string>
+    <string name="copied">Copied</string>
+    <string name="payment">Payment</string>
+    <string name="course_details">Course details</string>
+    <string name="send">Send</string>
+    <string name="forget_header">Forget Password</string>
+    <string name="forget_header1">Please enter the email to send the confirmation code to set a new password</string>
+    <string name="skip">Skip</string>
+    <string name="tes_site"><u>tesolutionspro.com</u></string>
+    <string name="profile">Profile</string>
+    <string name="about_body">Aljoud Academy is an integrated electronic educational platform that provides a detailed and professional explanation of the curricula of major\'s university for more than one university and specializes in more than one country to help students achieve academic excellence by connecting them with professional doctors and specialists in all fields within virtual classrooms that are technically equipped to provide an enjoyable and innovative educational experience. Aljoud Academy uses the latest standards for teaching, as all our courses are distinguished by the quality of lectures in terms of production quality and diversity, in addition to periodically online quizzes and tests.
+Thanks to God, our experience in the field of university teaching has exceeded 9 years, which gave us the opportunity to deal and teach a large number of students, specializations and universities in different countries and work to develop our teaching mechanism to be in the best possible way.
+
+
+Advantages of joining Aljoud Academy:
+Saving time
+Participating in Aljoud Academy courses eliminates the time and effort required to reach the classroom, as you only need to use your computer, tablet or mobile phone and start studying.
+
+Study from anywhere and anytime
+Through Aljoud Academy, you can attend the lectures at the times that suit you and from the places that provide you with comfort according to your choice, and you can re-attend the lectures again whenever you wish.
+
+Output quality and interactive environment
+All our lectures are of high quality in terms of imaging accuracy and sound quality. We also feature multiple modes of interactive tests and exercises to increase your abilities and the degree of your understanding of the lectures.</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="installment">Installmentable</string>
+    <string name="cart">Cart</string>
+    <string name="empty_cart">There is no courses right now\n try to add your first course</string>
+    <string name="cart_total">Total</string>
+    <string name="payment_type">Payment type</string>
+    <string name="cash">Cash</string>
+    <string name="radio_installment">Installment</string>
+    <string name="apply">Apply</string>
+    <string name="promo_code">Promo code</string>
+    <string name="discount_code">Enter code</string>
+    <string name="discount">Discount</string>
+    <string name="new_price">New price</string>
+    <string name="agreed_checkout_terms">Agree to the terms and conditions</string>
+    <string name="checkout_terms">"Completing the purchase process constitutes acceptance of the following terms and conditions:
+1. I pledge before God not to publish my account details, lessons, notes, or everything related to the academy to serve the student.
+2. I pledge before God not to share my membership with anyone else, as the Academy does not allow or permit me to share my membership with anyone else who did not participate and pay the course fees.
+3. The user is not allowed to take screenshots or take screenshots in any way. If the academy knows that the user has made any use that violates the terms and conditions mentioned, the academy has the right to take the appropriate measures, including stopping the computer or canceling all subscriptions without refunding any amounts and without referring to the customer.
+4. It is not possible to withdraw and refund the fees, whether the payment is made in cash or in installments, after activating the user's account in the course.
+5. In the case of purchasing courses in installments, the number of installments and the value of each installment are calculated based on the date of purchasing the materials and the number of months remaining in the term.
+6. In the event of a delay in paying the installment, the course content will be withheld from the user until the late installments are paid.
+7. In the event that the student pays one installment before the other, the content will also be withheld until the required installment is paid.
+9. No refund will be given if the user changes his mind or if he purchases the course by mistake.
+10. The number of lectures is not limited during one semester, and the Academy has the right to terminate the user's participation in lectures if the semester ends.
+
+or
+
+- The course content will remain available for viewing for the duration of the term in which the subscription was made, and the administration can be contacted to request the re-opening of the course in case the material is re-studied for any circumstance.
+11. All rights reserved and you may not change or withhold the trademarks and logos.
+12. Al-Joud Academy has the right to communicate with customers to indicate the extent of their satisfaction with the services provided and to obtain any navigation from them."
+</string>
+    <string name="choose_payment_method">Select payment first</string>
+    <string name="installment_info">Your installment information</string>
+    <string name="installment_number">Installment number</string>
+    <string name="installment_amount">amount of installment</string>
+    <string name="installment_pay_date">Date of first installment</string>
+    <string name="invoice_number">Invoice number</string>
+    <string name="pay_now">Pay now</string>
+    <string name="invoice_number_copied">Invoice number copied successfully</string>
+    <string name="paid">Paid</string>
+    <string name="unpaid">Unpaid</string>
+    <string name="late">Late</string>
+    <string name="subject">Subject</string>
+    <string name="paid_before">Must paid before</string>
+    <string name="amount">Amount</string>
+    <string name="not_pay_now">Not pay now</string>
+    <string name="installment_warning">Installments can be made when all the elements of the basket are capable of installments</string>
+</resources>

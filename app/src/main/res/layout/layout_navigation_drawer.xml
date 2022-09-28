@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="te.app.aljoud.utils.Constants" />
+
+        <import type="android.view.View" />
+
+        <import type="te.app.aljoud.utils.session.UserHelper" />
+
+        <variable
+            name="menuViewModel"
+            type="te.app.aljoud.customViews.menu.MenuViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/dl_main_navigation_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_navigation_drawer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_base_action_bar_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                </LinearLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/fl_home_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/ll_base_action_bar_container">
+
+                </FrameLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_navigation_drawer_header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:background="@color/colorPrimaryDark"
+                android:orientation="vertical">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_navigation_drawer_logo"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_wave">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/vv_navigation_drawer_image"
+                                android:layout_width="@dimen/dp90h"
+                                android:layout_height="@dimen/dp90h"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/dp15h"
+                                android:src="@drawable/logo" />
+
+                            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/vv_navigation_drawer_image"
+                                android:layout_centerHorizontal="true"
+                                android:text="@{UserHelper.getInstance(context).userData.name}"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/black" />
+                        </RelativeLayout>
+
+
+                        <te.app.aljoud.customViews.views.CustomTextViewMedium
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp25h"
+                            android:layout_marginEnd="@dimen/dp12w"
+                            android:drawableStart="@drawable/ic_chat"
+                            android:drawablePadding="@dimen/dp8w"
+                            android:drawableTint="@color/white"
+                            android:gravity="center_vertical"
+                            android:onClick="@{()->menuViewModel.buttonAction(Constants.UPDATE_PROFILE)}"
+                            android:text="@string/profile"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white"
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:id="@+id/view_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp15h"
+                            android:background="@color/overlayBackground"
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}" />
+
+                        <te.app.aljoud.customViews.views.CustomTextViewMedium
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp25h"
+                            android:layout_marginEnd="@dimen/dp12w"
+                            android:drawableStart="@drawable/ic_chat"
+                            android:drawablePadding="@dimen/dp8w"
+                            android:drawableTint="@color/white"
+                            android:gravity="center_vertical"
+                            android:onClick="@{()->menuViewModel.buttonAction(Constants.INSTALLMENT)}"
+                            android:text="@string/radio_installment"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white"
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp15h"
+                            android:background="@color/overlayBackground"
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}" />
+
+                        <te.app.aljoud.customViews.views.CustomTextViewMedium
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp25h"
+                            android:layout_marginEnd="@dimen/dp12w"
+                            android:drawableStart="@drawable/ic_chat"
+                            android:drawablePadding="@dimen/dp8w"
+                            android:drawableTint="@color/white"
+                            android:gravity="center_vertical"
+                            android:onClick="@{()->menuViewModel.buttonAction(Constants.INBOX)}"
+                            android:text="@string/inbox"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white"
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:id="@+id/view_inbox"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp15h"
+                            android:background="@color/overlayBackground"
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}" />
+
+                        <te.app.aljoud.customViews.views.CustomTextViewMedium
+                            android:id="@+id/tv_agents"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp15h"
+                            android:layout_marginEnd="@dimen/dp12w"
+                            android:drawableStart="@drawable/ic_assignment"
+                            android:drawablePadding="@dimen/dp8w"
+                            android:gravity="center_vertical"
+                            android:onClick="@{()->menuViewModel.buttonAction(Constants.MY_COURSES)}"
+                            android:text="@string/my_courses"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+                            android:textColor="@color/white"
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/view_profile" />
+
+                        <View
+                            android:id="@+id/view_agent"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp15h"
+                            android:background="@color/overlayBackground"
+
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_agents" />
+
+                        <te.app.aljoud.customViews.views.CustomTextViewMedium
+                            android:id="@+id/tv_customer_service"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp15h"
+                            android:layout_marginEnd="@dimen/dp12w"
+                            android:drawableStart="@drawable/ic_offer"
+                            android:drawablePadding="@dimen/dp8w"
+                            android:gravity="center_vertical"
+                            android:onClick="@{()-> menuViewModel.buttonAction(Constants.OFFERS)}"
+                            android:text="@string/offers"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+                            android:textColor="@color/white"
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/view_agent" />
+
+                        <View
+                            android:id="@+id/view_customer_service"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp15h"
+                            android:background="@color/overlayBackground"
+
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_contact" />
+
+                        <te.app.aljoud.customViews.views.CustomTextViewMedium
+                            android:id="@+id/tv_terms"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp15h"
+                            android:layout_marginEnd="@dimen/dp12w"
+                            android:drawableStart="@drawable/ic_request_course"
+                            android:drawablePadding="@dimen/dp8w"
+                            android:onClick="@{()-> menuViewModel.buttonAction(Constants.SERVICES)}"
+                            android:text="@string/request_course"
+                            android:textAlignment="viewStart"
+
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white"
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/view_support" />
+
+                        <View
+                            android:id="@+id/view_terms"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp15h"
+                            android:background="@color/overlayBackground"
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_terms" />
+
+                        <te.app.aljoud.customViews.views.CustomTextViewMedium
+                            android:id="@+id/tv_contact"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp15h"
+                            android:layout_marginEnd="@dimen/dp12w"
+                            android:drawableStart="@drawable/ic_more_contact"
+                            android:drawablePadding="@dimen/dp8w"
+                            android:gravity="center_vertical"
+                            android:onClick="@{()-> menuViewModel.buttonAction(Constants.CONTACT)}"
+                            android:text="@string/contact_us"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white"
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/view_agent" />
+
+                        <View
+                            android:id="@+id/view_contact"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp15h"
+                            android:background="@color/overlayBackground"
+
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_contact" />
+
+                        <!--Support App-->
+                        <te.app.aljoud.customViews.views.CustomTextViewMedium
+                            android:id="@+id/tv_support"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp15h"
+                            android:layout_marginEnd="@dimen/dp12w"
+                            android:drawableStart="@drawable/ic_more_admin_support"
+                            android:drawablePadding="@dimen/dp8w"
+                            android:onClick="@{()-> menuViewModel.buttonAction(Constants.ABOUT)}"
+                            android:text="@string/about"
+                            android:textAlignment="viewStart"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/view_contact" />
+
+                        <View
+                            android:id="@+id/view_support"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp15h"
+                            android:background="@color/overlayBackground"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_support" />
+
+                        <!--Share App-->
+                        <te.app.aljoud.customViews.views.CustomTextViewMedium
+                            android:id="@+id/tv_share"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp15h"
+                            android:layout_marginEnd="@dimen/dp12w"
+                            android:drawableStart="@drawable/ic_more_share"
+                            android:drawablePadding="@dimen/dp12w"
+                            android:onClick="@{()-> menuViewModel.buttonAction(Constants.SHARE_BAR)}"
+                            android:text="@string/share"
+                            android:textAlignment="viewStart"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/view_terms" />
+
+                        <View
+                            android:id="@+id/view_share"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp15h"
+                            android:background="@color/overlayBackground"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_share" />
+                        <!--Rate App-->
+                        <te.app.aljoud.customViews.views.CustomTextViewMedium
+                            android:id="@+id/tv_rate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp15h"
+                            android:layout_marginEnd="@dimen/dp12w"
+                            android:drawableStart="@drawable/ic_more_rate"
+                            android:drawablePadding="@dimen/dp8w"
+                            android:onClick="@{()-> menuViewModel.buttonAction(Constants.RATE_APP)}"
+                            android:text="@string/rate"
+                            android:textAlignment="viewStart"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/view_share" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp15h"
+                            android:background="@color/overlayBackground"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_share" />
+
+                        <te.app.aljoud.customViews.views.CustomTextViewMedium
+                            android:id="@+id/tv_language"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp15h"
+                            android:layout_marginEnd="@dimen/dp12w"
+                            android:drawableStart="@drawable/ic_language"
+                            android:drawablePadding="@dimen/dp8w"
+                            android:onClick="@{()-> menuViewModel.buttonAction(Constants.LANGUAGE)}"
+                            android:text="@string/language"
+                            android:textAlignment="viewStart"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_rate" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp15h"
+                            android:background="@color/overlayBackground"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_language" />
+
+                        <te.app.aljoud.customViews.views.CustomTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp15h"
+                            android:layout_marginBottom="@dimen/dp8h"
+                            android:drawableStart="@drawable/ic_logout"
+                            android:drawablePadding="@dimen/dp6w"
+                            android:gravity="center"
+                            android:onClick="@{()-> menuViewModel.buttonAction(Constants.LOGIN)}"
+                            android:text="@string/login"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white"
+                            android:visibility="@{UserHelper.getInstance(context).userData==null?View.VISIBLE:View.GONE}" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp15h"
+                            android:background="@color/overlayBackground"
+                            android:visibility="@{UserHelper.getInstance(context).userData==null?View.VISIBLE:View.GONE}"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_language" />
+
+                        <te.app.aljoud.customViews.views.CustomTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp15h"
+                            android:layout_marginBottom="@dimen/dp8h"
+                            android:drawableStart="@drawable/ic_logout"
+                            android:drawablePadding="@dimen/dp6w"
+                            android:gravity="center"
+                            android:onClick="@{()-> menuViewModel.buttonAction(Constants.DIALOG)}"
+                            android:text="@string/logout"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white"
+                            android:visibility="@{UserHelper.getInstance(context).userData!=null?View.VISIBLE:View.GONE}" />
+
+                        <te.app.aljoud.customViews.tesDialog.TesImageDialog
+                            android:id="@+id/grand_logo"
+                            android:layout_width="@dimen/dp60w"
+                            android:layout_height="@dimen/dp20h"
+                            android:layout_gravity="end"
+                            android:layout_margin="@dimen/dp10h"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/tes"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_rate" />
+
+
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+
+            </RelativeLayout>
+        </androidx.drawerlayout.widget.DrawerLayout>
+    </RelativeLayout>
+</layout>

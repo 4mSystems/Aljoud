@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="grand.app.moon.views.fragments.SplashFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="te.app.aljoud.utils.Constants" />
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="viewmodel"
+            type="te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="@{viewmodel.course.name!=null?View.VISIBLE:View.GONE}">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8h"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <te.app.aljoud.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_special"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp6h"
+                        android:text="@{viewmodel.course.name}"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorPrimaryDark"
+                        app:layout_constraintEnd_toStartOf="@+id/ic_university"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <te.app.aljoud.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_subjects"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp6h"
+                        android:text="@{viewmodel.course.desc}"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimaryDark"
+                        app:layout_constraintEnd_toStartOf="@+id/ic_university"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_special" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ic_university"
+                        android:layout_width="@dimen/dp80h"
+                        android:layout_height="@dimen/dp80h"
+                        android:layout_margin="@dimen/dp6h"
+                        android:src="@color/medium_color"
+                        app:imageFullUrl="@{viewmodel.course.image}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearance="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
+
+                    <androidx.constraintlayout.widget.Barrier
+                        android:id="@+id/br"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:barrierDirection="bottom"
+                        app:constraint_referenced_ids="tv_subjects,ic_university" />
+
+                    <te.app.aljoud.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_old_price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp6h"
+                        android:background="@drawable/rotate"
+                        android:text="@{viewmodel.course.price.concat(` `).concat(viewmodel.course.currency.code)}"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/orange"
+                        android:visibility="@{!viewmodel.course.discount.equals(`0.00`)?View.VISIBLE:View.GONE}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_new_price"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/br" />
+
+                    <te.app.aljoud.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_new_price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp6h"
+                        android:text="@{viewmodel.course.discount.equals(`0.00`)?viewmodel.course.price.concat(` `).concat(viewmodel.course.currency.code):viewmodel.course.discount.concat(` `).concat(viewmodel.course.currency.code)}"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/orange"
+                        android:visibility="@{!TextUtils.isEmpty(viewmodel.course.discount) &amp;&amp; !viewmodel.course.discount.equals(`0`)?View.VISIBLE:View.GONE}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/offer_item_desc"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/tv_old_price"
+                        app:layout_constraintTop_toBottomOf="@+id/br" />
+
+
+                    <androidx.appcompat.widget.AppCompatRatingBar
+                        android:id="@+id/offer_item_desc"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp10h"
+                        android:progressTint="@color/colorYellow"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/br"
+                        app:rate="@{String.valueOf(viewmodel.course.rate)}" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_instructor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8h"
+                android:visibility="@{viewmodel.course.instructor!=null?View.VISIBLE:View.GONE}"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintTop_toBottomOf="@id/card_info">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <te.app.aljoud.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_card_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp6h"
+                        android:text="@string/instructor_card_title"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorPrimaryDark"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ic_instructor"
+                        android:layout_width="@dimen/dp50w"
+                        android:layout_height="@dimen/dp50h"
+                        android:layout_margin="@dimen/dp6h"
+                        android:src="@color/overlayBackground"
+                        app:civ_border_color="@color/colorPrimaryDark"
+                        app:civ_border_width="4dp"
+                        app:imageFullUrl="@{viewmodel.course.instructor.image}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_card_title" />
+
+                    <te.app.aljoud.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_instractor_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp6h"
+                        android:text="@{viewmodel.course.instructor.name}"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorPrimaryDark"
+                        app:layout_constraintEnd_toStartOf="@+id/ic_arrow_right"
+                        app:layout_constraintStart_toEndOf="@+id/ic_instructor"
+                        app:layout_constraintTop_toTopOf="@+id/ic_instructor" />
+
+                    <te.app.aljoud.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_instractor_profession"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp6h"
+                        android:layout_marginEnd="@dimen/dp6h"
+                        android:text="@{viewmodel.course.instructor.jobTitle}"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintEnd_toStartOf="@+id/ic_arrow_right"
+                        app:layout_constraintStart_toEndOf="@+id/ic_instructor"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_instractor_name" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ic_arrow_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp10w"
+                        android:onClick="@{()->viewmodel.action(Constants.INSTRUCTOR)}"
+                        android:src="@drawable/ic_right"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_card_title" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_course_include"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8h"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintTop_toBottomOf="@id/card_instructor">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <te.app.aljoud.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_card_course"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp6h"
+                        android:text="@string/course_card_title"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorPrimaryDark"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <te.app.aljoud.customViews.views.CustomTextViewRegular
+                        android:id="@+id/tv_course_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp18w"
+                        android:layout_marginTop="@dimen/dp12h"
+                        android:layout_marginEnd="@dimen/dp8w"
+                        android:text="@{viewmodel.course.countVideosTime.concat(` `).concat(@string/course_time)}"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_card_course" />
+
+                    <te.app.aljoud.customViews.views.CustomTextViewRegular
+                        android:id="@+id/tv_course_article"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp18w"
+                        android:layout_marginTop="@dimen/dp4h"
+                        android:layout_marginEnd="@dimen/dp8w"
+                        android:text="@{viewmodel.course.countArticles.concat(` `).concat(@string/course_article)}"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_course_time" />
+
+                    <te.app.aljoud.customViews.views.CustomTextViewRegular
+                        android:id="@+id/tv_course_quiz"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp18w"
+                        android:layout_marginTop="@dimen/dp4h"
+                        android:layout_marginEnd="@dimen/dp8w"
+                        android:text="@{viewmodel.course.countQuizzes.concat(` `).concat(@string/course_quiz)}"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_course_article" />
+
+                    <te.app.aljoud.customViews.views.CustomTextViewRegular
+                        android:id="@+id/tv_course_access"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp18w"
+                        android:layout_marginTop="@dimen/dp4h"
+                        android:layout_marginEnd="@dimen/dp8w"
+                        android:text="@string/course_access"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_course_quiz" />
+
+                    <te.app.aljoud.customViews.views.CustomTextViewRegular
+                        android:id="@+id/tv_course_discuss"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp6w"
+                        android:layout_marginTop="@dimen/dp4h"
+                        android:layout_marginEnd="@dimen/dp8w"
+                        android:drawableStart="@drawable/ic_chat"
+                        android:drawablePadding="@dimen/dp4w"
+                        android:text="@string/course_discuss"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_course_access" />
+
+                    <te.app.aljoud.customViews.views.CustomTextViewRegular
+                        android:id="@+id/tv_course_certificate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp18w"
+                        android:layout_marginTop="@dimen/dp4h"
+                        android:layout_marginEnd="@dimen/dp8w"
+                        android:layout_marginBottom="@dimen/dp12h"
+                        android:text="@string/course_certificate"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_course_discuss" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_course_action"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8h"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintTop_toBottomOf="@id/card_course_include">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <te.app.aljoud.customViews.views.CustomTextViewMedium
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp8h"
+                        android:layout_marginTop="@dimen/dp8h"
+                        android:layout_marginEnd="@dimen/dp8h"
+                        android:text="@string/installment"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/red"
+                        android:visibility="@{viewmodel.course.isInstallment==Constants.installment?View.VISIBLE:View.GONE}" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp8h"
+                        android:layout_marginTop="@dimen/dp8h"
+                        android:layout_marginEnd="@dimen/dp8h"
+                        android:onClick="@{()->viewmodel.action(Constants.COURSE_LESSONS)}"
+                        android:text="@string/course_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorAccent"
+                        app:backgroundTint="@color/white"
+                        app:rippleColor="@color/overlayBackground"
+                        app:strokeColor="@color/colorAccent"
+                        app:strokeWidth="1dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp8h"
+                        android:layout_marginEnd="@dimen/dp8h"
+                        android:onClick="@{()->viewmodel.addToCart()}"
+                        android:text="@string/add_to_cart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/white"
+                        android:visibility="@{!viewmodel.course.myCourse?View.VISIBLE:View.GONE}"
+                        app:backgroundTint="@color/colorPrimary"
+                        app:icon="@drawable/ic_add_shopping_cart"
+                        app:iconGravity="textEnd" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp8h"
+                        android:layout_marginEnd="@dimen/dp8h"
+                        android:layout_marginBottom="@dimen/dp12h"
+                        android:onClick="@{()->viewmodel.action(Constants.ASK)}"
+                        android:padding="@dimen/dp6h"
+                        android:text="@string/course_ask"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/black"
+                        app:backgroundTint="@color/baby_blue" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

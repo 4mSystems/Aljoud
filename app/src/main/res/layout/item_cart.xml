@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="itemViewModel"
+            type="te.app.aljoud.pages.cart.viewModels.ItemCartViewModel" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp4h"
+        app:cardCornerRadius="@dimen/dp8h"
+        app:cardElevation="4dp"
+        app:strokeColor="@color/colorPrimaryDark"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_special"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp6h"
+                android:text="@{itemViewModel.cartItem.course.name}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintEnd_toStartOf="@+id/ic_university"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_subjects"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp6h"
+                android:text="@{itemViewModel.cartItem.course.desc}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintEnd_toStartOf="@+id/ic_university"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_special" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/ic_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8h"
+                android:background="@drawable/corner_view_primary_dark"
+                android:onClick="@{()-> itemViewModel.itemAction()}"
+                android:padding="@dimen/dp4h"
+                android:src="@drawable/ic_delete"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ic_university"
+                android:layout_width="@dimen/dp80h"
+                android:layout_height="@dimen/dp80h"
+                android:layout_margin="@dimen/dp6h"
+                android:src="@color/medium_color"
+                app:imageFullUrl="@{itemViewModel.cartItem.course.image}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ic_delete"
+                app:shapeAppearance="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/br"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="tv_subjects,ic_university" />
+
+            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_old_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp6h"
+                android:background="@drawable/rotate"
+                android:text="@{itemViewModel.cartItem.course.price.concat(` `).concat(itemViewModel.cartItem.course.currency.code)}"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/orange"
+                android:visibility="@{!itemViewModel.cartItem.course.discount.equals(`0.00`)?View.VISIBLE:View.GONE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_new_price"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/br" />
+
+            <te.app.aljoud.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_new_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp6h"
+                android:text="@{itemViewModel.cartItem.course.discount.equals(`0.00`)?itemViewModel.cartItem.course.price.concat(` `).concat(itemViewModel.cartItem.course.currency.code):itemViewModel.cartItem.course.discount.concat(` `).concat(itemViewModel.cartItem.course.currency.code)}"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/orange"
+                android:visibility="@{!TextUtils.isEmpty(itemViewModel.cartItem.course.discount) &amp;&amp; !itemViewModel.cartItem.course.discount.equals(`0`)?View.VISIBLE:View.GONE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tv_old_price"
+                app:layout_constraintTop_toBottomOf="@+id/br" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>
