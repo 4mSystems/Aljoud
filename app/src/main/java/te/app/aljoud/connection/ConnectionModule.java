@@ -66,7 +66,7 @@ public class ConnectionModule {
                 Request request = chain.request();
                 Request.Builder newRequest = request.newBuilder();
                 if (LanguagesHelper.getJwt() != null) {
-                    newRequest.header("api_token", LanguagesHelper.getJwt());
+                    newRequest.header("jwt", LanguagesHelper.getJwt());
                 }
                 Log.e(TAG, "webService: "+LanguagesHelper.getJwt() );
                 newRequest.addHeader("lang", LanguagesHelper.getCurrentLanguage());

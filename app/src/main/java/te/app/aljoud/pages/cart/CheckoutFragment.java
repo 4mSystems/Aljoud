@@ -20,6 +20,7 @@ import te.app.aljoud.base.IApplicationComponent;
 import te.app.aljoud.base.MyApplication;
 import te.app.aljoud.databinding.FragmentCheckoutBinding;
 import te.app.aljoud.model.base.Mutable;
+import te.app.aljoud.pages.fawaterkPayment.PaymentSuccessFragment;
 import te.app.aljoud.pages.fawaterkPayment.models.PaymentMethodResponse;
 import te.app.aljoud.pages.fawaterkPayment.models.check_out.ApplyDiscountResponse;
 import te.app.aljoud.pages.fawaterkPayment.models.check_out.PassingCheckoutData;
@@ -73,7 +74,14 @@ public class CheckoutFragment extends BaseFragment {
                 case Constants.CHECK_PAYMENT:
                     viewModel.setPaymentResultData(((PaymentResultResponse) mutable.object).getPaymentResultData());
                     break;
-               case Constants.APPLY_DISCOUNT:
+                case Constants.FAWRY:
+                case Constants.MOBILE_WALLET:
+                    MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getPaymentResultData()), null, PaymentSuccessFragment.class.getName(), null);
+                    break;
+                case Constants.BANK_CARD:
+                    MovementHelper.startPaymentActivityForResultWithBundle(requireActivity(), viewModel.getPaymentResultData().getPaymentResultData().getPaymentData().getRedirectTo());
+                    break;
+                case Constants.APPLY_DISCOUNT:
                     viewModel.setDiscountData(((ApplyDiscountResponse) mutable.object).getDiscountData());
                     break;
                 case Constants.INSTALLMENT:

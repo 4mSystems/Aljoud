@@ -2,6 +2,7 @@ package te.app.aljoud.activity;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -20,7 +21,7 @@ import te.app.aljoud.base.ParentActivity;
 import te.app.aljoud.databinding.ActivityRemotePdfBinding;
 import te.app.aljoud.utils.Constants;
 
-public class RemotePDFActivity extends ParentActivity  {
+public class RemotePDFActivity extends ParentActivity {
     ActivityRemotePdfBinding remotePdfBinding;
 
     @Override
@@ -33,6 +34,7 @@ public class RemotePDFActivity extends ParentActivity  {
 
 
     protected void setDownloadButtonListener(String url) {
+        url = url.replace("http", "https");
         new convertToInputStream().execute(url);
     }
 

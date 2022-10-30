@@ -130,13 +130,10 @@
             android:id="@+id/ic_qr_file"
             android:layout_width="@dimen/dp50w"
             android:layout_height="@dimen/dp50h"
-            android:layout_marginTop="@dimen/dp10h"
-            android:layout_marginEnd="@dimen/dp12w"
+            android:layout_margin="@dimen/dp10h"
             android:alpha=".4"
             android:src="@color/colordark"
             app:imageUrl="@{UserHelper.getInstance(context).userData.qr_image}"
-            app:layout_constraintBottom_toBottomOf="@+id/pdfView"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/pdfView"
             app:layout_constraintTop_toTopOf="@+id/pdfView" />
 

@@ -39,7 +39,6 @@
                 android:id="@+id/ic_instgram"
                 android:layout_width="@dimen/dp50w"
                 android:layout_height="@dimen/dp50h"
-
                 android:onClick="@{()-> viewmodel.action(Constants.INSTA)}"
                 android:src="@drawable/ic_instagram" />
 

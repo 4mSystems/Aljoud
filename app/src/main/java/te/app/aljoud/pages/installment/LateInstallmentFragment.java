@@ -1,12 +1,9 @@
 package te.app.aljoud.pages.installment;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
@@ -19,7 +16,6 @@ import te.app.aljoud.base.BaseFragment;
 import te.app.aljoud.base.IApplicationComponent;
 import te.app.aljoud.base.MyApplication;
 import te.app.aljoud.databinding.FragmentLateInstallmentBinding;
-import te.app.aljoud.databinding.FragmentUnpaidInstallmentBinding;
 import te.app.aljoud.model.base.Mutable;
 import te.app.aljoud.pages.fawaterkPayment.FawterkMethodFragment;
 import te.app.aljoud.pages.installment.models.InstallmentResponse;
@@ -78,4 +74,5 @@ public class LateInstallmentFragment extends BaseFragment {
 
         viewModel.getRepository().setLiveData(viewModel.liveData);
     }
+
 }
