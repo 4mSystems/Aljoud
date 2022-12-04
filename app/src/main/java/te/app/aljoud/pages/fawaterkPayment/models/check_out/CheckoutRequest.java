@@ -1,9 +1,11 @@
 package te.app.aljoud.pages.fawaterkPayment.models.check_out;
 
+import androidx.annotation.Keep;
+
 import com.google.gson.annotations.SerializedName;
 
 import te.app.aljoud.utils.Constants;
-
+@Keep
 public class CheckoutRequest {
     @SerializedName("type")
     private String type = Constants.CASH;

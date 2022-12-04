@@ -23,6 +23,7 @@ import te.app.aljoud.model.base.Mutable;
 import te.app.aljoud.pages.fawaterkPayment.PaymentSuccessFragment;
 import te.app.aljoud.pages.fawaterkPayment.models.PaymentMethodResponse;
 import te.app.aljoud.pages.fawaterkPayment.models.check_out.ApplyDiscountResponse;
+import te.app.aljoud.pages.fawaterkPayment.models.check_out.DiscountData;
 import te.app.aljoud.pages.fawaterkPayment.models.check_out.PassingCheckoutData;
 import te.app.aljoud.pages.fawaterkPayment.models.check_out.installment.CartInstallmentData;
 import te.app.aljoud.pages.fawaterkPayment.models.check_out.installment.CartInstallmentResponse;
@@ -48,6 +49,7 @@ public class CheckoutFragment extends BaseFragment {
         if (bundle != null) {
             String passingObject = bundle.getString(Constants.BUNDLE);
             viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
+            viewModel.updateTotalPrice();
             checkIfHasInstallment();
             viewModel.getPaymentMethod();
         }
@@ -85,7 +87,7 @@ public class CheckoutFragment extends BaseFragment {
                     viewModel.setDiscountData(((ApplyDiscountResponse) mutable.object).getDiscountData());
                     break;
                 case Constants.INSTALLMENT:
-                    openCheckoutTerms(((CartInstallmentResponse) mutable.object).getInstallmentData());
+                    openCheckoutTerms();
                     break;
                 case Constants.PAYMENT_METHOD_WARNING:
                     showError(getString(R.string.choose_payment_method));
@@ -94,9 +96,8 @@ public class CheckoutFragment extends BaseFragment {
         });
     }
 
-    private void openCheckoutTerms(CartInstallmentData cartInstallmentData) {
+    private void openCheckoutTerms() {
         PassingCheckoutData passingCheckoutData = new PassingCheckoutData();
-        passingCheckoutData.setInstallmentData(cartInstallmentData);
         passingCheckoutData.setCheckoutRequest(viewModel.getCheckoutRequest());
         MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(passingCheckoutData), getString(R.string.app_name), CheckoutTermsFragment.class.getName(), null);
 

@@ -93,6 +93,7 @@ public class FragmentCourseDetails extends BaseFragment {
                 // increment cart by one
                 int cartCount = Integer.parseInt(UserHelper.getInstance(requireActivity()).getCartCount()) + 1;
                 UserHelper.getInstance(requireActivity()).addCartCount(String.valueOf(cartCount));
+                baseActivity().cartCount.setValue(cartCount);
             } else if (Constants.PICKED_SUCCESSFULLY.equals(((Mutable) o).message)) {
                 if (viewModel.getFilesAdapter().getFiles().size() <= 4) {
                     LauncherHelper.launcherRequest = Constants.FILE_TYPE_IMAGE;

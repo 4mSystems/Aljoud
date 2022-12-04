@@ -129,7 +129,7 @@ Thanks to God, our experience in the field of university teaching has exceeded 9
 
 Advantages of joining Aljoud Academy:
 Saving time
-Participating in Aljoud Academy courses eliminates the time and effort required to reach the classroom, as you only need to use your computer, tablet or mobile phone and start studying.
+Participating in Aljoud Academy courses eliminates the time and effort required to reach the classroom, tablet or mobile phone and start studying.
 
 Study from anywhere and anytime
 Through Aljoud Academy, you can attend the lectures at the times that suit you and from the places that provide you with comfort according to your choice, and you can re-attend the lectures again whenever you wish.
@@ -150,24 +150,24 @@ All our lectures are of high quality in terms of imaging accuracy and sound qual
     <string name="discount">Discount</string>
     <string name="new_price">New price</string>
     <string name="agreed_checkout_terms">Agree to the terms and conditions</string>
-    <string name="checkout_terms">"Completing the purchase process constitutes acceptance of the following terms and conditions:
-1. I pledge before God not to publish my account details, lessons, notes, or everything related to the academy to serve the student.
-2. I pledge before God not to share my membership with anyone else, as the Academy does not allow or permit me to share my membership with anyone else who did not participate and pay the course fees.
-3. The user is not allowed to take screenshots or take screenshots in any way. If the academy knows that the user has made any use that violates the terms and conditions mentioned, the academy has the right to take the appropriate measures, including stopping the computer or canceling all subscriptions without refunding any amounts and without referring to the customer.
-4. It is not possible to withdraw and refund the fees, whether the payment is made in cash or in installments, after activating the user's account in the course.
-5. In the case of purchasing courses in installments, the number of installments and the value of each installment are calculated based on the date of purchasing the materials and the number of months remaining in the term.
-6. In the event of a delay in paying the installment, the course content will be withheld from the user until the late installments are paid.
-7. In the event that the student pays one installment before the other, the content will also be withheld until the required installment is paid.
-9. No refund will be given if the user changes his mind or if he purchases the course by mistake.
-10. The number of lectures is not limited during one semester, and the Academy has the right to terminate the user's participation in lectures if the semester ends.
+    <string name="checkout_terms">"Completing the purchase process constitutes acceptance of the following terms and conditions:\n
+1. I pledge before God not to publish my account details, lessons, notes, or everything related to the academy to serve the student.\n
+2. I pledge before God not to share my membership with anyone else, as the Academy does not allow or permit me to share my membership with anyone else who did not participate and pay the course fees.\n
+3. The user is not allowed to take screenshots or take screenshots in any way. If the academy knows that the user has made any use that violates the terms and conditions mentioned, the academy has the right to take the appropriate measures, including stopping the computer or canceling all subscriptions without refunding any amounts and without referring to the customer.\n
+4. It is not possible to withdraw and refund the fees, whether the payment is made in cash or in installments, after activating the user's account in the course.\n
+5. In the case of purchasing courses in installments, the number of installments and the value of each installment are calculated based on the date of purchasing the materials and the number of months remaining in the term.\n
+6. In the event of a delay in paying the installment, the course content will be withheld from the user until the late installments are paid.\n
+7. In the event that the student pays one installment before the other, the content will also be withheld until the required installment is paid.\n
+9. No refund will be given if the user changes his mind or if he purchases the course by mistake.\n
+10. The number of lectures is not limited during one semester, and the Academy has the right to terminate the user's participation in lectures if the semester ends.\n
 
-or
+or\n
 
-- The course content will remain available for viewing for the duration of the term in which the subscription was made, and the administration can be contacted to request the re-opening of the course in case the material is re-studied for any circumstance.
-11. All rights reserved and you may not change or withhold the trademarks and logos.
-12. Al-Joud Academy has the right to communicate with customers to indicate the extent of their satisfaction with the services provided and to obtain any navigation from them."
+- The course content will remain available for viewing for the duration of the term in which the subscription was made, and the administration can be contacted to request the re-opening of the course in case the material is re-studied for any circumstance.\n
+11. All rights reserved and you may not change or withhold the trademarks and logos.\n
+12. Al-Joud Academy has the right to communicate with customers to indicate the extent of their satisfaction with the services provided and to obtain any navigation from them."\n
 
-In case of any override in the student’s style or dealings, the subscription is deleted and canceled without any refund of the subscription.
+In case of any override in the student’s style or dealings, the subscription is deleted and canceled without any refund of the subscription.\n
 Subscription value includes annotation videos, any additional non-essential services such as cookies and others that are added according to the nature and time of each material and are free of charge of the subscription value.
 The administration of the application has the right to request any proof or identification of the student, and in the case of any fake or mismatched subscriptions, the subscription is canceled without refund of the subscription value.
     </string>
@@ -183,7 +183,7 @@ The administration of the application has the right to request any proof or iden
     <string name="unpaid">Unpaid</string>
     <string name="late">Late</string>
     <string name="subject">Subject</string>
-    <string name="paid_before">Must paid before</string>
+    <string name="paid_before">Pay date</string>
     <string name="amount">Amount</string>
     <string name="not_pay_now">Not pay now</string>
     <string name="installment_warning">Installments can be made when all the elements of the basket are capable of installments</string>

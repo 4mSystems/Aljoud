@@ -1,41 +1,48 @@
 package te.app.aljoud.pages.fawaterkPayment.models.check_out;
 
+import androidx.annotation.Keep;
+
 import com.google.gson.annotations.SerializedName;
 
+@Keep
 public class DiscountData {
 
-	@SerializedName("old_price")
-	private int oldPrice;
+    @SerializedName("old_price")
+    private float oldPrice;
 
-	@SerializedName("discount")
-	private float discount;
+    @SerializedName("discount")
+    private float discount;
 
-	@SerializedName("new_price")
-	private float newPrice;
+    @SerializedName("new_price")
+    private float newPrice;
 
-	@SerializedName("type")
-	private String type;
+    @SerializedName("type")
+    private String type;
 
-	@SerializedName("done")
-	private boolean done;
+    @SerializedName("done")
+    private boolean done = false;
 
-	public int getOldPrice(){
-		return oldPrice;
-	}
+    public Float getOldPrice() {
+        return oldPrice;
+    }
 
-	public float getDiscount(){
-		return discount;
-	}
+    public float getDiscount() {
+        return discount;
+    }
 
-	public float getNewPrice(){
-		return newPrice;
-	}
+    public float getNewPrice() {
+        return newPrice;
+    }
 
-	public String getType(){
-		return type;
-	}
+    public void setNewPrice(float newPrice) {
+        this.newPrice = newPrice;
+    }
 
-	public boolean isDone(){
-		return done;
-	}
+    public String getType() {
+        return type;
+    }
+
+    public boolean isDone() {
+        return done;
+    }
 }

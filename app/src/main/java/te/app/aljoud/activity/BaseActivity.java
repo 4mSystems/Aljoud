@@ -23,6 +23,7 @@ import te.app.aljoud.pages.splash.SplashFragment;
 import te.app.aljoud.utils.Constants;
 import te.app.aljoud.utils.helper.MovementHelper;
 import te.app.aljoud.utils.resources.ResourceManager;
+import te.app.aljoud.utils.session.UserHelper;
 
 public class BaseActivity extends ParentActivity {
     public ActivityBaseBinding activityBaseBinding;
@@ -121,5 +122,12 @@ public class BaseActivity extends ParentActivity {
             ex.printStackTrace();
         }
         super.onBackPressed();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (backActionBarView != null)
+            cartCount.setValue(1);
     }
 }

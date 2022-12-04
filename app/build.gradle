@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 android {
+    signingConfigs {
+        release {
+            storeFile file('/home/t-e-s/GrandKey')
+            storePassword 'grand2017'
+            keyAlias 'grand'
+            keyPassword 'grnad2017'
+        }
+    }
     compileSdkVersion 31
     buildToolsVersion "30.0.3"
 
@@ -11,9 +19,18 @@ android {
         versionCode 2
         versionName "1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.release
     }
     dataBinding {
         enabled = true
+    }
+    signingConfigs {
+        release {
+            storeFile file('/home/t-e-s/GrandKey')
+            storePassword 'grand2017'
+            keyAlias 'grand'
+            keyPassword 'grand2017'
+        }
     }
 
     buildTypes {
@@ -23,7 +40,7 @@ android {
 
         }
         release {
-            debuggable false
+            debuggable true
             minifyEnabled true
             shrinkResources true
             zipAlignEnabled true

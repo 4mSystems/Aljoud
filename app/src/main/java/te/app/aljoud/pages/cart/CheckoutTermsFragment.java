@@ -1,7 +1,6 @@
 package te.app.aljoud.pages.cart;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,11 +21,14 @@ import te.app.aljoud.base.MyApplication;
 import te.app.aljoud.databinding.FragmentCheckoutTermsBinding;
 import te.app.aljoud.model.base.Mutable;
 import te.app.aljoud.pages.fawaterkPayment.models.check_out.PassingCheckoutData;
+import te.app.aljoud.pages.fawaterkPayment.models.check_out.installment.CartInstallmentData;
+import te.app.aljoud.pages.fawaterkPayment.models.check_out.installment.CartInstallmentResponse;
 import te.app.aljoud.pages.fawaterkPayment.models.paymentResult.PaymentResultData;
 import te.app.aljoud.pages.fawaterkPayment.models.paymentResult.PaymentResultResponse;
 import te.app.aljoud.pages.fawaterkPayment.viewModels.PaymentsViewModel;
 import te.app.aljoud.utils.Constants;
 import te.app.aljoud.utils.helper.MovementHelper;
+import te.app.aljoud.utils.session.UserHelper;
 
 public class CheckoutTermsFragment extends BaseFragment {
     FragmentCheckoutTermsBinding methodsBinding;
@@ -55,8 +57,10 @@ public class CheckoutTermsFragment extends BaseFragment {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             if (Constants.CHECK_PAYMENT.equals(((Mutable) o).message)) {
-                openCheckSummary(((PaymentResultResponse) mutable.object).getPaymentResultData());
-            }
+                addPaymentResultToArguments(((PaymentResultResponse) mutable.object).getPaymentResultData());
+            } else if (Constants.INSTALLMENT.equals(((Mutable) o).message))
+                openCheckSummary(((CartInstallmentResponse) mutable.object).getInstallmentData());
+
         });
         methodsBinding.next.setOnClickListener(view -> {
             if (methodsBinding.checkbox.isChecked())
@@ -66,12 +70,17 @@ public class CheckoutTermsFragment extends BaseFragment {
         });
     }
 
-    private void openCheckSummary(PaymentResultData paymentResultData) {
+    private void addPaymentResultToArguments(PaymentResultData paymentResultData) {
         viewModel.getPassingCheckoutData().setInvoiceId(paymentResultData.getPaymentResultData().getInvoiceId());
         viewModel.getPassingCheckoutData().setRedirectTo(paymentResultData.getPaymentResultData().getPaymentData().getRedirectTo());
-        Log.e("setEvent", "setEvent: " + viewModel.getPassingCheckoutData().getInvoiceId() + " " + viewModel.getPassingCheckoutData().getRedirectTo());
-        MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getPassingCheckoutData()), null, CheckoutSummaryFragment.class.getName(), null);
+        viewModel.getInstallment();
+        UserHelper.getInstance(requireActivity()).addCartCount("0");
+        baseActivity().cartCount.setValue(0);
+    }
 
+    private void openCheckSummary(CartInstallmentData installmentData) {
+        viewModel.getPassingCheckoutData().setInstallmentData(installmentData);
+        MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getPassingCheckoutData()), null, CheckoutSummaryFragment.class.getName(), null);
     }
 
     @Override

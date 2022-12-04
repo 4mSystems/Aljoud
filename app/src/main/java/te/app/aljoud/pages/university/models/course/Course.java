@@ -1,5 +1,6 @@
 package te.app.aljoud.pages.university.models.course;
 
+
 import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
@@ -18,7 +19,7 @@ public class Course {
     private String show;
 
     @SerializedName("discount")
-    private String discount;
+    private double discount;
 
     @SerializedName("content")
     private List<Object> content;
@@ -44,7 +45,7 @@ public class Course {
     @SerializedName("is_installment")
     private int isInstallment;
     @SerializedName("price")
-    private String price;
+    private double price;
 
     @SerializedName("instructor_id")
     private Object instructorId;
@@ -87,13 +88,14 @@ public class Course {
         return show;
     }
 
-    public String getDiscount() {
-        if (discount != null && !discount.equals("0.00")) {
-            double amount = Double.parseDouble(price) * (Double.parseDouble(discount) / 100);
-            return discount = String.valueOf(Double.parseDouble(price) - amount);
+    public Double getDiscount() {
+        if (discount != 0) {
+            double amount = price * (discount / 100);
+            return discount = price - amount;
         }
         return discount;
     }
+
 
     public List<Object> getContent() {
         return content;
@@ -123,13 +125,14 @@ public class Course {
         return rate;
     }
 
-    public String getPrice() {
+    public Double getPrice() {
         return price;
     }
 
     public int getIsInstallment() {
         return isInstallment;
     }
+
     public Object getInstructorId() {
         return instructorId;
     }

@@ -44,7 +44,6 @@ public class CheckoutSummaryFragment extends BaseFragment {
             String passingObject = bundle.getString(Constants.BUNDLE);
             viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
             viewModel.setPassingCheckoutData(new Gson().fromJson(String.valueOf(viewModel.getPassingObject().getObjectClass()), PassingCheckoutData.class));
-            Log.e("onCreateView", "onCreateView: "+viewModel.getPassingCheckoutData().getInvoiceId()+ " " +viewModel.getPassingCheckoutData().getRedirectTo());
             methodsBinding.setData(viewModel.getPassingCheckoutData());
         }
         setEvent();

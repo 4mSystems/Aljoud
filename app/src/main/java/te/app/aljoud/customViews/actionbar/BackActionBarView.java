@@ -8,8 +8,10 @@ import android.view.LayoutInflater;
 import android.widget.RelativeLayout;
 
 import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.Observer;
 
 import te.app.aljoud.R;
+import te.app.aljoud.activity.BaseActivity;
 import te.app.aljoud.databinding.LayoutActionBarBackBinding;
 import te.app.aljoud.pages.cart.CartFragment;
 import te.app.aljoud.pages.conversations.ConversationsFragment;
@@ -45,9 +47,6 @@ public class BackActionBarView extends RelativeLayout {
     private void init() {
         LayoutInflater layoutInflater = LayoutInflater.from(getContext());
         layoutActionBarBackBinding = DataBindingUtil.inflate(layoutInflater, R.layout.layout_action_bar_back, this, true);
-        if (LanguagesHelper.getCurrentLanguage().equals("ar")) {
-            layoutActionBarBackBinding.imgActionBarCancel.setRotation(180);
-        }
         setCartCount();
         setEvents();
     }
@@ -55,7 +54,7 @@ public class BackActionBarView extends RelativeLayout {
     private void setEvents() {
         layoutActionBarBackBinding.imgActionBarCancel.setOnClickListener(view -> ((Activity) getContext()).finish());
         layoutActionBarBackBinding.imgActionBarFilter.setOnClickListener(view -> MovementHelper.startActivity(context, ConversationsFragment.class.getName(), getResources().getString(R.string.inbox), null));
-
+        ((BaseActivity) context).cartCount.observeForever(integer -> setCartCount());
     }
 
     public void setTitle(String title) {
@@ -66,6 +65,7 @@ public class BackActionBarView extends RelativeLayout {
         layoutActionBarBackBinding.setCartCount(UserHelper.getInstance(context).getCartCount());
         layoutActionBarBackBinding.imgActionBarCart.setOnClickListener(view -> MovementHelper.startActivity(context, CartFragment.class.getName(), null, null));
     }
+
     public void cartEnabled(boolean enabled) {
         layoutActionBarBackBinding.imgActionBarCart.setEnabled(enabled);
         layoutActionBarBackBinding.cartCount.setEnabled(enabled);

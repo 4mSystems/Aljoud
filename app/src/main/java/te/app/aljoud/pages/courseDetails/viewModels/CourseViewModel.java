@@ -2,6 +2,7 @@ package te.app.aljoud.pages.courseDetails.viewModels;
 
 
 import android.text.TextUtils;
+import android.util.Log;
 
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
@@ -33,7 +34,6 @@ public class CourseViewModel extends BaseViewModel {
     HomeRepository homeRepository;
     @Inject
     CartRepository cartRepository;
-
     Course course;
     AskRequest askRequest;
     pickFilesAdapter filesAdapter;
@@ -72,6 +72,11 @@ public class CourseViewModel extends BaseViewModel {
     public void setCourse(Course course) {
         notifyChange(BR.course);
         this.course = course;
+    }
+
+    public Boolean isCourseHasDiscount(double discount) {
+        Log.e("isCourseHasDiscount", "getDiscount: " + discount);
+        return discount != 0.0;
     }
 
     @Bindable

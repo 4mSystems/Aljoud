@@ -46,6 +46,7 @@ import te.app.aljoud.utils.session.UserHelper;
 public class ParentActivity extends AppCompatActivity implements
         ConnectivityReceiver.ConnectivityReceiverListener {
     public MutableLiveData<Boolean> ConnectionLiveData;
+    public MutableLiveData<Integer> cartCount;
     ConnectivityReceiver connectivityReceiver = new ConnectivityReceiver();
     ImmediateUpdateActivity immediateUpdateActivity;
     public ActivityResultLauncher<Intent> someActivityResultLauncher;
@@ -57,6 +58,7 @@ public class ParentActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         immediateUpdateActivity = new ImmediateUpdateActivity(this);
         ConnectionLiveData = new MutableLiveData<>();
+        cartCount = new MutableLiveData<>();
         initializeLanguage();
         initializeToken();
         initializeProgress();

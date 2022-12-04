@@ -99,5 +99,8 @@ public class MainActivity extends ParentActivity {
     public void onResume() {
         super.onResume();
         updateAuto();
+        if (homeActionBarView != null)
+            cartCount.setValue(1);
     }
+
 }

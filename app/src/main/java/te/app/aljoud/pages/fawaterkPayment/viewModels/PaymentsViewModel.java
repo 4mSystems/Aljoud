@@ -72,19 +72,24 @@ public class PaymentsViewModel extends BaseViewModel {
     }
 
     public void confirmOrder() {
+        getCheckoutRequest().setCoupon_code(getPromoCodeRequest().getCouponCode());
         if (getMethodsAdapter().lastSelected != -1) {
             paymentId = getMethodsAdapter().getPaymentMethodList().get(getMethodsAdapter().lastSelected).getPaymentId();
             getCheckoutRequest().setPaymentMethod(paymentId);
             if (getCheckoutRequest().getType().equals(Constants.CASH))
                 checkout();
             else
-                compositeDisposable.add(repository.getInstallment());
+                liveData.setValue(new Mutable(Constants.INSTALLMENT));
         } else
             liveData.setValue(new Mutable(Constants.PAYMENT_METHOD_WARNING));
     }
 
     public void checkout() {
         compositeDisposable.add(repository.checkout(getCheckoutRequest()));
+    }
+
+    public void getInstallment() {
+        compositeDisposable.add(repository.getInstallment());
     }
 
     public void redirectPayment() {
@@ -157,7 +162,6 @@ public class PaymentsViewModel extends BaseViewModel {
 
     @Bindable
     public void setDiscountData(DiscountData discountData) {
-        checkoutRequest.setCoupon_code(getPromoCodeRequest().getCouponCode());
         notifyChange(BR.discountData);
         this.discountData = discountData;
     }
@@ -199,4 +203,9 @@ public class PaymentsViewModel extends BaseViewModel {
         unSubscribeFromObservable();
     }
 
+    public void updateTotalPrice() {
+        DiscountData discountData = new DiscountData();
+        discountData.setNewPrice(Float.parseFloat(getPassingObject().getObject()));
+        setDiscountData(discountData);
+    }
 }

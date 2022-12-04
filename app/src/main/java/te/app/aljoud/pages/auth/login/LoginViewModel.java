@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData;
 import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
-import te.app.aljoud.BuildConfig;
+
 import te.app.aljoud.base.BaseViewModel;
 import te.app.aljoud.base.MyApplication;
 import te.app.aljoud.model.base.Mutable;
@@ -33,9 +33,9 @@ public class LoginViewModel extends BaseViewModel {
 
     public void loginPassword() {
         getLoginRequest().setToken(UserHelper.getInstance(MyApplication.getInstance()).getToken());
-        if (BuildConfig.DEBUG)
-            getLoginRequest().setMacAddress("asd123456");
-        else
+//        if (BuildConfig.DEBUG)
+//            getLoginRequest().setMacAddress("asd123456");
+//        else
             getLoginRequest().setMacAddress(AppHelper.getMacAddress());
         if (getLoginRequest().isValid()) {
             setMessage(Constants.SHOW_PROGRESS);

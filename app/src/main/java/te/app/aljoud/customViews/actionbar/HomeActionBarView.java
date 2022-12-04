@@ -11,6 +11,8 @@ import androidx.databinding.DataBindingUtil;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import te.app.aljoud.R;
+import te.app.aljoud.activity.BaseActivity;
+import te.app.aljoud.activity.MainActivity;
 import te.app.aljoud.customViews.menu.NavigationDrawerView;
 import te.app.aljoud.databinding.LayoutActionBarHomeBinding;
 import te.app.aljoud.pages.cart.CartFragment;
@@ -39,6 +41,7 @@ public class HomeActionBarView extends RelativeLayout {
     }
 
     private void setEvents() {
+        ((MainActivity) context).cartCount.observeForever(integer -> setCartCount());
         layoutActionBarHomeBinding.imgHomeBarMenu.setOnClickListener(view -> connectDrawer(HomeActionBarView.this.drawerLayout, false));
         layoutActionBarHomeBinding.imgActionBarFilter.setOnClickListener(view -> MovementHelper.startActivity(context, ConversationsFragment.class.getName(), getResources().getString(R.string.inbox), null));
     }
