@@ -39,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dp10h"
-            android:onClick="@{()-> viewmodel.payInstallments()}"
+            android:onClick="@{()-> viewmodel.initPaymentAction()}"
             android:padding="@dimen/dp8h"
             android:text="@string/confirm"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"

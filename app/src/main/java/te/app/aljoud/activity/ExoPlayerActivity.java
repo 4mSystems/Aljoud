@@ -3,6 +3,7 @@ package te.app.aljoud.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Pair;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.DefaultRenderersFactory;
@@ -29,6 +31,7 @@ import com.google.android.exoplayer2.source.TrackGroupArray;
 import com.google.android.exoplayer2.trackselection.DefaultTrackSelector;
 import com.google.android.exoplayer2.trackselection.MappingTrackSelector;
 import com.google.android.exoplayer2.trackselection.TrackSelectionArray;
+import com.google.android.exoplayer2.ui.AspectRatioFrameLayout;
 import com.google.android.exoplayer2.upstream.DataSource;
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
 import com.google.android.exoplayer2.util.ErrorMessageProvider;
@@ -40,8 +43,9 @@ import te.app.aljoud.databinding.ActivityExoPlayerBinding;
 
 public class ExoPlayerActivity extends AppCompatActivity {
     private static final String KEY_VIDEO_URI = "video_uri";
+    private static final String KEY_VIDEO_ID = "video_id";
     private ActivityExoPlayerBinding exoPlayerBinding;
-//        String videoUri = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4";
+    //    String videoUri = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4";
     String videoUri;
     // Saved instance state keys.
     private static final String TAG = "EXOPLAYER";
@@ -56,12 +60,14 @@ public class ExoPlayerActivity extends AppCompatActivity {
     private boolean startAutoPlay;
     private int startWindow;
     private long startPosition;
+    private boolean isShowingTrackSelectionDialog;
 
     public static Intent getStartIntent(Context context, String videoUri) {
         Intent intent = new Intent(context, ExoPlayerActivity.class);
         intent.putExtra(KEY_VIDEO_URI, videoUri);
         return intent;
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,7 +90,6 @@ public class ExoPlayerActivity extends AppCompatActivity {
             clearStartPosition();
         }
     }
-
     @Override
     public void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
@@ -133,7 +138,6 @@ public class ExoPlayerActivity extends AppCompatActivity {
     public void onDestroy() {
         super.onDestroy();
     }
-
     @Override
     public void onRequestPermissionsResult(
             int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -156,7 +160,7 @@ public class ExoPlayerActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
         updateTrackSelectorParameters();
         updateStartPosition();
-        outState.putParcelable(KEY_TRACK_SELECTOR_PARAMETERS, trackSelectorParameters);
+        outState.putParcelable(KEY_TRACK_SELECTOR_PARAMETERS, trackSelectorParameters.toBundle());
         outState.putBoolean(KEY_AUTO_PLAY, startAutoPlay);
         outState.putInt(KEY_WINDOW, startWindow);
         outState.putLong(KEY_POSITION, startPosition);
@@ -230,6 +234,7 @@ public class ExoPlayerActivity extends AppCompatActivity {
         }
     }
 
+
     private void updateStartPosition() {
         if (player != null) {
             startAutoPlay = player.getPlayWhenReady();
@@ -243,7 +248,20 @@ public class ExoPlayerActivity extends AppCompatActivity {
         startWindow = C.INDEX_UNSET;
         startPosition = C.TIME_UNSET;
     }
-//
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        int newOrientation = newConfig.orientation;
+
+        if (newOrientation == Configuration.ORIENTATION_LANDSCAPE) {
+            // Do certain things when the user has switched to landscape.
+            exoPlayerBinding.playerView.setResizeMode(AspectRatioFrameLayout.RESIZE_MODE_FILL);
+        } else {
+            exoPlayerBinding.playerView.setResizeMode(AspectRatioFrameLayout.RESIZE_MODE_FIT);
+        }
+    }
+
 
     private class PlayerEventListener implements Player.Listener {
 

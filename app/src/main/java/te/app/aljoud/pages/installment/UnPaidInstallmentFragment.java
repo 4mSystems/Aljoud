@@ -49,7 +49,7 @@ public class UnPaidInstallmentFragment extends BaseFragment {
                 viewModel.updateList(((InstallmentResponse) mutable.object).getInstallmentDataList());
             } else if (Constants.PAYMENT_METHOD.equals(((Mutable) o).message)) {
                 viewModel.payInstallmentRequest.setStatus(Constants.UNPAID);
-                MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.payInstallmentRequest), getString(R.string.payment), FawterkMethodFragment.class.getName(), null);
+                MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(Constants.INSTALLMENT,viewModel.payInstallmentRequest), getString(R.string.payment), FawterkMethodFragment.class.getName(), null);
             }
         });
 

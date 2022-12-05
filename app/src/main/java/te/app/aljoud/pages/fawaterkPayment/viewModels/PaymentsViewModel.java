@@ -51,7 +51,7 @@ public class PaymentsViewModel extends BaseViewModel {
         compositeDisposable.add(repository.getPaymentMethods(getPassingObject().getObject()));
     }
 
-    public void checkPayment() {
+    public void payOffer() {
         if (getMethodsAdapter().lastSelected != -1) {
             paymentId = getMethodsAdapter().paymentMethodList.get(getMethodsAdapter().lastSelected).getPaymentId();
             compositeDisposable.add(repository.checkPayment(getPassingObject().getId(), paymentId, getPassingObject().getObject()));
@@ -64,6 +64,13 @@ public class PaymentsViewModel extends BaseViewModel {
             getPayInstallmentRequest().setPaymentMethod(paymentId);
             compositeDisposable.add(repository.payInstallments(getPayInstallmentRequest()));
         }
+    }
+
+    public void initPaymentAction() {
+        if (getPassingObject().getObject().equals(Constants.INSTALLMENT))
+            payInstallments();
+        else
+            payOffer();
     }
 
     public void applyDiscount() {

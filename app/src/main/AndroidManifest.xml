@@ -44,6 +44,7 @@
         <activity android:name=".activity.RemotePDFActivity" />
         <activity
             android:name=".activity.ExoPlayerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="fullSensor" />
         <activity
             android:name=".activity.PaymentVisaActivity"

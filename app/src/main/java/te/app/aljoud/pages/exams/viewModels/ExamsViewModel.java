@@ -91,13 +91,19 @@ public class ExamsViewModel extends BaseViewModel {
         unSubscribeFromObservable();
     }
 
-    public void updateNextQuestion(AnswersItem answersItem) {
+    public void updateNextQuestion() {
+        if (getAnswersAdapter().selectedAnswer != 0) {
+            getAnswersAdapter().selectedAnswer = 0; // for reset
+            if (currentQuestions <= getExamDataList().size() - 1) {
+                setExamData(getExamDataList().get(currentQuestions));
+            } else
+                liveData.setValue(new Mutable(Constants.EXAM_RESULTS));
+        }
+    }
+
+    public void updateScore(AnswersItem answersItem) {
         currentQuestions++;
         if (answersItem.getCorrect().equals("1"))
             score.set(score.get() + 1);
-        if (currentQuestions <= getExamDataList().size() - 1) {
-            setExamData(getExamDataList().get(currentQuestions));
-        }else
-            liveData.setValue(new Mutable(Constants.EXAM_RESULTS));
     }
 }

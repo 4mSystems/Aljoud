@@ -14,27 +14,101 @@
         android:background="@color/black"
         android:keepScreenOn="true">
 
-
         <com.google.android.exoplayer2.ui.StyledPlayerView
             android:id="@+id/player_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:auto_show="true"
+            android:layout_height="0dp"
+            app:auto_show="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_instructor"
             app:resize_mode="fit"
-            app:show_shuffle_button="false"
-            app:show_subtitle_button="false" />
+            app:show_buffering="when_playing"
+            app:show_fastforward_button="true"
+            app:show_next_button="false"
+            app:show_previous_button="false"
+            app:show_rewind_button="true"
+            app:show_subtitle_button="true"
+            app:use_artwork="true" />
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/ic_qr"
-            android:layout_width="@dimen/dp50w"
-            android:layout_height="@dimen/dp50h"
-            android:layout_margin="@dimen/dp10h"
-            android:alpha=".4"
-            app:imageUrl="@{UserHelper.getInstance(context).userData.qr_image}"
-            app:layout_constraintStart_toStartOf="@id/player_view"
-            app:layout_constraintEnd_toEndOf="@id/player_view"
-            app:layout_constraintBottom_toBottomOf="@id/player_view"
-            app:layout_constraintTop_toTopOf="@id/player_view" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_instructor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <te.app.aljoud.customViews.views.CustomTextViewMedium
+                    android:id="@+id/tv_card_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp6h"
+                    android:text="@{@string/account_number.concat(` `).concat(String.valueOf(UserHelper.getInstance(context).userData.id))}"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimaryDark"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <te.app.aljoud.customViews.views.CustomTextViewRegular
+                    android:id="@+id/tv_policy_warning1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10w"
+                    android:layout_marginTop="@dimen/dp3h"
+                    android:layout_marginEnd="@dimen/dp10w"
+                    android:text="@string/policy_warning"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/red"
+                    app:layout_constraintEnd_toStartOf="@+id/ic_qr"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_card_title" />
+
+                <te.app.aljoud.customViews.views.CustomTextViewRegular
+                    android:id="@+id/tv_instractor_profession"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp6h"
+                    android:layout_marginEnd="@dimen/dp6h"
+                    android:layout_marginBottom="@dimen/dp8h"
+                    android:text="@string/policy_warning1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colordark"
+                    android:textSize="@dimen/sp8"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ic_qr"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_policy_warning1" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ic_qr"
+                    android:layout_width="@dimen/dp50w"
+                    android:layout_height="@dimen/dp50h"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:layout_marginEnd="@dimen/dp12w"
+                    android:src="@color/colordark"
+                    app:imageUrl="@{UserHelper.getInstance(context).userData.qr_image}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <te.app.aljoud.customViews.views.CustomTextViewRegular
+                    android:id="@+id/tv_account_qr"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/account_qr"
+                    android:textAlignment="center"
+                    android:textColor="@color/colordark"
+                    android:textSize="@dimen/sp6"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/ic_qr"
+                    app:layout_constraintStart_toStartOf="@+id/ic_qr"
+                    app:layout_constraintTop_toBottomOf="@+id/ic_qr" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

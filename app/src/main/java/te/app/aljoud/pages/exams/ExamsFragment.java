@@ -60,7 +60,7 @@ public class ExamsFragment extends BaseFragment {
             }
         });
         viewModel.getAnswersAdapter().liveData.observeForever(answersItem -> {
-            viewModel.updateNextQuestion(answersItem);
+            viewModel.updateScore(answersItem);
         });
     }
 

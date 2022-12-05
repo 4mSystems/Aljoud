@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.MutableLiveData;
@@ -27,13 +28,10 @@ public class AnswersAdapter extends RecyclerView.Adapter<AnswersAdapter.ViewHold
     List<AnswersItem> answersItemList;
     Context context;
     public MutableLiveData<AnswersItem> liveData = new MutableLiveData<>();
+    public int selectedAnswer = 0;
 
     public AnswersAdapter() {
         this.answersItemList = new ArrayList<>();
-    }
-
-    public List<AnswersItem> getAnswersItemList() {
-        return answersItemList;
     }
 
     @NonNull
@@ -51,9 +49,13 @@ public class AnswersAdapter extends RecyclerView.Adapter<AnswersAdapter.ViewHold
         AnswersItem categoriesData = answersItemList.get(position);
         ItemAnswerViewModel itemMenuViewModel = new ItemAnswerViewModel(categoriesData);
         itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {
+            selectedAnswer = categoriesData.getId();
             liveData.setValue(categoriesData);
             holder.itemMenuBinding.radio.setChecked(true);
+            updateCorrectAnswer();
         });
+        holder.itemMenuBinding.itemContainer.setBackground(ContextCompat.getDrawable(context, categoriesData.getItemBackground()));
+        holder.itemMenuBinding.itemContainer.setEnabled(categoriesData.isEnabled());
         holder.setViewModel(itemMenuViewModel);
     }
 
@@ -79,6 +81,18 @@ public class AnswersAdapter extends RecyclerView.Adapter<AnswersAdapter.ViewHold
     @Override
     public int getItemCount() {
         return answersItemList.size();
+    }
+
+    public void updateCorrectAnswer() {
+        List<AnswersItem> answersItems = new ArrayList<>(answersItemList);
+        for (int i = 0; i < answersItems.size(); i++) {
+            if (answersItems.get(i).getCorrect().equals("1"))
+                answersItems.get(i).setItemBackground(R.drawable.corner_view_green);
+            else
+                answersItems.get(i).setItemBackground(R.drawable.corner_view_red);
+            answersItems.get(i).setEnabled(false);
+        }
+        update(answersItems);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

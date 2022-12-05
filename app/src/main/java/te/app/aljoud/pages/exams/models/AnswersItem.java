@@ -2,68 +2,88 @@ package te.app.aljoud.pages.exams.models;
 
 import com.google.gson.annotations.SerializedName;
 
-public class AnswersItem{
+import te.app.aljoud.R;
 
-	@SerializedName("quiz_question_id")
-	private String quizQuestionId;
+public class AnswersItem {
 
-	@SerializedName("correct")
-	private String correct;
+    @SerializedName("quiz_question_id")
+    private String quizQuestionId;
 
-	@SerializedName("updated_at")
-	private String updatedAt;
+    @SerializedName("correct")
+    private String correct;
 
-	@SerializedName("name")
-	private String name;
+    @SerializedName("updated_at")
+    private String updatedAt;
 
-	@SerializedName("show")
-	private String show;
+    @SerializedName("name")
+    private String name;
 
-	@SerializedName("created_at")
-	private String createdAt;
+    @SerializedName("show")
+    private String show;
 
-	@SerializedName("id")
-	private int id;
+    @SerializedName("created_at")
+    private String createdAt;
 
-	@SerializedName("sort")
-	private String sort;
+    @SerializedName("id")
+    private int id;
 
-	@SerializedName("type")
-	private String type;
+    @SerializedName("sort")
+    private String sort;
 
-	public String getQuizQuestionId(){
-		return quizQuestionId;
-	}
+    @SerializedName("type")
+    private String type;
+    private int itemBackground = R.drawable.corner_view_border;
+    private boolean isEnabled = true;
 
-	public String getCorrect(){
-		return correct;
-	}
+    public String getQuizQuestionId() {
+        return quizQuestionId;
+    }
 
-	public String getUpdatedAt(){
-		return updatedAt;
-	}
+    public String getCorrect() {
+        return correct;
+    }
 
-	public String getName(){
-		return name;
-	}
+    public String getUpdatedAt() {
+        return updatedAt;
+    }
 
-	public String getShow(){
-		return show;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getCreatedAt(){
-		return createdAt;
-	}
+    public String getShow() {
+        return show;
+    }
 
-	public int getId(){
-		return id;
-	}
+    public String getCreatedAt() {
+        return createdAt;
+    }
 
-	public String getSort(){
-		return sort;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public String getType(){
-		return type;
-	}
+    public String getSort() {
+        return sort;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setItemBackground(int itemBackground) {
+        this.itemBackground = itemBackground;
+    }
+
+    public int getItemBackground() {
+        return itemBackground;
+    }
+
+    public boolean isEnabled() {
+        return isEnabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        isEnabled = enabled;
+    }
 }

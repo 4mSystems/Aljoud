@@ -187,4 +187,5 @@ The administration of the application has the right to request any proof or iden
     <string name="amount">Amount</string>
     <string name="not_pay_now">Not pay now</string>
     <string name="installment_warning">Installments can be made when all the elements of the basket are capable of installments</string>
+    <string name="next">Next</string>
 </resources>

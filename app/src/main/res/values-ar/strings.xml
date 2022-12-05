@@ -132,7 +132,7 @@
     <string name="cart_total">الاجمالي </string>
     <string name="payment_type">نوع الدفع</string>
     <string name="cash">كاش</string>
-    <string name="radio_installment">تقسيط</string>
+    <string name="radio_installment">التقسيط</string>
     <string name="apply">تأكيد</string>
     <string name="promo_code">كود الخصم</string>
     <string name="discount_code">أدخل الكود</string>
@@ -179,5 +179,6 @@
     <string name="amount">المبلغ</string>
     <string name="not_pay_now">لا تدفع الآن</string>
     <string name="installment_warning">يمكن التقسيط عندما تكون جميع عناصر السلة قابلة للتقسيط</string>
+    <string name="next">التالي</string>
 
 </resources>
