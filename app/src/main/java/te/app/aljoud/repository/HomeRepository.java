@@ -69,12 +69,12 @@ public class HomeRepository extends BaseRepository {
 
     public Disposable courseDetails(int courseId) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.COURSE_DETAILS.concat(String.valueOf(courseId)), new Object(), CourseDetailsResponse.class,
-                Constants.COURSE_DETAILS, false);
+                Constants.COURSE_DETAILS, true);
     }
 
     public Disposable getCourseLessons(int courseId) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.COURSE_LESSONS.concat(String.valueOf(courseId)), new Object(), CourseLessonsResponse.class,
-                Constants.COURSE_LESSONS, false);
+                Constants.COURSE_LESSONS, true);
     }
 
     public Disposable getLessonVideos(int lessonId, int page, boolean showProgress) {

@@ -11,107 +11,113 @@
             type="te.app.aljoud.pages.university.viewModel.UniversityViewModel" />
     </data>
 
-<androidx.core.widget.NestedScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_info"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dp8h"
-            app:cardBackgroundColor="@color/colorPrimary"
-            app:cardCornerRadius="@dimen/dp8h"
-            app:cardElevation="2dp"
-            app:cardUseCompatPadding="true"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="wrap_content">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_info"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8h"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintTop_toTopOf="parent">
 
-                <te.app.aljoud.customViews.views.CustomTextViewMedium
-                    android:id="@+id/tv_special"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/dp6h"
-                    android:text="@{@string/special.concat(` `).concat(String.valueOf(viewmodel.universityData.spiecialest))}"
-                    android:textAlignment="viewStart"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/white"
-                    app:layout_constraintEnd_toStartOf="@+id/ic_university"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <te.app.aljoud.customViews.views.CustomTextViewMedium
-                    android:id="@+id/tv_subjects"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/dp6h"
-                    android:text="@{@string/subjects.concat(` `).concat(String.valueOf(viewmodel.universityData.courses))}"
-                    android:textAlignment="viewStart"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/white"
-                    app:layout_constraintEnd_toStartOf="@+id/ic_university"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_special" />
+                    <te.app.aljoud.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_special"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp6h"
+                        android:text="@{@string/special.concat(` `).concat(String.valueOf(viewmodel.universityData.spiecialest))}"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/white"
+                        android:visibility="@{viewmodel.universityVisibile}"
+                        app:layout_constraintEnd_toStartOf="@+id/ic_university"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <te.app.aljoud.customViews.views.CustomTextViewMedium
-                    android:id="@+id/tv_lessons"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/dp6h"
-                    android:text="@{@string/lessons.concat(` `).concat(String.valueOf(viewmodel.universityData.lessons))}"
-                    android:textAlignment="viewStart"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/white"
-                    app:layout_constraintEnd_toStartOf="@+id/ic_university"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_subjects" />
+                    <te.app.aljoud.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_subjects"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp6h"
+                        android:text="@{@string/subjects.concat(` `).concat(String.valueOf(viewmodel.universityData.courses))}"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/white"
+                        android:visibility="@{viewmodel.universityVisibile}"
+                        app:layout_constraintEnd_toStartOf="@+id/ic_university"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_special" />
 
-                <te.app.aljoud.customViews.views.CustomTextViewMedium
-                    android:id="@+id/tv_students"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/dp6h"
-                    android:text="@{@string/students.concat(` `).concat(String.valueOf(viewmodel.universityData.students))}"
-                    android:textAlignment="viewStart"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/ic_university"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_lessons" />
+                    <te.app.aljoud.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_lessons"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp6h"
+                        android:text="@{@string/lessons.concat(` `).concat(String.valueOf(viewmodel.universityData.lessons))}"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/white"
+                        android:visibility="@{viewmodel.universityVisibile}"
+                        app:layout_constraintEnd_toStartOf="@+id/ic_university"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_subjects" />
 
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/ic_university"
-                    android:layout_width="@dimen/dp80h"
-                    android:layout_height="@dimen/dp80h"
-                    android:layout_margin="@dimen/dp6h"
-                    android:src="@color/white"
-                    app:imageFullUrl="@{viewmodel.universityData.image}"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:padding="4dp"
-                    app:shapeAppearance="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
+                    <te.app.aljoud.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_students"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp6h"
+                        android:text="@{@string/students.concat(` `).concat(String.valueOf(viewmodel.universityData.students))}"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/white"
+                        android:visibility="@{viewmodel.universityVisibile}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/ic_university"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_lessons" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dp8h"
-            app:adapter="@{viewmodel.collegesAdapter}"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintTop_toBottomOf="@id/card_info"
-            app:orientation="@{`1`}"
-            app:span="@{`2`}"
-            tools:listitem="@layout/item_university_section" />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ic_university"
+                        android:layout_width="@dimen/dp80h"
+                        android:layout_height="@dimen/dp80h"
+                        android:layout_margin="@dimen/dp6h"
+                        android:padding="4dp"
+                        android:src="@drawable/logo"
+                        app:imageFullUrl="@{viewmodel.universityData.image}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tv_students"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.core.widget.NestedScrollView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8h"
+                app:adapter="@{viewmodel.collegesAdapter}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/card_info"
+                app:orientation="@{`1`}"
+                app:span="@{`2`}"
+                tools:listitem="@layout/item_university_section" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 </layout>

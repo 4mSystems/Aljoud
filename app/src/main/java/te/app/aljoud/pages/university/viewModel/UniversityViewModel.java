@@ -1,5 +1,7 @@
 package te.app.aljoud.pages.university.viewModel;
 
+import android.view.View;
+
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 
@@ -25,6 +27,8 @@ public class UniversityViewModel extends BaseViewModel {
     UniversityData universityData;
     LevelsAdapter levelsAdapter;
     CourseAdapter courseAdapter;
+    @Bindable
+   public int universityVisibile = View.GONE;
 
     @Inject
     public UniversityViewModel(HomeRepository homeRepository) {
@@ -53,8 +57,16 @@ public class UniversityViewModel extends BaseViewModel {
     public void setUniversityData(UniversityData universityData) {
         getCollegesAdapter().update(universityData.getSpecialists());
         notifyChange(BR.universityData);
+        updateUniversityCardVisibility(universityData.getShowData());
         this.universityData = universityData;
     }
+
+    private void updateUniversityCardVisibility(String showData) {
+        if (showData.equals("false"))
+            universityVisibile = View.VISIBLE;
+        notifyChange(BR.universityVisibile);
+    }
+
 
     @Bindable
     public UniversityCollegesAdapter getCollegesAdapter() {
