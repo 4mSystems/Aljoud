@@ -1,8 +1,8 @@
 package te.app.aljoud.utils;
 
 public class URLS {
-//    public final static String BASE_URL = "http://test.aljoud-edu.com/api/";
-    public final static String BASE_URL = "https://joud-edu.com/api/";
+        public final static String BASE_URL = "http://test.joud-edu.com/api/";
+//    public final static String BASE_URL = "https://joud-edu.com/api/";
     public final static String CONTACT = "store-inbox";
     public final static String HOME = "home/university?page=";
     public final static String UNIVERSITY_DETAILS = "home/university/colleges/";
@@ -49,4 +49,5 @@ public class URLS {
     public static final String GET_CART_INSTALLMENT = "student/cart/get-cart-installments-data";
     public static final String GET_INSTALLMENTS = "student/installments?status=";
     public static final String PAY_INSTALLMENTS = "student/installments/pay";
+    public static final String REQUEST_TO_BUY = "student/purchase_requests/store";
 }

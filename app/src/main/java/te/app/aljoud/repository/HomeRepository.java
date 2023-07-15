@@ -24,6 +24,7 @@ import te.app.aljoud.pages.exams.models.ExamsResponse;
 import te.app.aljoud.pages.home.models.home.HomeResponse;
 import te.app.aljoud.pages.myCourses.models.MyCourseResponse;
 import te.app.aljoud.pages.offers.models.OffersResponse;
+import te.app.aljoud.pages.request_to_buy.models.RequestToBuy;
 import te.app.aljoud.pages.university.models.UniversityDetailsResponse;
 import te.app.aljoud.pages.university.models.course.CourseResponse;
 import te.app.aljoud.pages.university.models.levels.LevelsResponse;
@@ -127,4 +128,8 @@ public class HomeRepository extends BaseRepository {
                 Constants.EXAMS, true);
     }
 
+    public Disposable requestToBuy(RequestToBuy requestToBuy) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.REQUEST_TO_BUY, requestToBuy, StatusMessage.class,
+                Constants.REQUEST_TO_BUY, true);
+    }
 }

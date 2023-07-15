@@ -388,10 +388,22 @@
                         android:text="@string/add_to_cart"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="@color/white"
-                        android:visibility="@{!viewmodel.course.myCourse?View.VISIBLE:View.GONE}"
+                        android:visibility="@{viewmodel.course.isAddToCartVisible()}"
                         app:backgroundTint="@color/colorPrimary"
                         app:icon="@drawable/ic_add_shopping_cart"
                         app:iconGravity="textEnd" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp8h"
+                        android:layout_marginEnd="@dimen/dp8h"
+                        android:onClick="@{()->viewmodel.action(Constants.REQUEST_TO_BUY)}"
+                        android:text="@string/request_to_buy"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/white"
+                        android:visibility="@{viewmodel.course.isRequestToBuyVisible()}"
+                        app:backgroundTint="@color/colorPrimary" />
 
                     <com.google.android.material.button.MaterialButton
                         android:layout_width="match_parent"

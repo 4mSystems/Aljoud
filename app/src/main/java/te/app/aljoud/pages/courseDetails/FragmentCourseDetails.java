@@ -34,6 +34,7 @@ import te.app.aljoud.pages.auth.login.LoginFragment;
 import te.app.aljoud.pages.courseDetails.models.CourseDetailsResponse;
 import te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel;
 import te.app.aljoud.pages.fawaterkPayment.FawterkMethodFragment;
+import te.app.aljoud.pages.request_to_buy.FragmentRequestToBuy;
 import te.app.aljoud.utils.Constants;
 import te.app.aljoud.utils.helper.LauncherHelper;
 import te.app.aljoud.utils.helper.MovementHelper;
@@ -77,6 +78,8 @@ public class FragmentCourseDetails extends BaseFragment {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
             } else if (Constants.LOGIN.equals(((Mutable) o).message)) {
                 MovementHelper.startActivity(requireActivity(), LoginFragment.class.getName(), null, null);
+            } else if (Constants.REQUEST_TO_BUY.equals(((Mutable) o).message)) {
+                MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getCourse().getId()),getString(R.string.request_to_buy), FragmentRequestToBuy.class.getName(), null);
             } else if (Constants.DIALOG.equals(((Mutable) o).message)) {
                 if (askDialog != null) {
                     toastMessage(((StatusMessage) mutable.object).mMessage);

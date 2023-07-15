@@ -188,4 +188,9 @@ The administration of the application has the right to request any proof or iden
     <string name="not_pay_now">Not pay now</string>
     <string name="installment_warning">Installments can be made when all the elements of the basket are capable of installments</string>
     <string name="next">Next</string>
+    <string name="request_to_buy">Request to buy</string>
+    <string name="request_to_buy_sub_title">يستغرق طلب الشراء عده ايام للمعالجه,تيم فيها التواصل معكم لاتمام خطوات الشراء في الكورس</string>
+    <string name="request_to_buy_body">برجاء كتابه الملاحظات الخاصه بطلبكم في المساحه الخاصه بكتابه الملاحظات لنتمكن من مساعدتكم بشكل اسرع</string>
+    <string name="request_details">Request details...</string>
+    <string name="send_request">Send request</string>
 </resources>

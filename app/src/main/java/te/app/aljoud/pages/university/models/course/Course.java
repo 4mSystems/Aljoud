@@ -1,6 +1,8 @@
 package te.app.aljoud.pages.university.models.course;
 
 
+import android.view.View;
+
 import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
@@ -73,6 +75,9 @@ public class Course {
 
     @SerializedName("desc")
     private String desc;
+    @SerializedName("can_buy")
+    private int canBuy;
+
     @SerializedName("my_course")
     private boolean myCourse;
 
@@ -176,4 +181,25 @@ public class Course {
     public void setMyCourse(boolean myCourse) {
         this.myCourse = myCourse;
     }
+
+    public void setCanBuy(int canBuy) {
+        this.canBuy = canBuy;
+    }
+
+    public int getCanBuy() {
+        return canBuy;
+    }
+
+    public int isAddToCartVisible() {
+        if (isMyCourse()) return View.GONE;
+        else if (getCanBuy() == 1) return View.VISIBLE;
+        else return View.GONE;
+    }
+
+    public int isRequestToBuyVisible() {
+        if (isMyCourse()) return View.GONE;
+        else if (getCanBuy() == 0) return View.VISIBLE;
+        else return View.GONE;
+    }
+
 }

@@ -36,6 +36,7 @@ import te.app.aljoud.pages.installment.UnPaidInstallmentFragment;
 import te.app.aljoud.pages.myCourses.MyCoursesFragment;
 import te.app.aljoud.pages.offers.OffersFragment;
 import te.app.aljoud.pages.profile.ProfileFragment;
+import te.app.aljoud.pages.request_to_buy.FragmentRequestToBuy;
 import te.app.aljoud.pages.settings.ServiceRequestFragment;
 import te.app.aljoud.pages.university.FragmentCategorySections;
 import te.app.aljoud.pages.home.HomeFragment;
@@ -124,6 +125,7 @@ public interface IApplicationComponent {
     void inject(LateInstallmentFragment lateInstallmentFragment);
 
     void inject(CheckoutFragment checkoutFragment);
+    void inject(FragmentRequestToBuy fragmentRequestToBuy);
 
     @Component.Builder
     interface Builder {

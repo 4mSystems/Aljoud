@@ -99,7 +99,7 @@ public class Constants {
     public static final String DIALOG = "DIALOG";
     public static final String PICKED_SUCCESSFULLY = "PICKED_SUCCESSFULLY";
     public static final String DELETE = "DELETE";
-    public static final String CHECK_OUT = "CHECK_OUT";
+    public static final String REQUEST_TO_BUY = "REQUEST_TO_BUY";
     public static final String APPLY_DISCOUNT = "APPLY_DISCOUNT";
     public static final String CART = "CART";
     public static final String ADD_CART = "ADD_CART";

@@ -180,5 +180,10 @@
     <string name="not_pay_now">لا تدفع الآن</string>
     <string name="installment_warning">يمكن التقسيط عندما تكون جميع عناصر السلة قابلة للتقسيط</string>
     <string name="next">التالي</string>
+    <string name="request_to_buy">طلب شراء</string>
+    <string name="request_to_buy_sub_title">يستغرق طلب الشراء عده ايام للمعالجه,تيم فيها التواصل معكم لاتمام خطوات الشراء في الكورس</string>
+    <string name="request_to_buy_body">برجاء كتابه الملاحظات الخاصه بطلبكم في المساحه الخاصه بكتابه الملاحظات لنتمكن من مساعدتكم بشكل اسرع</string>
+    <string name="request_details">تفاصيل الطلب…</string>
+    <string name="send_request">ارسال الطلب</string>
 
 </resources>

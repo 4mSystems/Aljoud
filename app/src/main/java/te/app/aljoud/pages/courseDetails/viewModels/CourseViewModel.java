@@ -94,7 +94,11 @@ public class CourseViewModel extends BaseViewModel {
     }
 
     public void action(String action) {
-        if ((action.equals(Constants.ASK) || action.equals(Constants.PAYMENT_METHOD)) && UserHelper.getInstance(MyApplication.getInstance()).getUserData() == null)
+        if ((action.equals(Constants.ASK)
+                || action.equals(Constants.PAYMENT_METHOD)
+//                || action.equals(Constants.REQUEST_TO_BUY)
+        )
+                && UserHelper.getInstance(MyApplication.getInstance()).getUserData() == null)
             action = Constants.LOGIN;
         liveData.setValue(new Mutable(action));
     }
