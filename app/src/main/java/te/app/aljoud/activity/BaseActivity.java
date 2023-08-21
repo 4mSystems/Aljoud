@@ -21,6 +21,7 @@ import te.app.aljoud.pages.courseDetails.FragmentCourseDetails;
 import te.app.aljoud.pages.offers.OffersFragment;
 import te.app.aljoud.pages.splash.SplashFragment;
 import te.app.aljoud.utils.Constants;
+import te.app.aljoud.utils.filepicker.core.FilePicker;
 import te.app.aljoud.utils.helper.MovementHelper;
 import te.app.aljoud.utils.resources.ResourceManager;
 import te.app.aljoud.utils.session.UserHelper;
@@ -28,6 +29,7 @@ import te.app.aljoud.utils.session.UserHelper;
 public class BaseActivity extends ParentActivity {
     public ActivityBaseBinding activityBaseBinding;
     public BackActionBarView backActionBarView;
+    public FilePicker filePicker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +54,8 @@ public class BaseActivity extends ParentActivity {
             } else
                 MovementHelper.replaceFragment(this, new SplashFragment(), "");
         }
+        filePicker = FilePicker.getInstance(this);
+
     }
 
     public void getNotification() {

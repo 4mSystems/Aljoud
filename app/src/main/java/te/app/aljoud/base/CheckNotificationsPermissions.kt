@@ -8,9 +8,8 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import te.app.aljoud.R
-import te.app.aljoud.utils.Constants.MY_PERMISSIONS_REQUEST_POST_NOTIFICATIONS
 
-object CheckNotificationsPermissions {
+class CheckNotificationsPermissions {
     fun checkNotificationsPermissions(activity: Activity) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             if (ContextCompat.checkSelfPermission(
@@ -40,14 +39,14 @@ object CheckNotificationsPermissions {
                     ActivityCompat.requestPermissions(
                         activity,
                         arrayOf(Manifest.permission.POST_NOTIFICATIONS),
-                        MY_PERMISSIONS_REQUEST_POST_NOTIFICATIONS
+                        200
                     )
                 } else {
                     // No explanation needed; request the permission
                     ActivityCompat.requestPermissions(
                         activity,
                         arrayOf(Manifest.permission.POST_NOTIFICATIONS),
-                        MY_PERMISSIONS_REQUEST_POST_NOTIFICATIONS
+                        200
                     )
                 }
             } else {

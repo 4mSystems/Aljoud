@@ -1,11 +1,15 @@
 package te.app.aljoud.pages.chat.view;
 
 
+import static te.app.aljoud.utils.filepicker.picker.FilePermissionsKt.checkPickPermission;
+import static te.app.aljoud.utils.filepicker.picker.ImagePickerResultKt.getImagePickerResult;
+import static te.app.aljoud.utils.filepicker.picker.ImagePickerResultKt.getMimeType;
+
 import android.app.Dialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +21,6 @@ import androidx.lifecycle.Observer;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.gson.Gson;
 
-import java.util.Objects;
 
 import javax.inject.Inject;
 
@@ -30,14 +33,11 @@ import te.app.aljoud.base.MyApplication;
 import te.app.aljoud.connection.FileObject;
 import te.app.aljoud.databinding.FragmentChatBinding;
 import te.app.aljoud.databinding.ReplySheetBinding;
-import te.app.aljoud.model.File;
 import te.app.aljoud.model.base.Mutable;
 import te.app.aljoud.pages.chat.model.ChatResponse;
 import te.app.aljoud.pages.chat.model.ChatSendResponse;
 import te.app.aljoud.pages.chat.viewmodel.ChatViewModel;
 import te.app.aljoud.utils.Constants;
-import te.app.aljoud.utils.helper.LauncherHelper;
-import te.app.aljoud.utils.upload.FileOperations;
 
 public class ChatFragment extends BaseFragment {
     FragmentChatBinding binding;
@@ -74,8 +74,7 @@ public class ChatFragment extends BaseFragment {
                 showReply();
             } else if (Constants.PICKED_SUCCESSFULLY.equals(((Mutable) o).message)) {
                 if (viewModel.getFilesAdapter().getFiles().size() <= 4) {
-                    LauncherHelper.launcherRequest = Constants.FILE_TYPE_IMAGE;
-                    LauncherHelper.execute(LauncherHelper.storage);
+                    pickFile();
                 } else {
                     toastMessageError(getString(R.string.max_files));
                 }
@@ -121,25 +120,21 @@ public class ChatFragment extends BaseFragment {
         Constants.DATA_CHANGED = true;
     }
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        LauncherHelper.checkPermission(this, LauncherHelper.launcherRequest, (request, result) -> {
-            if (result)
-                pickImageDialogSelect(LauncherHelper.launcherRequest);
-        });
-    }
 
-    @Override
-    public void launchActivityResult(int request, int resultCode, Intent data) {
-        super.launchActivityResult(request, resultCode, data);
-        if (request == Constants.FILE_TYPE_IMAGE) {
-            String mimeType = requireActivity().getContentResolver().getType(Objects.requireNonNull(data.getData()));
-            FileObject fileObject = FileOperations.getFileObject(requireActivity(), data, "file[" + viewModel.fileObjectList.size() + "]", Constants.FILE_TYPE_IMAGE);
-            viewModel.getFilesAdapter().getFiles().add(new File(fileObject.getFilePath(), mimeType));
-            viewModel.getFilesAdapter().notifyDataSetChanged();
-            viewModel.notifyChange(BR.filesAdapter);
-            viewModel.fileObjectList.add(fileObject);
+    private void pickFile() {
+        if (checkPickPermission(requireActivity())) {
+            getImagePickerResult(requireActivity(), bitmapPair -> {
+                if (bitmapPair != null) {
+                    java.io.File file = bitmapPair.getSecond();
+                    FileObject fileObject = new FileObject("file[" + viewModel.fileObjectList.size() + "]", file.getPath(), Constants.FILE_TYPE_IMAGE);
+                    viewModel.getFilesAdapter().getFiles().add(new te.app.aljoud.model.File(fileObject.getFilePath(), getMimeType(file.getPath())));
+                    viewModel.getFilesAdapter().notifyDataSetChanged();
+                    viewModel.notifyChange(BR.filesAdapter);
+                    viewModel.fileObjectList.add(fileObject);
+                } else
+                    Log.e("pickFile", "pickFile: " + bitmapPair);
+                return null;
+            });
         }
     }
 }

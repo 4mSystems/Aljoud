@@ -4,9 +4,11 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
 import java.util.Map;
@@ -16,7 +18,11 @@ import te.app.aljoud.base.ParentActivity;
 
 public class LauncherHelper {
     public static int launcherRequest;
-    public static String[] storage = {Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA};
+    public static String[] storage = {
+            Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            Manifest.permission.CAMERA,
+    };
     public static ActivityResultLauncher<String[]> requestMultiplePermissions;
 
     public static void checkPermission(Fragment fragment, int request, LauncherInterface.permissionInterface permissionInterface) {

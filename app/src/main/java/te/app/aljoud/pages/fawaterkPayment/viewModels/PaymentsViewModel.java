@@ -96,7 +96,7 @@ public class PaymentsViewModel extends BaseViewModel {
     }
 
     public void getInstallment() {
-        compositeDisposable.add(repository.getInstallment());
+        compositeDisposable.add(repository.getInstallment(getCheckoutRequest()));
     }
 
     public void redirectPayment() {

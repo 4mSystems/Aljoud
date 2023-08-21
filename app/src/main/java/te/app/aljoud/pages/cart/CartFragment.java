@@ -23,6 +23,7 @@ import te.app.aljoud.pages.cart.models.cart_items.CartResponse;
 import te.app.aljoud.pages.cart.viewModels.CartViewModel;
 import te.app.aljoud.pages.fawaterkPayment.FawterkMethodFragment;
 import te.app.aljoud.utils.Constants;
+import te.app.aljoud.utils.helper.AppHelper;
 import te.app.aljoud.utils.helper.MovementHelper;
 
 
@@ -57,7 +58,9 @@ public class CartFragment extends BaseFragment {
                 if (viewModel.getCartAdapter().getItemCount() == 0)
                     showCartEmpty();
             } else if (Constants.PAYMENT_METHOD.equals(((Mutable) o).message)) {
-                MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getCartAdapter().hasInstallment,String.valueOf(viewModel.getCartData().getFinalTotal()), viewModel.getCartData().getCartCurrency()), getString(R.string.payment), CheckoutFragment.class.getName(), null);
+                MovementHelper.startActivityWithBundle(requireActivity(),
+                        new PassingObject(viewModel.getCartAdapter().hasInstallment, AppHelper.convertCurrency(viewModel.getCartData().getFinalTotal()),
+                                viewModel.getCartData().getCartCurrency()), getString(R.string.payment), CheckoutFragment.class.getName(), null);
             }
         });
         viewModel.getCartAdapter().cartLiveData.observeForever(cartId -> viewModel.deleteItem(cartId));

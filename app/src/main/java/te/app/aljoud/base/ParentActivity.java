@@ -196,7 +196,7 @@ public class ParentActivity extends AppCompatActivity implements
                 msg, Snackbar.LENGTH_LONG);
         View view = snackBar.getView();
         view.setBackgroundColor(ContextCompat.getColor(this, R.color.colorAccent));
-        TextView textView = view.findViewById(R.id.snackbar_text);
+        TextView textView = view.findViewById(com.google.android.material.R.id.snackbar_text);
         textView.setGravity(Gravity.CENTER_VERTICAL);
         textView.setTextColor(ContextCompat.getColor(this, R.color.white));
         snackBar.show();

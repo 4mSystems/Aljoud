@@ -1,8 +1,11 @@
 package te.app.aljoud.pages.cart.models.cart_items;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
+
+import te.app.aljoud.utils.helper.AppHelper;
 
 public class CartData {
 
@@ -24,7 +27,7 @@ public class CartData {
 
     public String getCartTotal() {
         if (!finalTotal.equals("0")) {
-            return finalTotal.concat(" ").concat(getCartCurrency());
+            return AppHelper.convertCurrency(finalTotal);
         }
         return finalTotal;
     }

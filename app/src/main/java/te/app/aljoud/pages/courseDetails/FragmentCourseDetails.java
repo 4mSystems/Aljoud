@@ -1,7 +1,11 @@
 package te.app.aljoud.pages.courseDetails;
 
-import android.content.Intent;
+import static te.app.aljoud.utils.filepicker.picker.FilePermissionsKt.checkPickPermission;
+import static te.app.aljoud.utils.filepicker.picker.ImagePickerResultKt.getImagePickerResult;
+import static te.app.aljoud.utils.filepicker.picker.ImagePickerResultKt.getMimeType;
+
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +17,7 @@ import androidx.lifecycle.Observer;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.gson.Gson;
 
-import java.util.Objects;
+import java.io.File;
 
 import javax.inject.Inject;
 
@@ -27,7 +31,6 @@ import te.app.aljoud.connection.FileObject;
 import te.app.aljoud.databinding.AskSheetBinding;
 import te.app.aljoud.databinding.FragmentCourseDetailsBinding;
 import te.app.aljoud.databinding.InstractorSheetBinding;
-import te.app.aljoud.model.File;
 import te.app.aljoud.model.base.Mutable;
 import te.app.aljoud.model.base.StatusMessage;
 import te.app.aljoud.pages.auth.login.LoginFragment;
@@ -36,10 +39,8 @@ import te.app.aljoud.pages.courseDetails.viewModels.CourseViewModel;
 import te.app.aljoud.pages.fawaterkPayment.FawterkMethodFragment;
 import te.app.aljoud.pages.request_to_buy.FragmentRequestToBuy;
 import te.app.aljoud.utils.Constants;
-import te.app.aljoud.utils.helper.LauncherHelper;
 import te.app.aljoud.utils.helper.MovementHelper;
 import te.app.aljoud.utils.session.UserHelper;
-import te.app.aljoud.utils.upload.FileOperations;
 
 
 public class FragmentCourseDetails extends BaseFragment {
@@ -79,7 +80,7 @@ public class FragmentCourseDetails extends BaseFragment {
             } else if (Constants.LOGIN.equals(((Mutable) o).message)) {
                 MovementHelper.startActivity(requireActivity(), LoginFragment.class.getName(), null, null);
             } else if (Constants.REQUEST_TO_BUY.equals(((Mutable) o).message)) {
-                MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getCourse().getId()),getString(R.string.request_to_buy), FragmentRequestToBuy.class.getName(), null);
+                MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getCourse().getId()), getString(R.string.request_to_buy), FragmentRequestToBuy.class.getName(), null);
             } else if (Constants.DIALOG.equals(((Mutable) o).message)) {
                 if (askDialog != null) {
                     toastMessage(((StatusMessage) mutable.object).mMessage);
@@ -99,8 +100,9 @@ public class FragmentCourseDetails extends BaseFragment {
                 baseActivity().cartCount.setValue(cartCount);
             } else if (Constants.PICKED_SUCCESSFULLY.equals(((Mutable) o).message)) {
                 if (viewModel.getFilesAdapter().getFiles().size() <= 4) {
-                    LauncherHelper.launcherRequest = Constants.FILE_TYPE_IMAGE;
-                    LauncherHelper.execute(LauncherHelper.storage);
+//                    LauncherHelper.launcherRequest = Constants.FILE_TYPE_IMAGE;
+//                    LauncherHelper.execute(LauncherHelper.storage);
+                    pickFile();
                 } else {
                     toastMessageError(getString(R.string.max_files));
                 }
@@ -109,6 +111,23 @@ public class FragmentCourseDetails extends BaseFragment {
         viewModel.getFilesAdapter().liveData.observeForever(integer -> {
             viewModel.getFileObjectList().remove(viewModel.getFilesAdapter().position);
         });
+    }
+
+    private void pickFile() {
+        if (checkPickPermission(requireActivity())) {
+            getImagePickerResult(requireActivity(), bitmapPair -> {
+                if (bitmapPair != null) {
+                    File file = bitmapPair.getSecond();
+                    FileObject fileObject = new FileObject("file[" + viewModel.getFileObjectList().size() + "]", file.getPath(), Constants.FILE_TYPE_IMAGE);
+                    viewModel.getFilesAdapter().getFiles().add(new te.app.aljoud.model.File(fileObject.getFilePath(), getMimeType(file.getPath())));
+                    viewModel.getFilesAdapter().notifyDataSetChanged();
+                    viewModel.notifyChange(BR.filesAdapter);
+                    viewModel.getFileObjectList().add(fileObject);
+                } else
+                    Log.e("pickFile", "pickFile: " + bitmapPair);
+                return null;
+            });
+        }
     }
 
     private void showAsk() {
@@ -135,25 +154,4 @@ public class FragmentCourseDetails extends BaseFragment {
         viewModel.getCartRepository().setLiveData(viewModel.liveData);
     }
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        LauncherHelper.checkPermission(this, LauncherHelper.launcherRequest, (request, result) -> {
-            if (result)
-                pickImageDialogSelect(LauncherHelper.launcherRequest);
-        });
-    }
-
-    @Override
-    public void launchActivityResult(int request, int resultCode, Intent data) {
-        super.launchActivityResult(request, resultCode, data);
-        if (request == Constants.FILE_TYPE_IMAGE) {
-            String mimeType = requireActivity().getContentResolver().getType(Objects.requireNonNull(data.getData()));
-            FileObject fileObject = FileOperations.getFileObject(requireActivity(), data, "file[" + viewModel.getFileObjectList().size() + "]", Constants.FILE_TYPE_IMAGE);
-            viewModel.getFilesAdapter().getFiles().add(new File(fileObject.getFilePath(), mimeType));
-            viewModel.getFilesAdapter().notifyDataSetChanged();
-            viewModel.notifyChange(BR.filesAdapter);
-            viewModel.getFileObjectList().add(fileObject);
-        }
-    }
 }

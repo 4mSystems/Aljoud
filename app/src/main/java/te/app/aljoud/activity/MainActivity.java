@@ -12,6 +12,7 @@ import com.google.android.play.core.install.model.UpdateAvailability;
 import javax.inject.Inject;
 
 import te.app.aljoud.R;
+import te.app.aljoud.base.CheckNotificationsPermissions;
 import te.app.aljoud.base.IApplicationComponent;
 import te.app.aljoud.base.ImmediateUpdateActivity;
 import te.app.aljoud.base.MyApplication;
@@ -23,6 +24,7 @@ import te.app.aljoud.model.base.Mutable;
 import te.app.aljoud.pages.home.HomeFragment;
 import te.app.aljoud.pages.home.viewModels.HomeViewModel;
 import te.app.aljoud.utils.Constants;
+import te.app.aljoud.utils.filepicker.core.FilePicker;
 import te.app.aljoud.utils.helper.MovementHelper;
 
 import static te.app.aljoud.base.ImmediateUpdateActivity.UPDATE_REQUEST_CODE;
@@ -55,6 +57,8 @@ public class MainActivity extends ParentActivity {
         MovementHelper.replaceFragment(this, new HomeFragment(), "");
         setEvents();
         immediateUpdateActivity = new ImmediateUpdateActivity(this);
+        new CheckNotificationsPermissions().checkNotificationsPermissions(this);
+
     }
 
     private void setEvents() {

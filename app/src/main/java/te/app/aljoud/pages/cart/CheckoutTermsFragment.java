@@ -59,12 +59,12 @@ public class CheckoutTermsFragment extends BaseFragment {
             if (Constants.CHECK_PAYMENT.equals(((Mutable) o).message)) {
                 addPaymentResultToArguments(((PaymentResultResponse) mutable.object).getPaymentResultData());
             } else if (Constants.INSTALLMENT.equals(((Mutable) o).message))
-                openCheckSummary(((CartInstallmentResponse) mutable.object).getInstallmentData());
+                updateInstallments(((CartInstallmentResponse) mutable.object).getInstallmentData());
 
         });
         methodsBinding.next.setOnClickListener(view -> {
             if (methodsBinding.checkbox.isChecked())
-                viewModel.checkout();
+                viewModel.getInstallment();
             else
                 toastMessageError(getString(R.string.agreed_checkout_terms));
         });
@@ -73,14 +73,14 @@ public class CheckoutTermsFragment extends BaseFragment {
     private void addPaymentResultToArguments(PaymentResultData paymentResultData) {
         viewModel.getPassingCheckoutData().setInvoiceId(paymentResultData.getPaymentResultData().getInvoiceId());
         viewModel.getPassingCheckoutData().setRedirectTo(paymentResultData.getPaymentResultData().getPaymentData().getRedirectTo());
-        viewModel.getInstallment();
+        MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getPassingCheckoutData()), null, CheckoutSummaryFragment.class.getName(), null);
         UserHelper.getInstance(requireActivity()).addCartCount("0");
         baseActivity().cartCount.setValue(0);
     }
 
-    private void openCheckSummary(CartInstallmentData installmentData) {
+    private void updateInstallments(CartInstallmentData installmentData) {
         viewModel.getPassingCheckoutData().setInstallmentData(installmentData);
-        MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(viewModel.getPassingCheckoutData()), null, CheckoutSummaryFragment.class.getName(), null);
+        viewModel.checkout();
     }
 
     @Override

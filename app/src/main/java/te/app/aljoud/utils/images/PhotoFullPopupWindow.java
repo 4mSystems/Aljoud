@@ -73,7 +73,7 @@ public class PhotoFullPopupWindow extends PopupWindow {
             Glide.with(ctx) .asBitmap()
                     .load(imageUrl)
 
-                    .error(R.drawable.ic_error_outline_white_24dp)
+                    .error(es.dmoral.toasty.R.drawable.ic_error_outline_white_24dp)
                     .listener(new RequestListener<Bitmap>() {
                         @Override
                         public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Bitmap> target, boolean isFirstResource) {

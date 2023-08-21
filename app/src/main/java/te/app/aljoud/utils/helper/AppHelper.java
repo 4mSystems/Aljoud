@@ -20,6 +20,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
+
 import te.app.aljoud.base.MyApplication;
 import te.app.aljoud.R;
 
@@ -65,6 +69,7 @@ public class AppHelper {
             e.printStackTrace();
         }
     }
+
     public static void openEmail(Context context, String email) {
 
         String mailto = "mailto:" + email + "?" +
@@ -83,6 +88,7 @@ public class AppHelper {
 
 
     }
+
     @SuppressLint("HardwareIds")
     public static String getMacAddress() {
         return Settings.Secure.getString(MyApplication.getInstance().getContentResolver(),
@@ -107,9 +113,19 @@ public class AppHelper {
         recyclerView.setLayoutManager(new GridLayoutManager(context, spanCount, LinearLayoutManager.HORIZONTAL, false));
     }
 
-    public static void copyText(Context requireActivity,String text) {
+    public static void copyText(Context requireActivity, String text) {
         ClipboardManager clipboard = (ClipboardManager) requireActivity.getSystemService(CLIPBOARD_SERVICE);
         ClipData clip = ClipData.newPlainText("label", text);
         clipboard.setPrimaryClip(clip);
+    }
+
+    public static String convertCurrency(String number) {
+        if (!number.equals("0")) {
+            DecimalFormatSymbols symbols = new DecimalFormatSymbols(Locale.US);
+            DecimalFormat decimalFormat = new DecimalFormat("##.##",symbols);
+
+            return decimalFormat.format(Double.parseDouble(number));
+        }
+        return "0.0";
     }
 }

@@ -4,6 +4,8 @@ import com.google.gson.annotations.SerializedName;
 
 import java.text.DecimalFormat;
 
+import te.app.aljoud.utils.helper.AppHelper;
+
 public class CartInstallmentData {
 
     @SerializedName("count")
@@ -21,7 +23,7 @@ public class CartInstallmentData {
 
     public String getInstallmentPrice() {
         if (installmentPrice != null) {
-            return new DecimalFormat("##.##").format(installmentPrice);
+            return AppHelper.convertCurrency(installmentPrice);
         }
         return installmentPrice;
     }

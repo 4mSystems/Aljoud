@@ -88,8 +88,8 @@ public class CartRepository extends BaseRepository {
                 Constants.CHECK_PAYMENT, true);
     }
 
-    public Disposable getInstallment() {
-        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.GET_CART_INSTALLMENT, new Object(), CartInstallmentResponse.class,
+    public Disposable getInstallment(CheckoutRequest checkoutRequest) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.GET_CART_INSTALLMENT, checkoutRequest, CartInstallmentResponse.class,
                 Constants.INSTALLMENT, true);
     }
 

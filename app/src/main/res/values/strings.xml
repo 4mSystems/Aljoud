@@ -15,6 +15,7 @@
     <string name="whats">Whatsapp</string>
     <string name="msg_server_error">Error ,try again</string>
     <string name="contact_us">Contact us</string>
+    <string name="generate_code">Generate code</string>
     <string name="menuHome">Home</string>
     <string name="menuMore">More</string>
     <string name="about">About Us</string>
@@ -191,6 +192,7 @@ The administration of the application has the right to request any proof or iden
     <string name="request_to_buy">Request to buy</string>
     <string name="request_to_buy_sub_title">يستغرق طلب الشراء عده ايام للمعالجه,تيم فيها التواصل معكم لاتمام خطوات الشراء في الكورس</string>
     <string name="request_to_buy_body">برجاء كتابه الملاحظات الخاصه بطلبكم في المساحه الخاصه بكتابه الملاحظات لنتمكن من مساعدتكم بشكل اسرع</string>
-    <string name="request_details">Request details...</string>
+    <string name="request_details">Request details…</string>
     <string name="send_request">Send request</string>
+    <string name="permission_dialog_content1">Allow permission to receive notification</string>
 </resources>

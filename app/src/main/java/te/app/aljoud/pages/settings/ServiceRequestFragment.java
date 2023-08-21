@@ -1,7 +1,11 @@
 package te.app.aljoud.pages.settings;
 
-import android.content.Intent;
+import static te.app.aljoud.utils.filepicker.picker.FilePermissionsKt.checkPickPermission;
+import static te.app.aljoud.utils.filepicker.picker.ImagePickerResultKt.getImagePickerResult;
+import static te.app.aljoud.utils.filepicker.picker.ImagePickerResultKt.getMimeType;
+
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,7 +16,6 @@ import androidx.appcompat.widget.PopupMenu;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 
-import java.util.Objects;
 
 import javax.inject.Inject;
 
@@ -22,17 +25,13 @@ import te.app.aljoud.base.BaseFragment;
 import te.app.aljoud.base.IApplicationComponent;
 import te.app.aljoud.base.MyApplication;
 import te.app.aljoud.connection.FileObject;
-import te.app.aljoud.databinding.FragmentContactsBinding;
 import te.app.aljoud.databinding.FragmentServiceRequestBinding;
-import te.app.aljoud.model.File;
 import te.app.aljoud.model.base.Mutable;
 import te.app.aljoud.model.base.StatusMessage;
 import te.app.aljoud.pages.settings.models.services.ServicesResponse;
 import te.app.aljoud.pages.settings.viewModels.SettingsViewModel;
 import te.app.aljoud.utils.Constants;
 import te.app.aljoud.utils.PopUp.PopUpMenuHelper;
-import te.app.aljoud.utils.helper.LauncherHelper;
-import te.app.aljoud.utils.upload.FileOperations;
 
 public class ServiceRequestFragment extends BaseFragment {
 
@@ -57,8 +56,7 @@ public class ServiceRequestFragment extends BaseFragment {
             handleActions(mutable);
             if (Constants.PICKED_SUCCESSFULLY.equals(((Mutable) o).message)) {
                 if (viewModel.getFilesAdapter().getFiles().size() <= 4) {
-                    LauncherHelper.launcherRequest = Constants.FILE_TYPE_IMAGE;
-                    LauncherHelper.execute(LauncherHelper.storage);
+                    pickFile();
                 } else {
                     toastMessageError(getString(R.string.max_files));
                 }
@@ -86,14 +84,6 @@ public class ServiceRequestFragment extends BaseFragment {
         });
     }
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        LauncherHelper.checkPermission(this, LauncherHelper.launcherRequest, (request, result) -> {
-            if (result)
-                pickImageDialogSelect(LauncherHelper.launcherRequest);
-        });
-    }
 
     @Override
     public void onResume() {
@@ -101,16 +91,20 @@ public class ServiceRequestFragment extends BaseFragment {
         viewModel.getRepository().setLiveData(viewModel.liveData);
     }
 
-    @Override
-    public void launchActivityResult(int request, int resultCode, Intent data) {
-        super.launchActivityResult(request, resultCode, data);
-        if (request == Constants.FILE_TYPE_IMAGE) {
-            String mimeType = requireActivity().getContentResolver().getType(Objects.requireNonNull(data.getData()));
-            FileObject fileObject = FileOperations.getFileObject(requireActivity(), data, "file[" + viewModel.getFileObjectList().size() + "]", Constants.FILE_TYPE_IMAGE);
-            viewModel.getFilesAdapter().getFiles().add(new File(fileObject.getFilePath(), mimeType));
-            viewModel.getFilesAdapter().notifyDataSetChanged();
-            viewModel.notifyChange(BR.filesAdapter);
-            viewModel.getFileObjectList().add(fileObject);
+    private void pickFile() {
+        if (checkPickPermission(requireActivity())) {
+            getImagePickerResult(requireActivity(), bitmapPair -> {
+                if (bitmapPair != null) {
+                    java.io.File file = bitmapPair.getSecond();
+                    FileObject fileObject = new FileObject("file[" + viewModel.getFileObjectList().size() + "]", file.getPath(), Constants.FILE_TYPE_IMAGE);
+                    viewModel.getFilesAdapter().getFiles().add(new te.app.aljoud.model.File(fileObject.getFilePath(), getMimeType(file.getPath())));
+                    viewModel.getFilesAdapter().notifyDataSetChanged();
+                    viewModel.notifyChange(BR.filesAdapter);
+                    viewModel.getFileObjectList().add(fileObject);
+                } else
+                    Log.e("pickFile", "pickFile: " + bitmapPair);
+                return null;
+            });
         }
     }
 }

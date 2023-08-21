@@ -1,8 +1,8 @@
 package te.app.aljoud.utils;
 
 public class URLS {
-        public final static String BASE_URL = "http://test.joud-edu.com/api/";
-//    public final static String BASE_URL = "https://joud-edu.com/api/";
+//        public final static String BASE_URL = "http://test.joud-edu.com/api/";
+    public final static String BASE_URL = "https://joud-edu.com/api/";
     public final static String CONTACT = "store-inbox";
     public final static String HOME = "home/university?page=";
     public final static String UNIVERSITY_DETAILS = "home/university/colleges/";

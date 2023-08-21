@@ -65,7 +65,7 @@ public class BaseFragment extends Fragment {
     }
 
     public void toastMessage(String message) {
-        ((ParentActivity) context).toastMessage(message, R.drawable.ic_check_white_24dp, R.color.colorPrimaryDark);
+        ((ParentActivity) context).toastMessage(message, es.dmoral.toasty.R.drawable.ic_check_white_24dp, R.color.colorPrimaryDark);
     }
 
 

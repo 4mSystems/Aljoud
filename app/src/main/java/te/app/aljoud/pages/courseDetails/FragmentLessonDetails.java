@@ -1,7 +1,11 @@
 package te.app.aljoud.pages.courseDetails;
 
-import android.content.Intent;
+import static te.app.aljoud.utils.filepicker.picker.FilePermissionsKt.checkPickPermission;
+import static te.app.aljoud.utils.filepicker.picker.ImagePickerResultKt.getImagePickerResult;
+import static te.app.aljoud.utils.filepicker.picker.ImagePickerResultKt.getMimeType;
+
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +18,6 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.tabs.TabLayout;
 import com.google.gson.Gson;
 
-import java.util.Objects;
 
 import javax.inject.Inject;
 
@@ -27,16 +30,11 @@ import te.app.aljoud.base.MyApplication;
 import te.app.aljoud.connection.FileObject;
 import te.app.aljoud.databinding.AskLessonSheetBinding;
 import te.app.aljoud.databinding.FragmentLessonDetailsBinding;
-import te.app.aljoud.model.File;
 import te.app.aljoud.model.base.Mutable;
 import te.app.aljoud.model.base.StatusMessage;
 import te.app.aljoud.pages.courseDetails.viewModels.LessonDetailsViewModel;
-import te.app.aljoud.pages.exams.ExamsFragment;
 import te.app.aljoud.utils.Constants;
-import te.app.aljoud.utils.URLS;
-import te.app.aljoud.utils.helper.LauncherHelper;
 import te.app.aljoud.utils.helper.MovementHelper;
-import te.app.aljoud.utils.upload.FileOperations;
 
 
 public class FragmentLessonDetails extends BaseFragment {
@@ -69,16 +67,12 @@ public class FragmentLessonDetails extends BaseFragment {
                 showAsk();
             } else if (Constants.PICKED_SUCCESSFULLY.equals(((Mutable) o).message)) {
                 if (viewModel.getFilesAdapter().getFiles().size() <= 4) {
-                    LauncherHelper.launcherRequest = Constants.FILE_TYPE_IMAGE;
-                    LauncherHelper.execute(LauncherHelper.storage);
+                    pickFile();
                 } else {
                     toastMessageError(getString(R.string.max_files));
                 }
             } else if (Constants.DIALOG.equals(((Mutable) o).message)) {
-//                if (askDialog != null) {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
-//                    askDialog.dismiss();
-//                }
             }
         });
 
@@ -128,25 +122,20 @@ public class FragmentLessonDetails extends BaseFragment {
         viewModel.getHomeRepository().setLiveData(viewModel.liveData);
     }
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        LauncherHelper.checkPermission(this, LauncherHelper.launcherRequest, (request, result) -> {
-            if (result)
-                pickImageDialogSelect(LauncherHelper.launcherRequest);
-        });
-    }
-
-    @Override
-    public void launchActivityResult(int request, int resultCode, Intent data) {
-        super.launchActivityResult(request, resultCode, data);
-        if (request == Constants.FILE_TYPE_IMAGE) {
-            String mimeType = requireActivity().getContentResolver().getType(Objects.requireNonNull(data.getData()));
-            FileObject fileObject = FileOperations.getFileObject(requireActivity(), data, "file[" + viewModel.getFileObjectList().size() + "]", Constants.FILE_TYPE_IMAGE);
-            viewModel.getFilesAdapter().getFiles().add(new File(fileObject.getFilePath(), mimeType));
-            viewModel.getFilesAdapter().notifyDataSetChanged();
-            viewModel.notifyChange(BR.filesAdapter);
-            viewModel.getFileObjectList().add(fileObject);
+    private void pickFile() {
+        if (checkPickPermission(requireActivity())) {
+            getImagePickerResult(requireActivity(), bitmapPair -> {
+                if (bitmapPair != null) {
+                    java.io.File file = bitmapPair.getSecond();
+                    FileObject fileObject = new FileObject("file[" + viewModel.getFileObjectList().size() + "]", file.getPath(), Constants.FILE_TYPE_IMAGE);
+                    viewModel.getFilesAdapter().getFiles().add(new te.app.aljoud.model.File(fileObject.getFilePath(), getMimeType(file.getPath())));
+                    viewModel.getFilesAdapter().notifyDataSetChanged();
+                    viewModel.notifyChange(BR.filesAdapter);
+                    viewModel.getFileObjectList().add(fileObject);
+                } else
+                    Log.e("pickFile", "pickFile: " + bitmapPair);
+                return null;
+            });
         }
     }
 }
