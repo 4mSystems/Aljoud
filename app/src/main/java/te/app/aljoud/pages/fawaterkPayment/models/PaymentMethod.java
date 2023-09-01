@@ -1,7 +1,9 @@
 package te.app.aljoud.pages.fawaterkPayment.models;
 
-import com.google.gson.annotations.SerializedName;
+import androidx.annotation.Keep;
 
+import com.google.gson.annotations.SerializedName;
+@Keep
 public class PaymentMethod {
 
 	@SerializedName("redirect")

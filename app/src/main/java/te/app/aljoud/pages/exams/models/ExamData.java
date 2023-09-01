@@ -1,8 +1,10 @@
 package te.app.aljoud.pages.exams.models;
 
+import androidx.annotation.Keep;
+
 import java.util.List;
 import com.google.gson.annotations.SerializedName;
-
+@Keep
 public class ExamData {
 
 	@SerializedName("quiz_id")

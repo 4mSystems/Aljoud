@@ -1,5 +1,8 @@
 package te.app.aljoud.pages.home.models.social;
 
+import androidx.annotation.Keep;
+
+@Keep
 public class SocialModel {
     private int icon;
     private String url;

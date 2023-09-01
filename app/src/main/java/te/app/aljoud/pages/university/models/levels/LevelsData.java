@@ -1,7 +1,9 @@
 package te.app.aljoud.pages.university.models.levels;
 
-import com.google.gson.annotations.SerializedName;
+import androidx.annotation.Keep;
 
+import com.google.gson.annotations.SerializedName;
+@Keep
 public class LevelsData {
 
     @SerializedName("image")

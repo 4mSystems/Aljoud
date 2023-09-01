@@ -1,11 +1,13 @@
 package te.app.aljoud.pages.fawaterkPayment.models.check_out.installment;
 
+import androidx.annotation.Keep;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.text.DecimalFormat;
 
 import te.app.aljoud.utils.helper.AppHelper;
-
+@Keep
 public class CartInstallmentData {
 
     @SerializedName("count")

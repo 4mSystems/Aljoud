@@ -1,7 +1,9 @@
 package te.app.aljoud.pages.settings.models;
 
-import com.google.gson.annotations.SerializedName;
+import androidx.annotation.Keep;
 
+import com.google.gson.annotations.SerializedName;
+@Keep
 public class AboutMain {
     @SerializedName("about")
     private AboutData aboutData;

@@ -1,9 +1,11 @@
 package te.app.aljoud.model;
 
+import androidx.annotation.Keep;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
-
+@Keep
 public class PaginateMain {
     @SerializedName("per_page")
     private int perPage;

@@ -3,6 +3,8 @@ package te.app.aljoud.pages.conversations.models;
 import android.os.Build;
 import android.text.Html;
 
+import androidx.annotation.Keep;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
@@ -10,7 +12,7 @@ import java.util.List;
 import te.app.aljoud.pages.auth.models.UserData;
 import te.app.aljoud.pages.courseDetails.models.videos.VideoData;
 
-
+@Keep
 public class ConversationsData {
 
     @SerializedName("receiver")

@@ -1,8 +1,10 @@
 package te.app.aljoud.pages.chat.model;
 
+import androidx.annotation.Keep;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
+@Keep
 public class ChatRequest {
 
     @SerializedName("user_id")

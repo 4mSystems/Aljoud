@@ -1,11 +1,13 @@
 package te.app.aljoud.pages.cart.models.cart_items;
 
+import androidx.annotation.Keep;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.text.DecimalFormat;
 
 import te.app.aljoud.pages.university.models.course.Course;
-
+@Keep
 public class CartItem {
 
     @SerializedName("course_id")

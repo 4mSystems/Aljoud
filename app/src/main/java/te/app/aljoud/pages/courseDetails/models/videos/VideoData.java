@@ -1,11 +1,13 @@
 package te.app.aljoud.pages.courseDetails.models.videos;
 
+import androidx.annotation.Keep;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.io.IOException;
 import java.net.URL;
 import java.net.URLConnection;
-
+@Keep
 public class VideoData {
 
     @SerializedName("id")

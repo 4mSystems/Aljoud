@@ -1,9 +1,11 @@
 package te.app.aljoud.pages.splash.models;
 
+import androidx.annotation.Keep;
+
 import java.util.List;
 import com.google.gson.annotations.SerializedName;
 
-
+@Keep
 public class SettingData {
 
 	@SerializedName("reasons")

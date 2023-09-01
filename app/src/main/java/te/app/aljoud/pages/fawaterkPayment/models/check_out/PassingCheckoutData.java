@@ -1,7 +1,9 @@
 package te.app.aljoud.pages.fawaterkPayment.models.check_out;
 
-import te.app.aljoud.pages.fawaterkPayment.models.check_out.installment.CartInstallmentData;
+import androidx.annotation.Keep;
 
+import te.app.aljoud.pages.fawaterkPayment.models.check_out.installment.CartInstallmentData;
+@Keep
 public class PassingCheckoutData {
     private CheckoutRequest checkoutRequest;
     private CartInstallmentData cartInstallmentData;

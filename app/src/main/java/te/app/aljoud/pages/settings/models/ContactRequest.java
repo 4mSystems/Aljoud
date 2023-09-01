@@ -2,8 +2,10 @@ package te.app.aljoud.pages.settings.models;
 
 import android.text.TextUtils;
 
-import com.google.gson.annotations.SerializedName;
+import androidx.annotation.Keep;
 
+import com.google.gson.annotations.SerializedName;
+@Keep
 public class ContactRequest {
     @SerializedName("name")
     private String name;

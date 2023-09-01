@@ -3,12 +3,14 @@ package te.app.aljoud.pages.university.models.course;
 
 import android.view.View;
 
+import androidx.annotation.Keep;
+
 import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
 
 import te.app.aljoud.pages.auth.models.UserData;
-
+@Keep
 public class Course {
 
     @SerializedName("image")

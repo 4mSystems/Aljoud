@@ -1,5 +1,7 @@
 package te.app.aljoud.pages.offers.models;
 
+import androidx.annotation.Keep;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
@@ -7,7 +9,7 @@ import java.util.List;
 import te.app.aljoud.pages.university.models.course.Course;
 import te.app.aljoud.pages.university.models.course.Currency;
 import te.app.aljoud.pages.university.models.levels.LevelsData;
-
+@Keep
 public class OfferItem {
 
     @SerializedName("level")

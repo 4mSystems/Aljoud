@@ -1,7 +1,9 @@
 package te.app.aljoud.pages.home.models.home;
 
-import com.google.gson.annotations.SerializedName;
+import androidx.annotation.Keep;
 
+import com.google.gson.annotations.SerializedName;
+@Keep
 public class University {
 
 	@SerializedName("image")

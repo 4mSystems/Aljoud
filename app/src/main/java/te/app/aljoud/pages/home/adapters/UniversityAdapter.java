@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
@@ -23,7 +24,7 @@ import te.app.aljoud.pages.home.viewModels.ItemUniversityViewModel;
 import te.app.aljoud.pages.university.FragmentUniversityDetails;
 import te.app.aljoud.utils.helper.MovementHelper;
 
-
+@Keep
 public class UniversityAdapter extends RecyclerView.Adapter<UniversityAdapter.ViewHolder> {
     List<University> universities;
     Context context;

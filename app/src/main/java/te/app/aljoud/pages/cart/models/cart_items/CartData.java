@@ -1,12 +1,13 @@
 package te.app.aljoud.pages.cart.models.cart_items;
 
-import java.text.DecimalFormat;
+import androidx.annotation.Keep;
+
 import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
 
 import te.app.aljoud.utils.helper.AppHelper;
-
+@Keep
 public class CartData {
 
     @SerializedName("final_total")

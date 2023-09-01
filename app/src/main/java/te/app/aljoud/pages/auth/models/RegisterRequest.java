@@ -1,5 +1,6 @@
 package te.app.aljoud.pages.auth.models;
 
+import androidx.annotation.Keep;
 import androidx.databinding.ObservableField;
 
 import com.google.gson.annotations.Expose;
@@ -7,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
 
 import te.app.aljoud.utils.Constants;
 import te.app.aljoud.utils.validation.Validate;
-
+@Keep
 public class RegisterRequest {
     @SerializedName("name")
     private String name;

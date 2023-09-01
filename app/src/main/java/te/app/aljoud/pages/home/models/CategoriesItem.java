@@ -1,9 +1,11 @@
 package te.app.aljoud.pages.home.models;
 
+import androidx.annotation.Keep;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
-
+@Keep
 public class CategoriesItem {
 
     @SerializedName("image")

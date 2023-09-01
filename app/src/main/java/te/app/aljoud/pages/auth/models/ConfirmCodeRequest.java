@@ -2,8 +2,10 @@ package te.app.aljoud.pages.auth.models;
 
 import android.text.TextUtils;
 
-import com.google.gson.annotations.SerializedName;
+import androidx.annotation.Keep;
 
+import com.google.gson.annotations.SerializedName;
+@Keep
 public class ConfirmCodeRequest {
     @SerializedName("email")
     private String email;
